@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "smsn",
+  "version": "${version}",
+  "name": "Save My Shit Network",
+  "description": "Save My Shit Network",
+  "authors": [
+    "Gizmo"
+  ],
+  "contact": {
+    "homepage": "https://github.com/gizmo-ds/smsn-mod",
+    "sources": "https://github.com/gizmo-ds/smsn-mod",
+    "issues": "https://github.com/gizmo-ds/smsn-mod/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.aika.smsn.fabric.SMSNFabric"
+    ],
+    "client": [
+      "dev.aika.smsn.fabric.client.SMSNFabricClient"
+    ]
+  },
+  "mixins": [
+    "smsn-common.mixins.json",
+    "smsn.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/gizmo-ds/smsn-mod/issues"
+license = "MIT"
+
+[[mods]]
+modId = "smsn"
+version = "${version}"
+displayName = "Save My Shit Network"
+authors = "Gizmo"
+description = '''
+Save My Shit Network
+'''
+logoFile = "icon.png"
+displayURL = "https://github.com/gizmo-ds/smsn-mod"
+
+[[dependencies.smsn]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"

@@ -1,0 +1,10 @@
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    implementation "maven.modrinth:xaeros-minimap:$rootProject.xaeros_minimap_fabric_version"
+    implementation "maven.modrinth:xaeros-world-map:$rootProject.xaeros_world_map_fabric_version"
+}
