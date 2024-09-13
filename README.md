@@ -4,7 +4,7 @@
 
 ## 你能得到什么
 
-- [Quark](https://modrinth.com/mod/qnQsVE2z)你的服务器启动不再会花费数十秒尝试获取赞助者列表, 每次玩家加入都不再会重新获取赞助者列表.
+- 你的服务器启动不再会花费数十秒尝试获取[Quark](https://modrinth.com/mod/qnQsVE2z)的赞助者列表, 每次玩家加入都不再会重新获取赞助者列表.
 - [Citadel](https://modrinth.com/mod/jJfV67b1)不再会让你的游戏在愚人节崩溃.
 
 ## 功能
