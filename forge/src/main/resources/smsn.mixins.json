@@ -6,7 +6,6 @@
   "client": [
   ],
   "mixins": [
-    "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
     "quark.ThreadContributorListLoaderMixin"

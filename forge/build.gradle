@@ -35,8 +35,7 @@ dependencies {
     forge "net.minecraftforge:forge:$rootProject.forge_version"
 
     implementation "maven.modrinth:quark:$rootProject.quark_version"
-    implementation "maven.modrinth:alexs-caves:$rootProject.alexs_caves_version"
-    implementation "maven.modrinth:citadel:$rootProject.citadel_version"
+    implementation "curse.maven:citadel-331936:$rootProject.citadel_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')

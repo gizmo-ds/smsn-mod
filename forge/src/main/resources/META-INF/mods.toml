@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[43,)"
 issueTrackerURL = "https://github.com/gizmo-ds/smsn-mod/issues"
 license = "MIT"
 
@@ -17,13 +17,13 @@ displayURL = "https://github.com/gizmo-ds/smsn-mod"
 [[dependencies.smsn]]
 modId = "forge"
 mandatory = true
-versionRange = "[47,)"
+versionRange = "[43,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.smsn]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.1,)"
+versionRange = "[1.19.2,)"
 ordering = "NONE"
 side = "BOTH"
