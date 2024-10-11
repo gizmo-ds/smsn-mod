@@ -10,7 +10,7 @@ architectury {
 
 allprojects {
     group = rootProject.maven_group
-    version = rootProject.mod_version
+    version = "$rootProject.mod_version+mc$rootProject.minecraft_version"
 }
 
 subprojects {
@@ -51,6 +51,12 @@ subprojects {
 
     tasks.withType(JavaCompile).configureEach {
         it.options.release = 17
+    }
+
+    processResources {
+        from("../LICENSE") {
+            rename { "$rootProject.archives_name-LICENSE" }
+        }
     }
 
     // Configure Maven publishing.
