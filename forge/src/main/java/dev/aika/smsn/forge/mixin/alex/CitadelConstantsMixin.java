@@ -10,6 +10,5 @@ public class CitadelConstantsMixin {
     @Inject(method = "isAprilFools", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onIsAprilFools(CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(false);
-        cir.cancel();
     }
 }
