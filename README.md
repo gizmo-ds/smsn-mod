@@ -1,4 +1,4 @@
-# Save My Shit Network
+# Save My Shaky Network
 
 在不影响 mods 功能的前提下阻止常用 mod 的联网行为, 防止因网络原因导致的加载缓慢或游戏崩溃.
 
