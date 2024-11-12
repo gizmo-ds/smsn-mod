@@ -24,8 +24,19 @@ configurations {
     }
 }
 
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    modLocalRuntime "net.fabricmc.fabric-api:fabric-api:0.77.0+1.19.2"
+    modLocalRuntime "maven.modrinth:xaeros-minimap:$rootProject.xaeros_minimap_fabric_version"
+    modLocalRuntime "maven.modrinth:xaeros-world-map:$rootProject.xaeros_world_map_fabric_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
@@ -36,6 +47,9 @@ processResources {
 
     filesMatching('fabric.mod.json') {
         expand version: project.version
+    }
+    from(rootProject.file("assets/icon.png")) {
+        rename { "assets/$rootProject.archives_name/icon.png" }
     }
 }
 
