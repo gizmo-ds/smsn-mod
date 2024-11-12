@@ -31,6 +31,13 @@ configurations {
     }
 }
 
+repositories {
+    maven {
+        name = 'tterag maven'
+        url = 'https://maven.tterrag.com/'
+    }
+}
+
 dependencies {
     forge "net.minecraftforge:forge:$rootProject.forge_version"
 
@@ -41,6 +48,10 @@ dependencies {
     modImplementation "maven.modrinth:citadel:$rootProject.citadel_version"
     modLocalRuntime "maven.modrinth:xaeros-minimap:$rootProject.xaeros_minimap_forge_version"
     modLocalRuntime "maven.modrinth:xaeros-world-map:$rootProject.xaeros_world_map_forge_version"
+    modImplementation "maven.modrinth:petrolpark:$rootProject.petrolpark_version"
+    modLocalRuntime("com.simibubi.create:create-$rootProject.minecraft_version:$rootProject.create_version:slim") { transitive = false }
+    modLocalRuntime "com.jozufozu.flywheel:flywheel-forge-$rootProject.minecraft_version:$rootProject.flywheel_version"
+    modLocalRuntime "com.tterrag.registrate:Registrate:$rootProject.registrate_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')

@@ -10,6 +10,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "petrolpark.BadgeHandlerMixin",
     "quark.ThreadContributorListLoaderMixin"
   ],
   "injectors": {

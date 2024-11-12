@@ -6,6 +6,8 @@
 
 - 你的服务器启动不再会花费数十秒尝试获取[Quark](https://modrinth.com/mod/qnQsVE2z)的赞助者列表, 每次玩家加入都不再会重新获取赞助者列表.
 - [Citadel](https://modrinth.com/mod/jJfV67b1)不再会让你的游戏在愚人节崩溃.
+- [Destroy](https://modrinth.com/mod/destroy) 或 [Petrol's Parts](https://modrinth.com/mod/petrols-parts)
+  不会再在每次玩家加入时请求一次远程数据库.
 
 ## 功能
 
@@ -16,6 +18,8 @@
 - [Quark](https://modrinth.com/mod/qnQsVE2z): 禁止了获取贡献者和赞助者列表.
 - [Xaero's Minimap](https://modrinth.com/mod/1bokaNcj): 禁止了更新检测和获取赞助者列表.
 - [Xaero's World Map](https://modrinth.com/mod/NcUtCpym): 禁止了更新检测和获取赞助者列表.
+- [Petrolpark's Library](https://modrinth.com/mod/petrolpark): 禁止了获取 Badges 的请求. EarlyBird? 这真的不是什么违反
+  Mojang 的 EULA 的东西吗?
 
 ## 为什么?
 
