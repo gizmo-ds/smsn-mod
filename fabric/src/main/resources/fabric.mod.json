@@ -13,7 +13,7 @@
     "issues": "https://github.com/gizmo-ds/smsn-mod/issues"
   },
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/smsn/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

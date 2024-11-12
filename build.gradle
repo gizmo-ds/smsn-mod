@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '1.6-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
 }
@@ -25,6 +25,10 @@ subprojects {
 
     repositories {
         maven {
+            name = 'ParchmentMC'
+            url = 'https://maven.parchmentmc.org'
+        }
+        maven {
             url = "https://cursemaven.com"
             content { includeGroup "curse.maven" }
         }
@@ -36,7 +40,10 @@ subprojects {
 
     dependencies {
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-        mappings "net.fabricmc:yarn:$rootProject.yarn_mappings:v2"
+        mappings(loom.layered {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-$rootProject.minecraft_version:$rootProject.parchment_version@zip")
+        })
     }
 
     java {
@@ -54,8 +61,8 @@ subprojects {
     }
 
     processResources {
-        from("../LICENSE") {
-            rename { "$rootProject.archives_name-LICENSE" }
+        from(rootProject.file("LICENSE")) {
+            rename { "META-INF/${it}_$rootProject.archives_name" }
         }
     }
 

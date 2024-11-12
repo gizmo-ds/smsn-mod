@@ -11,7 +11,7 @@ authors = "Gizmo"
 description = '''
 Save My Shit Network
 '''
-logoFile = "icon.png"
+logoFile = "smsn-icon.png"
 displayURL = "https://github.com/gizmo-ds/smsn-mod"
 
 [[dependencies.smsn]]
