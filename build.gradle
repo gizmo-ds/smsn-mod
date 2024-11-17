@@ -36,6 +36,12 @@ subprojects {
             url = "https://api.modrinth.com/maven"
             content { includeGroup "maven.modrinth" }
         }
+        maven { // KubeJS and Rhino
+            url = "https://maven.saps.dev/minecraft"
+            content {
+                includeGroup "dev.latvian.mods"
+            }
+        }
     }
 
     dependencies {

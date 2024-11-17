@@ -32,6 +32,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("xaeroworldmap");
             case "com.petrolpark.badge.BadgeHandler":
                 return SMSNPlatform.isModLoaded("petrolpark");
+            case "dev.latvian.mods.kubejs.KubeJS":
+                return SMSNPlatform.isModLoaded("kubejs");
             default:
                 return true;
         }
