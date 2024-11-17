@@ -29,6 +29,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("xaerominimap");
             case "xaero.map.misc.Internet", "xaero.map.patreon.Patreon":
                 return SMSNPlatform.isModLoaded("xaeroworldmap");
+            case "dev.latvian.mods.kubejs.KubeJS":
+                return SMSNPlatform.isModLoaded("kubejs");
             default:
                 return true;
         }
