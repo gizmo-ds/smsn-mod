@@ -34,7 +34,9 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("petrolpark");
             case "dev.latvian.mods.kubejs.KubeJS":
                 return SMSNPlatform.isModLoaded("kubejs");
-            case "org.anti_ad.mc.ipnext.IPNInfoManager":
+            case "org.anti_ad.mc.ipnext.IPNInfoManager",
+                 "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
+                 "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
                 return SMSNPlatform.isModLoaded("inventoryprofilesnext");
             case "com.obscuria.obscureapi.network.ObscuriaCollection",
                  "com.obscuria.obscureapi.network.ObscuriaCollection$Mod":
