@@ -40,7 +40,8 @@ dependencies {
     modImplementation "curse.maven:citadel-331936:$rootProject.citadel_version"
     modLocalRuntime "maven.modrinth:xaeros-minimap:$rootProject.xaeros_minimap_forge_version"
     modLocalRuntime "maven.modrinth:xaeros-world-map:$rootProject.xaeros_world_map_forge_version"
-    modLocalRuntime "dev.latvian.mods:kubejs-forge:${rootProject.kubejs_version}"
+    modLocalRuntime "dev.latvian.mods:kubejs-forge:$rootProject.kubejs_version"
+    modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_forge_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')

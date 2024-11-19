@@ -9,6 +9,7 @@
   "mixins": [
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "ipn.IPNInfoManagerMixin",
     "quark.ThreadContributorListLoaderMixin"
   ],
   "injectors": {

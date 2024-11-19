@@ -31,7 +31,12 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("xaeroworldmap");
             case "dev.latvian.mods.kubejs.KubeJS":
                 return SMSNPlatform.isModLoaded("kubejs");
+            case "org.anti_ad.mc.ipnext.IPNInfoManager",
+                 "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
+                 "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
+                return SMSNPlatform.isModLoaded("inventoryprofilesnext");
             default:
+                System.out.println("SMSN: Unknown target class: " + targetClassName);
                 return true;
         }
     }
