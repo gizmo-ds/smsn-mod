@@ -5,6 +5,7 @@
   "minVersion": "0.8",
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
+    "obscure.ObscuriaCollectionMixin"
   ],
   "mixins": [
     "alex.CitadelConstantsMixin",

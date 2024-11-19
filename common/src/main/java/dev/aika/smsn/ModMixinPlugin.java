@@ -35,6 +35,9 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                  "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
                  "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
                 return SMSNPlatform.isModLoaded("inventoryprofilesnext");
+            case "com.obscuria.obscureapi.network.ObscuriaCollection",
+                 "com.obscuria.obscureapi.network.ObscuriaCollection$Mod":
+                return SMSNPlatform.isModLoaded("obscure_api");
             default:
                 System.out.println("SMSN: Unknown target class: " + targetClassName);
                 return true;
