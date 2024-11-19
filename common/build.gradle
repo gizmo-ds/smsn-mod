@@ -7,5 +7,5 @@ dependencies {
 
     implementation "maven.modrinth:xaeros-minimap:$rootProject.xaeros_minimap_fabric_version"
     implementation "maven.modrinth:xaeros-world-map:$rootProject.xaeros_world_map_fabric_version"
-    implementation "dev.latvian.mods:kubejs:${rootProject.kubejs_version}"
+    implementation "dev.latvian.mods:kubejs:$rootProject.kubejs_version"
 }
