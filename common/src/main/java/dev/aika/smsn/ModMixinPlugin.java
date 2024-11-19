@@ -34,6 +34,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("petrolpark");
             case "dev.latvian.mods.kubejs.KubeJS":
                 return SMSNPlatform.isModLoaded("kubejs");
+            case "org.anti_ad.mc.ipnext.IPNInfoManager":
+                return SMSNPlatform.isModLoaded("inventoryprofilesnext");
             default:
                 return true;
         }

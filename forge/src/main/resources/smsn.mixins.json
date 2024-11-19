@@ -10,6 +10,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "quark.ThreadContributorListLoaderMixin"
   ],
