@@ -12,6 +12,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "blueprint.RewardHandlerMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "quark.ThreadContributorListLoaderMixin"

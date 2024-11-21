@@ -23,6 +23,8 @@
 - [KubeJS](https://modrinth.com/mod/kubejs): 禁止了更新检测, 为什么不允许用户禁止这个行为?
 - [Inventory Profiles Next](https://modrinth.com/mod/O7RBXm3n): 禁止了更新检测和追踪请求, 我不明白这个mod中的隐私设定有何意义.
 - [Obscure API](https://modrinth.com/mod/fU7jbFHc): 禁止了获取作品展示信息的请求, 我不认为这些信息对于用户来说有什么意义.
+- [Blueprint](https://modrinth.com/mod/VsM5EDoI): 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false`
+  的情况下不会再发送请求.
 
 ## 为什么?
 
