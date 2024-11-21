@@ -10,6 +10,7 @@
   "mixins": [
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "blueprint.RewardHandlerMixin",
     "ipn.IPNInfoManagerMixin",
     "quark.ThreadContributorListLoaderMixin"
   ],
