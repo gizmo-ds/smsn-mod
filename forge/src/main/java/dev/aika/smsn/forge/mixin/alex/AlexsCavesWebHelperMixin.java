@@ -1,5 +1,6 @@
 package dev.aika.smsn.forge.mixin.alex;
 
+import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -11,6 +12,6 @@ import java.io.BufferedReader;
 public class AlexsCavesWebHelperMixin {
     @Inject(method = "getURLContents", at = @At(value = "INVOKE", target = "Ljava/net/URL;openConnection()Ljava/net/URLConnection;"), cancellable = true, remap = false)
     private static void onGetURLContents(String urlString, String backupFileLoc, CallbackInfoReturnable<BufferedReader> cir) {
-        cir.setReturnValue(null);
+        if (!SMSN.CONFIG.alexModsContributorCheck()) cir.setReturnValue(null);
     }
 }

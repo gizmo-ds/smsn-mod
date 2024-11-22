@@ -1,5 +1,6 @@
 package dev.aika.smsn.mixin.kubejs;
 
+import dev.aika.smsn.SMSN;
 import dev.latvian.mods.kubejs.KubeJS;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,6 +13,6 @@ public abstract class KubeJSMixin {
             at = @At(value = "INVOKE", target = "Ljava/lang/Thread;start()V"),
             cancellable = true)
     private void loadComplete(CallbackInfo ci) {
-        ci.cancel();
+        if (!SMSN.CONFIG.kubejsUpdateCheck()) ci.cancel();
     }
 }
