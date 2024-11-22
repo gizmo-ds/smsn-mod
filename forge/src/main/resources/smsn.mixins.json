@@ -6,14 +6,14 @@
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
     "obscure.ObscuriaCollectionMixin",
-    "obscure.ObscuriaCollectionMixin$Mod"
+    "obscure.ObscuriaCollectionMixin$Mod",
+    "blueprint.RewardHandlerMixin"
   ],
   "mixins": [
     "aetherteam.UserData$ServerMixin",
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
-    "blueprint.RewardHandlerMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "quark.ThreadContributorListLoaderMixin"
