@@ -9,6 +9,7 @@
     "obscure.ObscuriaCollectionMixin$Mod"
   ],
   "mixins": [
+    "aetherteam.UserData$ServerMixin",
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
