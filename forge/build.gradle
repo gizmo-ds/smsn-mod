@@ -34,6 +34,8 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:$rootProject.forge_version"
 
+    modImplementation "me.shedaniel.cloth:cloth-config-forge:$rootProject.cloth_config_version"
+
     localRuntime("io.github.llamalad7:mixinextras-forge:0.3.6")
     modImplementation "maven.modrinth:quark:$rootProject.quark_version"
     modLocalRuntime "maven.modrinth:autoreglib:$rootProject.autoreglib_version"

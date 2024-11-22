@@ -19,8 +19,8 @@
     "main": [
       "dev.aika.smsn.fabric.SMSNFabric"
     ],
-    "client": [
-      "dev.aika.smsn.fabric.client.SMSNFabricClient"
+    "modmenu": [
+      "dev.aika.smsn.fabric.config.ModMenuImpl"
     ]
   },
   "mixins": [
@@ -33,6 +33,6 @@
     "java": ">=17"
   },
   "suggests": {
-    "another-mod": "*"
+    "cloth-config2": ">=8.0.0"
   }
 }

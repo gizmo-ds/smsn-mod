@@ -43,7 +43,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
             case "com.aetherteam.nitrogen.api.users.UserData$Server":
                 return SMSNPlatform.isModLoaded("nitrogen");
             default:
-                System.out.println("SMSN: Unknown target class: " + targetClassName);
+                SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
                 return true;
         }
     }

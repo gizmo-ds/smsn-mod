@@ -1,5 +1,6 @@
 package dev.aika.smsn.fabric.mixin.ipn;
 
+import dev.aika.smsn.SMSN;
 import org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin {
     @Inject(method = "run", at = @At("HEAD"), cancellable = true)
     public void dontRun(CallbackInfo ci) {
-        ci.cancel();
+        if (!SMSN.CONFIG.ipnUpdateCheckAndUserTracking()) ci.cancel();
     }
 }

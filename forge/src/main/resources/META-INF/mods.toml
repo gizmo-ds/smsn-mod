@@ -27,3 +27,10 @@ mandatory = true
 versionRange = "[1.19.2,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "cloth_config"
+mandatory = false
+versionRange = "[8.,)"
+ordering = "NONE"
+side = "CLIENT"

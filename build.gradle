@@ -40,6 +40,7 @@ subprojects {
             }
         }
         maven githubPackage.invoke("The-Aether-Team/Nitrogen")
+        maven { url "https://maven.shedaniel.me/" }
     }
 
     dependencies {

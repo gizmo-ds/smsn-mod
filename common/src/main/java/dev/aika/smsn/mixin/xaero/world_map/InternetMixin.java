@@ -1,5 +1,6 @@
 package dev.aika.smsn.mixin.xaero.world_map;
 
+import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -9,6 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class InternetMixin {
     @Inject(method = "checkModVersion", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onCheckModVersion(CallbackInfo ci) {
-        ci.cancel();
+        if (!SMSN.CONFIG.xaeroMapVersionCheck()) ci.cancel();
     }
 }

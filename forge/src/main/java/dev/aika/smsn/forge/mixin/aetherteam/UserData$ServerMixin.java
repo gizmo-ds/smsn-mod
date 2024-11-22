@@ -2,6 +2,7 @@ package dev.aika.smsn.forge.mixin.aetherteam;
 
 
 import com.aetherteam.nitrogen.api.users.UserData;
+import dev.aika.smsn.SMSN;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,6 +16,6 @@ import java.util.UUID;
 public abstract class UserData$ServerMixin {
     @Inject(method = "sendUserRequest", at = @At("HEAD"), cancellable = true)
     private static void sendUserRequest(MinecraftServer server, ServerPlayer serverPlayer, UUID uuid, CallbackInfo ci) {
-        ci.cancel();
+        if (!SMSN.CONFIG.aetherMoaSkinsFeature()) ci.cancel();
     }
 }
