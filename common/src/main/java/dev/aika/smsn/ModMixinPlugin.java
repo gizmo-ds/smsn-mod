@@ -44,7 +44,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
             case "com.teamabnormals.blueprint.client.RewardHandler":
                 return SMSNPlatform.isModLoaded("blueprint");
             case "com.aetherteam.nitrogen.api.users.UserData$Server":
-                return SMSNPlatform.isModLoaded("aether");
+                return SMSNPlatform.isModLoaded("nitrogen");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
                 return true;
