@@ -5,10 +5,11 @@
   "minVersion": "0.8",
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
-    "obscure.ObscuriaCollectionMixin",
-    "blueprint.RewardHandlerMixin"
+    "blueprint.RewardHandlerMixin",
+    "obscure.ObscuriaCollectionMixin"
   ],
   "mixins": [
+    "aetherteam.UserData$ServerMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
     "ipn.IPNInfoManagerMixin",
