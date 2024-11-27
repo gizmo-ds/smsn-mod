@@ -11,4 +11,5 @@ public interface ModConfig {
     boolean alexModsContributorCheck();
     boolean petrolparkBadgeCheck();
     boolean obscureModsCheck();
+    boolean supplementariesCreditsCheck();
 }

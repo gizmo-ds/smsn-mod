@@ -25,6 +25,7 @@
 - [Obscure API](https://modrinth.com/mod/fU7jbFHc): 禁止了获取作品展示信息的请求, 我不认为这些信息对于用户来说有什么意义.
 - [Blueprint](https://modrinth.com/mod/VsM5EDoI): 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false`
   的情况下不会再发送请求.
+- [Supplementaries](https://modrinth.com/mod/fFEIiSDQ): 禁止获取赞助者信息的请求.
 
 ## 为什么?
 

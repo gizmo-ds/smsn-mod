@@ -19,6 +19,8 @@ public class ModConfigDefaults implements ModConfig {
 
     public static final boolean OBSCURE_MODS_CHECK = false;
 
+    public static final boolean SUPPLEMENTARIES_CREDITS_CHECK = false;
+
     public boolean aetherMoaSkinsFeature() {
         return AETHER_MOA_SKINS_FEATURE;
     }
@@ -57,5 +59,9 @@ public class ModConfigDefaults implements ModConfig {
 
     public boolean obscureModsCheck() {
         return OBSCURE_MODS_CHECK;
+    }
+
+    public boolean supplementariesCreditsCheck() {
+        return SUPPLEMENTARIES_CREDITS_CHECK;
     }
 }

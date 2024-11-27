@@ -8,6 +8,7 @@
   ],
   "mixins": [
     "kubejs.KubeJSMixin",
+    "supplementaries.CreditsMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",

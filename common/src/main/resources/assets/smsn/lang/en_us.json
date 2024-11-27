@@ -23,5 +23,7 @@
   "text.autoconfig.smsn.option.petrolparkBadgeCheck": "Petrolpark's Mods Badges Check",
   "text.autoconfig.smsn.option.petrolparkBadgeCheck.@Tooltip": "Allow Petrolpark's Mods badges checks",
   "text.autoconfig.smsn.option.obscureModsCheck": "Obscure API Mods Check",
-  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "Allow Obscure API mods checks"
+  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "Allow Obscure API mods checks",
+  "text.autoconfig.smsn.option.supplementariesCreditsCheck": "Supplementaries supporters check",
+  "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "Allow Supplementaries supporters checks"
 }

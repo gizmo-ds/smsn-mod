@@ -36,6 +36,9 @@ public class ModConfigData implements ConfigData, ModConfig {
     @ConfigEntry.Gui.Tooltip()
     public boolean obscureModsCheck = ModConfigDefaults.OBSCURE_MODS_CHECK;
 
+    @ConfigEntry.Gui.Tooltip()
+    public boolean supplementariesCreditsCheck = ModConfigDefaults.SUPPLEMENTARIES_CREDITS_CHECK;
+
     @Override
     public boolean aetherMoaSkinsFeature() {
         return aetherMoaSkinsFeature;
@@ -84,5 +87,10 @@ public class ModConfigData implements ConfigData, ModConfig {
     @Override
     public boolean obscureModsCheck() {
         return obscureModsCheck;
+    }
+
+    @Override
+    public boolean supplementariesCreditsCheck() {
+        return supplementariesCreditsCheck;
     }
 }
