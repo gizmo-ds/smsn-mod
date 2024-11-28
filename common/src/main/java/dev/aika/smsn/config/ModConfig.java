@@ -12,4 +12,5 @@ public interface ModConfig {
     boolean petrolparkBadgeCheck();
     boolean obscureModsCheck();
     boolean supplementariesCreditsCheck();
+    boolean botaniaContributorCheck();
 }

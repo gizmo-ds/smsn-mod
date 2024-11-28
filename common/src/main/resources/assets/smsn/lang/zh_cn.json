@@ -25,5 +25,7 @@
   "text.autoconfig.smsn.option.obscureModsCheck": "Obscure API 模组检查",
   "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "是否允许 Obscure API 进行模组检查",
   "text.autoconfig.smsn.option.supplementariesCreditsCheck": "锦致装饰 赞助者检查",
-  "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "是否允许 锦致装饰 进行赞助者检查"
+  "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "是否允许 锦致装饰 进行赞助者检查",
+  "text.autoconfig.smsn.option.botaniaContributorCheck": "植物魔法 贡献者检查",
+  "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "是否允许 植物魔法 进行贡献者检查"
 }

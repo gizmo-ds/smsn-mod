@@ -4,6 +4,7 @@ public class ModConfigDefaults implements ModConfig {
     public static final boolean AETHER_MOA_SKINS_FEATURE = true;
 
     public static final boolean QUARK_CONTRIBUTOR_CHECK = false;
+    public static final boolean BOTANIA_CONTRIBUTOR_CHECK = false;
 
     public static final boolean IPN_UPDATE_CHECK_AND_USER_TRACKING = false;
 
@@ -27,6 +28,10 @@ public class ModConfigDefaults implements ModConfig {
 
     public boolean quarkContributorCheck() {
         return QUARK_CONTRIBUTOR_CHECK;
+    }
+
+    public boolean botaniaContributorCheck() {
+        return BOTANIA_CONTRIBUTOR_CHECK;
     }
 
     public boolean ipnUpdateCheckAndUserTracking() {

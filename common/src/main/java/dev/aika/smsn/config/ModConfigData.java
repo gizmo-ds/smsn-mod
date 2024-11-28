@@ -13,6 +13,8 @@ public class ModConfigData implements ConfigData, ModConfig {
 
     @ConfigEntry.Gui.Tooltip()
     public boolean quarkContributorCheck = ModConfigDefaults.QUARK_CONTRIBUTOR_CHECK;
+    @ConfigEntry.Gui.Tooltip()
+    public boolean botaniaContributorCheck = ModConfigDefaults.BOTANIA_CONTRIBUTOR_CHECK;
 
     @ConfigEntry.Gui.Tooltip()
     public boolean ipnUpdateCheckAndUserTracking = ModConfigDefaults.IPN_UPDATE_CHECK_AND_USER_TRACKING;
@@ -47,6 +49,11 @@ public class ModConfigData implements ConfigData, ModConfig {
     @Override
     public boolean quarkContributorCheck() {
         return quarkContributorCheck;
+    }
+
+    @Override
+    public boolean botaniaContributorCheck() {
+        return botaniaContributorCheck;
     }
 
     @Override

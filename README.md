@@ -26,6 +26,7 @@
 - [Blueprint](https://modrinth.com/mod/VsM5EDoI): 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false`
   的情况下不会再发送请求.
 - [Supplementaries](https://modrinth.com/mod/fFEIiSDQ): 禁止获取赞助者信息的请求.
+- [Botania](https://modrinth.com/mod/pfjLUfGv): 禁止获取贡献者列表.
 
 ## 为什么?
 

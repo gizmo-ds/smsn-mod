@@ -10,4 +10,5 @@ dependencies {
     implementation "dev.latvian.mods:kubejs:$rootProject.kubejs_version"
     implementation "me.shedaniel.cloth:cloth-config-fabric:$rootProject.cloth_config_version"
     implementation "maven.modrinth:supplementaries:$rootProject.supplementaries_fabric_version"
+    implementation "maven.modrinth:botania:$rootProject.botania_fabric_version"
 }

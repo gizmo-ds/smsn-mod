@@ -25,5 +25,7 @@
   "text.autoconfig.smsn.option.obscureModsCheck": "Obscure API Mods Check",
   "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "Allow Obscure API mods checks",
   "text.autoconfig.smsn.option.supplementariesCreditsCheck": "Supplementaries supporters check",
-  "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "Allow Supplementaries supporters checks"
+  "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "Allow Supplementaries supporters checks",
+  "text.autoconfig.smsn.option.botaniaContributorCheck": "Botania contributor check",
+  "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "Allow Botania contributor checks"
 }
