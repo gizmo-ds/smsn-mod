@@ -13,4 +13,5 @@ public interface ModConfig {
     boolean obscureModsCheck();
     boolean supplementariesCreditsCheck();
     boolean botaniaContributorCheck();
+    boolean bagusLibSupportersCheck();
 }

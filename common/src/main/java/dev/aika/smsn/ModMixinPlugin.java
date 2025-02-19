@@ -49,6 +49,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("supplementaries");
             case "vazkii.botania.common.handler.ContributorList":
                 return SMSNPlatform.isModLoaded("botania");
+            case "bagu_chan.bagus_lib.util.TierHelper":
+                return SMSNPlatform.isModLoaded("bagus_lib");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
                 return true;

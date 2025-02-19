@@ -41,6 +41,9 @@ public class ModConfigData implements ConfigData, ModConfig {
     @ConfigEntry.Gui.Tooltip()
     public boolean supplementariesCreditsCheck = ModConfigDefaults.SUPPLEMENTARIES_CREDITS_CHECK;
 
+    @ConfigEntry.Gui.Tooltip()
+    public boolean bagusLibSupportersCheck = ModConfigDefaults.BAGUS_LIB_SUPPORTERS_CHECK;
+
     @Override
     public boolean aetherMoaSkinsFeature() {
         return aetherMoaSkinsFeature;
@@ -99,5 +102,10 @@ public class ModConfigData implements ConfigData, ModConfig {
     @Override
     public boolean supplementariesCreditsCheck() {
         return supplementariesCreditsCheck;
+    }
+
+    @Override
+    public boolean bagusLibSupportersCheck() {
+        return bagusLibSupportersCheck;
     }
 }

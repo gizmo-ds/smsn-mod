@@ -27,5 +27,7 @@
   "text.autoconfig.smsn.option.supplementariesCreditsCheck": "锦致装饰 赞助者检查",
   "text.autoconfig.smsn.option.supplementariesCreditsCheck.@Tooltip": "是否允许 锦致装饰 进行赞助者检查",
   "text.autoconfig.smsn.option.botaniaContributorCheck": "植物魔法 贡献者检查",
-  "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "是否允许 植物魔法 进行贡献者检查"
+  "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "是否允许 植物魔法 进行贡献者检查",
+  "text.autoconfig.smsn.option.bagusLibSupportersCheck": "Bagus Lib 赞助者检查",
+  "text.autoconfig.smsn.option.bagusLibSupportersCheck.@Tooltip": "是否允许 Bagus Lib 进行赞助者检查"
 }

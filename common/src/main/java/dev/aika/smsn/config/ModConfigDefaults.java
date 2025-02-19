@@ -22,6 +22,8 @@ public class ModConfigDefaults implements ModConfig {
 
     public static final boolean SUPPLEMENTARIES_CREDITS_CHECK = false;
 
+    public static final boolean BAGUS_LIB_SUPPORTERS_CHECK = false;
+
     public boolean aetherMoaSkinsFeature() {
         return AETHER_MOA_SKINS_FEATURE;
     }
@@ -68,5 +70,9 @@ public class ModConfigDefaults implements ModConfig {
 
     public boolean supplementariesCreditsCheck() {
         return SUPPLEMENTARIES_CREDITS_CHECK;
+    }
+
+    public boolean bagusLibSupportersCheck() {
+        return BAGUS_LIB_SUPPORTERS_CHECK;
     }
 }
