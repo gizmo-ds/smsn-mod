@@ -1,19 +1,14 @@
 {
   "required": true,
   "package": "dev.aika.smsn.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
   ],
   "mixins": [
-    "botania.ContributorListMixin",
-    "kubejs.KubeJSMixin",
     "supplementaries.CreditsMixin",
-    "xaero.minimap.InternetMixin",
-    "xaero.minimap.PatreonMixin",
-    "xaero.world_map.InternetMixin",
-    "xaero.world_map.PatreonMixin"
+    "supplementaries.SupplementariesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

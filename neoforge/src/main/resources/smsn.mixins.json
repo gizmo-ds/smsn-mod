@@ -1,14 +1,16 @@
 {
   "required": true,
-  "package": "dev.aika.smsn.fabric.mixin",
+  "package": "dev.aika.smsn.neoforge.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
   ],
   "mixins": [
-    "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
-    "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin"
+    "aetherteam.UserData$ServerMixin",
+    "bagu_chan.bagus_lib.TierHelperMixin",
+    "ipn.IPNInfoManagerMixin",
+    "kubejs.KubeJSModEventHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

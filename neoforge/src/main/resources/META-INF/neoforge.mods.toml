@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+issueTrackerURL = "https://github.com/gizmo-ds/i-have-slept-mod/issues"
+license = "MIT"
+
+[[mods]]
+modId = "smsn"
+version = "${version}"
+displayName = "Save My Shit Network"
+authors = "Gizmo"
+description = '''
+Save My Shit Network
+'''
+logoFile = "smsn-icon.png"
+displayURL = "https://github.com/gizmo-ds/smsn-mod"
+
+[[dependencies.smsn]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "smsn.mixins.json"

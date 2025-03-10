@@ -7,6 +7,8 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import java.util.List;
 import java.util.Set;
 
+import static dev.aika.smsn.SMSNPlatform.isModLoaded;
+
 public class ModMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
@@ -17,40 +19,43 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
         return null;
     }
 
+    @SuppressWarnings({"CommentedOutCode", "EnhancedSwitchMigration"})
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         switch (targetClassName) {
-            case "com.github.alexthe666.citadel.CitadelConstants", "com.github.alexthe666.citadel.web.WebHelper":
-                return SMSNPlatform.isModLoaded("citadel");
-            case "com.github.alexmodguy.alexscaves.server.misc.WebHelper":
-                return SMSNPlatform.isModLoaded("alexscaves");
-            case "org.violetmoon.quark.base.handler.ContributorRewardHandler$ThreadContributorListLoader":
-                return SMSNPlatform.isModLoaded("quark");
+            // Common
+//            case "vazkii.botania.common.handler.ContributorList":
+//                return isModLoaded("botania");
+            case "net.mehvahdjukaar.supplementaries.common.utils.Credits",
+                 "net.mehvahdjukaar.supplementaries.Supplementaries":
+                return isModLoaded("supplementaries");
             case "xaero.common.misc.Internet", "xaero.common.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaerominimap");
+                return isModLoaded("xaerominimap");
             case "xaero.map.misc.Internet", "xaero.map.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaeroworldmap");
-            case "com.petrolpark.badge.BadgeHandler":
-                return SMSNPlatform.isModLoaded("petrolpark");
-            case "dev.latvian.mods.kubejs.KubeJS":
-                return SMSNPlatform.isModLoaded("kubejs");
-            case "org.anti_ad.mc.ipnext.IPNInfoManager",
-                 "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
+                return isModLoaded("xaeroworldmap");
+            // Fabric
+            case "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
                  "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
-                return SMSNPlatform.isModLoaded("inventoryprofilesnext");
-            case "com.obscuria.obscureapi.network.ObscuriaCollection",
-                 "com.obscuria.obscureapi.network.ObscuriaCollection$Mod":
-                return SMSNPlatform.isModLoaded("obscure_api");
-            case "com.teamabnormals.blueprint.client.RewardHandler":
-                return SMSNPlatform.isModLoaded("blueprint");
+                return isModLoaded("inventoryprofilesnext");
+            // NeoForge
             case "com.aetherteam.nitrogen.api.users.UserData$Server":
-                return SMSNPlatform.isModLoaded("nitrogen");
-            case "net.mehvahdjukaar.supplementaries.common.utils.Credits":
-                return SMSNPlatform.isModLoaded("supplementaries");
-            case "vazkii.botania.common.handler.ContributorList":
-                return SMSNPlatform.isModLoaded("botania");
-            case "bagu_chan.bagus_lib.util.TierHelper":
-                return SMSNPlatform.isModLoaded("bagus_lib");
+                return isModLoaded("nitrogen");
+//            case "com.github.alexthe666.citadel.CitadelConstants", "com.github.alexthe666.citadel.web.WebHelper":
+//                return SMSNPlatform.isModLoaded("citadel");
+//            case "com.github.alexmodguy.alexscaves.server.misc.WebHelper":
+//                return SMSNPlatform.isModLoaded("alexscaves");
+            case "bagu_chan.bagus_lib.util.reward.TierHelper":
+                return isModLoaded("bagus_lib");
+//            case "com.teamabnormals.blueprint.client.RewardHandler":
+//                return SMSNPlatform.isModLoaded("blueprint");
+            case "org.anti_ad.mc.ipnext.IPNInfoManager":
+                return isModLoaded("inventoryprofilesnext");
+            case "dev.latvian.mods.kubejs.KubeJSModEventHandler":
+                return isModLoaded("kubejs");
+//            case "com.petrolpark.badge.BadgeHandler":
+//                return SMSNPlatform.isModLoaded("petrolpark");
+//            case "org.violetmoon.quark.base.handler.ContributorRewardHandler$ThreadContributorListLoader":
+//                return SMSNPlatform.isModLoaded("quark");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
                 return true;

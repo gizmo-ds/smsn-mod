@@ -2,7 +2,7 @@ package dev.aika.smsn.fabric.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import dev.aika.smsn.config.MissingClothConfigScreen;
+import dev.aika.smsn.gui.MissingClothConfigScreen;
 import dev.aika.smsn.config.ModConfigData;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
