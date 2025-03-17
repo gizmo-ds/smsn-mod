@@ -21,5 +21,7 @@
   "text.autoconfig.smsn.option.alexModsContributorCheck": "Alex的模组 贡献者检查",
   "text.autoconfig.smsn.option.alexModsContributorCheck.@Tooltip": "是否允许 Alex的模组 进行贡献者检查",
   "text.autoconfig.smsn.option.obscureModsCheck": "Obscure API 模组检查",
-  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "是否允许 Obscure API 进行模组检查"
+  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "是否允许 Obscure API 进行模组检查",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers": "沉浸工程 特殊左轮请求",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers.@Tooltip": "是否允许 沉浸工程 特殊左轮请求"
 }

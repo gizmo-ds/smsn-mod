@@ -12,6 +12,7 @@
     "aetherteam.UserData$ServerMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
     "quark.ThreadContributorListLoaderMixin"
   ],

@@ -21,5 +21,7 @@
   "text.autoconfig.smsn.option.alexModsContributorCheck": "Alex's Mods Contributor Check",
   "text.autoconfig.smsn.option.alexModsContributorCheck.@Tooltip": "Allow Alex's Mods contributor checks",
   "text.autoconfig.smsn.option.obscureModsCheck": "Obscure API Mods Check",
-  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "Allow Obscure API mods checks"
+  "text.autoconfig.smsn.option.obscureModsCheck.@Tooltip": "Allow Obscure API mods checks",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers": "ImmersiveEngineering special revolver request",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers.@Tooltip": "Allow ImmersiveEngineering special revolver request"
 }

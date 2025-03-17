@@ -10,4 +10,5 @@ public interface ModConfig {
     boolean citadelAprilFoolsContent();
     boolean alexModsContributorCheck();
     boolean obscureModsCheck();
+    boolean immersiveEngineeringSpecialRevolvers();
 }

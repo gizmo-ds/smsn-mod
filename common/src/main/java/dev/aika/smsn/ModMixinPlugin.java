@@ -42,9 +42,11 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("blueprint");
             case "com.aetherteam.nitrogen.api.users.UserData$Server":
                 return SMSNPlatform.isModLoaded("nitrogen");
+            case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
+                return SMSNPlatform.isModLoaded("immersiveengineering");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
-                return true;
+                return false;
         }
     }
 

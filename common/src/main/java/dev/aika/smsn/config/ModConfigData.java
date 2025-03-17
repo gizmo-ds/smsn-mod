@@ -33,6 +33,9 @@ public class ModConfigData implements ConfigData, ModConfig {
     @ConfigEntry.Gui.Tooltip()
     public boolean obscureModsCheck = ModConfigDefaults.OBSCURE_MODS_CHECK;
 
+    @ConfigEntry.Gui.Tooltip()
+    public boolean immersiveEngineeringSpecialRevolvers = ModConfigDefaults.IMMERSIVE_ENGINEERING_SPECIAL_REVOLVERS;
+
     @Override
     public boolean aetherMoaSkinsFeature() {
         return aetherMoaSkinsFeature;
@@ -76,5 +79,10 @@ public class ModConfigData implements ConfigData, ModConfig {
     @Override
     public boolean obscureModsCheck() {
         return obscureModsCheck;
+    }
+
+    @Override
+    public boolean immersiveEngineeringSpecialRevolvers() {
+        return immersiveEngineeringSpecialRevolvers;
     }
 }
