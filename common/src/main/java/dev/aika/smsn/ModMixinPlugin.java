@@ -51,9 +51,11 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return SMSNPlatform.isModLoaded("botania");
             case "bagu_chan.bagus_lib.util.TierHelper":
                 return SMSNPlatform.isModLoaded("bagus_lib");
+            case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
+                return SMSNPlatform.isModLoaded("immersiveengineering");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
-                return true;
+                return false;
         }
     }
 

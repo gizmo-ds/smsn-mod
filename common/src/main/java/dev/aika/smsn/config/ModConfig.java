@@ -14,4 +14,5 @@ public interface ModConfig {
     boolean supplementariesCreditsCheck();
     boolean botaniaContributorCheck();
     boolean bagusLibSupportersCheck();
+    boolean immersiveEngineeringSpecialRevolvers();
 }

@@ -15,6 +15,7 @@
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
     "bagu_chan.bagus_lib.TierHelperMixin",
+    "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "quark.ThreadContributorListLoaderMixin"
