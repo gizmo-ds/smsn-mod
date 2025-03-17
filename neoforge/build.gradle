@@ -55,8 +55,9 @@ dependencies {
     }
     modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_neoforge_version"\
 //    modImplementation "maven.modrinth:blueprint:$rootProject.blueprint_version"
-    modImplementation "com.aetherteam.nitrogen:nitrogen_internals:$rootProject.nitrogen_forge_version"
-    modImplementation "maven.modrinth:bagus-lib:$rootProject.bagus_lib_forge_version"
+    modImplementation "com.aetherteam.nitrogen:nitrogen_internals:$rootProject.nitrogen_neoforge_version"
+    modImplementation "maven.modrinth:bagus-lib:$rootProject.bagus_lib_neoforge_version"
+    modImplementation "maven.modrinth:immersiveengineering:$rootProject.immersive_engineering_neoforge_version"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

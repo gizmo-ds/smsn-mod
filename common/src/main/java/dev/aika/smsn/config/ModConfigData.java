@@ -39,6 +39,9 @@ public class ModConfigData implements ConfigData, ModConfig {
     @ConfigEntry.Gui.Tooltip()
     public boolean bagusLibSupportersCheck = ModConfigDefaults.BAGUS_LIB_SUPPORTERS_CHECK;
 
+    @ConfigEntry.Gui.Tooltip()
+    public boolean immersiveEngineeringSpecialRevolvers = ModConfigDefaults.IMMERSIVE_ENGINEERING_SPECIAL_REVOLVERS;
+
     @Override
     public boolean aetherMoaSkinsFeature() {
         return aetherMoaSkinsFeature;
@@ -92,5 +95,10 @@ public class ModConfigData implements ConfigData, ModConfig {
     @Override
     public boolean bagusLibSupportersCheck() {
         return bagusLibSupportersCheck;
+    }
+
+    @Override
+    public boolean immersiveEngineeringSpecialRevolvers() {
+        return immersiveEngineeringSpecialRevolvers;
     }
 }

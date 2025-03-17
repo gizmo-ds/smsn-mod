@@ -46,6 +46,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 //                return SMSNPlatform.isModLoaded("alexscaves");
             case "bagu_chan.bagus_lib.util.reward.TierHelper":
                 return isModLoaded("bagus_lib");
+            case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
+                return isModLoaded("immersiveengineering");
 //            case "com.teamabnormals.blueprint.client.RewardHandler":
 //                return SMSNPlatform.isModLoaded("blueprint");
             case "org.anti_ad.mc.ipnext.IPNInfoManager":
@@ -58,7 +60,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 //                return SMSNPlatform.isModLoaded("quark");
             default:
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
-                return true;
+                return false;
         }
     }
 

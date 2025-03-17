@@ -21,6 +21,8 @@ public class ModConfigDefaults implements ModConfig {
 
     public static final boolean BAGUS_LIB_SUPPORTERS_CHECK = false;
 
+    public static final boolean IMMERSIVE_ENGINEERING_SPECIAL_REVOLVERS = false;
+
     public boolean aetherMoaSkinsFeature() {
         return AETHER_MOA_SKINS_FEATURE;
     }
@@ -63,5 +65,9 @@ public class ModConfigDefaults implements ModConfig {
 
     public boolean bagusLibSupportersCheck() {
         return BAGUS_LIB_SUPPORTERS_CHECK;
+    }
+
+    public boolean immersiveEngineeringSpecialRevolvers() {
+        return IMMERSIVE_ENGINEERING_SPECIAL_REVOLVERS;
     }
 }

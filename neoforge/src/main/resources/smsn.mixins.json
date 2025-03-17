@@ -9,6 +9,7 @@
   "mixins": [
     "aetherteam.UserData$ServerMixin",
     "bagu_chan.bagus_lib.TierHelperMixin",
+    "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
     "kubejs.KubeJSModEventHandlerMixin"
   ],

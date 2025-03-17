@@ -23,5 +23,7 @@
   "text.autoconfig.smsn.option.botaniaContributorCheck": "Botania contributor check",
   "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "Allow Botania contributor checks",
   "text.autoconfig.smsn.option.bagusLibSupportersCheck": "Bagus Lib supporters check",
-  "text.autoconfig.smsn.option.bagusLibSupportersCheck.@Tooltip": "Allow Bagus Lib supporters checks"
+  "text.autoconfig.smsn.option.bagusLibSupportersCheck.@Tooltip": "Allow Bagus Lib supporters checks",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers": "ImmersiveEngineering special revolver request",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers.@Tooltip": "Allow ImmersiveEngineering special revolver request"
 }

@@ -23,5 +23,7 @@
   "text.autoconfig.smsn.option.botaniaContributorCheck": "植物魔法 贡献者检查",
   "text.autoconfig.smsn.option.botaniaContributorCheck.@Tooltip": "是否允许 植物魔法 进行贡献者检查",
   "text.autoconfig.smsn.option.bagusLibSupportersCheck": "Bagus Lib 赞助者检查",
-  "text.autoconfig.smsn.option.bagusLibSupportersCheck.@Tooltip": "是否允许 Bagus Lib 进行赞助者检查"
+  "text.autoconfig.smsn.option.bagusLibSupportersCheck.@Tooltip": "是否允许 Bagus Lib 进行赞助者检查",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers": "沉浸工程 特殊左轮请求",
+  "text.autoconfig.smsn.option.immersiveEngineeringSpecialRevolvers.@Tooltip": "是否允许 沉浸工程 特殊左轮请求"
 }
