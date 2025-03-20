@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-issueTrackerURL = "https://github.com/gizmo-ds/i-have-slept-mod/issues"
+issueTrackerURL = "https://github.com/gizmo-ds/smsn-mod/issues"
 license = "MIT"
 
 [[mods]]
