@@ -1,8 +1,10 @@
 package dev.aika.smsn.neoforge;
 
 import dev.aika.smsn.SMSN;
-import dev.aika.smsn.config.ClothConfigCommonImpl;
 import dev.aika.smsn.neoforge.config.ClothConfigImpl;
+import dev.aika.smsn.neoforge.config.ModConfigDataNeoForge;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -16,7 +18,11 @@ public class SMSNClientNeoForge {
     }
 
     public SMSNClientNeoForge(IEventBus ignoredModEventBus, ModContainer modContainer) {
-        if (clothConfigIsInstalled()) ClothConfigCommonImpl.loadConfig();
+        if (clothConfigIsInstalled()) {
+            var holder = AutoConfig.register(ModConfigDataNeoForge.class, JanksonConfigSerializer::new);
+            SMSN.CONFIG = holder.getConfig();
+            AutoConfig.getGuiRegistry(ModConfigDataNeoForge.class);
+        }
         modContainer.registerExtensionPoint(IConfigScreenFactory.class, ClothConfigImpl::setup);
     }
 }

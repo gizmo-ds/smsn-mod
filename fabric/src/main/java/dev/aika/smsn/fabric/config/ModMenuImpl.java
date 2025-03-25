@@ -3,7 +3,6 @@ package dev.aika.smsn.fabric.config;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import dev.aika.smsn.gui.MissingClothConfigScreen;
-import dev.aika.smsn.config.ModConfigData;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,7 +13,7 @@ public class ModMenuImpl implements ModMenuApi {
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
         return parent -> {
             if (ClothConfigImpl.clothConfigIsInstalled())
-                return AutoConfig.getConfigScreen(ModConfigData.class, parent).get();
+                return AutoConfig.getConfigScreen(ModConfigDataFabric.class, parent).get();
             else return new MissingClothConfigScreen(parent);
         };
     }

@@ -1,7 +1,6 @@
 package dev.aika.smsn.neoforge.config;
 
 import dev.aika.smsn.gui.MissingClothConfigScreen;
-import dev.aika.smsn.config.ModConfigData;
 import dev.aika.smsn.neoforge.SMSNPlatformImpl;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.gui.screens.Screen;
@@ -14,7 +13,7 @@ public class ClothConfigImpl {
 
     public static Screen setup(ModContainer ignoredModContainer, Screen parent) {
         if (clothConfigIsInstalled())
-            return AutoConfig.getConfigScreen(ModConfigData.class, parent).get();
+            return AutoConfig.getConfigScreen(ModConfigDataNeoForge.class, parent).get();
         else return new MissingClothConfigScreen(parent);
     }
 }
