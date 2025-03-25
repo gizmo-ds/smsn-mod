@@ -1,7 +1,9 @@
 package dev.aika.smsn.fabric.config;
 
-import dev.aika.smsn.config.ClothConfigCommonImpl;
+import dev.aika.smsn.SMSN;
 import dev.aika.smsn.fabric.SMSNPlatformImpl;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 
 public class ClothConfigImpl {
     public static boolean clothConfigIsInstalled() {
@@ -9,6 +11,10 @@ public class ClothConfigImpl {
     }
 
     public static void loadConfig() {
-        if (clothConfigIsInstalled()) ClothConfigCommonImpl.loadConfig();
+        if (clothConfigIsInstalled()) {
+            var holder = AutoConfig.register(ModConfigDataFabric.class, JanksonConfigSerializer::new);
+            SMSN.CONFIG = holder.getConfig();
+            AutoConfig.getGuiRegistry(ModConfigDataFabric.class);
+        }
     }
 }

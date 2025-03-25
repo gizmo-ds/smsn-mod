@@ -1,10 +1,10 @@
 package dev.aika.smsn.forge.config;
 
-import dev.aika.smsn.config.ClothConfigCommonImpl;
+import dev.aika.smsn.SMSN;
 import dev.aika.smsn.config.MissingClothConfigScreen;
-import dev.aika.smsn.config.ModConfigData;
 import dev.aika.smsn.forge.SMSNPlatformImpl;
 import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 
@@ -18,12 +18,16 @@ public class ClothConfigImpl {
                 () -> new ConfigScreenHandler.ConfigScreenFactory(
                         (client, parent) -> {
                             if (clothConfigIsInstalled())
-                                return AutoConfig.getConfigScreen(ModConfigData.class, parent).get();
+                                return AutoConfig.getConfigScreen(ModConfigDataForge.class, parent).get();
                             else return new MissingClothConfigScreen(parent);
                         }));
     }
 
     public static void loadConfig() {
-        if (clothConfigIsInstalled()) ClothConfigCommonImpl.loadConfig();
+        if (clothConfigIsInstalled()) {
+            var holder = AutoConfig.register(ModConfigDataForge.class, JanksonConfigSerializer::new);
+            SMSN.CONFIG = holder.getConfig();
+            AutoConfig.getGuiRegistry(ModConfigDataForge.class);
+        }
     }
 }

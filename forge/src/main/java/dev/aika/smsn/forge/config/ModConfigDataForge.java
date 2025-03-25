@@ -1,13 +1,14 @@
-package dev.aika.smsn.config;
+package dev.aika.smsn.forge.config;
 
 import dev.aika.smsn.SMSN;
+import dev.aika.smsn.config.ModConfig;
+import dev.aika.smsn.config.ModConfigDefaults;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@SuppressWarnings("CanBeFinal")
 @Config(name = SMSN.MOD_ID)
-public class ModConfigData implements ConfigData, ModConfig {
+public class ModConfigDataForge implements ConfigData, ModConfig {
     @ConfigEntry.Gui.Tooltip()
     public boolean aetherMoaSkinsFeature = ModConfigDefaults.AETHER_MOA_SKINS_FEATURE;
 

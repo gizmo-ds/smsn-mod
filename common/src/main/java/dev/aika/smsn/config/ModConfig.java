@@ -1,5 +1,6 @@
 package dev.aika.smsn.config;
 
+@SuppressWarnings("BooleanMethodIsAlwaysInverted")
 public interface ModConfig {
     boolean aetherMoaSkinsFeature();
     boolean quarkContributorCheck();
