@@ -40,21 +40,20 @@ dependencies {
 
     modImplementation "me.shedaniel.cloth:cloth-config-forge:$rootProject.cloth_config_version"
 
-
 //    localRuntime("io.github.llamalad7:mixinextras-forge:0.3.6")
 //    modImplementation "maven.modrinth:quark:$rootProject.quark_version"
 //    modLocalRuntime "maven.modrinth:zeta:$rootProject.zeta_version"
 //    modImplementation "maven.modrinth:alexs-caves:$rootProject.alexs_caves_version"
 //    modImplementation "maven.modrinth:citadel:$rootProject.citadel_version"
-//    modImplementation "maven.modrinth:petrolpark:$rootProject.petrolpark_version"
+    modImplementation "maven.modrinth:petrolpark:$rootProject.petrolpark_version"
 //    modLocalRuntime("com.simibubi.create:create-$rootProject.minecraft_version:$rootProject.create_version:slim") { transitive = false }
 //    modLocalRuntime "com.jozufozu.flywheel:flywheel-forge-$rootProject.minecraft_version:$rootProject.flywheel_version"
 //    modLocalRuntime "com.tterrag.registrate:Registrate:$rootProject.registrate_version"
     modImplementation("dev.latvian.mods:kubejs-neoforge:$rootProject.kubejs_version") {
         exclude(group: "dev.latvian.apps")
     }
-    modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_neoforge_version"\
-//    modImplementation "maven.modrinth:blueprint:$rootProject.blueprint_version"
+    modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_neoforge_version"
+    modImplementation "maven.modrinth:blueprint:$rootProject.blueprint_version"
     modImplementation "com.aetherteam.nitrogen:nitrogen_internals:$rootProject.nitrogen_neoforge_version"
     modImplementation "maven.modrinth:bagus-lib:$rootProject.bagus_lib_neoforge_version"
     modImplementation "maven.modrinth:immersiveengineering:$rootProject.immersive_engineering_neoforge_version"

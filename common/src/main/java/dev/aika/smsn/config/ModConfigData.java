@@ -27,8 +27,8 @@ public class ModConfigData implements ConfigData, ModConfig {
 //    @ConfigEntry.Gui.Tooltip()
 //    public boolean alexModsContributorCheck = ModConfigDefaults.ALEX_MODS_CONTRIBUTOR_CHECK;
 
-//    @ConfigEntry.Gui.Tooltip()
-//    public boolean petrolparkBadgeCheck = ModConfigDefaults.PETROLPARK_BADGE_CHECK;
+    @ConfigEntry.Gui.Tooltip()
+    public boolean petrolparkBadgeCheck = ModConfigDefaults.PETROLPARK_BADGE_CHECK;
 
 //    @ConfigEntry.Gui.Tooltip()
 //    public boolean obscureModsCheck = ModConfigDefaults.OBSCURE_MODS_CHECK;
@@ -77,10 +77,10 @@ public class ModConfigData implements ConfigData, ModConfig {
 //        return alexModsContributorCheck;
 //    }
 
-//    @Override
-//    public boolean petrolparkBadgeCheck() {
-//        return petrolparkBadgeCheck;
-//    }
+    @Override
+    public boolean petrolparkBadgeCheck() {
+        return petrolparkBadgeCheck;
+    }
 
 //    @Override
 //    public boolean obscureModsCheck() {

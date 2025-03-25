@@ -7,7 +7,7 @@ public interface ModConfig {
     boolean kubejsUpdateCheck();
 //    boolean citadelAprilFoolsContent();
 //    boolean alexModsContributorCheck();
-//    boolean petrolparkBadgeCheck();
+    boolean petrolparkBadgeCheck();
 //    boolean obscureModsCheck();
     boolean supplementariesCreditsCheck();
 //    boolean botaniaContributorCheck();

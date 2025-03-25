@@ -48,14 +48,14 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
                 return isModLoaded("bagus_lib");
             case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
                 return isModLoaded("immersiveengineering");
-//            case "com.teamabnormals.blueprint.client.RewardHandler":
-//                return SMSNPlatform.isModLoaded("blueprint");
+            case "com.teamabnormals.blueprint.client.RewardHandler":
+                return SMSNPlatform.isModLoaded("blueprint");
             case "org.anti_ad.mc.ipnext.IPNInfoManager":
                 return isModLoaded("inventoryprofilesnext");
             case "dev.latvian.mods.kubejs.KubeJSModEventHandler":
                 return isModLoaded("kubejs");
-//            case "com.petrolpark.badge.BadgeHandler":
-//                return SMSNPlatform.isModLoaded("petrolpark");
+            case "com.petrolpark.badge.BadgeHandler":
+                return SMSNPlatform.isModLoaded("petrolpark");
 //            case "org.violetmoon.quark.base.handler.ContributorRewardHandler$ThreadContributorListLoader":
 //                return SMSNPlatform.isModLoaded("quark");
             default:

@@ -5,13 +5,15 @@
   "minVersion": "0.8",
   "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
+    "blueprint.RewardHandlerMixin"
   ],
   "mixins": [
     "aetherteam.UserData$ServerMixin",
     "bagu_chan.bagus_lib.TierHelperMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
-    "kubejs.KubeJSModEventHandlerMixin"
+    "kubejs.KubeJSModEventHandlerMixin",
+    "petrolpark.BadgeHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
