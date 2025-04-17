@@ -8,8 +8,6 @@ public class ModConfigDefaults implements ModConfig {
 
     public static final boolean IPN_UPDATE_CHECK_AND_USER_TRACKING = false;
 
-    public static final boolean KUBEJS_UPDATE_CHECK = false;
-
     public static final boolean XAERO_MAP_PATREON_CHECK = false;
     public static final boolean XAERO_MAP_VERSION_CHECK = false;
 
@@ -40,10 +38,6 @@ public class ModConfigDefaults implements ModConfig {
 
     public boolean ipnUpdateCheckAndUserTracking() {
         return IPN_UPDATE_CHECK_AND_USER_TRACKING;
-    }
-
-    public boolean kubejsUpdateCheck() {
-        return KUBEJS_UPDATE_CHECK;
     }
 
     public boolean xaeroMapPatreonCheck() {

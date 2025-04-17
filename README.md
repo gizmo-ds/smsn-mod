@@ -20,7 +20,6 @@
 | [Xaero's Minimap](https://modrinth.com/mod/1bokaNcj)         | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
 | [Xaero's World Map](https://modrinth.com/mod/NcUtCpym)       | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
 | [Petrolpark's Library](https://modrinth.com/mod/petrolpark)  | Forge        | 禁止了获取 Badges 的请求. EarlyBird? 这真的不是什么违反 Mojang 的 EULA 的东西吗?                                |
-| [KubeJS](https://modrinth.com/mod/kubejs)                    | Forge/Fabric | 禁止了更新检测, 为什么不允许用户禁止这个行为?                                                                  |
 | [Inventory Profiles Next](https://modrinth.com/mod/O7RBXm3n) | Forge/Fabric | 禁止了更新检测和追踪请求, 我不明白这个mod中的隐私设定有何意义.                                                        |
 | [Obscure API](https://modrinth.com/mod/fU7jbFHc)             | Forge        | 禁止了获取作品展示信息的请求, 我不认为这些信息对于用户来说有什么意义.                                                      |
 | [Blueprint](https://modrinth.com/mod/VsM5EDoI)               | Forge        | 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false` 的情况下不会再发送请求.                           |

@@ -10,8 +10,6 @@
   "text.autoconfig.smsn.option.quarkContributorCheck.@Tooltip": "是否允许 夸克 进行贡献者检查",
   "text.autoconfig.smsn.option.ipnUpdateCheckAndUserTracking": "一键背包整理Next 更新检查和用户追踪",
   "text.autoconfig.smsn.option.ipnUpdateCheckAndUserTracking.@Tooltip": "是否允许 一键背包整理Next 进行更新检查和用户追踪",
-  "text.autoconfig.smsn.option.kubejsUpdateCheck": "KubeJS 更新检查",
-  "text.autoconfig.smsn.option.kubejsUpdateCheck.@Tooltip": "是否允许 KubeJS 进行更新检查",
   "text.autoconfig.smsn.option.xaeroMapPatreonCheck": "Xaero的地图 赞助者检查",
   "text.autoconfig.smsn.option.xaeroMapPatreonCheck.@Tooltip": "是否允许 Xaero的地图 进行赞助者检查",
   "text.autoconfig.smsn.option.xaeroMapVersionCheck": "Xaero的地图 更新检查",

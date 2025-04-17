@@ -10,8 +10,6 @@
   "text.autoconfig.smsn.option.quarkContributorCheck.@Tooltip": "Allow Quark contributor checks",
   "text.autoconfig.smsn.option.ipnUpdateCheckAndUserTracking": "Inventory Profiles Next update Check & user tracking",
   "text.autoconfig.smsn.option.ipnUpdateCheckAndUserTracking.@Tooltip": "Allow Inventory Profiles Next update Check & user tracking",
-  "text.autoconfig.smsn.option.kubejsUpdateCheck": "KubeJS Update Check",
-  "text.autoconfig.smsn.option.kubejsUpdateCheck.@Tooltip": "Allow KubeJS update checks",
   "text.autoconfig.smsn.option.xaeroMapPatreonCheck": "Xaero's Maps Patreon Check",
   "text.autoconfig.smsn.option.xaeroMapPatreonCheck.@Tooltip": "Allow Xaero's Maps patreon checks",
   "text.autoconfig.smsn.option.xaeroMapVersionCheck": "Xaero's Maps Update Check",

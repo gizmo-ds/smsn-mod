@@ -16,9 +16,6 @@ public class ModConfigDataFabric implements ConfigData, ModConfig {
     public boolean ipnUpdateCheckAndUserTracking = ModConfigDefaults.IPN_UPDATE_CHECK_AND_USER_TRACKING;
 
     @ConfigEntry.Gui.Tooltip()
-    public boolean kubejsUpdateCheck = ModConfigDefaults.KUBEJS_UPDATE_CHECK;
-
-    @ConfigEntry.Gui.Tooltip()
     public boolean xaeroMapPatreonCheck = ModConfigDefaults.XAERO_MAP_PATREON_CHECK;
     @ConfigEntry.Gui.Tooltip()
     public boolean xaeroMapVersionCheck = ModConfigDefaults.XAERO_MAP_VERSION_CHECK;
@@ -39,11 +36,6 @@ public class ModConfigDataFabric implements ConfigData, ModConfig {
     @Override
     public boolean ipnUpdateCheckAndUserTracking() {
         return ipnUpdateCheckAndUserTracking;
-    }
-
-    @Override
-    public boolean kubejsUpdateCheck() {
-        return kubejsUpdateCheck;
     }
 
     @Override

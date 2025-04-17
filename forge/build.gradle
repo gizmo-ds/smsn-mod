@@ -54,7 +54,6 @@ dependencies {
     modLocalRuntime("com.simibubi.create:create-$rootProject.minecraft_version:$rootProject.create_version:slim") { transitive = false }
     modLocalRuntime "com.jozufozu.flywheel:flywheel-forge-$rootProject.minecraft_version:$rootProject.flywheel_version"
     modLocalRuntime "com.tterrag.registrate:Registrate:$rootProject.registrate_version"
-    modLocalRuntime "dev.latvian.mods:kubejs-forge:$rootProject.kubejs_version"
     modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_forge_version"
     modImplementation "maven.modrinth:obscure-api:$rootProject.obscure_api_forge_version"
     modImplementation "maven.modrinth:blueprint:$rootProject.blueprint_version"
