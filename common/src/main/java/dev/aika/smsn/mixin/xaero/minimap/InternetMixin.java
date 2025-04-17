@@ -11,6 +11,6 @@ import xaero.common.IXaeroMinimap;
 public class InternetMixin {
     @Inject(method = "checkModVersion", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onCheckModVersion(IXaeroMinimap modMain, CallbackInfo ci) {
-        if (!SMSN.CONFIG.xaeroMapVersionCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isXaeroMapVersionCheck()) ci.cancel();
     }
 }

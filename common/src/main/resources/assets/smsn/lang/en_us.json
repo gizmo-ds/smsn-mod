@@ -1,8 +1,12 @@
 {
+  "modmenu.nameTranslation.smsn": "Save My Shit Network",
+  "modmenu.descriptionTranslation.smsn": "Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.",
   "gui.smsn.missing_cloth_config.title": "Couldn't open in-game configuration",
   "gui.smsn.missing_cloth_config.message": "You'll need to install the Cloth Config mod to use the in-game configuration feature",
   "gui.smsn.missing_cloth_config.modrinth_download": "Open Cloth Config page on Modrinth",
   "gui.smsn.missing_cloth_config.curseforge_download": "Open Cloth Config page on CurseForge",
+  "config.zako.sponsor.description": "❤ Enjoy %1$s ? Support the author on %2$s ! ❤",
+  "config.zako.sponsor.description.afdian": "AFDIAN",
   "text.autoconfig.smsn.title": "Save My Shit Network",
   "text.autoconfig.smsn.option.aetherMoaSkinsFeature": "The Aether MOA Skins Feature",
   "text.autoconfig.smsn.option.aetherMoaSkinsFeature.@Tooltip": "Enable The Aether Moa feature(if disable, Sponsor skins will not be available)",

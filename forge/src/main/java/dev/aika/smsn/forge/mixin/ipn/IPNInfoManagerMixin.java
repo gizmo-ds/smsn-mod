@@ -11,11 +11,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class IPNInfoManagerMixin {
     @Inject(method = "doCheckVersion", at = @At("HEAD"), cancellable = true)
     public void dontDoCheckVersion(CallbackInfo ci) {
-        if (!SMSN.CONFIG.ipnUpdateCheckAndUserTracking()) ci.cancel();
+        if (!SMSN.CONFIG.isIpnUpdateCheckAndUserTracking()) ci.cancel();
     }
 
     @Inject(method = "doSessionKeepAlive", at = @At("HEAD"), cancellable = true)
     public void dontDoSessionKeepAlive(CallbackInfo ci) {
-        if (!SMSN.CONFIG.ipnUpdateCheckAndUserTracking()) ci.cancel();
+        if (!SMSN.CONFIG.isIpnUpdateCheckAndUserTracking()) ci.cancel();
     }
 }

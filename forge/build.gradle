@@ -61,6 +61,9 @@ dependencies {
     modImplementation "maven.modrinth:bagus-lib:$rootProject.bagus_lib_forge_version"
     modImplementation "maven.modrinth:immersiveengineering:$rootProject.immersive_engineering_forge_version"
 
+    shadowBundle "blue.endless:jankson:1.2.3"
+    forgeRuntimeLibrary "blue.endless:jankson:1.2.3"
+
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
@@ -79,6 +82,8 @@ processResources {
 shadowJar {
     configurations = [project.configurations.shadowBundle]
     archiveClassifier = 'dev-shadow'
+
+    relocate 'blue.endless.jankson', "${maven_group}.libs.jankson"
 }
 
 remapJar {

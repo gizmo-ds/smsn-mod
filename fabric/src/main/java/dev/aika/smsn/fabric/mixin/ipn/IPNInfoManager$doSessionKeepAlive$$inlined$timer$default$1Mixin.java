@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin {
     @Inject(method = "run", at = @At("HEAD"), cancellable = true)
     public void dontRun(CallbackInfo ci) {
-        if (!SMSN.CONFIG.ipnUpdateCheckAndUserTracking()) ci.cancel();
+        if (!SMSN.CONFIG.isIpnUpdateCheckAndUserTracking()) ci.cancel();
     }
 }

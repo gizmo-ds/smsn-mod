@@ -11,6 +11,6 @@ import xaero.common.IXaeroMinimap;
 public class PatreonMixin {
     @Inject(method = "checkPatreon(Lxaero/common/IXaeroMinimap;)V", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onCheckPatreon(IXaeroMinimap modMain, CallbackInfo ci) {
-        if (!SMSN.CONFIG.xaeroMapPatreonCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isXaeroMapPatreonCheck()) ci.cancel();
     }
 }

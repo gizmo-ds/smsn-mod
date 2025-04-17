@@ -12,6 +12,6 @@ import vazkii.botania.common.handler.ContributorList;
 public abstract class ContributorListMixin {
     @Inject(method = "fetch", at = @At("HEAD"), cancellable = true)
     private static void fetch(CallbackInfo ci) {
-        if (!SMSN.CONFIG.botaniaContributorCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isBotaniaContributorCheck()) ci.cancel();
     }
 }

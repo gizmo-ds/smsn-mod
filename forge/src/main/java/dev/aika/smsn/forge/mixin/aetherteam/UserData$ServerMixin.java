@@ -15,6 +15,6 @@ import java.util.UUID;
 public abstract class UserData$ServerMixin {
     @Inject(method = "sendUserRequest", at = @At("HEAD"), cancellable = true)
     private static void sendUserRequest(MinecraftServer server, ServerPlayer serverPlayer, UUID uuid, CallbackInfo ci) {
-        if (!SMSN.CONFIG.aetherMoaSkinsFeature()) ci.cancel();
+        if (!SMSN.CONFIG.isAetherMoaSkinsFeature()) ci.cancel();
     }
 }

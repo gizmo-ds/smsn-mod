@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Save My Shit Network"
 authors = "Gizmo"
 description = '''
-Save My Shit Network
+Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.
 '''
 logoFile = "smsn-icon.png"
 displayURL = "https://github.com/gizmo-ds/smsn-mod"

@@ -10,6 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ThreadContributorListLoaderMixin {
     @Inject(method = "run", at = @At("HEAD"), cancellable = true, remap = false)
     private void onRun(CallbackInfo ci) {
-        if (!SMSN.CONFIG.quarkContributorCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isQuarkContributorCheck()) ci.cancel();
     }
 }

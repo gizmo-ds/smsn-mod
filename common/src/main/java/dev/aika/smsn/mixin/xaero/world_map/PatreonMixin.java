@@ -10,6 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class PatreonMixin {
     @Inject(method = "checkPatreon", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onCheckPatreon(CallbackInfo ci) {
-        if (!SMSN.CONFIG.xaeroMapPatreonCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isXaeroMapPatreonCheck()) ci.cancel();
     }
 }

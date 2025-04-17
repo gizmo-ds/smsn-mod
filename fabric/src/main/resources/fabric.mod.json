@@ -3,7 +3,7 @@
   "id": "smsn",
   "version": "${version}",
   "name": "Save My Shit Network",
-  "description": "Save My Shit Network",
+  "description": "Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.",
   "authors": [
     "Gizmo"
   ],
@@ -20,7 +20,7 @@
       "dev.aika.smsn.fabric.SMSNFabric"
     ],
     "modmenu": [
-      "dev.aika.smsn.fabric.config.ModMenuImpl"
+      "dev.aika.smsn.fabric.compat.cloth.ClothConfigCompat"
     ]
   },
   "mixins": [

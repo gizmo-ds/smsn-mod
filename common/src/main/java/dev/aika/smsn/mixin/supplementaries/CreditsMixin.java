@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class CreditsMixin {
     @Inject(method = "fetchFromServer", at = @At("HEAD"), cancellable = true)
     private static void fetchFromServer(CallbackInfo ci) {
-        if (!SMSN.CONFIG.supplementariesCreditsCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isSupplementariesCreditsCheck()) ci.cancel();
     }
 }
