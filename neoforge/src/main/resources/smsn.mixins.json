@@ -3,7 +3,7 @@
   "package": "dev.aika.smsn.neoforge.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
-  "plugin": "dev.aika.smsn.ModMixinPlugin",
+  "plugin": "dev.aika.smsn.neoforge.ModMixinPlugin",
   "client": [
     "blueprint.RewardHandlerMixin"
   ],
@@ -12,7 +12,6 @@
     "bagu_chan.bagus_lib.TierHelperMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
-    "kubejs.KubeJSModEventHandlerMixin",
     "petrolpark.BadgeHandlerMixin"
   ],
   "injectors": {

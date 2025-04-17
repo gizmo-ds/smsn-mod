@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class ImmersiveEngineeringMixin {
     @Inject(method = "run", at = @At("HEAD"), cancellable = true)
     public void run(CallbackInfo ci) {
-        if (!SMSN.CONFIG.immersiveEngineeringSpecialRevolvers()) ci.cancel();
+        if (!SMSN.CONFIG.isImmersiveEngineeringSpecialRevolvers()) ci.cancel();
     }
 }

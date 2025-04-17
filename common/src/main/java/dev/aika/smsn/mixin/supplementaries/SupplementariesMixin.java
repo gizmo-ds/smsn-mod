@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class SupplementariesMixin {
     @Inject(method = "commonInit", at = @At(value = "INVOKE", target = "Lnet/mehvahdjukaar/supplementaries/common/utils/Credits;fetchFromServer()V"), cancellable = true)
     private static void fetchFromServer(CallbackInfo ci) {
-        SMSN.LOGGER.info("net.mehvahdjukaar.supplementaries.Supplementaries.commonInit -> {}", SMSN.CONFIG.supplementariesCreditsCheck());
-        if (!SMSN.CONFIG.supplementariesCreditsCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isSupplementariesCreditsCheck()) ci.cancel();
     }
 }

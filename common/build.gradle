@@ -5,7 +5,7 @@ architectury {
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
-    implementation "me.shedaniel.cloth:cloth-config-fabric:$rootProject.cloth_config_version"
+    modImplementation "me.shedaniel.cloth:cloth-config:$rootProject.cloth_config_version"
     implementation "maven.modrinth:supplementaries:$rootProject.supplementaries_fabric_version"
 //    implementation "maven.modrinth:botania:$rootProject.botania_fabric_version"
 }

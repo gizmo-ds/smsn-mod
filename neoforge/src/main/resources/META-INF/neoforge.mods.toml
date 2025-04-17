@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "Save My Shit Network"
 authors = "Gizmo"
 description = '''
-Save My Shit Network
+Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.
 '''
 logoFile = "smsn-icon.png"
 displayURL = "https://github.com/gizmo-ds/smsn-mod"
@@ -27,6 +27,13 @@ type = "required"
 versionRange = "[1.21.1,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "cloth_config"
+type = "optional"
+versionRange = "[15.0.130,)"
+ordering = "NONE"
+side = "CLIENT"
 
 [[mixins]]
 config = "smsn.mixins.json"

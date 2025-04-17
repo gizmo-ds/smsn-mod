@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 public abstract class TierHelperMixin {
     @Inject(method = "getSuporterContents", at = @At(value = "INVOKE", target = "Ljava/net/URL;openConnection()Ljava/net/URLConnection;"), cancellable = true)
     private static void onGetSuporterContents(CallbackInfoReturnable<BufferedReader> cir) {
-        if (!SMSN.CONFIG.bagusLibSupportersCheck())
+        if (!SMSN.CONFIG.isBagusLibSupportersCheck())
             cir.setReturnValue(null);
     }
 }

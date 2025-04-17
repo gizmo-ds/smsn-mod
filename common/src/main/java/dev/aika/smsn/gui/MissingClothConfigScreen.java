@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.MultiLineLabel;
+import net.minecraft.client.gui.components.Renderable;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
@@ -34,18 +35,19 @@ public class MissingClothConfigScreen extends Screen {
 
         this.message = MultiLineLabel.create(this.font, Component.translatable("gui.smsn.missing_cloth_config.message"), 300);
         this.addRenderableWidget(Button.builder(Component.translatable("gui.smsn.missing_cloth_config.modrinth_download"),
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_MODRINTH)).bounds(posX, posY - 15, 200, 20).build());
+                b -> Util.getPlatform().openUri(CLOTH_CONFIG_MODRINTH)).bounds(posX, posY, 200, 20).build());
+        posY += 25;
         this.addRenderableWidget(Button.builder(Component.translatable("gui.smsn.missing_cloth_config.curseforge_download"),
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_CURSEFORGE)).bounds(posX, posY - 15 + 30, 200, 20).build());
+                b -> Util.getPlatform().openUri(CLOTH_CONFIG_CURSEFORGE)).bounds(posX, posY, 200, 20).build());
+        posY += 25;
         this.addRenderableWidget(Button.builder(CommonComponents.GUI_BACK,
-                (pressed) -> Minecraft.getInstance().setScreen(this.parent)).bounds(posX, posY + 50, 200, 20).build());
+                (pressed) -> Minecraft.getInstance().setScreen(this.parent)).bounds(posX, posY, 200, 20).build());
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
-        this.renderBackground(guiGraphics, mouseX, mouseY, partialTick);
-        guiGraphics.drawCenteredString(font, title, width / 2, 80, CommonColors.WHITE);
-        this.message.renderCentered(guiGraphics, this.width / 2, 100);
-        super.render(guiGraphics, mouseX, mouseY, partialTick);
+    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        super.render(graphics, mouseX, mouseY, partialTick);
+        graphics.drawCenteredString(font, title, width / 2, this.height / 2 - 60, CommonColors.WHITE);
+        this.message.renderCentered(graphics, this.width / 2, this.height / 2 - 40);
     }
 }

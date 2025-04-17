@@ -42,6 +42,8 @@ dependencies {
     modLocalRuntime "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
     modImplementation "maven.modrinth:inventory-profiles-next:$rootProject.ipn_fabric_version"
 
+    shadowBundle "blue.endless:jankson:1.2.3"
+
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 }
@@ -60,6 +62,8 @@ processResources {
 shadowJar {
     configurations = [project.configurations.shadowBundle]
     archiveClassifier = 'dev-shadow'
+
+    relocate 'blue.endless.jankson', "${maven_group}.libs.jankson"
 }
 
 remapJar {

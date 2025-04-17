@@ -12,6 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class BadgeHandlerMixin {
     @Inject(method = "fetchAndAddBadgesIncludingEarlyBird", at = @At("HEAD"), cancellable = true)
     private static void fetchAndAddBadgesIncludingEarlyBird(ServerPlayer player, CallbackInfo ci) {
-        if (!SMSN.CONFIG.petrolparkBadgeCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isPetrolparkBadgeCheck()) ci.cancel();
     }
 }

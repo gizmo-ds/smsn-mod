@@ -7,7 +7,7 @@ import net.neoforged.fml.common.Mod;
 
 @Mod(SMSN.MOD_ID)
 public final class SMSNNeoForge {
-    public SMSNNeoForge(IEventBus modEventBus, ModContainer modContainer) {
+    public SMSNNeoForge(IEventBus ignoredBus, ModContainer ignoredContainer) {
         SMSN.init();
     }
 }
