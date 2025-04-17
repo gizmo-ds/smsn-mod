@@ -60,6 +60,7 @@ dependencies {
     modImplementation "com.aetherteam.nitrogen:nitrogen_internals:$rootProject.nitrogen_forge_version"
     modImplementation "maven.modrinth:bagus-lib:$rootProject.bagus_lib_forge_version"
     modImplementation "maven.modrinth:immersiveengineering:$rootProject.immersive_engineering_forge_version"
+    modImplementation "maven.modrinth:enigmatic-legacy:$rootProject.enigmatic_legacy_forge_version"
 
     shadowBundle "blue.endless:jankson:1.2.3"
     forgeRuntimeLibrary "blue.endless:jankson:1.2.3"

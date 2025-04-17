@@ -28,7 +28,7 @@ public class SMSNClothConfig {
     public static Screen ConfigScreen(Screen parent) {
         final ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(Component.translatable("text.autoconfig.smsn.title"))
+                .setTitle(Component.translatable("config.smsn.title"))
                 .setSavingRunnable(SMSN.CONFIG::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
@@ -51,6 +51,8 @@ public class SMSNClothConfig {
         addEntry(general, BOTH, makeOption(entryBuilder, "botaniaContributorCheck"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "bagusLibSupportersCheck"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
+        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyUpdateCheck"));
+        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyFetchDevotedBelievers"));
 
         builder.transparentBackground();
         return builder.build();
@@ -58,11 +60,16 @@ public class SMSNClothConfig {
 
     private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
         return builder.startBooleanToggle(
-                        Component.translatable("text.autoconfig.smsn.option." + key),
+                        Component.translatable("config.smsn.general." + key),
                         getConfigValueByFieldName(key))
-                .setTooltip(Component.translatable("text.autoconfig.smsn.option." + key + ".@Tooltip"))
+                .setTooltip(Component.translatable("config.smsn.general." + key + ".tooltip"))
                 .setDefaultValue(getConfigDefaultValueByFieldName(key))
                 .setSaveConsumer(value -> setConfigValueByFieldName(key, value))
+                .setYesNoTextSupplier((v -> v ?
+                        Component.translatable("config.smsn.option.allow")
+                                .withStyle(s -> s.withColor(ChatFormatting.GREEN)) :
+                        Component.translatable("config.smsn.option.not_allow")
+                                .withStyle(s -> s.withColor(ChatFormatting.RED))))
                 .build();
     }
 
@@ -107,10 +114,10 @@ public class SMSNClothConfig {
 
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
         return entryBuilder.startTextDescription(
-                Component.translatable("config.zako.sponsor.description",
+                Component.translatable("config.smsn.sponsor.description",
                         Component.translatable("modmenu.nameTranslation.smsn")
                                 .withStyle(s -> s.withColor(ChatFormatting.AQUA).withBold(true)),
-                        Component.translatable("config.zako.sponsor.description.afdian")
+                        Component.translatable("config.smsn.sponsor.description.afdian")
                                 .withStyle(s -> s.withColor(ChatFormatting.DARK_PURPLE).withBold(true)
                                         .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal(ModConstants.SponsorUrl)))
                                         .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ModConstants.SponsorUrl)))

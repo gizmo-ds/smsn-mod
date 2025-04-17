@@ -19,42 +19,18 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        switch (targetClassName) {
-            case "com.github.alexthe666.citadel.CitadelConstants", "com.github.alexthe666.citadel.web.WebHelper":
-                return SMSNPlatform.isModLoaded("citadel");
-            case "com.github.alexmodguy.alexscaves.server.misc.WebHelper":
-                return SMSNPlatform.isModLoaded("alexscaves");
-            case "org.violetmoon.quark.base.handler.ContributorRewardHandler$ThreadContributorListLoader":
-                return SMSNPlatform.isModLoaded("quark");
-            case "xaero.common.misc.Internet", "xaero.common.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaerominimap");
-            case "xaero.map.misc.Internet", "xaero.map.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaeroworldmap");
-            case "com.petrolpark.badge.BadgeHandler":
-                return SMSNPlatform.isModLoaded("petrolpark");
-            case "org.anti_ad.mc.ipnext.IPNInfoManager",
-                 "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
-                 "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
-                return SMSNPlatform.isModLoaded("inventoryprofilesnext");
-            case "com.obscuria.obscureapi.network.ObscuriaCollection",
-                 "com.obscuria.obscureapi.network.ObscuriaCollection$Mod":
-                return SMSNPlatform.isModLoaded("obscure_api");
-            case "com.teamabnormals.blueprint.client.RewardHandler":
-                return SMSNPlatform.isModLoaded("blueprint");
-            case "com.aetherteam.nitrogen.api.users.UserData$Server":
-                return SMSNPlatform.isModLoaded("nitrogen");
-            case "net.mehvahdjukaar.supplementaries.common.utils.Credits":
-                return SMSNPlatform.isModLoaded("supplementaries");
-            case "vazkii.botania.common.handler.ContributorList":
-                return SMSNPlatform.isModLoaded("botania");
-            case "bagu_chan.bagus_lib.util.TierHelper":
-                return SMSNPlatform.isModLoaded("bagus_lib");
-            case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
-                return SMSNPlatform.isModLoaded("immersiveengineering");
-            default:
+        return switch (targetClassName) {
+            case "xaero.common.misc.Internet", "xaero.common.patreon.Patreon" ->
+                    SMSNPlatform.isModLoaded("xaerominimap");
+            case "xaero.map.misc.Internet", "xaero.map.patreon.Patreon" -> SMSNPlatform.isModLoaded("xaeroworldmap");
+            case "net.mehvahdjukaar.supplementaries.common.utils.Credits" ->
+                    SMSNPlatform.isModLoaded("supplementaries");
+            case "vazkii.botania.common.handler.ContributorList" -> SMSNPlatform.isModLoaded("botania");
+            default -> {
                 SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
-                return false;
-        }
+                yield false;
+            }
+        };
     }
 
     @Override

@@ -14,4 +14,6 @@ public class SMSNConfigDefault {
     public static boolean supplementariesCreditsCheck = false;
     public static boolean botaniaContributorCheck = false;
     public static boolean bagusLibSupportersCheck = false;
+    public static boolean enigmaticLegacyUpdateCheck = false;
+    public static boolean enigmaticLegacyFetchDevotedBelievers = false;
 }

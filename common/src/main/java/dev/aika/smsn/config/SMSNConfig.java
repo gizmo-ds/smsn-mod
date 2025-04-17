@@ -26,6 +26,8 @@ public class SMSNConfig extends ModConfig {
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
     public boolean botaniaContributorCheck = SMSNConfigDefault.botaniaContributorCheck;
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
+    public boolean enigmaticLegacyUpdateCheck = SMSNConfigDefault.enigmaticLegacyUpdateCheck;
+    public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 
