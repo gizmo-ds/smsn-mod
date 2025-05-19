@@ -14,9 +14,4 @@ public class SMSNPlatform {
     public static Path getConfigDir() {
         throw new AssertionError();
     }
-
-    @ExpectPlatform
-    public static String getPlatform() {
-        throw new AssertionError();
-    }
 }

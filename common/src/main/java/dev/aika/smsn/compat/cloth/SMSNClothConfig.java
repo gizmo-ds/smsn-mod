@@ -2,8 +2,8 @@ package dev.aika.smsn.compat.cloth;
 
 import dev.aika.smsn.ModConstants;
 import dev.aika.smsn.SMSN;
-import dev.aika.smsn.SMSNPlatform;
 import dev.aika.smsn.config.SMSNConfigDefault;
+import dev.architectury.injectables.targets.ArchitecturyTarget;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -107,7 +107,7 @@ public class SMSNClothConfig {
     }
 
     private static void addEntry(ConfigCategory category, List<String> platforms, BooleanListEntry entry) {
-        if (!platforms.contains(SMSNPlatform.getPlatform())) return;
+        if (!platforms.contains(ArchitecturyTarget.getCurrentTarget())) return;
         category.addEntry(entry);
     }
 
