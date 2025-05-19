@@ -33,6 +33,7 @@ repositories {
         name = 'NeoForged'
         url = 'https://maven.neoforged.net/releases'
     }
+    maven { url = "https://packages.aether-mod.net/Nitrogen" }
 }
 
 dependencies {
