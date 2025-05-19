@@ -13,8 +13,4 @@ public class SMSNPlatformImpl {
     public static Path getConfigDir() {
         return FabricLoader.getInstance().getConfigDir();
     }
-
-    public static String getPlatform() {
-        return "fabric";
-    }
 }

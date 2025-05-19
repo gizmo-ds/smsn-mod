@@ -14,8 +14,4 @@ public class SMSNPlatformImpl {
     public static Path getConfigDir() {
         return FMLPaths.CONFIGDIR.get();
     }
-
-    public static String getPlatform() {
-        return "forge";
-    }
 }
