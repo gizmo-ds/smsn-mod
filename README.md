@@ -8,24 +8,30 @@
 - [Citadel](https://modrinth.com/mod/jJfV67b1)不再会让你的游戏在愚人节崩溃.
 - [Destroy](https://modrinth.com/mod/destroy) 或 [Petrol's Parts](https://modrinth.com/mod/petrols-parts)
   不会再在每次玩家加入时请求一次远程数据库.
-- 更多可参考下面的表格
+- 更多可参考下面的列表
 
 ## 功能
 
-| Mod                                                          | Mod loaders  | Description                                                                               |
-|--------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
-| [Quark](https://modrinth.com/mod/qnQsVE2z)                   | Forge        | 禁止了获取贡献者和赞助者列表.                                                                           |
-| [Alex's Caves](https://modrinth.com/mod/qnQsVE2z)            | Forge        | 禁止了获取最新冲突mod列表的请求, 现在会使用`assets/alexscaves/warning/mod_generation_conflicts.txt`作为冲突mod列表 |
-| [Citadel](https://modrinth.com/mod/jJfV67b1)                 | Forge        | 禁止了获取赞助者列表, 现在会使用`assets/citadel/patreon.txt`. 愚人节彩蛋永远不会被触发.                              |
-| [Xaero's Minimap](https://modrinth.com/mod/1bokaNcj)         | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
-| [Xaero's World Map](https://modrinth.com/mod/NcUtCpym)       | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
-| [Petrolpark's Library](https://modrinth.com/mod/petrolpark)  | Forge        | 禁止了获取 Badges 的请求. EarlyBird? 这真的不是什么违反 Mojang 的 EULA 的东西吗?                                |
-| [Inventory Profiles Next](https://modrinth.com/mod/O7RBXm3n) | Forge/Fabric | 禁止了更新检测和追踪请求, 我不明白这个mod中的隐私设定有何意义.                                                        |
-| [Obscure API](https://modrinth.com/mod/fU7jbFHc)             | Forge        | 禁止了获取作品展示信息的请求, 我不认为这些信息对于用户来说有什么意义.                                                      |
-| [Blueprint](https://modrinth.com/mod/VsM5EDoI)               | Forge        | 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false` 的情况下不会再发送请求.                           |
-| [Supplementaries](https://modrinth.com/mod/fFEIiSDQ)         | Forge/Fabric | 禁止获取赞助者信息的请求.                                                                             |
-| [Botania](https://modrinth.com/mod/pfjLUfGv)                 | Forge/Fabric | 禁止获取贡献者列表.                                                                                |
-| [Bagus Lib](https://modrinth.com/mod/95nSN4Rd)               | Forge        | 禁止获取赞助者信息的请求.                                                                             |
+```yaml
+#file: noinspection SpellCheckingInspection
+Neoforge:
+  - Actually Additions
+  - Bagus Lib
+  - Blueprint
+  - Immersive Engineering
+  - Immersive Caves
+  - Nitrogen (The Aether Team)
+  - Petrolpark's Library
+  - Placebo
+  - Iris Shader
+  - Supplementaries
+  - Inventory Profiles Next
+
+Fabric:
+  - Supplementaries
+  - Inventory Profiles Next
+  - Iris Shader
+```
 
 ## 为什么?
 

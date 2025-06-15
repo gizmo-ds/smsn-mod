@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
+    "iris.UpdateCheckerMixin"
   ],
   "mixins": [
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",

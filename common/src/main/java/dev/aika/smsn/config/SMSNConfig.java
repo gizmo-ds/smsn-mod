@@ -26,6 +26,11 @@ public class SMSNConfig extends ModConfig {
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
     public boolean enigmaticLegacyUpdateCheck = SMSNConfigDefault.enigmaticLegacyUpdateCheck;
     public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
+    public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
+    public boolean placeboWings = SMSNConfigDefault.placeboWings;
+    public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
+    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+    public boolean actuallyAdditionsSpecialPeopleStuff = SMSNConfigDefault.actuallyAdditionsSpecialPeopleStuff;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

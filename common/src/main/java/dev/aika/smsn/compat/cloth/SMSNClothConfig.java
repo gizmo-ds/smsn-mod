@@ -32,41 +32,45 @@ public class SMSNClothConfig {
                 .setSavingRunnable(SMSN.CONFIG::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-        final ConfigCategory general = builder.getOrCreateCategory(Component.literal("General"));
+        final ConfigCategory general = builder.getOrCreateCategory(Component.translatable("config.smsn.general"));
         general.addEntry(sponsorDescription(entryBuilder));
 
-        final var forgeOnly = List.of("neoforge");
+        final ConfigCategory qol = builder.getOrCreateCategory(Component.translatable("config.smsn.qol"));
+        qol.addEntry(sponsorDescription(entryBuilder));
+
+        final var neoforgeOnly = List.of("neoforge");
         final var BOTH = List.of("neoforge", "fabric");
 
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "quarkContributorCheck"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
         addEntry(general, BOTH, makeOption(entryBuilder, "ipnUpdateCheckAndUserTracking"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "citadelAprilFoolsContent"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "alexModsContributorCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "petrolparkBadgeCheck"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "obscureModsCheck"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "petrolparkBadgeCheck"));
         addEntry(general, BOTH, makeOption(entryBuilder, "supplementariesCreditsCheck"));
-//        addEntry(general, BOTH, makeOption(entryBuilder, "botaniaContributorCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "bagusLibSupportersCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyUpdateCheck"));
-//        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyFetchDevotedBelievers"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "bagusLibSupportersCheck"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboTrails"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboWings"));
+        addEntry(general, BOTH, makeOption(entryBuilder, "irisUpdateCheck"));
+
+        addEntry(qol, neoforgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));
 
         builder.transparentBackground();
         return builder.build();
     }
 
     private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
+        return makeOption(builder, "general", key);
+    }
+
+    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String category, String key) {
         return builder.startBooleanToggle(
-                        Component.translatable("config.smsn.general." + key),
+                        Component.translatable(String.format("config.smsn.%s.%s", category, key)),
                         getConfigValueByFieldName(key))
-                .setTooltip(Component.translatable("config.smsn.general." + key + ".tooltip"))
                 .setDefaultValue(getConfigDefaultValueByFieldName(key))
                 .setSaveConsumer(value -> setConfigValueByFieldName(key, value))
                 .setYesNoTextSupplier((v -> v ?
-                        Component.translatable("config.smsn.option.allow")
+                        Component.translatable("config.smsn.option.yes")
                                 .withStyle(s -> s.withColor(ChatFormatting.GREEN)) :
-                        Component.translatable("config.smsn.option.not_allow")
+                        Component.translatable("config.smsn.option.no")
                                 .withStyle(s -> s.withColor(ChatFormatting.RED))))
                 .build();
     }

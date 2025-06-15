@@ -5,14 +5,19 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
-    "blueprint.RewardHandlerMixin"
+    "blueprint.RewardHandlerMixin",
+    "iris.UpdateCheckerMixin"
   ],
   "mixins": [
+    "actuallyadditions.ThreadSpecialFetcherMixin",
     "aetherteam.UserData$ServerMixin",
-    "bagu_chan.bagus_lib.TierHelperMixin",
+    "bagus_lib.TierHelperMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
+    "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
+    "placebo.TrailsManagerMixin",
+    "placebo.WingsManagerMixin",
     "supplementaries.CreditsMixin"
   ],
   "injectors": {

@@ -14,4 +14,9 @@ public class SMSNConfigDefault {
     public static boolean bagusLibSupportersCheck = false;
     public static boolean enigmaticLegacyUpdateCheck = false;
     public static boolean enigmaticLegacyFetchDevotedBelievers = false;
+    public static boolean placeboTrails = false;
+    public static boolean placeboWings = false;
+    public static boolean irisUpdateCheck = false;
+    public static boolean immersiveCavesDiscordMessage = false;
+    public static boolean actuallyAdditionsSpecialPeopleStuff = false;
 }

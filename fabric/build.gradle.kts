@@ -1,4 +1,4 @@
-@file:Suppress("UnstableApiUsage")
+@file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
     id("com.github.johnrengelman.shadow")
@@ -37,13 +37,16 @@ dependencies {
     }
     modImplementation("com.terraformersmc:modmenu:11.0.3")
 
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
+    modLocalRuntime("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
 
     // Supplementaries
     modLocalRuntime("maven.modrinth:moonlight:WGUxPaDX")
     modImplementation("maven.modrinth:supplementaries:${mod.prop("fabric.supplementaries")}")
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("fabric.ipn")}")
+    // Iris Shader
+    modLocalRuntime("maven.modrinth:sodium:RncWhTxD")
+    modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

@@ -91,6 +91,14 @@ dependencies {
     modLocalRuntime("malte0811:BlockModelSplitter:2.0.1")
     modLocalRuntime("malte0811:DualCodecs:0.1.2")
     modImplementation("blusunrize.immersiveengineering:ImmersiveEngineering:${mod.prop("neoforge.immersive_engineering")}")
+    // Placebo
+    modImplementation("curse.maven:placebo-283644:${mod.prop("neoforge.placebo")}")
+    // Immersive Caves
+    modImplementation("maven.modrinth:immersive-caves:${mod.prop("neoforge.immersive_caves")}")
+    // Iris Shader
+    modCompileOnly("maven.modrinth:iris:${mod.prop("neoforge.iris")}")
+    // Actually Additions
+    modImplementation("maven.modrinth:actually-additions:${mod.prop("neoforge.actually_additions")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")
