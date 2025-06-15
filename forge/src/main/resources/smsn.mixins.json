@@ -1,9 +1,9 @@
 {
   "required": true,
   "package": "dev.aika.smsn.forge.mixin",
+  "plugin": "dev.aika.smsn.ModMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "plugin": "dev.aika.smsn.forge.ModMixinPlugin",
   "client": [
     "blueprint.RewardHandlerMixin",
     "obscure.ObscuriaCollectionMixin",
@@ -20,7 +20,12 @@
     "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
-    "quark.ThreadContributorListLoaderMixin"
+    "quark.ThreadContributorListLoaderMixin",
+    "supplementaries.CreditsMixin",
+    "xaero.minimap.InternetMixin",
+    "xaero.minimap.PatreonMixin",
+    "xaero.world_map.InternetMixin",
+    "xaero.world_map.PatreonMixin"
   ],
   "injectors": {
     "defaultRequire": 1
