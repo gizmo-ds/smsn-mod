@@ -53,6 +53,8 @@ public class SMSNClothConfig {
         addEntry(general, forgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyUpdateCheck"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyFetchDevotedBelievers"));
+        addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboTrails"));
+        addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboWings"));
 
         builder.transparentBackground();
         return builder.build();
@@ -62,7 +64,6 @@ public class SMSNClothConfig {
         return builder.startBooleanToggle(
                         Component.translatable("config.smsn.general." + key),
                         getConfigValueByFieldName(key))
-                .setTooltip(Component.translatable("config.smsn.general." + key + ".tooltip"))
                 .setDefaultValue(getConfigDefaultValueByFieldName(key))
                 .setSaveConsumer(value -> setConfigValueByFieldName(key, value))
                 .setYesNoTextSupplier((v -> v ?

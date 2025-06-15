@@ -99,6 +99,8 @@ dependencies {
     // Supplementaries
     modLocalRuntime("maven.modrinth:moonlight:zFdn1sMr")
     modImplementation("maven.modrinth:supplementaries:${mod.prop("forge.supplementaries")}")
+    // Placebo
+    modImplementation("curse.maven:placebo-283644:${mod.prop("forge.placebo")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

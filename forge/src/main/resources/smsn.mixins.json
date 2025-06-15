@@ -20,6 +20,8 @@
     "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
+    "placebo.TrailsManagerMixin",
+    "placebo.WingsManagerMixin",
     "quark.ThreadContributorListLoaderMixin",
     "supplementaries.CreditsMixin",
     "xaero.minimap.InternetMixin",

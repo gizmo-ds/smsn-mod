@@ -37,6 +37,9 @@ public class MixinInfo {
             put("dev.aika.smsn.forge.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
 
             put("dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin", "supplementaries");
+
+            put("dev.aika.smsn.forge.mixin.placebo.TrailsManagerMixin", "placebo");
+            put("dev.aika.smsn.forge.mixin.placebo.WingsManagerMixin", "placebo");
         }};
     }
 }
