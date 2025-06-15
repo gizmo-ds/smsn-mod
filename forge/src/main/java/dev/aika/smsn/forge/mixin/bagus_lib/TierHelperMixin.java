@@ -1,4 +1,4 @@
-package dev.aika.smsn.forge.mixin.bagu_chan.bagus_lib;
+package dev.aika.smsn.forge.mixin.bagus_lib;
 
 import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,5 +1,10 @@
 # Save My Shaky Network
 
+[![爱发电](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fafdian.com%2Fapi%2Fuser%2Fget-profile%3Fuser_id%3D75e549844b5111ed8df552540025c377&query=%24.data.user.name&label=%E7%88%B1%E5%8F%91%E7%94%B5&color=%23946ce6)](https://afdian.com/a/gizmo)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/mod/oXzIQwRj)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1129397?logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/smsn)
+![GitHub License](https://img.shields.io/github/license/gizmo-ds/smsn-mod?style=flat&label=License)
+
 在不影响 mods 功能的前提下阻止常用 mod 的联网行为, 防止因网络原因导致的加载缓慢或游戏崩溃.
 
 ## 你能得到什么
@@ -8,24 +13,33 @@
 - [Citadel](https://modrinth.com/mod/jJfV67b1)不再会让你的游戏在愚人节崩溃.
 - [Destroy](https://modrinth.com/mod/destroy) 或 [Petrol's Parts](https://modrinth.com/mod/petrols-parts)
   不会再在每次玩家加入时请求一次远程数据库.
-- 更多可参考下面的表格
+- 更多可参考下面的列表
 
 ## 功能
 
-| Mod                                                          | Mod loaders  | Description                                                                               |
-|--------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
-| [Quark](https://modrinth.com/mod/qnQsVE2z)                   | Forge        | 禁止了获取贡献者和赞助者列表.                                                                           |
-| [Alex's Caves](https://modrinth.com/mod/qnQsVE2z)            | Forge        | 禁止了获取最新冲突mod列表的请求, 现在会使用`assets/alexscaves/warning/mod_generation_conflicts.txt`作为冲突mod列表 |
-| [Citadel](https://modrinth.com/mod/jJfV67b1)                 | Forge        | 禁止了获取赞助者列表, 现在会使用`assets/citadel/patreon.txt`. 愚人节彩蛋永远不会被触发.                              |
-| [Xaero's Minimap](https://modrinth.com/mod/1bokaNcj)         | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
-| [Xaero's World Map](https://modrinth.com/mod/NcUtCpym)       | Forge/Fabric | 禁止了更新检测和获取赞助者列表                                                                           |
-| [Petrolpark's Library](https://modrinth.com/mod/petrolpark)  | Forge        | 禁止了获取 Badges 的请求. EarlyBird? 这真的不是什么违反 Mojang 的 EULA 的东西吗?                                |
-| [Inventory Profiles Next](https://modrinth.com/mod/O7RBXm3n) | Forge/Fabric | 禁止了更新检测和追踪请求, 我不明白这个mod中的隐私设定有何意义.                                                        |
-| [Obscure API](https://modrinth.com/mod/fU7jbFHc)             | Forge        | 禁止了获取作品展示信息的请求, 我不认为这些信息对于用户来说有什么意义.                                                      |
-| [Blueprint](https://modrinth.com/mod/VsM5EDoI)               | Forge        | 现在会尊重用户的 `slabfishSettings.enabled` 设置, 在为 `false` 的情况下不会再发送请求.                           |
-| [Supplementaries](https://modrinth.com/mod/fFEIiSDQ)         | Forge/Fabric | 禁止获取赞助者信息的请求.                                                                             |
-| [Botania](https://modrinth.com/mod/pfjLUfGv)                 | Forge/Fabric | 禁止获取贡献者列表.                                                                                |
-| [Bagus Lib](https://modrinth.com/mod/95nSN4Rd)               | Forge        | 禁止获取赞助者信息的请求.                                                                             |
+如果你使用 Forge 或 NeoForge，请尝试修改 `config/fml.toml` 的 `versionCheck` 为 `false`，这能禁用掉加载器自带的版本更新检查。
+
+```yaml
+#file: noinspection SpellCheckingInspection
+Forge:
+  - Bagus Lib
+  - Blueprint
+  - Immersive Engineering
+  - Immersive Caves
+  - Nitrogen (The Aether Team)
+  - Petrolpark's Library
+  - Placebo
+  - Supplementaries
+  - Inventory Profiles Next
+
+Fabric:
+  - Supplementaries
+  - Xaero's Minimap
+  - Xaero's World Map
+  - Botania
+  - Inventory Profiles Next
+  - Iris Shader
+```
 
 ## 为什么?
 
@@ -41,3 +55,18 @@
 在那些网络不好的地区使用这些mod往往会导致游戏加载时间过长, 有的mod甚至会导致游戏无法启动.
 
 如果mod不会导致以上的问题, 又或者mod开发者愿意增加一个禁止这些行为的选项, 这个mod也许就不会诞生.
+
+## 常见问题（Q&A）
+
+1. 会支持 XX Minecraft 版本吗？  
+   作者的精力只能确保当前主流版本和作者游玩的版本的维护。
+2. 可以将 `救救我的答辩网络` 加入整合包吗？  
+   可以，✅ 我推荐整合包使用 [Modrinth
+   `.mrpack`](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) 或 CurseForge 整合包 ZIP
+   格式。❌ 请不要直接将模组二进制文件(`.jar`)直接包含在整合包中，请为用户的安全负责。
+
+## 赞助 ❤️
+
+喜欢 `救救我的答辩网络` 吗？你可以在 [爱发电](https://afdian.com/a/gizmo) 对我进行赞助，助力模组持续更新！
+
+[![金主爸爸](https://afdian-connect.deno.dev/sponsor.svg)](https://afdian.com/a/gizmo)

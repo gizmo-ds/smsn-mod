@@ -14,7 +14,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
-    "bagu_chan.bagus_lib.TierHelperMixin",
+    "bagus_lib.TierHelperMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",

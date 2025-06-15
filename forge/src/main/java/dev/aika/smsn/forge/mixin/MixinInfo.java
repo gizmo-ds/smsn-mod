@@ -20,7 +20,7 @@ public class MixinInfo {
             put("dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin", "citadel");
             put("dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin", "citadel");
 
-            put("dev.aika.smsn.forge.mixin.bagu_chan.bagus_lib.TierHelperMixin", "bagus_lib");
+            put("dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin", "bagus_lib");
 
             put("dev.aika.smsn.forge.mixin.enigmatic_legacy.DevotedBelieversHandlerMixin", "enigmaticlegacy");
             put("dev.aika.smsn.forge.mixin.enigmatic_legacy.EnigmaticUpdateHandlerMixin", "enigmaticlegacy");

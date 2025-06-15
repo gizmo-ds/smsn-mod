@@ -1,6 +1,5 @@
 package dev.aika.smsn.forge.mixin.obscure;
 
-import com.obscuria.obscureapi.network.ObscuriaCollection;
 import dev.aika.smsn.SMSN;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -13,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
-@Mixin(value = ObscuriaCollection.class, remap = false)
+@Mixin(value = com.obscuria.obscureapi.network.ObscuriaCollection.class, remap = false)
 public abstract class ObscuriaCollectionMixin {
     @Inject(method = "upload", at = @At("HEAD"), cancellable = true)
     private static void upload(CallbackInfo ci) {
@@ -31,7 +30,7 @@ public abstract class ObscuriaCollectionMixin {
     }
 
     @Inject(method = "getCollectionMods", at = @At("HEAD"), cancellable = true)
-    private static void getCollectionMods(CallbackInfoReturnable<List<ObscuriaCollection.Mod>> cir) {
+    private static void getCollectionMods(CallbackInfoReturnable<List<com.obscuria.obscureapi.network.ObscuriaCollection.Mod>> cir) {
         if (!SMSN.CONFIG.isObscureModsCheck()) cir.setReturnValue(List.of());
     }
 
@@ -55,10 +54,10 @@ public abstract class ObscuriaCollectionMixin {
         if (!SMSN.CONFIG.isObscureModsCheck()) cir.setReturnValue(List.of());
     }
 
-    @Mixin(value = ObscuriaCollection.Mod.class, remap = false)
+    @Mixin(value = com.obscuria.obscureapi.network.ObscuriaCollection.Mod.class, remap = false)
     public static abstract class Mod {
         @Inject(method = "load", at = @At("HEAD"), cancellable = true)
-        private static void load(String modID, CallbackInfoReturnable<ObscuriaCollection.Mod> cir) {
+        private static void load(String modID, CallbackInfoReturnable<com.obscuria.obscureapi.network.ObscuriaCollection.Mod> cir) {
             if (!SMSN.CONFIG.isObscureModsCheck()) cir.setReturnValue(null);
         }
     }
