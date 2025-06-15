@@ -41,20 +41,23 @@ dependencies {
     }
     modImplementation("com.terraformersmc:modmenu:7.2.2")
 
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
+    modLocalRuntime("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
 
     // Xaero's maps
     modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
     modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")
     // Supplementaries
-    modLocalRuntime("maven.modrinth:moonlight:dOeX0aw2")
-    modImplementation("maven.modrinth:supplementaries:${mod.prop("fabric.supplementaries")}")
+    modCompileOnly("maven.modrinth:moonlight:dOeX0aw2")
+    modCompileOnly("maven.modrinth:supplementaries:${mod.prop("fabric.supplementaries")}")
     // Botania
     modImplementation("vazkii.botania:Botania:${mod.prop("fabric.botania")}") {
         exclude(group = "com.jamieswhiteshirt")
     }
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("fabric.ipn")}")
+    // Iris
+    modLocalRuntime("maven.modrinth:sodium:vgceLbdH")
+    modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

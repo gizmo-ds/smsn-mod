@@ -30,6 +30,7 @@ public class SMSNConfig extends ModConfig {
     public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
     public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
     public boolean placeboWings = SMSNConfigDefault.placeboWings;
+    public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

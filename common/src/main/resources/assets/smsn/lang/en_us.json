@@ -9,7 +9,7 @@
   "config.smsn.sponsor.description": "❤ Enjoy %1$s ? Support the author on %2$s ! ❤",
   "config.smsn.sponsor.description.afdian": "AFDIAN",
   "config.smsn.option.allow": "Allow",
-  "config.smsn.option.not_allow": "Not allow",
+  "config.smsn.option.not_allow": "Not allowed",
   "config.smsn.general.aetherMoaSkinsFeature": "The Aether MOA Skins Feature",
   "config.smsn.general.quarkContributorCheck": "Quark Contributor Check",
   "config.smsn.general.ipnUpdateCheckAndUserTracking": "Inventory Profiles Next update Check & user tracking",
@@ -26,5 +26,6 @@
   "config.smsn.general.enigmaticLegacyUpdateCheck": "Enigmatic Legacy Update check",
   "config.smsn.general.enigmaticLegacyFetchDevotedBelievers": "Enigmatic Legacy Fetch \"DevotedBelievers\"",
   "config.smsn.general.placeboTrails": "Placebo Patreon Trails request",
-  "config.smsn.general.placeboWings": "Placebo Patreon Wings request"
+  "config.smsn.general.placeboWings": "Placebo Patreon Wings request",
+  "config.smsn.general.irisUpdateCheck": "Iris update check"
 }

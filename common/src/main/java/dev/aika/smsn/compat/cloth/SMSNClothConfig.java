@@ -36,6 +36,7 @@ public class SMSNClothConfig {
         general.addEntry(sponsorDescription(entryBuilder));
 
         final var forgeOnly = List.of("forge");
+        final var fabricOnly = List.of("fabric");
         final var BOTH = List.of("forge", "fabric");
 
         addEntry(general, forgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
@@ -55,6 +56,7 @@ public class SMSNClothConfig {
         addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyFetchDevotedBelievers"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboTrails"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboWings"));
+        addEntry(general, fabricOnly, makeOption(entryBuilder, "irisUpdateCheck"));
 
         builder.transparentBackground();
         return builder.build();

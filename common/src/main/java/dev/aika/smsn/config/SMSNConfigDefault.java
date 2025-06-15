@@ -18,4 +18,5 @@ public class SMSNConfigDefault {
     public static boolean enigmaticLegacyFetchDevotedBelievers = false;
     public static boolean placeboTrails = false;
     public static boolean placeboWings = false;
+    public static boolean irisUpdateCheck = false;
 }
