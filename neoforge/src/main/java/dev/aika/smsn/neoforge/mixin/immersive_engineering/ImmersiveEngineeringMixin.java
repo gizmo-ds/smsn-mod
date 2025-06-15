@@ -1,6 +1,5 @@
 package dev.aika.smsn.neoforge.mixin.immersive_engineering;
 
-
 import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

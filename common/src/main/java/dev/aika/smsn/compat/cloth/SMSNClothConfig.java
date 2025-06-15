@@ -35,8 +35,8 @@ public class SMSNClothConfig {
         final ConfigCategory general = builder.getOrCreateCategory(Component.literal("General"));
         general.addEntry(sponsorDescription(entryBuilder));
 
-        final var forgeOnly = List.of("forge");
-        final var BOTH = List.of("forge", "fabric");
+        final var forgeOnly = List.of("neoforge");
+        final var BOTH = List.of("neoforge", "fabric");
 
         addEntry(general, forgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
 //        addEntry(general, forgeOnly, makeOption(entryBuilder, "quarkContributorCheck"));
