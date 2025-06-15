@@ -50,6 +50,7 @@ public class SMSNClothConfig {
         addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboTrails"));
         addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboWings"));
         addEntry(general, BOTH, makeOption(entryBuilder, "irisUpdateCheck"));
+        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "actuallyAdditionsSpecialPeopleStuff"));
 
         addEntry(qol, neoforgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));
 
