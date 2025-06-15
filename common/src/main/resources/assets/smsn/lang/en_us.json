@@ -8,14 +8,14 @@
   "config.smsn.title": "Save My Shit Network",
   "config.smsn.sponsor.description": "❤ Enjoy %1$s ? Support the author on %2$s ! ❤",
   "config.smsn.sponsor.description.afdian": "AFDIAN",
-  "config.smsn.option.allow": "Allow",
-  "config.smsn.option.not_allow": "Not allowed",
+  "config.smsn.option.yes": "Allow",
+  "config.smsn.option.no": "Not allowed",
+  "config.smsn.general": "General",
   "config.smsn.general.aetherMoaSkinsFeature": "The Aether MOA Skins Feature",
   "config.smsn.general.quarkContributorCheck": "Quark Contributor Check",
   "config.smsn.general.ipnUpdateCheckAndUserTracking": "Inventory Profiles Next update Check & user tracking",
   "config.smsn.general.xaeroMapPatreonCheck": "Xaero's Maps Patreon Check",
   "config.smsn.general.xaeroMapVersionCheck": "Xaero's Maps Update Check",
-  "config.smsn.general.citadelAprilFoolsContent": "Citadel April Fools Content",
   "config.smsn.general.alexModsContributorCheck": "Alex's Mods Contributor Check",
   "config.smsn.general.petrolparkBadgeCheck": "Petrolpark's Mods Badges Check",
   "config.smsn.general.obscureModsCheck": "Obscure API Mods Check",
@@ -27,5 +27,8 @@
   "config.smsn.general.enigmaticLegacyFetchDevotedBelievers": "Enigmatic Legacy Fetch \"DevotedBelievers\"",
   "config.smsn.general.placeboTrails": "Placebo Patreon Trails request",
   "config.smsn.general.placeboWings": "Placebo Patreon Wings request",
-  "config.smsn.general.irisUpdateCheck": "Iris Shaders update check"
+  "config.smsn.general.irisUpdateCheck": "Iris Shaders update check",
+  "config.smsn.qol": "QoL",
+  "config.smsn.qol.citadelAprilFoolsContent": "Citadel April Fools Content",
+  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"
 }

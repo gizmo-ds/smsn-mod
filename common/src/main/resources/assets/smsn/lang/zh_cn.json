@@ -8,14 +8,14 @@
   "config.smsn.title": "救救我的答辩网络",
   "config.smsn.sponsor.description": "❤ 喜欢 %1$s 吗？欢迎到 %2$s 赞助支持，助力模组持续更新！ ❤",
   "config.smsn.sponsor.description.afdian": "爱发电",
-  "config.smsn.option.allow": "允许",
-  "config.smsn.option.not_allow": "不允许",
+  "config.smsn.option.yes": "允许",
+  "config.smsn.option.no": "不允许",
+  "config.smsn.general": "一般",
   "config.smsn.general.aetherMoaSkinsFeature": "启用 天境 的恐鸟外观功能",
   "config.smsn.general.quarkContributorCheck": "夸克 贡献者检查",
   "config.smsn.general.ipnUpdateCheckAndUserTracking": "一键背包整理Next 更新检查和用户追踪",
   "config.smsn.general.xaeroMapPatreonCheck": "Xaero的地图 赞助者检查",
   "config.smsn.general.xaeroMapVersionCheck": "Xaero的地图 更新检查",
-  "config.smsn.general.citadelAprilFoolsContent": "Citadel 愚人节内容",
   "config.smsn.general.alexModsContributorCheck": "Alex的模组 贡献者检查",
   "config.smsn.general.petrolparkBadgeCheck": "Petrolpark的模组 徽章检查",
   "config.smsn.general.obscureModsCheck": "Obscure API 模组检查",
@@ -27,5 +27,8 @@
   "config.smsn.general.enigmaticLegacyFetchDevotedBelievers": "神秘遗物 获取\"虔诚的信徒\"",
   "config.smsn.general.placeboTrails": "Placebo 赞助者轨迹请求",
   "config.smsn.general.placeboWings": "Placebo 赞助者翅膀请求",
-  "config.smsn.general.irisUpdateCheck": "Iris Shaders 更新检查"
+  "config.smsn.general.irisUpdateCheck": "Iris Shaders 更新检查",
+  "config.smsn.qol": "QoL",
+  "config.smsn.qol.citadelAprilFoolsContent": "Citadel 愚人节内容",
+  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息"
 }

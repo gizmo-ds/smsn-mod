@@ -31,6 +31,7 @@ public class SMSNConfig extends ModConfig {
     public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
     public boolean placeboWings = SMSNConfigDefault.placeboWings;
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
+    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

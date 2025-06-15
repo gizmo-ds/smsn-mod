@@ -40,6 +40,8 @@ public class MixinInfo {
 
             put("dev.aika.smsn.forge.mixin.placebo.TrailsManagerMixin", "placebo");
             put("dev.aika.smsn.forge.mixin.placebo.WingsManagerMixin", "placebo");
+
+            put("dev.aika.smsn.forge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin", "immersivecaves");
         }};
     }
 }

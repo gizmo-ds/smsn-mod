@@ -18,6 +18,7 @@
     "enigmatic_legacy.DevotedBelieversHandlerMixin",
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
+    "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",

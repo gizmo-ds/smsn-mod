@@ -32,8 +32,11 @@ public class SMSNClothConfig {
                 .setSavingRunnable(SMSN.CONFIG::save);
         ConfigEntryBuilder entryBuilder = builder.entryBuilder();
 
-        final ConfigCategory general = builder.getOrCreateCategory(Component.literal("General"));
+        final ConfigCategory general = builder.getOrCreateCategory(Component.translatable("config.smsn.general"));
         general.addEntry(sponsorDescription(entryBuilder));
+
+        final ConfigCategory qol = builder.getOrCreateCategory(Component.translatable("config.smsn.qol"));
+        qol.addEntry(sponsorDescription(entryBuilder));
 
         final var forgeOnly = List.of("forge");
         final var fabricOnly = List.of("fabric");
@@ -44,7 +47,6 @@ public class SMSNClothConfig {
         addEntry(general, BOTH, makeOption(entryBuilder, "ipnUpdateCheckAndUserTracking"));
         addEntry(general, BOTH, makeOption(entryBuilder, "xaeroMapPatreonCheck"));
         addEntry(general, BOTH, makeOption(entryBuilder, "xaeroMapVersionCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "citadelAprilFoolsContent"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "alexModsContributorCheck"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "petrolparkBadgeCheck"));
         addEntry(general, forgeOnly, makeOption(entryBuilder, "obscureModsCheck"));
@@ -58,20 +60,27 @@ public class SMSNClothConfig {
         addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboWings"));
         addEntry(general, fabricOnly, makeOption(entryBuilder, "irisUpdateCheck"));
 
+        addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol","citadelAprilFoolsContent"));
+        addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));
+
         builder.transparentBackground();
         return builder.build();
     }
 
     private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
+        return makeOption(builder, "general", key);
+    }
+
+    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String category, String key) {
         return builder.startBooleanToggle(
-                        Component.translatable("config.smsn.general." + key),
+                        Component.translatable(String.format("config.smsn.%s.%s", category, key)),
                         getConfigValueByFieldName(key))
                 .setDefaultValue(getConfigDefaultValueByFieldName(key))
                 .setSaveConsumer(value -> setConfigValueByFieldName(key, value))
                 .setYesNoTextSupplier((v -> v ?
-                        Component.translatable("config.smsn.option.allow")
+                        Component.translatable("config.smsn.option.yes")
                                 .withStyle(s -> s.withColor(ChatFormatting.GREEN)) :
-                        Component.translatable("config.smsn.option.not_allow")
+                        Component.translatable("config.smsn.option.no")
                                 .withStyle(s -> s.withColor(ChatFormatting.RED))))
                 .build();
     }
