@@ -12,25 +12,27 @@
 
 ## 功能
 
+如果你使用 Forge 或 NeoForge，请尝试修改 `config/fml.toml` 的 `versionCheck` 为 `false`，这能禁用掉加载器自带的版本更新检查。
+
 ```yaml
 #file: noinspection SpellCheckingInspection
 Neoforge:
-  - Actually Additions
-  - Bagus Lib
-  - Blueprint
-  - Immersive Engineering
-  - Immersive Caves
-  - Nitrogen (The Aether Team)
-  - Petrolpark's Library
-  - Placebo
-  - Iris Shader
-  - Supplementaries
-  - Inventory Profiles Next
+  - Supplementaries: 禁止获取赞助者信息的请求
+  - Petrolpark's Library: 禁止了获取 Badges 的请求
+  - Nitrogen: 禁用了 The Aether Team 的模组（如：The Aether）的赞助者内容，这会让 The Aether 中的恐鸟的赞助者换肤功能失效，默认不启用
+  - Inventory Profiles Next: 禁止了更新检测和追踪请求
+  - Blueprint: 现在会尊重用户的 "slabfishSettings.enabled" 设置，在为 false 的情况下不会再发送请求
+  - Bagus Lib: 禁止获取赞助者信息的请求
+  - Immersive Engineering: 禁止获取特殊左轮皮肤的请求
+  - Iris Shader: 禁止更新请求
+  - Actually Additions: 禁止 Special People Stuff
+  - Immersive Caves: 禁用 Discord 消息
+  - Placebo: 禁止赞助者轨迹请求和赞助者翅膀请求
 
 Fabric:
-  - Supplementaries
-  - Inventory Profiles Next
-  - Iris Shader
+  - Supplementaries: 禁止获取赞助者信息的请求
+  - Inventory Profiles Next: 禁止了更新检测和追踪请求
+  - Iris Shader: 禁止更新请求
 ```
 
 ## 为什么?
@@ -47,3 +49,18 @@ Fabric:
 在那些网络不好的地区使用这些mod往往会导致游戏加载时间过长, 有的mod甚至会导致游戏无法启动.
 
 如果mod不会导致以上的问题, 又或者mod开发者愿意增加一个禁止这些行为的选项, 这个mod也许就不会诞生.
+
+## 常见问题（Q&A）
+
+1. 会支持 XX Minecraft 版本吗？  
+   作者的精力只能确保当前主流版本和作者游玩的版本的维护。
+2. 可以将 `救救我的答辩网络` 加入整合包吗？  
+   可以，✅ 我推荐整合包使用 [Modrinth
+   `.mrpack`](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) 或 CurseForge 整合包 ZIP
+   格式。❌ 请不要直接将模组二进制文件(`.jar`)直接包含在整合包中，请为用户的安全负责。
+
+## 赞助 ❤️
+
+喜欢 `救救我的答辩网络` 吗？你可以在 [爱发电](https://afdian.com/a/gizmo) 对我进行赞助，助力模组持续更新！
+
+[![金主爸爸](https://afdian-connect.deno.dev/sponsor.svg)](https://afdian.com/a/gizmo)
