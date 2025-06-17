@@ -2,6 +2,7 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
+    id("me.shedaniel.unified-publishing") version "0.1.+"
 }
 
 architectury {
@@ -36,6 +37,8 @@ repositories {
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${mod.prop("fabric.loader")}")
 
+    implementation(include("io.github.llamalad7:mixinextras-fabric:0.4.1")!!)
+
     modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.prop("cloth_config")}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
@@ -58,6 +61,9 @@ dependencies {
     // Iris
     modLocalRuntime("maven.modrinth:sodium:vgceLbdH")
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
+    // Ad Astra!
+//    modCompileOnly("mods:ad_astra:fabric-1.20.1-1.15.3")
+    modCompileOnly("maven.modrinth:ad-astra:${mod.prop("fabric.ad_astra")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 
@@ -67,10 +73,10 @@ dependencies {
 
 tasks {
     processResources {
-        inputs.property("version", mod.version)
+        inputs.property("version", project.version)
 
         filesMatching("fabric.mod.json") {
-            expand("version" to mod.version)
+            expand("version" to project.version)
         }
         from(rootProject.file("assets/icon.png")) {
             rename { "assets/${mod.id}/icon.png" }
@@ -89,5 +95,43 @@ tasks {
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
+    }
+}
+
+unifiedPublishing {
+    project {
+        version.set("${mod.version}+mc${mod.minecraft_version}")
+        displayName.set("${mod.name} v${mod.version}")
+        gameVersions.add(mod.minecraft_version)
+        gameLoaders.set(listOf("fabric"))
+        releaseType.set(mod.release_type)
+
+        mainPublication.set(tasks.remapJar.flatMap { it.archiveFile })
+
+        val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
+        val modrinthId: String = mod.prop("modrinth_id")
+        if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
+            modrinth {
+                token.set(modrinthToken)
+                id.set(modrinthId)
+
+                relations {
+                    optionals.add("cloth-config")
+                }
+            }
+        }
+
+        val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
+        val curseforgeId: String = mod.prop("curseforge_id")
+        if (curseforgeId.isNotEmpty() && curseforgeToken.isNotEmpty()) {
+            curseforge {
+                token.set(curseforgeToken)
+                id.set(curseforgeId)
+
+                relations {
+                    optionals.add("cloth-config")
+                }
+            }
+        }
     }
 }

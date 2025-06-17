@@ -8,6 +8,7 @@
     "iris.UpdateCheckerMixin"
   ],
   "mixins": [
+    "ad_astra.StationLoaderMixin",
     "botania.ContributorListMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",

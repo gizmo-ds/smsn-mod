@@ -28,3 +28,4 @@ gradle-app.setting
 .architectury-transformer
 
 .idea/
+.env

@@ -20,4 +20,5 @@ public class SMSNConfigDefault {
     public static boolean placeboWings = false;
     public static boolean irisUpdateCheck = false;
     public static boolean immersiveCavesDiscordMessage = false;
+    public static boolean adAstraStation = false;
 }

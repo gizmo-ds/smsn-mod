@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - v*mc1.20.1
+      - v*mc1.20.1-*
 
 permissions:
   contents: write
@@ -30,6 +31,9 @@ jobs:
         uses: gradle/gradle-build-action@093dfe9d598ec5a42246855d09b49dc76803c005
         with:
           arguments: build --no-daemon
+
+      - name: Publishing
+        run: ./gradlew publishUnified
 
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191

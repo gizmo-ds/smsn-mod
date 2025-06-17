@@ -10,6 +10,7 @@
     "obscure.ObscuriaCollectionMixin$Mod"
   ],
   "mixins": [
+    "ad_astra.StationLoaderMixin",
     "aetherteam.UserData$ServerMixin",
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",

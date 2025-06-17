@@ -28,6 +28,7 @@
   "config.smsn.general.placeboTrails": "Placebo Patreon Trails request",
   "config.smsn.general.placeboWings": "Placebo Patreon Wings request",
   "config.smsn.general.irisUpdateCheck": "Iris Shaders update check",
+  "config.smsn.general.adAstraStation": "Ad Astra Stations",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.citadelAprilFoolsContent": "Citadel April Fools Content",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"

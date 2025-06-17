@@ -20,6 +20,8 @@ public class MixinInfo {
             put("dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin", "inventoryprofilesnext");
 
             put("dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin", "iris");
+
+            put("dev.aika.smsn.fabric.mixin.ad_astra.StationLoaderMixin", "ad_astra");
         }};
     }
 }
