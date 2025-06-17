@@ -105,7 +105,6 @@ dependencies {
     // Immersive Caves
     modImplementation("maven.modrinth:immersive-caves:XaMLdtpw")
     // Ad Astra!
-//    modCompileOnly("earth.terrarium.adastra:ad_astra-forge-1.20.1:1.15.20")
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("forge.ad_astra")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")

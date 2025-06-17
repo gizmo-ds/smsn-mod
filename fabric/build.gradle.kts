@@ -62,7 +62,6 @@ dependencies {
     modLocalRuntime("maven.modrinth:sodium:vgceLbdH")
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
     // Ad Astra!
-//    modCompileOnly("mods:ad_astra:fabric-1.20.1-1.15.3")
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("fabric.ad_astra")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
