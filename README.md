@@ -22,23 +22,31 @@
 ```yaml
 #file: noinspection SpellCheckingInspection
 Forge:
-  - Bagus Lib
-  - Blueprint
-  - Immersive Engineering
-  - Immersive Caves
-  - Nitrogen (The Aether Team)
-  - Petrolpark's Library
-  - Placebo
-  - Supplementaries
-  - Inventory Profiles Next
+  - Quark: 禁止了获取贡献者和赞助者列表
+  - Alex's Caves: 禁止了获取最新冲突 mod 列表的请求，现在会使用 "assets/alexscaves/warning/mod_generation_conflicts.txt" 作为冲突 mod 列表
+  - Citadel: 禁止了获取赞助者列表，现在会使用 "assets/citadel/patreon.txt"，愚人节彩蛋永远不会被触发
+  - Botania: 禁止获取贡献者列表
+  - Supplementaries: 禁止获取赞助者信息的请求
+  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
+  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
+  - Petrolpark's Library: 禁止了获取 Badges 的请求
+  - Nitrogen: 禁用了 The Aether Team 的模组（如：The Aether）的赞助者内容，这会让 The Aether 中的恐鸟的赞助者换肤功能失效，默认不启用
+  - Inventory Profiles Next: 禁止了更新检测和追踪请求
+  - Obscure API: 禁止了获取作品展示信息的请求，我不认为这些信息对于用户来说有什么意义
+  - Blueprint: 现在会尊重用户的 "slabfishSettings.enabled" 设置，在为 false 的情况下不会再发送请求
+  - Bagus Lib: 禁止获取赞助者信息的请求
+  - Immersive Engineering: 禁止获取特殊左轮皮肤的请求
+  - Enigmatic Legacy: 禁止获取 "虔诚的信徒" 文件
+  - Immersive Caves: 禁用 Discord 消息
+  - Placebo: 禁止赞助者轨迹请求和赞助者翅膀请求
 
 Fabric:
-  - Supplementaries
-  - Xaero's Minimap
-  - Xaero's World Map
-  - Botania
-  - Inventory Profiles Next
-  - Iris Shader
+  - Botania: 禁止获取贡献者列表
+  - Supplementaries: 禁止获取赞助者信息的请求
+  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
+  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
+  - Inventory Profiles Next: 禁止了更新检测和追踪请求
+  - Iris Shader: 禁止更新请求
 ```
 
 ## 为什么?
