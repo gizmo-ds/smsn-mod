@@ -39,6 +39,7 @@ Forge:
   - Enigmatic Legacy: 禁止获取 "虔诚的信徒" 文件
   - Immersive Caves: 禁用 Discord 消息
   - Placebo: 禁止赞助者轨迹请求和赞助者翅膀请求
+  - Ad Astra: Stations
 
 Fabric:
   - Botania: 禁止获取贡献者列表
@@ -47,6 +48,7 @@ Fabric:
   - Xaero's World Map: 禁止了更新检测和获取赞助者列表
   - Inventory Profiles Next: 禁止了更新检测和追踪请求
   - Iris Shader: 禁止更新请求
+  - Ad Astra: Stations
 ```
 
 ## 为什么?
