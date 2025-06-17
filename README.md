@@ -1,5 +1,10 @@
 # Save My Shaky Network
 
+[![爱发电](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fafdian.com%2Fapi%2Fuser%2Fget-profile%3Fuser_id%3D75e549844b5111ed8df552540025c377&query=%24.data.user.name&label=%E7%88%B1%E5%8F%91%E7%94%B5&color=%23946ce6)](https://afdian.com/a/gizmo)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/mod/oXzIQwRj)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1129397?logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/smsn)
+![GitHub License](https://img.shields.io/github/license/gizmo-ds/smsn-mod?style=flat&label=License)
+
 在不影响 mods 功能的前提下阻止常用 mod 的联网行为, 防止因网络原因导致的加载缓慢或游戏崩溃.
 
 ## 你能得到什么

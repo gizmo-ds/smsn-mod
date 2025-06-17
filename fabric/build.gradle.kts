@@ -2,6 +2,7 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
+    id("me.shedaniel.unified-publishing") version "0.1.+"
 }
 
 architectury {
@@ -78,5 +79,43 @@ tasks {
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
+    }
+}
+
+unifiedPublishing {
+    project {
+        version.set("${mod.version}+mc${mod.minecraft_version}")
+        displayName.set("${mod.name} v${mod.version}")
+        gameVersions.add(mod.minecraft_version)
+        gameLoaders.set(listOf("fabric"))
+        releaseType.set(mod.release_type)
+
+        mainPublication.set(tasks.remapJar.flatMap { it.archiveFile })
+
+        val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
+        val modrinthId: String = mod.prop("modrinth_id")
+        if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
+            modrinth {
+                token.set(modrinthToken)
+                id.set(modrinthId)
+
+                relations {
+                    optionals.add("cloth-config")
+                }
+            }
+        }
+
+        val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
+        val curseforgeId: String = mod.prop("curseforge_id")
+        if (curseforgeId.isNotEmpty() && curseforgeToken.isNotEmpty()) {
+            curseforge {
+                token.set(curseforgeToken)
+                id.set(curseforgeId)
+
+                relations {
+                    optionals.add("cloth-config")
+                }
+            }
+        }
     }
 }

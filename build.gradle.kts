@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
+
 import net.fabricmc.loom.api.LoomGradleExtensionAPI
 
 plugins {
@@ -5,6 +7,7 @@ plugins {
     id("dev.architectury.loom") version "1.10-SNAPSHOT" apply false
     id("architectury-plugin") version "3.4-SNAPSHOT"
     id("com.github.johnrengelman.shadow") version "8.1.1" apply false
+    id("co.uzzu.dotenv.gradle") version "4.0.0"
 }
 
 architectury {
@@ -50,7 +53,6 @@ subprojects {
 
     dependencies {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
-        @Suppress("UnstableApiUsage", "SpellCheckingInspection")
         "mappings"(loom.layered {
             officialMojangMappings()
             parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
