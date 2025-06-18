@@ -21,4 +21,5 @@ public class SMSNConfigDefault {
     public static boolean irisUpdateCheck = false;
     public static boolean immersiveCavesDiscordMessage = false;
     public static boolean adAstraStation = false;
+    public static boolean exposureGoldenCameraSkin = false;
 }

@@ -33,6 +33,7 @@ public class SMSNConfig extends ModConfig {
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
     public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
+    public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

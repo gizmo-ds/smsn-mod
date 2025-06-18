@@ -2,7 +2,6 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
-    id("me.shedaniel.unified-publishing") version "0.1.+"
 }
 
 architectury {
@@ -63,6 +62,8 @@ dependencies {
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
     // Ad Astra!
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("fabric.ad_astra")}")
+    // Exposure
+    modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 
@@ -94,43 +95,5 @@ tasks {
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
-    }
-}
-
-unifiedPublishing {
-    project {
-        version.set("${mod.version}+mc${mod.minecraft_version}")
-        displayName.set("${mod.name} v${mod.version}")
-        gameVersions.add(mod.minecraft_version)
-        gameLoaders.set(listOf("fabric"))
-        releaseType.set(mod.release_type)
-
-        mainPublication.set(tasks.remapJar.flatMap { it.archiveFile })
-
-        val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
-        val modrinthId: String = mod.prop("modrinth_id")
-        if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
-            modrinth {
-                token.set(modrinthToken)
-                id.set(modrinthId)
-
-                relations {
-                    optionals.add("cloth-config")
-                }
-            }
-        }
-
-        val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
-        val curseforgeId: String = mod.prop("curseforge_id")
-        if (curseforgeId.isNotEmpty() && curseforgeToken.isNotEmpty()) {
-            curseforge {
-                token.set(curseforgeToken)
-                id.set(curseforgeId)
-
-                relations {
-                    optionals.add("cloth-config")
-                }
-            }
-        }
     }
 }

@@ -2,7 +2,6 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
-    id("me.shedaniel.unified-publishing") version "0.1.+"
 }
 
 loom {
@@ -76,9 +75,7 @@ dependencies {
     // Petrolpark
     modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.3")
     modLocalRuntime("com.jozufozu.flywheel:flywheel-forge-1.20.1:0.6.11-13")
-    modLocalRuntime("com.simibubi.create:create-1.20.1:0.5.1.h-48:slim") {
-        isTransitive = false
-    }
+    modLocalRuntime("com.simibubi.create:create-1.20.1:0.5.1.h-48:slim") { isTransitive = false }
     modImplementation("maven.modrinth:petrolpark:${mod.prop("forge.petrolpark")}")
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("forge.ipn")}")
@@ -106,6 +103,8 @@ dependencies {
     modImplementation("maven.modrinth:immersive-caves:XaMLdtpw")
     // Ad Astra!
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("forge.ad_astra")}")
+    // Exposure
+    modCompileOnly("maven.modrinth:exposure:${mod.prop("forge.exposure")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")
@@ -138,43 +137,5 @@ tasks {
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
-    }
-}
-
-unifiedPublishing {
-    project {
-        version.set("${mod.version}+mc${mod.minecraft_version}")
-        displayName.set("${mod.name} v${mod.version}")
-        gameVersions.add(mod.minecraft_version)
-        gameLoaders.set(listOf("forge"))
-        releaseType.set(mod.release_type)
-
-        mainPublication.set(tasks.remapJar.flatMap { it.archiveFile })
-
-        val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
-        val modrinthId: String = mod.prop("modrinth_id")
-        if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
-            modrinth {
-                token.set(modrinthToken)
-                id.set(modrinthId)
-
-                relations {
-                    optionals.add("cloth-config")
-                }
-            }
-        }
-
-        val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
-        val curseforgeId: String = mod.prop("curseforge_id")
-        if (curseforgeId.isNotEmpty() && curseforgeToken.isNotEmpty()) {
-            curseforge {
-                token.set(curseforgeToken)
-                id.set(curseforgeId)
-
-                relations {
-                    optionals.add("cloth-config")
-                }
-            }
-        }
     }
 }
