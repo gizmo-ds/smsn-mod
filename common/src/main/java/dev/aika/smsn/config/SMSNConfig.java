@@ -34,6 +34,7 @@ public class SMSNConfig extends ModConfig {
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
     public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
     public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
+    public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

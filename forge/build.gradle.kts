@@ -105,6 +105,8 @@ dependencies {
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("forge.ad_astra")}")
     // Exposure
     modCompileOnly("maven.modrinth:exposure:${mod.prop("forge.exposure")}")
+    // Titanium
+    modCompileOnly("maven.modrinth:titanium:${mod.prop("forge.titanium")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

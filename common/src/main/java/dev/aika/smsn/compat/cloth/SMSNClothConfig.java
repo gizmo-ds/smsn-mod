@@ -61,6 +61,7 @@ public class SMSNClothConfig {
         addEntry(general, fabricOnly, makeOption(entryBuilder, "irisUpdateCheck"));
         addEntry(general, BOTH, makeOption(entryBuilder, "adAstraStation"));
         addEntry(general, BOTH, makeOption(entryBuilder, "exposureGoldenCameraSkin"));
+        addEntry(general, forgeOnly, makeOption(entryBuilder, "titaniumReward"));
 
         addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol","citadelAprilFoolsContent"));
         addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));

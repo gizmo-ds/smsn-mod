@@ -47,6 +47,8 @@ public class MixinInfo {
 
             put("dev.aika.smsn.forge.mixin.exposure.GildedMixin", "exposure");
             put("dev.aika.smsn.forge.mixin.exposure.PatreonMixin", "exposure");
+
+            put("dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium");
         }};
     }
 }

@@ -28,6 +28,7 @@
     "placebo.WingsManagerMixin",
     "quark.ThreadContributorListLoaderMixin",
     "supplementaries.CreditsMixin",
+    "titanium.RewardMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
