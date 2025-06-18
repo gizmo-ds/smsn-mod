@@ -32,9 +32,6 @@ jobs:
         with:
           arguments: build --no-daemon
 
-      - name: Publishing
-        run: ./gradlew publishUnified
-
       - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191
         if: startsWith(github.ref, 'refs/tags/')
