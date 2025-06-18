@@ -67,7 +67,7 @@ dependencies {
 
     // Supplementaries
     modLocalRuntime("maven.modrinth:moonlight:kC4rX7ac")
-    modImplementation("libs:supplementaries:${mod.prop("neoforge.supplementaries")}")
+    modImplementation("mods:supplementaries:${mod.prop("neoforge.supplementaries")}")
     // Petrolpark's Library
     modLocalRuntime("com.tterrag.registrate:Registrate:MC1.21-1.3.0+62")
     modLocalRuntime("net.createmod.ponder:Ponder-NeoForge-1.21.1:1.0.45")
