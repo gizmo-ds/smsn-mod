@@ -40,6 +40,8 @@ Forge:
   - Immersive Caves: 禁用 Discord 消息
   - Placebo: 禁止赞助者轨迹请求和赞助者翅膀请求
   - Ad Astra: Stations
+  - Exposure: 禁止黄金相机皮肤请求
+  - Titanium: 禁止奖励请求
 
 Fabric:
   - Botania: 禁止获取贡献者列表
@@ -49,6 +51,7 @@ Fabric:
   - Inventory Profiles Next: 禁止了更新检测和追踪请求
   - Iris Shader: 禁止更新请求
   - Ad Astra: Stations
+  - Exposure: 禁止黄金相机皮肤请求
 ```
 
 ## 为什么?
