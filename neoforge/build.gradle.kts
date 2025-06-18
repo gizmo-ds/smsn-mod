@@ -98,6 +98,8 @@ dependencies {
     modImplementation("maven.modrinth:actually-additions:${mod.prop("neoforge.actually_additions")}")
     // Exposure
     modCompileOnly("maven.modrinth:exposure:${mod.prop("neoforge.exposure")}")
+    // Titanium
+    modCompileOnly("maven.modrinth:titanium:${mod.prop("neoforge.titanium")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

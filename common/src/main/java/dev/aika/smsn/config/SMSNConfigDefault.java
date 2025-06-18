@@ -20,4 +20,5 @@ public class SMSNConfigDefault {
     public static boolean immersiveCavesDiscordMessage = false;
     public static boolean actuallyAdditionsSpecialPeopleStuff = false;
     public static boolean exposureGoldenCameraSkin = false;
+    public static boolean titaniumReward = false;
 }

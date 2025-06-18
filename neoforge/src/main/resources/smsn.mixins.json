@@ -20,7 +20,8 @@
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
-    "supplementaries.CreditsMixin"
+    "supplementaries.CreditsMixin",
+    "titanium.RewardMixin"
   ],
   "injectors": {
     "defaultRequire": 1
