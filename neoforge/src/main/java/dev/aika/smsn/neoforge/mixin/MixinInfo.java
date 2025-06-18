@@ -29,6 +29,9 @@ public class MixinInfo {
             put("dev.aika.smsn.neoforge.mixin.iris.UpdateCheckerMixin", "iris");
 
             put("dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin", "actuallyadditions");
+
+            put("dev.aika.smsn.neoforge.mixin.exposure.GildedMixin", "exposure");
+            put("dev.aika.smsn.neoforge.mixin.exposure.PatreonMixin", "exposure");
         }};
     }
 }

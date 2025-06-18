@@ -8,6 +8,8 @@
     "iris.UpdateCheckerMixin"
   ],
   "mixins": [
+    "exposure.GildedMixin",
+    "exposure.PatreonMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "supplementaries.CreditsMixin"

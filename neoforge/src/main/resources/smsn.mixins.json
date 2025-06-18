@@ -12,6 +12,8 @@
     "actuallyadditions.ThreadSpecialFetcherMixin",
     "aetherteam.UserData$ServerMixin",
     "bagus_lib.TierHelperMixin",
+    "exposure.GildedMixin",
+    "exposure.PatreonMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "ipn.IPNInfoManagerMixin",

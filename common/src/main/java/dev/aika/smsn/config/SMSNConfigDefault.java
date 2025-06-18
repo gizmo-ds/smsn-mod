@@ -19,4 +19,5 @@ public class SMSNConfigDefault {
     public static boolean irisUpdateCheck = false;
     public static boolean immersiveCavesDiscordMessage = false;
     public static boolean actuallyAdditionsSpecialPeopleStuff = false;
+    public static boolean exposureGoldenCameraSkin = false;
 }

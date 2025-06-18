@@ -48,6 +48,8 @@ dependencies {
     // Iris Shader
     modLocalRuntime("maven.modrinth:sodium:RncWhTxD")
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
+    // Exposure
+    modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

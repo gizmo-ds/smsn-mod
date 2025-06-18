@@ -49,6 +49,17 @@ subprojects {
             name = "Cloth Config"
             url = uri("https://maven.shedaniel.me/")
         }
+        maven {
+            name = "Just Enough Items"
+            url = uri("https://modmaven.dev")
+        }
+        maven {
+            name = "Fuzss"
+            url = uri("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/")
+            content {
+                includeGroup("fuzs.forgeconfigapiport")
+            }
+        }
     }
 
     dependencies {
