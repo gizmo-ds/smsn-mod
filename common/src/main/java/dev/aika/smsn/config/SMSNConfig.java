@@ -5,36 +5,67 @@ import blue.endless.jankson.Jankson;
 import blue.endless.jankson.annotation.SerializedName;
 import dev.aika.smsn.ModConstants;
 import dev.aika.smsn.SMSN;
+import dev.aika.smsn.annotation.Category;
+import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 
 @Getter
+@SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
     @SerializedName("yuumi")
     @Comment("❤ Loving " + SMSN.MOD_NAME + " ? Consider supporting development on " + ModConstants.SponsorUrl + " to help keep updates coming! ❤")
-    public String sponsor = ModConstants.MyCat;
+    private static final String sponsor = ModConstants.MyCat;
 
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean quarkContributorCheck = SMSNConfigDefault.quarkContributorCheck;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
-    public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean alexModsContributorCheck = SMSNConfigDefault.alexModsContributorCheck;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean obscureModsCheck = SMSNConfigDefault.obscureModsCheck;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean botaniaContributorCheck = SMSNConfigDefault.botaniaContributorCheck;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean enigmaticLegacyUpdateCheck = SMSNConfigDefault.enigmaticLegacyUpdateCheck;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean placeboWings = SMSNConfigDefault.placeboWings;
+    @LoaderSpecific(LoaderType.FABRIC)
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
-    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
+    public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
+
+    @Category("qol")
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
+    @Category("qol")
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
 
     private static final Jankson JANKSON = Jankson.builder().build();
 

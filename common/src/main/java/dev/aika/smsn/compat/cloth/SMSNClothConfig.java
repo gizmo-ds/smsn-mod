@@ -2,8 +2,10 @@ package dev.aika.smsn.compat.cloth;
 
 import dev.aika.smsn.ModConstants;
 import dev.aika.smsn.SMSN;
+import dev.aika.smsn.annotation.Category;
+import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.config.SMSNConfigDefault;
-import dev.architectury.injectables.targets.ArchitecturyTarget;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -19,11 +21,13 @@ import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SMSNClothConfig {
     private static final Logger log = SMSN.LOGGER;
-    private static final Marker MARKER = MarkerFactory.getMarker("SMSNClothConfig");
+    private static final Marker marker = MarkerFactory.getMarker("SMSNClothConfig");
 
     public static Screen ConfigScreen(Screen parent) {
         final ConfigBuilder builder = ConfigBuilder.create()
@@ -38,40 +42,13 @@ public class SMSNClothConfig {
         final ConfigCategory qol = builder.getOrCreateCategory(Component.translatable("config.smsn.qol"));
         qol.addEntry(sponsorDescription(entryBuilder));
 
-        final var forgeOnly = List.of("forge");
-        final var fabricOnly = List.of("fabric");
-        final var BOTH = List.of("forge", "fabric");
-
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "quarkContributorCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "ipnUpdateCheckAndUserTracking"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "xaeroMapPatreonCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "xaeroMapVersionCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "alexModsContributorCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "petrolparkBadgeCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "obscureModsCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "supplementariesCreditsCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "botaniaContributorCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "bagusLibSupportersCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyUpdateCheck"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "enigmaticLegacyFetchDevotedBelievers"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboTrails"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "placeboWings"));
-        addEntry(general, fabricOnly, makeOption(entryBuilder, "irisUpdateCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "adAstraStation"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "exposureGoldenCameraSkin"));
-        addEntry(general, forgeOnly, makeOption(entryBuilder, "titaniumReward"));
-
-        addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol","citadelAprilFoolsContent"));
-        addEntry(qol, forgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));
+        Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            addEntry(builder, entryBuilder, field);
+        }
 
         builder.transparentBackground();
         return builder.build();
-    }
-
-    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
-        return makeOption(builder, "general", key);
     }
 
     private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String category, String key) {
@@ -88,13 +65,17 @@ public class SMSNClothConfig {
                 .build();
     }
 
+    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
+        return makeOption(builder, "general", key);
+    }
+
     private static boolean getConfigValueByFieldName(String name) {
         try {
             Field field = SMSN.CONFIG.getClass().getDeclaredField(name);
             field.setAccessible(true);
             return (boolean) field.get(SMSN.CONFIG);
         } catch (Exception e) {
-            log.error(MARKER, "Could not get config value for {}", name, e);
+            log.error(marker, "Could not get config value for {}", name, e);
             return false;
         }
     }
@@ -106,7 +87,7 @@ public class SMSNClothConfig {
             field.setAccessible(true);
             field.set(SMSN.CONFIG, value);
         } catch (Exception e) {
-            log.error(MARKER, "Could not set config value for {}", name, e);
+            log.error(marker, "Could not set config value for {}", name, e);
         }
     }
 
@@ -116,16 +97,28 @@ public class SMSNClothConfig {
             field.setAccessible(true);
             return (boolean) field.get(null);
         } catch (Exception e) {
-            log.error(MARKER, "Could not get config default value for {}", name, e);
+            log.error(marker, "Could not get config default value for {}", name, e);
             return false;
         }
     }
 
-    private static void addEntry(ConfigCategory category, List<String> platforms, BooleanListEntry entry) {
-        if (!platforms.contains(ArchitecturyTarget.getCurrentTarget())) return;
-        category.addEntry(entry);
-    }
+    private static void addEntry(ConfigBuilder builder, ConfigEntryBuilder entryBuilder, Field field) {
+        if (Modifier.isFinal(field.getModifiers())) return;
 
+        final Category categoryAnnotation = field.getAnnotation(Category.class);
+        final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
+
+        final List<LoaderType> loaders = new ArrayList<>();
+        final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
+        if (loaderAnnotation != null) loaders.addAll(List.of(loaderAnnotation.value()));
+        else loaders.add(LoaderType.getCurrentLoader());
+        if (!loaders.contains(LoaderType.getCurrentLoader())) return;
+
+        final ConfigCategory configCategory = builder.getOrCreateCategory(Component.translatable("config.smsn." + category));
+
+        BooleanListEntry entry = makeOption(entryBuilder, category, field.getName());
+        configCategory.addEntry(entry);
+    }
 
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
         return entryBuilder.startTextDescription(
@@ -138,6 +131,4 @@ public class SMSNClothConfig {
                                         .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ModConstants.SponsorUrl)))
                 )).build();
     }
-
-
 }
