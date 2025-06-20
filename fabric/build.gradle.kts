@@ -64,6 +64,8 @@ dependencies {
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("fabric.ad_astra")}")
     // Exposure
     modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
+    // Ribbits
+    modCompileOnly("maven.modrinth:ribbits:${mod.prop("fabric.ribbits")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

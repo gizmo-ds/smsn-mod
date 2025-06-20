@@ -25,6 +25,8 @@ public class MixinInfo {
 
             put("dev.aika.smsn.fabric.mixin.exposure.GildedMixin", "exposure");
             put("dev.aika.smsn.fabric.mixin.exposure.PatreonMixin", "exposure");
+
+            put("dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin", "ribbits");
         }};
     }
 }

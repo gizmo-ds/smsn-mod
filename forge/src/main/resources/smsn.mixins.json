@@ -27,6 +27,7 @@
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
     "quark.ThreadContributorListLoaderMixin",
+    "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "titanium.RewardMixin",
     "xaero.minimap.InternetMixin",
