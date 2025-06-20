@@ -42,6 +42,7 @@ Forge:
   - Ad Astra: Stations
   - Exposure: 禁止黄金相机皮肤请求
   - Titanium: 禁止奖励请求
+  - Ribbits: 禁止赞助者帽子请求
 
 Fabric:
   - Botania: 禁止获取贡献者列表
@@ -52,6 +53,7 @@ Fabric:
   - Iris Shader: 禁止更新请求
   - Ad Astra: Stations
   - Exposure: 禁止黄金相机皮肤请求
+  - Ribbits: 禁止赞助者帽子请求
 ```
 
 ## 为什么?
