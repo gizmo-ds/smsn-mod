@@ -20,6 +20,7 @@
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
+    "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "titanium.RewardMixin"
   ],

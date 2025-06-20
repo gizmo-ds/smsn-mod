@@ -28,10 +28,6 @@ repositories {
         url = uri("https://maven.neoforged.net/releases")
     }
     maven {
-        name = "Aether Team"
-        url = uri("https://packages.aether-mod.net/Nitrogen")
-    }
-    maven {
         name = "Blueprint"
         url = uri("https://maven.teamabnormals.com")
     }
@@ -99,6 +95,8 @@ dependencies {
     modCompileOnly("maven.modrinth:exposure:${mod.prop("neoforge.exposure")}")
     // Titanium
     modCompileOnly("maven.modrinth:titanium:${mod.prop("neoforge.titanium")}")
+    // Ribbits
+    modCompileOnly("maven.modrinth:ribbits:${mod.prop("neoforge.ribbits")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

@@ -49,6 +49,10 @@ dependencies {
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
     // Exposure
     modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
+    // Aether Nitrogen
+    modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("fabric.nitrogen")}")
+    // Ribbits
+    modCompileOnly("maven.modrinth:ribbits:${mod.prop("fabric.ribbits")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

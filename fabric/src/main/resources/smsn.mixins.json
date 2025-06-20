@@ -8,10 +8,12 @@
     "iris.UpdateCheckerMixin"
   ],
   "mixins": [
+    "aetherteam.UserData$ServerMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
+    "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin"
   ],
   "injectors": {

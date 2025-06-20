@@ -34,6 +34,8 @@ public class MixinInfo {
             put("dev.aika.smsn.neoforge.mixin.exposure.PatreonMixin", "exposure");
 
             put("dev.aika.smsn.neoforge.mixin.titanium.RewardMixin", "titanium");
+
+            put("dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin", "ribbits");
         }};
     }
 }
