@@ -53,6 +53,10 @@ subprojects {
             url = uri("https://modmaven.dev")
         }
         maven {
+            name = "Aether Team"
+            url = uri("https://packages.aether-mod.net/Nitrogen")
+        }
+        maven {
             name = "Fuzss"
             url = uri("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/")
             content {

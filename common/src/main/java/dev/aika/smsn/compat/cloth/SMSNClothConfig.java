@@ -2,8 +2,10 @@ package dev.aika.smsn.compat.cloth;
 
 import dev.aika.smsn.ModConstants;
 import dev.aika.smsn.SMSN;
+import dev.aika.smsn.annotation.Category;
+import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.config.SMSNConfigDefault;
-import dev.architectury.injectables.targets.ArchitecturyTarget;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -19,11 +21,13 @@ import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SMSNClothConfig {
     private static final Logger log = SMSN.LOGGER;
-    private static final Marker MARKER = MarkerFactory.getMarker("SMSNClothConfig");
+    private static final Marker marker = MarkerFactory.getMarker("SMSNClothConfig");
 
     public static Screen ConfigScreen(Screen parent) {
         final ConfigBuilder builder = ConfigBuilder.create()
@@ -38,30 +42,13 @@ public class SMSNClothConfig {
         final ConfigCategory qol = builder.getOrCreateCategory(Component.translatable("config.smsn.qol"));
         qol.addEntry(sponsorDescription(entryBuilder));
 
-        final var neoforgeOnly = List.of("neoforge");
-        final var BOTH = List.of("neoforge", "fabric");
-
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "aetherMoaSkinsFeature"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "ipnUpdateCheckAndUserTracking"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "petrolparkBadgeCheck"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "supplementariesCreditsCheck"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "bagusLibSupportersCheck"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "immersiveEngineeringSpecialRevolvers"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboTrails"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "placeboWings"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "irisUpdateCheck"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "actuallyAdditionsSpecialPeopleStuff"));
-        addEntry(general, BOTH, makeOption(entryBuilder, "exposureGoldenCameraSkin"));
-        addEntry(general, neoforgeOnly, makeOption(entryBuilder, "titaniumReward"));
-
-        addEntry(qol, neoforgeOnly, makeOption(entryBuilder, "qol", "immersiveCavesDiscordMessage"));
+        Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            addEntry(builder, entryBuilder, field);
+        }
 
         builder.transparentBackground();
         return builder.build();
-    }
-
-    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String key) {
-        return makeOption(builder, "general", key);
     }
 
     private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String category, String key) {
@@ -84,7 +71,7 @@ public class SMSNClothConfig {
             field.setAccessible(true);
             return (boolean) field.get(SMSN.CONFIG);
         } catch (Exception e) {
-            log.error(MARKER, "Could not get config value for {}", name, e);
+            log.error(marker, "Could not get config value for {}", name, e);
             return false;
         }
     }
@@ -96,7 +83,7 @@ public class SMSNClothConfig {
             field.setAccessible(true);
             field.set(SMSN.CONFIG, value);
         } catch (Exception e) {
-            log.error(MARKER, "Could not set config value for {}", name, e);
+            log.error(marker, "Could not set config value for {}", name, e);
         }
     }
 
@@ -106,16 +93,28 @@ public class SMSNClothConfig {
             field.setAccessible(true);
             return (boolean) field.get(null);
         } catch (Exception e) {
-            log.error(MARKER, "Could not get config default value for {}", name, e);
+            log.error(marker, "Could not get config default value for {}", name, e);
             return false;
         }
     }
 
-    private static void addEntry(ConfigCategory category, List<String> platforms, BooleanListEntry entry) {
-        if (!platforms.contains(ArchitecturyTarget.getCurrentTarget())) return;
-        category.addEntry(entry);
-    }
+    private static void addEntry(ConfigBuilder builder, ConfigEntryBuilder entryBuilder, Field field) {
+        if (Modifier.isFinal(field.getModifiers())) return;
 
+        final Category categoryAnnotation = field.getAnnotation(Category.class);
+        final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
+
+        final List<LoaderType> loaders = new ArrayList<>();
+        final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
+        if (loaderAnnotation != null) loaders.addAll(List.of(loaderAnnotation.value()));
+        else loaders.add(LoaderType.getCurrentLoader());
+        if (!loaders.contains(LoaderType.getCurrentLoader())) return;
+
+        final ConfigCategory configCategory = builder.getOrCreateCategory(Component.translatable("config.smsn." + category));
+
+        BooleanListEntry entry = makeOption(entryBuilder, category, field.getName());
+        configCategory.addEntry(entry);
+    }
 
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
         return entryBuilder.startTextDescription(
