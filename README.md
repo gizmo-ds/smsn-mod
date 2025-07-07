@@ -36,6 +36,8 @@ Neoforge:
   - Exposure: 禁止黄金相机皮肤请求
   - Titanium: 禁止奖励请求
   - Ribbits: 禁止赞助者帽子请求
+  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
+  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
 
 Fabric:
   - Supplementaries: 禁止获取赞助者信息的请求
@@ -44,6 +46,8 @@ Fabric:
   - Exposure: 禁止黄金相机皮肤请求
   - Nitrogen: 禁用了 The Aether Team 的模组（如：The Aether）的赞助者内容，这会让 The Aether 中的恐鸟的赞助者换肤功能失效，默认不启用
   - Ribbits: 禁止赞助者帽子请求
+  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
+  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
 ```
 
 ## 为什么?
