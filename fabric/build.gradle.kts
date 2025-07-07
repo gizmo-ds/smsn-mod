@@ -121,7 +121,8 @@ if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
         val readme = rootProject.file("README.md").readText()
         if (readme.isNotEmpty()) syncBodyFrom.set(readme)
 
-        versionNumber.set(mod.version)
+        versionName.set("${mod.version} ${loom.platform.get().displayName()}")
+        versionNumber.set(project.version.toString())
         versionType.set(mod.release_type)
         uploadFile.set(tasks.remapJar.flatMap { it.archiveFile })
         gameVersions.addAll(mod.game_version_supports)
