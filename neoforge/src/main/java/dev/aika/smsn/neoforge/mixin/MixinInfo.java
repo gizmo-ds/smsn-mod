@@ -36,6 +36,11 @@ public class MixinInfo {
             put("dev.aika.smsn.neoforge.mixin.titanium.RewardMixin", "titanium");
 
             put("dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin", "ribbits");
+
+            put("dev.aika.smsn.neoforge.mixin.xaero.minimap.InternetMixin", "xaerominimap");
+            put("dev.aika.smsn.neoforge.mixin.xaero.minimap.PatreonMixin", "xaerominimap");
+            put("dev.aika.smsn.neoforge.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
+            put("dev.aika.smsn.neoforge.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
         }};
     }
 }

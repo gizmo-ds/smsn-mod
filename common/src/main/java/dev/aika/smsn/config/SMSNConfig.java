@@ -43,6 +43,10 @@ public class SMSNConfig extends ModConfig {
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
     @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
+    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
+    public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
+    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
+    public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

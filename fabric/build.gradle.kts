@@ -53,6 +53,9 @@ dependencies {
     modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("fabric.nitrogen")}")
     // Ribbits
     modCompileOnly("maven.modrinth:ribbits:${mod.prop("fabric.ribbits")}")
+    // Xaero's Maps
+    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
+    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

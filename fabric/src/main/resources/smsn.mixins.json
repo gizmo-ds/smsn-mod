@@ -14,7 +14,11 @@
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "ribbits.SupportersJSONMixin",
-    "supplementaries.CreditsMixin"
+    "supplementaries.CreditsMixin",
+    "xaero.minimap.InternetMixin",
+    "xaero.minimap.PatreonMixin",
+    "xaero.world_map.InternetMixin",
+    "xaero.world_map.PatreonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

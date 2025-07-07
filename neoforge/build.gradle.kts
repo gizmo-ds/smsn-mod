@@ -97,6 +97,9 @@ dependencies {
     modCompileOnly("maven.modrinth:titanium:${mod.prop("neoforge.titanium")}")
     // Ribbits
     modCompileOnly("maven.modrinth:ribbits:${mod.prop("neoforge.ribbits")}")
+    // Xaero's Maps
+    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("neoforge.xaeros_minimap")}")
+    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("neoforge.xaeros_world_map")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

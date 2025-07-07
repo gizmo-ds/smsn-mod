@@ -22,7 +22,11 @@
     "placebo.WingsManagerMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
-    "titanium.RewardMixin"
+    "titanium.RewardMixin",
+    "xaero.minimap.InternetMixin",
+    "xaero.minimap.PatreonMixin",
+    "xaero.world_map.InternetMixin",
+    "xaero.world_map.PatreonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

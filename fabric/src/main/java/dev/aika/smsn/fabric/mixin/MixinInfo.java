@@ -20,6 +20,11 @@ public class MixinInfo {
             put("dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin", "ribbits");
 
             put("dev.aika.smsn.fabric.mixin.aetherteam.UserData$ServerMixin", "nitrogen");
+
+            put("dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin", "xaerominimap");
+            put("dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap");
+            put("dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
+            put("dev.aika.smsn.fabric.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
         }};
     }
 }
