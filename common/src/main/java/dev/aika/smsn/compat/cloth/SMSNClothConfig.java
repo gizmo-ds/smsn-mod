@@ -44,6 +44,7 @@ public class SMSNClothConfig {
 
         Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
         for (Field field : fields) {
+            if (isIgnored(field)) continue;
             addEntry(builder, entryBuilder, field);
         }
 
@@ -98,17 +99,19 @@ public class SMSNClothConfig {
         }
     }
 
-    private static void addEntry(ConfigBuilder builder, ConfigEntryBuilder entryBuilder, Field field) {
-        if (Modifier.isFinal(field.getModifiers())) return;
-
-        final Category categoryAnnotation = field.getAnnotation(Category.class);
-        final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
+    private static boolean isIgnored(Field field) {
+        if (Modifier.isFinal(field.getModifiers())) return true;
 
         final List<LoaderType> loaders = new ArrayList<>();
         final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
         if (loaderAnnotation != null) loaders.addAll(List.of(loaderAnnotation.value()));
         else loaders.add(LoaderType.getCurrentLoader());
-        if (!loaders.contains(LoaderType.getCurrentLoader())) return;
+        return !loaders.contains(LoaderType.getCurrentLoader());
+    }
+
+    private static void addEntry(ConfigBuilder builder, ConfigEntryBuilder entryBuilder, Field field) {
+        final Category categoryAnnotation = field.getAnnotation(Category.class);
+        final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
 
         final ConfigCategory configCategory = builder.getOrCreateCategory(Component.translatable("config.smsn." + category));
 
