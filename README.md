@@ -38,6 +38,7 @@ Neoforge:
   - Ribbits: 禁止赞助者帽子请求
   - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
   - Xaero's World Map: 禁止了更新检测和获取赞助者列表
+  - M.R.U: 禁止 API 请求
 
 Fabric:
   - Supplementaries: 禁止获取赞助者信息的请求
@@ -48,6 +49,7 @@ Fabric:
   - Ribbits: 禁止赞助者帽子请求
   - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
   - Xaero's World Map: 禁止了更新检测和获取赞助者列表
+  - M.R.U: 禁止 API 请求
 ```
 
 ## 为什么?

@@ -25,6 +25,8 @@ public class MixinInfo {
             put("dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap");
             put("dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
             put("dev.aika.smsn.fabric.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
+
+            put("dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin", "mru");
         }};
     }
 }

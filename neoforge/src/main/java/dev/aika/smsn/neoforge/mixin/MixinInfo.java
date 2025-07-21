@@ -41,6 +41,8 @@ public class MixinInfo {
             put("dev.aika.smsn.neoforge.mixin.xaero.minimap.PatreonMixin", "xaerominimap");
             put("dev.aika.smsn.neoforge.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
             put("dev.aika.smsn.neoforge.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
+
+            put("dev.aika.smsn.neoforge.mixin.imb11.mru.APIMixin", "mru");
         }};
     }
 }

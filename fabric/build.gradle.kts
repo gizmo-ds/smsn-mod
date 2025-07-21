@@ -58,6 +58,8 @@ dependencies {
     // Xaero's Maps
     modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
     modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")
+    // M.R.U
+    modImplementation("maven.modrinth:mru:${mod.prop("fabric.mru")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

@@ -102,6 +102,8 @@ dependencies {
     // Xaero's Maps
     modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("neoforge.xaeros_minimap")}")
     modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("neoforge.xaeros_world_map")}")
+    // M.R.U
+    modImplementation("maven.modrinth:mru:${mod.prop("neoforge.mru")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")
