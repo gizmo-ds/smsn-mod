@@ -24,4 +24,5 @@ public class SMSNConfigDefault {
     public static boolean exposureGoldenCameraSkin = false;
     public static boolean titaniumReward = false;
     public static boolean ribbitsSupporterHat = false;
+    public static boolean mruApi = false;
 }

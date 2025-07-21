@@ -59,6 +59,8 @@ public class SMSNConfig extends ModConfig {
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
     @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
+    public boolean mruApi = SMSNConfigDefault.mruApi;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
