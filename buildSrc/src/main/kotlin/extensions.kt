@@ -15,6 +15,7 @@ value class ModData(private val project: Project) {
     val group: String get() = strProp("mod.group")
     val release_type: String get() = strProp("mod.release_type")
     val minecraft_version: String get() = strProp("minecraft_version")
+    val game_version_supports: List<String> get() = strProp("mod.game_version_supports").split(",")
     val enabled_platforms: List<String> get() = strProp("mod.enabled_platforms").split(",")
 
     fun prop(key: String) = strProp(key)

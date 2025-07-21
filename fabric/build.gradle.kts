@@ -2,6 +2,8 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
+    id("com.modrinth.minotaur").version("2.+")
+    id("net.darkhax.curseforgegradle").version("1.+")
 }
 
 architectury {
@@ -99,5 +101,45 @@ tasks {
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
+    }
+}
+
+tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
+    group = "publishing"
+
+    val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
+    val curseforgeId: String = mod.prop("curseforge_id")
+    if (curseforgeId.isEmpty() || curseforgeToken.isEmpty()) {
+        isEnabled = false
+        return@register
+    }
+
+    apiToken = curseforgeToken
+    val mainFile = upload(curseforgeId, tasks.remapJar.flatMap { it.archiveFile })
+    mainFile.releaseType = mod.release_type
+    mainFile.gameVersions.addAll(mod.game_version_supports)
+    mainFile.addModLoader(loom.platform.get().displayName())
+    mainFile.addOptional("cloth-config")
+    mainFile.changelog = ""
+}
+
+val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
+val modrinthId: String = mod.prop("modrinth_id")
+if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
+    modrinth {
+        token.set(modrinthToken)
+        projectId.set(modrinthId)
+
+        val readme = rootProject.file("README.md").readText()
+        if (readme.isNotEmpty()) syncBodyFrom.set(readme)
+
+        versionName.set("${mod.version} ${loom.platform.get().displayName()}")
+        versionType.set(mod.release_type)
+        uploadFile.set(tasks.remapJar.flatMap { it.archiveFile })
+        gameVersions.addAll(mod.game_version_supports)
+        loaders.add(loom.platform.get().id())
+        dependencies {
+            optional.project("cloth-config")
+        }
     }
 }
