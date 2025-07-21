@@ -20,6 +20,7 @@
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
+    "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "ipn.IPNInfoManagerMixin",

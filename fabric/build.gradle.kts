@@ -66,6 +66,8 @@ dependencies {
     modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
     // Ribbits
     modCompileOnly("maven.modrinth:ribbits:${mod.prop("fabric.ribbits")}")
+    // M.R.U
+    modImplementation("maven.modrinth:mru:${mod.prop("fabric.mru")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
 

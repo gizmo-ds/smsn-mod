@@ -109,6 +109,8 @@ dependencies {
     modCompileOnly("maven.modrinth:titanium:${mod.prop("forge.titanium")}")
     // Ribbits
     modCompileOnly("maven.modrinth:ribbits:${mod.prop("forge.ribbits")}")
+    // M.R.U
+    modImplementation("maven.modrinth:mru:${mod.prop("forge.mru")}")
 
     shadowBundle("blue.endless:jankson:1.2.3")
     forgeRuntimeLibrary("blue.endless:jankson:1.2.3")

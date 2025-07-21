@@ -51,6 +51,8 @@ public class MixinInfo {
             put("dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium");
 
             put("dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin", "ribbits");
+
+            put("dev.aika.smsn.forge.mixin.imb11.mru.APIMixin", "mru");
         }};
     }
 }
