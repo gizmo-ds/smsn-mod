@@ -134,6 +134,7 @@ if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
         if (readme.isNotEmpty()) syncBodyFrom.set(readme)
 
         versionName.set("${mod.version} ${loom.platform.get().displayName()}")
+        versionNumber.set(project.version.toString())
         versionType.set(mod.release_type)
         uploadFile.set(tasks.remapJar.flatMap { it.archiveFile })
         gameVersions.addAll(mod.game_version_supports)
