@@ -4,7 +4,7 @@ import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import dev.aika.smsn.compat.cloth.SMSNClothConfig;
 import dev.aika.smsn.fabric.SMSNPlatformImpl;
-import dev.aika.smsn.gui.MissingClothConfigScreen;
+import dev.aika.smsn.client.gui.MissingClothConfigScreen;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 

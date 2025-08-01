@@ -26,6 +26,8 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
+        if (mixinClassName.startsWith("dev.aika.smsn.mixin.")) return true;
+
         final Map<String, String> mixinClassNames = SMSNPlatform.getMixinClassNames();
         if (mixinClassNames.containsKey(mixinClassName))
             return SMSNPlatform.isModLoaded(mixinClassNames.get(mixinClassName));

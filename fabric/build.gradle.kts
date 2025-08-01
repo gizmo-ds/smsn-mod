@@ -52,8 +52,6 @@ dependencies {
     // M.R.U
     modImplementation("maven.modrinth:mru:${mod.prop("fabric.mru")}")
 
-    shadowBundle("blue.endless:jankson:1.2.3")
-
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))
 }
@@ -75,8 +73,6 @@ tasks {
         archiveClassifier.set("dev-shadow")
 
         mergeServiceFiles()
-
-        relocate("blue.endless.jankson", "${mod.group}.${mod.id}.libs.jankson")
     }
 
     remapJar {

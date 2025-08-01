@@ -1,4 +1,4 @@
-package dev.aika.smsn.gui;
+package dev.aika.smsn.client.gui;
 
 import net.minecraft.Util;
 import net.minecraft.client.Minecraft;

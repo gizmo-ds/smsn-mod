@@ -1,16 +1,15 @@
 package dev.aika.smsn.compat.cloth;
 
-import dev.aika.smsn.ModConstants;
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
+import dev.aika.smsn.client.gui.config.components.ComponentBuilder;
 import dev.aika.smsn.config.SMSNConfigDefault;
 import lombok.SneakyThrows;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import me.shedaniel.clothconfig2.gui.entries.BooleanListEntry;
 import me.shedaniel.clothconfig2.gui.entries.TextListEntry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
@@ -44,61 +43,18 @@ public class SMSNClothConfig {
         final ConfigCategory qol = builder.getOrCreateCategory(Component.translatable("config.smsn.qol"));
         qol.addEntry(sponsorDescription(entryBuilder));
 
-        Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
+        final ComponentBuilder componentBuilder = new ComponentBuilder(entryBuilder, SMSN.CONFIG)
+                .setModId(SMSN.MOD_ID)
+                .setDefaultObject(SMSNConfigDefault.class);
+
+        final Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
         for (Field field : fields) {
             if (isIgnored(field)) continue;
-            addEntry(builder, entryBuilder, field);
+            addEntry(builder, componentBuilder, field);
         }
 
         builder.transparentBackground();
         return builder.build();
-    }
-
-    private static BooleanListEntry makeOption(ConfigEntryBuilder builder, String category, String key) {
-        return builder.startBooleanToggle(
-                        Component.translatable(String.format("config.smsn.%s.%s", category, key)),
-                        getConfigValueByFieldName(key))
-                .setDefaultValue(getConfigDefaultValueByFieldName(key))
-                .setSaveConsumer(value -> setConfigValueByFieldName(key, value))
-                .setYesNoTextSupplier((v -> v ?
-                        Component.translatable("config.smsn.option.yes")
-                                .withStyle(s -> s.withColor(ChatFormatting.GREEN)) :
-                        Component.translatable("config.smsn.option.no")
-                                .withStyle(s -> s.withColor(ChatFormatting.RED))))
-                .build();
-    }
-
-    private static boolean getConfigValueByFieldName(String name) {
-        try {
-            Field field = SMSN.CONFIG.getClass().getDeclaredField(name);
-            field.setAccessible(true);
-            return (boolean) field.get(SMSN.CONFIG);
-        } catch (Exception e) {
-            log.error(marker, "Could not get config value for {}", name, e);
-            return false;
-        }
-    }
-
-    private static void setConfigValueByFieldName(String name, boolean value) {
-        try {
-            Class<?> clazz = SMSN.CONFIG.getClass();
-            Field field = clazz.getDeclaredField(name);
-            field.setAccessible(true);
-            field.set(SMSN.CONFIG, value);
-        } catch (Exception e) {
-            log.error(marker, "Could not set config value for {}", name, e);
-        }
-    }
-
-    private static boolean getConfigDefaultValueByFieldName(String name) {
-        try {
-            Field field = SMSNConfigDefault.class.getDeclaredField(name);
-            field.setAccessible(true);
-            return (boolean) field.get(null);
-        } catch (Exception e) {
-            log.error(marker, "Could not get config default value for {}", name, e);
-            return false;
-        }
     }
 
     private static boolean isIgnored(Field field) {
@@ -111,19 +67,22 @@ public class SMSNClothConfig {
         return !loaders.contains(LoaderType.getCurrentLoader());
     }
 
-    private static void addEntry(ConfigBuilder builder, ConfigEntryBuilder entryBuilder, Field field) {
+    private static void addEntry(ConfigBuilder builder, ComponentBuilder componentBuilder, Field field) {
         final Category categoryAnnotation = field.getAnnotation(Category.class);
         final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
 
-        final ConfigCategory configCategory = builder.getOrCreateCategory(Component.translatable("config.smsn." + category));
+        final ConfigCategory configCategory = builder.getOrCreateCategory(
+                Component.translatable(String.format("config.smsn.%s", category)));
 
-        BooleanListEntry entry = makeOption(entryBuilder, category, field.getName());
-        configCategory.addEntry(entry);
+        Class<?> fieldType = field.getType();
+        if (fieldType == Boolean.class || fieldType == boolean.class)
+            configCategory.addEntry(componentBuilder.switchBuilder(field).setCategory(category).build());
+        else log.warn(marker, "Unsupported field type: {}", fieldType);
     }
 
     @SneakyThrows
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
-        final URI sponsorUrl = new URI(ModConstants.SponsorUrl);
+        final URI sponsorUrl = new URI(SMSN.SponsorUrl);
         return entryBuilder.startTextDescription(
                 Component.translatable("config.smsn.sponsor.description",
                         Component.translatable("modmenu.nameTranslation.smsn")

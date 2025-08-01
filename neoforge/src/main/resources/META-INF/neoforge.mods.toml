@@ -24,16 +24,18 @@ side = "BOTH"
 [[dependencies.smsn]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.7,)"
+versionRange = "[1.21.6,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.smsn]]
 modId = "cloth_config"
 type = "optional"
-versionRange = "[19.0.147,)"
+versionRange = "[19.0.0,)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[mixins]]
 config = "smsn.mixins.json"
+[[mixins]]
+config = "smsn-common.mixins.json"

@@ -1,7 +1,7 @@
 package dev.aika.smsn.neoforge.compat.cloth;
 
 import dev.aika.smsn.compat.cloth.SMSNClothConfig;
-import dev.aika.smsn.gui.MissingClothConfigScreen;
+import dev.aika.smsn.client.gui.MissingClothConfigScreen;
 import dev.aika.smsn.neoforge.SMSNPlatformImpl;
 import net.minecraft.client.gui.screens.Screen;
 import net.neoforged.fml.ModContainer;

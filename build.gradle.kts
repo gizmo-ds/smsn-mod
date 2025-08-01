@@ -73,8 +73,6 @@ subprojects {
             parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
         })
 
-        implementation("blue.endless:jankson:1.2.3")
-
         compileOnly("org.projectlombok:lombok:1.18.38")
         annotationProcessor("org.projectlombok:lombok:1.18.38")
     }
