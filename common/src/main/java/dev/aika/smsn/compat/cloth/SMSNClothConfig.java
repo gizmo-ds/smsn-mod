@@ -6,6 +6,7 @@ import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.config.SMSNConfigDefault;
+import lombok.SneakyThrows;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -22,6 +23,7 @@ import org.slf4j.MarkerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,15 +121,18 @@ public class SMSNClothConfig {
         configCategory.addEntry(entry);
     }
 
+    @SneakyThrows
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
+        final URI sponsorUrl = new URI(ModConstants.SponsorUrl);
         return entryBuilder.startTextDescription(
                 Component.translatable("config.smsn.sponsor.description",
                         Component.translatable("modmenu.nameTranslation.smsn")
                                 .withStyle(s -> s.withColor(ChatFormatting.AQUA).withBold(true)),
                         Component.translatable("config.smsn.sponsor.description.afdian")
                                 .withStyle(s -> s.withColor(ChatFormatting.DARK_PURPLE).withBold(true)
-                                        .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal(ModConstants.SponsorUrl)))
-                                        .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, ModConstants.SponsorUrl)))
+                                        .withHoverEvent(new HoverEvent.ShowText(Component.literal(sponsorUrl.toString())))
+                                        .withClickEvent(new ClickEvent.OpenUrl(sponsorUrl))
+                                )
                 )).build();
     }
 }

@@ -37,24 +37,15 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.prop("cloth_config")}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
-    modImplementation("com.terraformersmc:modmenu:11.0.3")
+    modImplementation("com.terraformersmc:modmenu:${mod.prop("fabric.modmenu")}")
 
     modLocalRuntime("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
 
-    // Supplementaries
-    modLocalRuntime("maven.modrinth:moonlight:WGUxPaDX")
-    modImplementation("maven.modrinth:supplementaries:${mod.prop("fabric.supplementaries")}")
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("fabric.ipn")}")
     // Iris Shader
-    modLocalRuntime("maven.modrinth:sodium:RncWhTxD")
+    modLocalRuntime("maven.modrinth:sodium:${mod.prop("fabric.sodium")}")
     modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
-    // Exposure
-    modCompileOnly("maven.modrinth:exposure:${mod.prop("fabric.exposure")}")
-    // Aether Nitrogen
-    modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("fabric.nitrogen")}")
-    // Ribbits
-    modCompileOnly("maven.modrinth:ribbits:${mod.prop("fabric.ribbits")}")
     // Xaero's Maps
     modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
     modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")

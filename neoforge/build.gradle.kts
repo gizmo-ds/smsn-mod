@@ -63,42 +63,11 @@ dependencies {
 
     modApi("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
 
-    // Supplementaries
-    modLocalRuntime("maven.modrinth:moonlight:kC4rX7ac")
-    modImplementation("mods:supplementaries:${mod.prop("neoforge.supplementaries")}")
-    // Petrolpark's Library
-    modLocalRuntime("com.tterrag.registrate:Registrate:MC1.21-1.3.0+62")
-    modLocalRuntime("net.createmod.ponder:Ponder-NeoForge-1.21.1:1.0.45")
-    modImplementation("maven.modrinth:petrolpark:${mod.prop("neoforge.petrolpark")}")
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("neoforge.ipn")}")
-    // Blueprint
-    modImplementation("com.teamabnormals:blueprint:${mod.prop("neoforge.blueprint")}")
-    // Aether Nitrogen
-    modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("neoforge.nitrogen")}")
-    // Bagus lib
-    modImplementation("maven.modrinth:bagus-lib:${mod.prop("neoforge.bagus_lib")}")
-    // Immersive Engineering
-    modLocalRuntime("malte0811:BlockModelSplitter:2.0.1")
-    modLocalRuntime("malte0811:DualCodecs:0.1.2")
-    modImplementation(
-        group = "blusunrize.immersiveengineering", name = "ImmersiveEngineering",
-        version = mod.prop("neoforge.immersive_engineering")
-    )
-    // Placebo
-    modImplementation("curse.maven:placebo-283644:${mod.prop("neoforge.placebo")}")
-    // Immersive Caves
-    modImplementation("maven.modrinth:immersive-caves:${mod.prop("neoforge.immersive_caves")}")
     // Iris Shader
+    modLocalRuntime("maven.modrinth:sodium:${mod.prop("neoforge.sodium")}")
     modCompileOnly("maven.modrinth:iris:${mod.prop("neoforge.iris")}")
-    // Actually Additions
-    modImplementation("maven.modrinth:actually-additions:${mod.prop("neoforge.actually_additions")}")
-    // Exposure
-    modCompileOnly("maven.modrinth:exposure:${mod.prop("neoforge.exposure")}")
-    // Titanium
-    modCompileOnly("maven.modrinth:titanium:${mod.prop("neoforge.titanium")}")
-    // Ribbits
-    modCompileOnly("maven.modrinth:ribbits:${mod.prop("neoforge.ribbits")}")
     // Xaero's Maps
     modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("neoforge.xaeros_minimap")}")
     modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("neoforge.xaeros_world_map")}")

@@ -24,14 +24,14 @@ side = "BOTH"
 [[dependencies.smsn]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.1,)"
+versionRange = "[1.21.7,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.smsn]]
 modId = "cloth_config"
 type = "optional"
-versionRange = "[15.0.130,)"
+versionRange = "[19.0.147,)"
 ordering = "NONE"
 side = "CLIENT"
 
