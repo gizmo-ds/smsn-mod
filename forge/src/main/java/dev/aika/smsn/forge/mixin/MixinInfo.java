@@ -11,13 +11,6 @@ public class MixinInfo {
 
             put("dev.aika.smsn.forge.mixin.blueprint.RewardHandlerMixin", "blueprint");
 
-            put("dev.aika.smsn.forge.mixin.aetherteam.UserData$ServerMixin", "nitrogen");
-
-            put("dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin", "obscure_api");
-            put("dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin$Mod", "obscure_api");
-
-            put("dev.aika.smsn.forge.mixin.alex.AlexsCavesWebHelperMixin", "alexscaves");
-            put("dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin", "citadel");
             put("dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin", "citadel");
 
             put("dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin", "bagus_lib");
@@ -27,8 +20,6 @@ public class MixinInfo {
 
             put("dev.aika.smsn.forge.mixin.immersive_engineering.ImmersiveEngineeringMixin", "immersiveengineering");
 
-            put("dev.aika.smsn.forge.mixin.petrolpark.BadgeHandlerMixin", "petrolpark");
-
             put("dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin", "inventoryprofilesnext");
 
             put("dev.aika.smsn.forge.mixin.xaero.minimap.InternetMixin", "xaerominimap");
@@ -36,23 +27,9 @@ public class MixinInfo {
             put("dev.aika.smsn.forge.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
             put("dev.aika.smsn.forge.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
 
-            put("dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin", "supplementaries");
-
-            put("dev.aika.smsn.forge.mixin.placebo.TrailsManagerMixin", "placebo");
-            put("dev.aika.smsn.forge.mixin.placebo.WingsManagerMixin", "placebo");
-
-            put("dev.aika.smsn.forge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin", "immersivecaves");
-
-            put("dev.aika.smsn.forge.mixin.ad_astra.StationLoaderMixin", "ad_astra");
-
-            put("dev.aika.smsn.forge.mixin.exposure.GildedMixin", "exposure");
-            put("dev.aika.smsn.forge.mixin.exposure.PatreonMixin", "exposure");
-
             put("dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium");
 
-            put("dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin", "ribbits");
-
-            put("dev.aika.smsn.forge.mixin.imb11.mru.APIMixin", "mru");
+            put("dev.aika.smsn.forge.mixin.botania.ContributorListMixin", "botania");
         }};
     }
 }

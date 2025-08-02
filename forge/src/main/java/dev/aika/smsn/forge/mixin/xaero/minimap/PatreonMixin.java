@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import xaero.common.IXaeroMinimap;
 
+@SuppressWarnings("SpellCheckingInspection")
 @Mixin(value = xaero.common.patreon.Patreon.class, remap = false)
 public class PatreonMixin {
     @Inject(method = "checkPatreon(Lxaero/common/IXaeroMinimap;)V", at = @At("HEAD"), cancellable = true, remap = false)

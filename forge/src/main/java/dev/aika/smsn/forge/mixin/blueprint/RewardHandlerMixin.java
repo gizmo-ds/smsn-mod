@@ -1,5 +1,6 @@
 package dev.aika.smsn.forge.mixin.blueprint;
 
+import com.teamabnormals.blueprint.client.RewardHandler;
 import com.teamabnormals.blueprint.core.BlueprintConfig;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -10,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @OnlyIn(Dist.CLIENT)
-@Mixin(value = com.teamabnormals.blueprint.client.RewardHandler.class, remap = false)
+@Mixin(value = RewardHandler.class, remap = false)
 public abstract class RewardHandlerMixin {
     @Inject(method = "clientSetup", at = @At("HEAD"), cancellable = true)
     private static void onClientSetup(FMLClientSetupEvent event, CallbackInfo ci) {

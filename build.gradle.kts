@@ -1,13 +1,13 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
-import net.fabricmc.loom.api.LoomGradleExtensionAPI
-
 plugins {
-    java
-    id("dev.architectury.loom") version "1.10-SNAPSHOT" apply false
-    id("architectury-plugin") version "3.4-SNAPSHOT"
-    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
-    id("co.uzzu.dotenv.gradle") version "4.0.0"
+    `kotlin-dsl`
+    id("dev.architectury.loom").version("1.10-SNAPSHOT") apply false
+    id("architectury-plugin").version("3.4-SNAPSHOT")
+    id("com.github.johnrengelman.shadow").version("8.1.1") apply false
+    id("co.uzzu.dotenv.gradle").version("4.0.0")
+    id("net.darkhax.curseforgegradle").version("1.1.26") apply false
+    id("com.modrinth.minotaur").version("2.+") apply false
 }
 
 architectury {
@@ -16,18 +16,22 @@ architectury {
 
 allprojects {
     group = mod.group
-    version = "${mod.version}+mc${mod.minecraft_version}"
+    version = "${mod.minecraft_version}-${mod.version}"
 }
+
+val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
+val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
+val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
+val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
     apply(plugin = "architectury-plugin")
     apply(plugin = "maven-publish")
 
-    val loom = project.extensions.getByName<LoomGradleExtensionAPI>("loom")
+    val loom = project.extensions.getByName<net.fabricmc.loom.api.LoomGradleExtensionAPI>("loom")
 
     loom.silentMojangMappingsLicense()
-
     base.archivesName.set("${mod.id}-${project.name}")
 
     repositories {
@@ -72,8 +76,6 @@ subprojects {
 
         compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1")!!)
 
-        implementation("blue.endless:jankson:1.2.3")
-
         compileOnly("org.projectlombok:lombok:1.18.38")
         annotationProcessor("org.projectlombok:lombok:1.18.38")
     }
@@ -93,5 +95,47 @@ subprojects {
     tasks.processResources {
         from(rootProject.file("LICENSE"))
         from(rootProject.file("third-party-licenses")) { into("third-party-licenses") }
+    }
+
+    if (mod.enabled_platforms.contains(project.name)) {
+        apply(plugin = "com.modrinth.minotaur")
+        apply(plugin = "net.darkhax.curseforgegradle")
+
+        ext.set("changelog", modChangelog)
+        ext.set("curseforge_token", curseforgeToken)
+        ext.set("modrinth_token", modrinthToken)
+
+        if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty())
+            extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
+                debugMode.set(debugPublishing)
+                token.set(modrinthToken)
+                projectId.set(mod.modrinth_id)
+                syncBodyFrom.set(rootProject.file("README.md").readText())
+                versionName.set("${mod.version} ${loom.platform.get().displayName()}")
+                versionNumber.set(project.version.toString())
+                versionType.set(mod.release_type)
+                gameVersions.addAll(mod.game_version_supports)
+                loaders.add(project.name)
+                changelog.set(modChangelog)
+                dependencies {
+                    optional.project("cloth-config")
+                }
+            }
+        if (mod.curseforge_id.isNotEmpty() && curseforgeToken.isNotEmpty())
+            tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
+                if (mod.curseforge_id.isEmpty() || curseforgeToken.isEmpty()) {
+                    isEnabled = false
+                    return@register
+                }
+                group = "publishing"
+                debugMode = debugPublishing
+                apiToken = curseforgeToken
+            }
+        tasks.register("releaseMod") {
+            group = "publishing"
+
+            dependsOn("curseforge")
+            dependsOn("modrinth")
+        }
     }
 }
