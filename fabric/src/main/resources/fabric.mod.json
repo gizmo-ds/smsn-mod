@@ -8,7 +8,7 @@
     "Gizmo"
   ],
   "contact": {
-    "homepage": "https://github.com/gizmo-ds/smsn-mod",
+    "homepage": "https://wiki.aika.dev/smsn.html",
     "sources": "https://github.com/gizmo-ds/smsn-mod",
     "issues": "https://github.com/gizmo-ds/smsn-mod/issues"
   },
@@ -20,7 +20,7 @@
       "dev.aika.smsn.fabric.SMSNFabric"
     ],
     "modmenu": [
-      "dev.aika.smsn.fabric.compat.cloth.ClothConfigCompat"
+      "dev.aika.smsn.fabric.compat.ClothConfigCompat"
     ]
   },
   "mixins": [

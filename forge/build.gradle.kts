@@ -2,9 +2,10 @@
 
 plugins {
     id("com.github.johnrengelman.shadow")
-    id("com.modrinth.minotaur").version("2.+")
-    id("net.darkhax.curseforgegradle").version("1.+")
 }
+
+apply(plugin = "com.modrinth.minotaur")
+apply(plugin = "net.darkhax.curseforgegradle")
 
 loom {
     forge {
@@ -61,9 +62,10 @@ repositories {
 dependencies {
     forge("net.minecraftforge:forge:${mod.prop("forge.version")}")
 
-    implementation(include("io.github.llamalad7:mixinextras-forge:0.4.1")!!)
+    localRuntime("io.github.llamalad7:mixinextras-forge:${mod.prop("mixinextras")}")
 
     modApi("me.shedaniel.cloth:cloth-config-forge:${mod.prop("cloth_config")}")
+//    modCompileOnly("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
 
     // Quark
     modLocalRuntime("maven.modrinth:zeta:VDiwJ2Xr")
@@ -92,9 +94,9 @@ dependencies {
     // Immersive Engineering
     modImplementation("maven.modrinth:immersiveengineering:${mod.prop("forge.immersive_engineering")}")
     // Enigmatic Legacy
-    modLocalRuntime("top.theillusivec4.caelus:caelus-forge:3.2.0+1.20.1")
-    modLocalRuntime("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1")
-    modLocalRuntime("vazkii.patchouli:Patchouli:1.20.1-80-FORGE")
+    modLocalRuntime("top.theillusivec4.caelus:caelus-forge:${mod.prop("forge.caelus")}")
+    modLocalRuntime("top.theillusivec4.curios:curios-forge:${mod.prop("forge.curios")}")
+    modLocalRuntime("vazkii.patchouli:Patchouli:${mod.prop("forge.patchouli")}")
     modImplementation("maven.modrinth:enigmatic-legacy:${mod.prop("forge.enigmatic_legacy")}")
     // Supplementaries
     modLocalRuntime("maven.modrinth:moonlight:zFdn1sMr")
@@ -102,7 +104,7 @@ dependencies {
     // Placebo
     modImplementation("curse.maven:placebo-283644:${mod.prop("forge.placebo")}")
     // Immersive Caves
-    modImplementation("maven.modrinth:immersive-caves:XaMLdtpw")
+    modImplementation("maven.modrinth:immersive-caves:${mod.prop("forge.immersive_caves")}")
     // Ad Astra!
     modCompileOnly("maven.modrinth:ad-astra:${mod.prop("forge.ad_astra")}")
     // Exposure
@@ -113,9 +115,8 @@ dependencies {
     modCompileOnly("maven.modrinth:ribbits:${mod.prop("forge.ribbits")}")
     // M.R.U
     modImplementation("maven.modrinth:mru:${mod.prop("forge.mru")}")
-
-    shadowBundle("blue.endless:jankson:1.2.3")
-    forgeRuntimeLibrary("blue.endless:jankson:1.2.3")
+    // Botania
+    modImplementation("vazkii.botania:Botania:${mod.prop("forge.botania")}")
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))
@@ -138,53 +139,22 @@ tasks {
         archiveClassifier.set("dev-shadow")
 
         mergeServiceFiles()
-
-        relocate("blue.endless.jankson", "${mod.group}.${mod.id}.libs.jankson")
     }
 
     remapJar {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
     }
-}
 
-tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
-    group = "publishing"
-
-    val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
-    val curseforgeId: String = mod.prop("curseforge_id")
-    if (curseforgeId.isEmpty() || curseforgeToken.isEmpty()) {
-        isEnabled = false
-        return@register
-    }
-
-    apiToken = curseforgeToken
-    val mainFile = upload(curseforgeId, tasks.remapJar.flatMap { it.archiveFile })
-    mainFile.releaseType = mod.release_type
-    mainFile.gameVersions.addAll(mod.game_version_supports)
-    mainFile.addModLoader(loom.platform.get().displayName())
-    mainFile.addOptional("cloth-config")
-    mainFile.changelog = ""
-}
-
-val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
-val modrinthId: String = mod.prop("modrinth_id")
-if (modrinthId.isNotEmpty() && modrinthToken.isNotEmpty()) {
-    modrinth {
-        token.set(modrinthToken)
-        projectId.set(modrinthId)
-
-        val readme = rootProject.file("README.md").readText()
-        if (readme.isNotEmpty()) syncBodyFrom.set(readme)
-
-        versionName.set("${mod.version} ${loom.platform.get().displayName()}")
-        versionNumber.set(project.version.toString())
-        versionType.set(mod.release_type)
-        uploadFile.set(tasks.remapJar.flatMap { it.archiveFile })
-        gameVersions.addAll(mod.game_version_supports)
-        loaders.add(loom.platform.get().id())
-        dependencies {
-            optional.project("cloth-config")
+    if (mod.modrinth_id.isNotEmpty() && (ext.get("modrinth_token") as String).isNotEmpty())
+        modrinth { uploadFile.set(remapJar.flatMap { it.archiveFile }) }
+    if (mod.curseforge_id.isNotEmpty() && (ext.get("curseforge_token") as String).isNotEmpty())
+        curseforge {
+            val mainFile = upload(mod.curseforge_id, remapJar.flatMap { it.archiveFile })
+            mainFile.releaseType = mod.release_type
+            mainFile.gameVersions.addAll(mod.game_version_supports)
+            mainFile.addModLoader(project.name)
+            mainFile.addOptional("cloth-config")
+            mainFile.changelog = ext.get("changelog")
         }
-    }
 }
