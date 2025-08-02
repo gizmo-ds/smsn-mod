@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = shadows.placebo.patreon.TrailsManager.class, remap = false)
+@Mixin(value = dev.shadowsoffire.placebo.patreon.TrailsManager.class, remap = false)
 public abstract class TrailsManagerMixin {
     @Inject(method = "init", at = @At("HEAD"), cancellable = true)
     private static void init(CallbackInfo ci) {

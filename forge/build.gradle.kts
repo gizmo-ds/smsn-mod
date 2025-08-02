@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -31,92 +31,84 @@ configurations {
     shadowBundle.isCanBeConsumed = false
 }
 
-@Suppress("SpellCheckingInspection")
 repositories {
-    maven {
-        name = "Create"
-        url = uri("https://maven.tterrag.com/")
-    }
-    maven {
-        name = "Aether Teams"
-        url = uri("https://packages.aether-mod.net/Nitrogen")
-    }
-    maven {
-        name = "Curios"
-        url = uri("https://maven.theillusivec4.top/")
-    }
-    maven {
-        name = "Blueprint"
-        url = uri("https://maven.teamabnormals.com")
-    }
-    maven {
+    maven("https://maven.tterrag.com/") { name = "Create" }
+    maven("https://packages.aether-mod.net/Nitrogen") { name = "Aether Teams" }
+    maven("https://maven.theillusivec4.top/") { name = "Curios" }
+    maven("https://maven.teamabnormals.com") { name = "Blueprint" }
+    maven("https://maven.blamejared.com/") {
         name = "Immersive Engineering"
-        url = uri("https://maven.blamejared.com/")
         content {
             includeGroup("malte0811")
             includeGroup("blusunrize.immersiveengineering")
         }
     }
+    maven("https://maven.shadowsoffire.dev/releases") {
+        content {
+            includeGroup("dev.shadowsoffire")
+        }
+    }
 }
 
 dependencies {
-    forge("net.minecraftforge:forge:${mod.prop("forge.version")}")
+    forge(libs.forge.version)
 
-    localRuntime("io.github.llamalad7:mixinextras-forge:${mod.prop("mixinextras")}")
+    localRuntime(libs.mixinextras.forge)
+    modLocalRuntime(libs.norealmsbutton.forge)
 
-    modApi("me.shedaniel.cloth:cloth-config-forge:${mod.prop("cloth_config")}")
-//    modCompileOnly("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
+    modApi(libs.clothconfig.forge)
+//    modCompileOnly(libs.clothconfig.forge)
 
     // Quark
-    modLocalRuntime("maven.modrinth:zeta:VDiwJ2Xr")
-    modImplementation("maven.modrinth:quark:${mod.prop("forge.quark")}")
+    modLocalRuntime(libs.forge.zeta)
+    modImplementation(libs.forge.quark)
     // Alex's mods
-    modImplementation("maven.modrinth:citadel:${mod.prop("forge.citadel")}")
-    modImplementation("maven.modrinth:alexs-caves:${mod.prop("forge.alexs_caves")}")
+    modImplementation(libs.forge.citadel)
+    modImplementation(libs.forge.alexscaves)
     // Xaero's maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("forge.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("forge.xaeros_world_map")}")
+    modImplementation(libs.forge.xaeros.minimap)
+    modImplementation(libs.forge.xaeros.worldmap)
     // Petrolpark
-    modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.3")
-    modLocalRuntime("com.jozufozu.flywheel:flywheel-forge-1.20.1:0.6.11-13")
-    modLocalRuntime("com.simibubi.create:create-1.20.1:0.5.1.h-48:slim") { isTransitive = false }
-    modImplementation("maven.modrinth:petrolpark:${mod.prop("forge.petrolpark")}")
+    modLocalRuntime(libs.forge.registrate)
+    modLocalRuntime(libs.forge.flywheel)
+    modLocalRuntime(libs.forge.create) { isTransitive = false }
+    modImplementation(libs.forge.petrolpark)
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("forge.ipn")}")
+    modCompileOnly(libs.forge.ipn)
     // Obscure API
-    modImplementation("maven.modrinth:obscure-api:${mod.prop("forge.obscure_api")}")
+    modImplementation(libs.forge.obscureapi)
     // Blueprint
-    modImplementation("com.teamabnormals:blueprint:${mod.prop("forge.blueprint")}")
+    modImplementation(libs.forge.blueprint)
     // Aether Nitrogen
-    modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("forge.nitrogen")}")
+    modImplementation(libs.forge.nitrogen)
     // Bagus lib
-    modImplementation("maven.modrinth:bagus-lib:${mod.prop("forge.bagus_lib")}")
+    modImplementation(libs.forge.baguslib)
     // Immersive Engineering
-    modImplementation("maven.modrinth:immersiveengineering:${mod.prop("forge.immersive_engineering")}")
+    modImplementation(libs.forge.immersiveengineering)
     // Enigmatic Legacy
-    modLocalRuntime("top.theillusivec4.caelus:caelus-forge:${mod.prop("forge.caelus")}")
-    modLocalRuntime("top.theillusivec4.curios:curios-forge:${mod.prop("forge.curios")}")
-    modLocalRuntime("vazkii.patchouli:Patchouli:${mod.prop("forge.patchouli")}")
-    modImplementation("maven.modrinth:enigmatic-legacy:${mod.prop("forge.enigmatic_legacy")}")
+    modLocalRuntime(libs.forge.curios)
+    modLocalRuntime(libs.forge.caelus)
+    modLocalRuntime(libs.forge.patchouli)
+    modImplementation(libs.forge.enigmaticlegacy)
     // Supplementaries
-    modLocalRuntime("maven.modrinth:moonlight:zFdn1sMr")
-    modImplementation("maven.modrinth:supplementaries:${mod.prop("forge.supplementaries")}")
+    modCompileOnly(libs.forge.moonlight)
+    modCompileOnly(libs.forge.supplementaries)
     // Placebo
-    modImplementation("curse.maven:placebo-283644:${mod.prop("forge.placebo")}")
+    modImplementation(libs.forge.placebo)
     // Immersive Caves
-    modImplementation("maven.modrinth:immersive-caves:${mod.prop("forge.immersive_caves")}")
+    modImplementation(libs.forge.immersivecaves)
     // Ad Astra!
-    modCompileOnly("maven.modrinth:ad-astra:${mod.prop("forge.ad_astra")}")
+    modCompileOnly(libs.forge.adastra)
     // Exposure
-    modCompileOnly("maven.modrinth:exposure:${mod.prop("forge.exposure")}")
+    modCompileOnly(libs.forge.exposure)
     // Titanium
-    modCompileOnly("maven.modrinth:titanium:${mod.prop("forge.titanium")}")
+    modCompileOnly(libs.forge.titanium)
     // Ribbits
-    modCompileOnly("maven.modrinth:ribbits:${mod.prop("forge.ribbits")}")
+    modCompileOnly(libs.forge.ribbits)
     // M.R.U
-    modImplementation("maven.modrinth:mru:${mod.prop("forge.mru")}")
+    modImplementation(libs.forge.mru)
     // Botania
-    modImplementation("vazkii.botania:Botania:${mod.prop("forge.botania")}")
+    modImplementation(libs.forge.botania)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

@@ -2,12 +2,12 @@
 
 plugins {
     java
-    id("dev.architectury.loom").version("1.10-SNAPSHOT") apply false
-    id("architectury-plugin").version("3.4-SNAPSHOT")
-    id("com.github.johnrengelman.shadow").version("8.1.1") apply false
-    id("co.uzzu.dotenv.gradle").version("4.0.0")
-    id("net.darkhax.curseforgegradle").version("1.1.26") apply false
-    id("com.modrinth.minotaur").version("2.+") apply false
+    alias(libs.plugins.loom) apply false
+    alias(libs.plugins.architectury)
+    alias(libs.plugins.shadow) apply false
+    alias(libs.plugins.dotenv)
+    alias(libs.plugins.curseforge) apply false
+    alias(libs.plugins.modrinth) apply false
 }
 
 architectury {
@@ -22,6 +22,7 @@ allprojects {
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
+val parchmentVersion: String = libs.versions.parchment.get()
 val debugPublishing = true
 
 subprojects {
@@ -36,29 +37,17 @@ subprojects {
     repositories {
         flatDir { dirs("mods") }
 
-        maven {
-            name = "ParchmentMC"
-            url = uri("https://maven.parchmentmc.org")
-        }
-        maven {
-            name = "JitPack"
-            url = uri("https://jitpack.io")
-        }
-        maven {
-            url = uri("https://cursemaven.com")
+        maven("https://maven.parchmentmc.org") { name = "ParchmentMC" }
+        maven("https://jitpack.io") { name = "JitPack" }
+        maven("https://cursemaven.com") {
             content { includeGroup("curse.maven") }
         }
-        maven {
-            url = uri("https://api.modrinth.com/maven")
+        maven("https://api.modrinth.com/maven") {
             content { includeGroup("maven.modrinth") }
         }
-        maven {
-            name = "Cloth Config"
-            url = uri("https://maven.shedaniel.me/")
-        }
-        maven {
+        maven("https://maven.shedaniel.me/") { name = "Cloth Config" }
+        maven("https://maven.blamejared.com") {
             name = "vazkii"
-            url = uri("https://maven.blamejared.com")
             content {
                 includeGroup("vazkii.patchouli")
                 includeGroup("vazkii.botania")
@@ -70,15 +59,14 @@ subprojects {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
         "mappings"(loom.layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
+            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:$parchmentVersion@zip")
         })
 
-        compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1")!!)
+        compileOnly(rootProject.libs.mixinextras.common)
+        annotationProcessor(rootProject.libs.mixinextras.common)
 
-        implementation("blue.endless:jankson:1.2.3")
-
-        compileOnly("org.projectlombok:lombok:1.18.38")
-        annotationProcessor("org.projectlombok:lombok:1.18.38")
+        compileOnly(rootProject.libs.lombok)
+        annotationProcessor(rootProject.libs.lombok)
     }
 
     java {
