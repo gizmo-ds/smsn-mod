@@ -18,5 +18,8 @@ value class ModData(private val project: Project) {
     val enabled_platforms: List<String> get() = strProp("mod.enabled_platforms").split(",")
     val game_version_supports: List<String> get() = strProp("mod.game_version_supports").split(",")
 
+    val modrinth_id: String get() = strProp("modrinth_id")
+    val curseforge_id: String get() = strProp("curseforge_id")
+
     fun prop(key: String) = strProp(key)
 }

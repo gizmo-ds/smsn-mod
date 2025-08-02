@@ -1,22 +1,16 @@
 package dev.aika.smsn.config;
 
-import blue.endless.jankson.Comment;
-import blue.endless.jankson.Jankson;
-import blue.endless.jankson.annotation.SerializedName;
-import dev.aika.smsn.ModConstants;
-import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
+import lombok.SneakyThrows;
+
+import java.nio.file.Files;
 
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
-    @SerializedName("yuumi")
-    @Comment("❤ Loving " + SMSN.MOD_NAME + " ? Consider supporting development on " + ModConstants.SponsorUrl + " to help keep updates coming! ❤")
-    private static final String sponsor = ModConstants.MyCat;
-
     @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.NEOFORGE)
@@ -54,14 +48,11 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
 
-    private static final Jankson JANKSON = Jankson.builder().build();
-
-    public SMSNConfig() {
-        super(JANKSON);
-    }
-
+    @SneakyThrows
     public static SMSNConfig load() {
-        if (CONFIG_FILE.exists()) return SMSNConfig.load(SMSNConfig.class, JANKSON);
+        if (!CONFIG_FILE.exists() && OLD_CONFIG_FILE.exists())
+            Files.move(OLD_CONFIG_FILE.toPath(), CONFIG_FILE.toPath());
+        if (CONFIG_FILE.exists()) return SMSNConfig.load(SMSNConfig.class);
         final var defaultConfig = new SMSNConfig();
         defaultConfig.save();
         return defaultConfig;
