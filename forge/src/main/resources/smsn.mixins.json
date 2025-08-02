@@ -16,6 +16,7 @@
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
     "bagus_lib.TierHelperMixin",
+    "botania.ContributorListMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "exposure.GildedMixin",
