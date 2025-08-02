@@ -1,7 +1,5 @@
 package dev.aika.smsn.config;
 
-import dev.aika.smsn.annotation.Category;
-import dev.aika.smsn.annotation.Components;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
