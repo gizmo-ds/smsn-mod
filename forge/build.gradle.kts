@@ -58,7 +58,7 @@ repositories {
 dependencies {
     forge("net.minecraftforge:forge:${mod.prop("forge.version")}")
 
-    implementation(include("io.github.llamalad7:mixinextras-forge:0.4.1")!!)
+    localRuntime("io.github.llamalad7:mixinextras-forge:0.4.1")
 
     modApi("me.shedaniel.cloth:cloth-config-forge:${mod.prop("cloth_config")}")
 
@@ -83,9 +83,7 @@ dependencies {
     modLocalRuntime("vazkii.patchouli:Patchouli:${mod.prop("forge.patchouli")}")
     modImplementation("maven.modrinth:enigmatic-legacy:${mod.prop("forge.enigmatic_legacy")}")
     // Botania
-    modImplementation("vazkii.botania:Botania:${mod.prop("forge.botania")}") {
-//        exclude(group = "com.jamieswhiteshirt")
-    }
+    modImplementation("vazkii.botania:Botania:${mod.prop("forge.botania")}")
     // Titanium
     modCompileOnly("maven.modrinth:titanium:${mod.prop("forge.titanium")}")
 

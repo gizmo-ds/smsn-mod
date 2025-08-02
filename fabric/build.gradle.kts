@@ -39,7 +39,7 @@ repositories {
 dependencies {
     modImplementation("net.fabricmc:fabric-loader:${mod.prop("fabric.loader")}")
 
-    implementation(include("io.github.llamalad7:mixinextras-fabric:0.4.1")!!)
+    localRuntime("io.github.llamalad7:mixinextras-fabric:0.4.1")
 
     modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.prop("cloth_config")}") {
         exclude(group = "net.fabricmc.fabric-api")
