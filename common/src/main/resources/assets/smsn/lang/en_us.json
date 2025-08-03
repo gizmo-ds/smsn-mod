@@ -19,7 +19,6 @@
   "config.smsn.general.xaeroMapPatreonCheck": "Xaero's Maps Patreon Check",
   "config.smsn.general.xaeroMapVersionCheck": "Xaero's Maps Update Check",
   "config.smsn.general.alexModsContributorCheck": "Alex's Mods Contributor Check",
-  "config.smsn.general.petrolparkBadgeCheck": "Petrolpark's Mods Badges Check",
   "config.smsn.general.obscureModsCheck": "Obscure API Mods Check",
   "config.smsn.general.supplementariesCreditsCheck": "Supplementaries supporters check",
   "config.smsn.general.botaniaContributorCheck": "Botania contributor check",
@@ -27,15 +26,8 @@
   "config.smsn.general.immersiveEngineeringSpecialRevolvers": "ImmersiveEngineering special revolver request",
   "config.smsn.general.enigmaticLegacyUpdateCheck": "Enigmatic Legacy Update check",
   "config.smsn.general.enigmaticLegacyFetchDevotedBelievers": "Enigmatic Legacy Fetch \"DevotedBelievers\"",
-  "config.smsn.general.placeboTrails": "Placebo Patreon Trails request",
-  "config.smsn.general.placeboWings": "Placebo Patreon Wings request",
   "config.smsn.general.irisUpdateCheck": "Iris Shaders update check",
-  "config.smsn.general.adAstraStation": "Ad Astra Stations",
-  "config.smsn.general.exposureGoldenCameraSkin": "Exposure golden camera skin request",
   "config.smsn.general.titaniumReward": "Titanium reward request",
-  "config.smsn.general.ribbitsSupporterHat": "Ribbits supporter hat request",
-  "config.smsn.general.mruApi": "M.R.U API request",
   "config.smsn.qol": "QoL",
-  "config.smsn.qol.citadelAprilFoolsContent": "Citadel April Fools Content",
-  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"
+  "config.smsn.qol.citadelAprilFoolsContent": "Citadel April Fools Content"
 }

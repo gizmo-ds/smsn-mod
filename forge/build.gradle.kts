@@ -1,5 +1,13 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
+import java.io.BufferedOutputStream
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.net.URI
+import java.util.zip.ZipEntry
+import java.util.zip.ZipInputStream
+import java.util.zip.ZipOutputStream
+
 plugins {
     alias(libs.plugins.shadow)
 }
@@ -32,20 +40,11 @@ configurations {
 }
 
 repositories {
-    maven("https://maven.tterrag.com/") { name = "Create" }
     maven("https://maven.theillusivec4.top/") { name = "Curios" }
     maven("https://maven.teamabnormals.com") { name = "Blueprint" }
     maven("https://maven.blamejared.com/") {
         name = "Immersive Engineering"
-        content {
-            includeGroup("malte0811")
-            includeGroup("blusunrize.immersiveengineering")
-        }
-    }
-    maven("https://maven.shadowsoffire.dev/releases") {
-        content {
-            includeGroup("dev.shadowsoffire")
-        }
+        content { includeGroup("blusunrize.immersiveengineering") }
     }
 }
 
@@ -53,22 +52,18 @@ dependencies {
     forge(libs.forge.version)
 
     localRuntime(libs.mixinextras.forge)
-    modLocalRuntime(libs.norealmsbutton.forge)
 
     modApi(libs.clothconfig.forge)
 //    modCompileOnly(libs.clothconfig.forge)
 
     // Quark
-    modLocalRuntime(libs.forge.zeta)
+    modLocalRuntime(libs.forge.autoreglib)
     modImplementation(libs.forge.quark)
     // Alex's mods
     modImplementation(libs.forge.citadel)
-    modImplementation(libs.forge.alexscaves)
     // Xaero's maps
     modImplementation(libs.forge.xaeros.minimap)
     modImplementation(libs.forge.xaeros.worldmap)
-    // Petrolpark
-    modCompileOnly(libs.forge.petrolpark)
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly(libs.forge.ipn)
     // Obscure API
@@ -89,20 +84,8 @@ dependencies {
     // Supplementaries
     modLocalRuntime(libs.forge.moonlight)
     modImplementation(libs.forge.supplementaries)
-    // Placebo
-    modImplementation(libs.forge.placebo)
-    // Immersive Caves
-    modImplementation(libs.forge.immersivecaves)
-    // Ad Astra!
-    modCompileOnly(libs.forge.adastra)
-    // Exposure
-    modImplementation(libs.forge.exposure)
     // Titanium
     modImplementation(libs.forge.titanium)
-    // Ribbits
-    modCompileOnly(libs.forge.ribbits)
-    // M.R.U
-    modImplementation(libs.forge.mru)
     // Botania
     modImplementation(libs.forge.botania)
 
@@ -145,4 +128,39 @@ tasks {
             mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
         }
+}
+
+fun downloadAndPatchJar(dep: MinimalExternalModuleDependency): String {
+    val modFile = file("./mods/${dep.name}-${dep.version}.jar")
+    modFile.parentFile.mkdirs()
+    if (modFile.exists()) return "mods:${dep.name}:${dep.version}"
+
+    val tempFile = File.createTempFile("temp", ".jar")
+    tempFile.deleteOnExit()
+
+    println("Downloading ${dep.name}...")
+    URI("https://api.modrinth.com/maven/maven/modrinth/${dep.name}/${dep.version}/${dep.name}-${dep.version}.jar")
+        .toURL().openStream().use {
+            it.copyTo(BufferedOutputStream(tempFile.outputStream()))
+        }
+
+    println("Patching ${dep.name}...")
+    FileInputStream(tempFile).use { it ->
+        ZipInputStream(it).use { zis ->
+            FileOutputStream(modFile).use {
+                ZipOutputStream(it).use { zos ->
+                    var entry = zis.nextEntry
+                    while (entry != null) {
+                        if (entry.name != "architectury.common.json") {
+                            zos.putNextEntry(ZipEntry(entry.name))
+                            if (!entry.isDirectory) zis.copyTo(zos)
+                            zos.closeEntry()
+                        }
+                        entry = zis.nextEntry
+                    }
+                }
+            }
+        }
+    }
+    return "mods:${dep.name}:${dep.version}"
 }

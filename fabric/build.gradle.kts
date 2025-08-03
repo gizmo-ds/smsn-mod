@@ -34,10 +34,12 @@ dependencies {
     modImplementation(libs.fabric.loader)
 
     localRuntime(libs.mixinextras.fabric)
-    modLocalRuntime(libs.norealmsbutton.fabric)
     modLocalRuntime(libs.fabric.api)
 
-    modApi(libs.clothconfig.fabric) { exclude(group = "net.fabricmc.fabric-api") }
+    modApi(libs.clothconfig.fabric) {
+        exclude(group = "net.fabricmc.fabric-api")
+        exclude(group = "net.fabricmc", module = "fabric-loader")
+    }
 //    modCompileOnly(libs.clothconfig.fabric)
     modImplementation(libs.modmenu)
 
@@ -51,18 +53,7 @@ dependencies {
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly(libs.fabric.ipn)
     // Iris
-    modLocalRuntime(libs.fabric.sodium)
-    modImplementation(libs.fabric.iris)
-    // Ad Astra!
-    modCompileOnly(libs.fabric.adastra)
-    // Exposure
-    modCompileOnly(libs.fabric.exposure)
-    // Ribbits
-    modCompileOnly(libs.fabric.ribbits)
-    // M.R.U
-    modImplementation(libs.fabric.mru)
-    // Aether Nitrogen
-    modImplementation(libs.fabric.nitrogen)
+    modCompileOnly(libs.fabric.iris)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

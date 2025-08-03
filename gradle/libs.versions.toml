@@ -10,13 +10,13 @@ curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
 lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
-parchment = "2023.09.03"
-fabric-loader = "0.16.14"
-forge = "1.20.1-47.2.32"
-clothconfig = "11.1.136"
+parchment = "2022.11.27"
+fabric-loader = "0.15.11"
+forge = "1.19.2-43.4.4"
+clothconfig = "8.3.134"
 # Dev
-modmenu = "7.2.2"
-fabric-api = "0.92.2+1.20.1"
+modmenu = "4.1.2"
+fabric-api = "0.77.0+1.19.2"
 
 [libraries]
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
@@ -32,46 +32,30 @@ clothconfig-forge = { module = "me.shedaniel.cloth:cloth-config-forge", version.
 # Dev
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
-norealmsbutton-fabric = { version = "pHRo8eLv", module = "maven.modrinth:no-realms-button" } # 2.0.2
-norealmsbutton-forge = { version = "TYRKC9pB", module = "maven.modrinth:no-realms-button" } # 2.0.2
-forge-moonlight = { version = "1.20-2.14.4-forge", module = "maven.modrinth:moonlight" }
-forge-zeta = { version = "1.20.1-1.0-19", module = "maven.modrinth:zeta" }
-fabric-sodium = { version = "mc1.20-0.4.10", module = "maven.modrinth:sodium" }
-forge-patchouli = { version = "1.20.1-83-FORGE", module = "vazkii.patchouli:Patchouli" }
-forge-curios = { version = "5.14.1+1.20.1", module = "top.theillusivec4.curios:curios-forge" }
-forge-caelus = { version = "3.2.0+1.20.1", module = "top.theillusivec4.caelus:caelus-forge" }
+forge-patchouli = { version = "1.19.2-77", module = "vazkii.patchouli:Patchouli" }
+forge-curios = { version = "1.19.2-5.1.1.0", module = "top.theillusivec4.curios:curios-forge" }
+forge-caelus = { version = "1.19.2-3.0.0.6", module = "top.theillusivec4.caelus:caelus-forge" }
+forge-autoreglib = { version = "pwEa2yJ2", module = "maven.modrinth:autoreglib" } # 1.8.2-55
+forge-moonlight = { version = "4R7I44b3", module = "maven.modrinth:moonlight" } # 1.19.2-2.3.7
 # Fabric
-fabric-xaeros-minimap = { version = "24.2.0_Fabric_1.20", module = "maven.modrinth:xaeros-minimap" }
-fabric-xaeros-worldmap = { version = "1.38.8_Fabric_1.20", module = "maven.modrinth:xaeros-world-map" }
-fabric-supplementaries = { version = "SFY0zXug", module = "maven.modrinth:supplementaries" } # 1.20-3.1.10
-fabric-ipn = { version = "fabric-1.20.1-1.10.11", module = "maven.modrinth:inventory-profiles-next" }
-fabric-botania = { version = "1.20.1-446-FABRIC", module = "vazkii.botania:Botania" }
-fabric-iris = { version = "URWeWMAt", module = "maven.modrinth:iris" } # 1.6.4+1.20
-fabric-mru = { version = "1.0.0+1.20.1-fabric", module = "maven.modrinth:mru" }
-fabric-ribbits = { version = "15vB3aE9", module = "maven.modrinth:ribbits" } # 3.0.2
-fabric-exposure = { version = "O4Fow0Po", module = "maven.modrinth:exposure" } # 1.7.15
-fabric-adastra = { version = "MxqFxL9C", module = "maven.modrinth:ad-astra" } # 1.15.18
-fabric-nitrogen = { version = "1.20.1-1.0.15-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+fabric-xaeros-minimap = { version = "24.2.0_Fabric_1.19.1", module = "maven.modrinth:xaeros-minimap" }
+fabric-xaeros-worldmap = { version = "1.38.8_Fabric_1.19.1", module = "maven.modrinth:xaeros-world-map" }
+fabric-supplementaries = { version = "VNwz9Avv", module = "maven.modrinth:supplementaries" } # 1.19.2-2.4.20
+fabric-ipn = { version = "fabric-1.19.2-1.10.11", module = "maven.modrinth:inventory-profiles-next" }
+fabric-botania = { version = "1.19.2-440-FABRIC", module = "vazkii.botania:Botania" }
+fabric-iris = { version = "9YEwbzW6", module = "maven.modrinth:iris" } # 1.6.4+1.19.2
 # Forge
-forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
-forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
-forge-supplementaries = { version = "HcdcLvdS", module = "maven.modrinth:supplementaries" } # 1.20-3.1.10
-forge-quark = { version = "4.0-458", module = "maven.modrinth:quark" }
-forge-citadel = { version = "2.5.4", module = "maven.modrinth:citadel" }
-forge-alexscaves = { version = "1.1.4", module = "maven.modrinth:alexs-caves" }
-forge-blueprint = { version = "1.20.1-7.1.0", module = "com.teamabnormals:blueprint" }
-forge-obscureapi = { version = "FizVdYUp", module = "maven.modrinth:obscure-api" } # 15
-forge-ipn = { version = "forge-1.20.1-1.10.11", module = "maven.modrinth:inventory-profiles-next" }
-forge-botania = { version = "1.20.1-446-FORGE", module = "vazkii.botania:Botania" }
-forge-mru = { version = "1.0.0+1.20.1-forge", module = "maven.modrinth:mru" }
-forge-ribbits = { version = "FEcTRv8b", module = "maven.modrinth:ribbits" } # 3.0.2
-forge-exposure = { version = "GxlCCDbA", module = "maven.modrinth:exposure" } # 1.7.15
-forge-adastra = { version = "WUGYX9Me", module = "maven.modrinth:ad-astra" } # 1.15.18
-forge-titanium = { version = "1.20.1-3.8.23", module = "maven.modrinth:titanium" }
-forge-immersivecaves = { version = "1.4.1", module = "maven.modrinth:immersive-caves" }
-forge-placebo = { version = "1.20.1-8.6.0", module = "dev.shadowsoffire:Placebo" }
-forge-enigmaticlegacy = { version = "mkqkIwez", module = "maven.modrinth:enigmatic-legacy" } # 2.29.0
-forge-immersiveengineering = { version = "uqGFpLXw", module = "maven.modrinth:immersiveengineering" } # 1.20.1-10.0.0-169
-forge-nitrogen = { version = "1.20.1-1.0.11-neoforge", module = "com.aetherteam.nitrogen:nitrogen_internals" }
-forge-baguslib = { version = "VU7aEpro", module = "maven.modrinth:bagus-lib" } # 1.20.1-5.3.0
-forge-petrolpark = { version = "fBVOTUaX", module = "maven.modrinth:petrolpark" } # 1.20.1-1.0.6
+forge-xaeros-minimap = { version = "24.2.0_Forge_1.19.1", module = "maven.modrinth:xaeros-minimap" }
+forge-xaeros-worldmap = { version = "1.38.8_Forge_1.19.1", module = "maven.modrinth:xaeros-world-map" }
+forge-supplementaries = { version = "UQu29fD5", module = "maven.modrinth:supplementaries" } # 1.19.2-2.4.20
+forge-quark = { version = "1.19.2-3.4-418", module = "maven.modrinth:quark" }
+forge-citadel = { version = "4556677", module = "curse.maven:citadel-331936" } # 2.1.4-1.19
+forge-blueprint = { version = "1.19.2-6.2.0", module = "com.teamabnormals:blueprint" }
+forge-obscureapi = { version = "phjhLqIP", module = "maven.modrinth:obscure-api" } # 15
+forge-ipn = { version = "forge-1.19.2-1.10.11", module = "maven.modrinth:inventory-profiles-next" }
+forge-botania = { version = "1.19.2-440-FORGE", module = "vazkii.botania:Botania" }
+forge-titanium = { version = "C671K5PG", module = "maven.modrinth:titanium" } # 3.7.3
+forge-enigmaticlegacy = { version = "9pdtGQb7", module = "maven.modrinth:enigmatic-legacy" } # 2.26.5
+forge-immersiveengineering = { version = "VzTXQKEm", module = "maven.modrinth:immersiveengineering" } # 1.19.2-9.2.4-170
+forge-nitrogen = { version = "1.19.2-1.0.7-forge", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+forge-baguslib = { version = "Qiw9t3HU", module = "maven.modrinth:bagus-lib" } # 1.19.2-3.6.0

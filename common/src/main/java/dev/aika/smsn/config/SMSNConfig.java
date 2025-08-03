@@ -11,7 +11,7 @@ import java.nio.file.Files;
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
@@ -26,8 +26,6 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.FORGE)
     public boolean alexModsContributorCheck = SMSNConfigDefault.alexModsContributorCheck;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
-    @LoaderSpecific(LoaderType.FORGE)
     public boolean obscureModsCheck = SMSNConfigDefault.obscureModsCheck;
     @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
@@ -39,29 +37,14 @@ public class SMSNConfig extends ModConfig {
     public boolean enigmaticLegacyUpdateCheck = SMSNConfigDefault.enigmaticLegacyUpdateCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
-    @LoaderSpecific(LoaderType.FORGE)
-    public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
-    @LoaderSpecific(LoaderType.FORGE)
-    public boolean placeboWings = SMSNConfigDefault.placeboWings;
     @LoaderSpecific(LoaderType.FABRIC)
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
-    public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
-    public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
-    public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
-    public boolean mruApi = SMSNConfigDefault.mruApi;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
     public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
-    @Category("qol")
-    @LoaderSpecific(LoaderType.FORGE)
-    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
 
     @SneakyThrows
     public static SMSNConfig load() {
