@@ -33,7 +33,6 @@ configurations {
 
 repositories {
     maven("https://maven.tterrag.com/") { name = "Create" }
-    maven("https://packages.aether-mod.net/Nitrogen") { name = "Aether Teams" }
     maven("https://maven.theillusivec4.top/") { name = "Curios" }
     maven("https://maven.teamabnormals.com") { name = "Blueprint" }
     maven("https://maven.blamejared.com/") {
@@ -69,10 +68,7 @@ dependencies {
     modImplementation(libs.forge.xaeros.minimap)
     modImplementation(libs.forge.xaeros.worldmap)
     // Petrolpark
-    modLocalRuntime(libs.forge.registrate)
-    modLocalRuntime(libs.forge.flywheel)
-    modLocalRuntime(libs.forge.create) { isTransitive = false }
-    modImplementation(libs.forge.petrolpark)
+    modCompileOnly(libs.forge.petrolpark)
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
     modCompileOnly(libs.forge.ipn)
     // Obscure API
@@ -91,8 +87,8 @@ dependencies {
     modLocalRuntime(libs.forge.patchouli)
     modImplementation(libs.forge.enigmaticlegacy)
     // Supplementaries
-    modCompileOnly(libs.forge.moonlight)
-    modCompileOnly(libs.forge.supplementaries)
+    modLocalRuntime(libs.forge.moonlight)
+    modImplementation(libs.forge.supplementaries)
     // Placebo
     modImplementation(libs.forge.placebo)
     // Immersive Caves
@@ -100,9 +96,9 @@ dependencies {
     // Ad Astra!
     modCompileOnly(libs.forge.adastra)
     // Exposure
-    modCompileOnly(libs.forge.exposure)
+    modImplementation(libs.forge.exposure)
     // Titanium
-    modCompileOnly(libs.forge.titanium)
+    modImplementation(libs.forge.titanium)
     // Ribbits
     modCompileOnly(libs.forge.ribbits)
     // M.R.U

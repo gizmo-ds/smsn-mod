@@ -29,6 +29,8 @@ public class MixinInfo {
             put("dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin", "ribbits");
 
             put("dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin", "mru");
+
+            put("dev.aika.smsn.fabric.mixin.aetherteam.UserData$ServerMixin", "nitrogen");
         }};
     }
 }

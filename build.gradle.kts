@@ -23,7 +23,7 @@ val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
 val parchmentVersion: String = libs.versions.parchment.get()
-val debugPublishing = true
+val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
@@ -52,6 +52,11 @@ subprojects {
                 includeGroup("vazkii.patchouli")
                 includeGroup("vazkii.botania")
             }
+        }
+        maven("https://packages.aether-mod.net/Nitrogen") { name = "Aether Teams" }
+        maven("https://mvn.devos.one/snapshots/") {
+            name = "Porting Lib"
+            content { includeGroup("io.github.fabricators_of_create.Porting-Lib") }
         }
     }
 

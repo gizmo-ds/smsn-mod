@@ -9,6 +9,7 @@
   ],
   "mixins": [
     "ad_astra.StationLoaderMixin",
+    "aetherteam.UserData$ServerMixin",
     "botania.ContributorListMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",

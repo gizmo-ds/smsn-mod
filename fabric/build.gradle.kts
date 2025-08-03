@@ -41,12 +41,10 @@ dependencies {
 //    modCompileOnly(libs.clothconfig.fabric)
     modImplementation(libs.modmenu)
 
-
     // Xaero's maps
     modImplementation(libs.fabric.xaeros.minimap)
     modImplementation(libs.fabric.xaeros.worldmap)
     // Supplementaries
-    modCompileOnly(libs.fabric.moonlight)
     modCompileOnly(libs.fabric.supplementaries)
     // Botania
     modImplementation(libs.fabric.botania) { exclude(group = "com.jamieswhiteshirt") }
@@ -63,6 +61,8 @@ dependencies {
     modCompileOnly(libs.fabric.ribbits)
     // M.R.U
     modImplementation(libs.fabric.mru)
+    // Aether Nitrogen
+    modImplementation(libs.fabric.nitrogen)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

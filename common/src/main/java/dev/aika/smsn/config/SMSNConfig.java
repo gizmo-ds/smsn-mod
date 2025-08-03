@@ -11,7 +11,7 @@ import java.nio.file.Files;
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
-    @LoaderSpecific(LoaderType.FORGE)
+    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
