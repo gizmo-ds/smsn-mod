@@ -1,5 +1,13 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
+import java.io.BufferedOutputStream
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.net.URI
+import java.util.zip.ZipEntry
+import java.util.zip.ZipInputStream
+import java.util.zip.ZipOutputStream
+
 plugins {
     alias(libs.plugins.shadow)
 }
@@ -59,7 +67,8 @@ dependencies {
 
     // Supplementaries
     modLocalRuntime(libs.neoforge.moonlight)
-    modImplementation(libs.neoforge.supplementaries)
+    downloadAndModifySupplementariesJar()
+    modImplementation("mods:supplementaries:${libs.neoforge.supplementaries.get().version}")
     // Petrolpark's Library
     modLocalRuntime(libs.neoforge.registrate)
     modLocalRuntime(libs.neoforge.ponder)
@@ -134,4 +143,38 @@ tasks {
             mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
         }
+}
+
+fun downloadAndModifySupplementariesJar() {
+    val supplementaries = libs.neoforge.supplementaries.get()
+    val modFile = file("./mods/supplementaries-${supplementaries.version}.jar")
+    if (modFile.exists()) return
+
+    val tempFile = File.createTempFile("temp", ".jar")
+    tempFile.deleteOnExit()
+
+    println("Downloading supplementaries...")
+    URI("https://api.modrinth.com/maven/maven/modrinth/supplementaries/${supplementaries.version}/supplementaries-${supplementaries.version}.jar")
+        .toURL().openStream().use {
+            it.copyTo(BufferedOutputStream(tempFile.outputStream()))
+        }
+
+    println("Modifiing supplementaries...")
+    FileInputStream(tempFile).use { it ->
+        ZipInputStream(it).use { zis ->
+            FileOutputStream(modFile).use {
+                ZipOutputStream(it).use { zos ->
+                    var entry = zis.nextEntry
+                    while (entry != null) {
+                        if (entry.name != "architectury.common.json") {
+                            zos.putNextEntry(ZipEntry(entry.name))
+                            if (!entry.isDirectory) zis.copyTo(zos)
+                            zos.closeEntry()
+                        }
+                        entry = zis.nextEntry
+                    }
+                }
+            }
+        }
+    }
 }

@@ -53,7 +53,7 @@ fabric-nitrogen = { version = "1.21.1-1.1.21-fabric", module = "com.aetherteam.n
 # NeoForge
 neoforge-xaeros-minimap = { version = "24.3.0_NeoForge_1.21", module = "maven.modrinth:xaeros-minimap" }
 neoforge-xaeros-worldmap = { version = "1.39.0_NeoForge_1.21", module = "maven.modrinth:xaeros-world-map" }
-neoforge-supplementaries = { version = "3.1.1-neoforge", module = "maven.modrinth:supplementaries" }
+neoforge-supplementaries = { version = "neoforge_1.21-3.1.1", module = "maven.modrinth:supplementaries" }
 neoforge-ipn = { version = "neoforge-1.21-2.0.4", module = "maven.modrinth:inventory-profiles-next" }
 neoforge-iris = { version = "1.8.0+1.21.1-neoforge", module = "maven.modrinth:iris" }
 neoforge-mru = { version = "1.0.0+1.21-neoforge", module = "maven.modrinth:mru" }
