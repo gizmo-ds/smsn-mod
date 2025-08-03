@@ -100,7 +100,7 @@ subprojects {
                 projectId.set(mod.modrinth_id)
                 syncBodyFrom.set(rootProject.file("README.md").readText())
                 versionName.set("${mod.version} ${loom.platform.get().displayName()}")
-                versionNumber.set(project.version.toString())
+                versionNumber.set("${project.name}-${project.version}")
                 versionType.set(mod.release_type)
                 gameVersions.addAll(mod.game_version_supports)
                 loaders.add(project.name)
