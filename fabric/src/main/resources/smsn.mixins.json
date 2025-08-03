@@ -1,14 +1,27 @@
 {
   "required": true,
   "package": "dev.aika.smsn.fabric.mixin",
+  "plugin": "dev.aika.smsn.ModMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
+    "iris.UpdateCheckerMixin"
   ],
   "mixins": [
+    "ad_astra.StationLoaderMixin",
+    "aetherteam.UserData$ServerMixin",
+    "botania.ContributorListMixin",
+    "exposure.GildedMixin",
+    "exposure.PatreonMixin",
+    "imb11.mru.APIMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
-    "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin"
+    "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
+    "ribbits.SupportersJSONMixin",
+    "supplementaries.CreditsMixin",
+    "xaero.minimap.InternetMixin",
+    "xaero.minimap.PatreonMixin",
+    "xaero.world_map.InternetMixin",
+    "xaero.world_map.PatreonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

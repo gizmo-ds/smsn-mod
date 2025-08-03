@@ -1,20 +1,41 @@
 {
   "required": true,
   "package": "dev.aika.smsn.forge.mixin",
+  "plugin": "dev.aika.smsn.ModMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
-  "plugin": "dev.aika.smsn.ModMixinPlugin",
   "client": [
     "blueprint.RewardHandlerMixin",
-    "obscure.ObscuriaCollectionMixin"
+    "obscure.ObscuriaCollectionMixin",
+    "obscure.ObscuriaCollectionMixin$Mod"
   ],
   "mixins": [
+    "ad_astra.StationLoaderMixin",
     "aetherteam.UserData$ServerMixin",
+    "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "bagus_lib.TierHelperMixin",
+    "botania.ContributorListMixin",
+    "enigmatic_legacy.DevotedBelieversHandlerMixin",
+    "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
+    "exposure.GildedMixin",
+    "exposure.PatreonMixin",
+    "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
+    "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "ipn.IPNInfoManagerMixin",
-    "quark.ThreadContributorListLoaderMixin"
+    "petrolpark.BadgeHandlerMixin",
+    "placebo.TrailsManagerMixin",
+    "placebo.WingsManagerMixin",
+    "quark.ThreadContributorListLoaderMixin",
+    "ribbits.SupportersJSONMixin",
+    "supplementaries.CreditsMixin",
+    "titanium.RewardMixin",
+    "xaero.minimap.InternetMixin",
+    "xaero.minimap.PatreonMixin",
+    "xaero.world_map.InternetMixin",
+    "xaero.world_map.PatreonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

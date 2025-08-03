@@ -12,6 +12,6 @@ import java.io.BufferedReader;
 public class CitadelWebHelperMixin {
     @Inject(method = "getURLContents", at = @At(value = "INVOKE", target = "Ljava/net/URL;openConnection()Ljava/net/URLConnection;"), cancellable = true, remap = false)
     private static void onGetURLContents(String urlString, String backupFileLoc, CallbackInfoReturnable<BufferedReader> cir) {
-        if (!SMSN.CONFIG.alexModsContributorCheck()) cir.setReturnValue(null);
+        if (!SMSN.CONFIG.isAlexModsContributorCheck()) cir.setReturnValue(null);
     }
 }

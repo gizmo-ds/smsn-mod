@@ -3,12 +3,12 @@
   "id": "smsn",
   "version": "${version}",
   "name": "Save My Shit Network",
-  "description": "Save My Shit Network",
+  "description": "Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.",
   "authors": [
     "Gizmo"
   ],
   "contact": {
-    "homepage": "https://github.com/gizmo-ds/smsn-mod",
+    "homepage": "https://wiki.aika.dev/smsn.html",
     "sources": "https://github.com/gizmo-ds/smsn-mod",
     "issues": "https://github.com/gizmo-ds/smsn-mod/issues"
   },
@@ -20,19 +20,18 @@
       "dev.aika.smsn.fabric.SMSNFabric"
     ],
     "modmenu": [
-      "dev.aika.smsn.fabric.config.ModMenuImpl"
+      "dev.aika.smsn.fabric.compat.ClothConfigCompat"
     ]
   },
   "mixins": [
-    "smsn-common.mixins.json",
     "smsn.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.11",
-    "minecraft": "~1.19.2",
+    "minecraft": "~1.20.1",
     "java": ">=17"
   },
   "suggests": {
-    "cloth-config2": ">=8.0.0"
+    "cloth-config2": ">=11.0.0"
   }
 }

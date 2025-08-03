@@ -1,14 +1,20 @@
 package dev.aika.smsn;
 
-
 import org.objectweb.asm.tree.ClassNode;
+import org.slf4j.Logger;
+import org.slf4j.Marker;
+import org.slf4j.MarkerFactory;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class ModMixinPlugin implements IMixinConfigPlugin {
+    private static final Logger log = SMSN.LOGGER;
+    private static final Marker marker = MarkerFactory.getMarker("ModMixinPlugin");
+
     @Override
     public void onLoad(String mixinPackage) {
     }
@@ -20,34 +26,12 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        switch (targetClassName) {
-            case "com.github.alexthe666.citadel.CitadelConstants", "com.github.alexthe666.citadel.web.WebHelper":
-                return SMSNPlatform.isModLoaded("citadel");
-            case "vazkii.quark.base.handler.ContributorRewardHandler$ThreadContributorListLoader":
-                return SMSNPlatform.isModLoaded("quark");
-            case "xaero.common.misc.Internet", "xaero.common.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaerominimap");
-            case "xaero.map.misc.Internet", "xaero.map.patreon.Patreon":
-                return SMSNPlatform.isModLoaded("xaeroworldmap");
-            case "dev.latvian.mods.kubejs.KubeJS":
-                return SMSNPlatform.isModLoaded("kubejs");
-            case "org.anti_ad.mc.ipnext.IPNInfoManager",
-                 "org.anti_ad.mc.ipnext.IPNInfoManager$doCheckVersion$$inlined$timer$default$1",
-                 "org.anti_ad.mc.ipnext.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1":
-                return SMSNPlatform.isModLoaded("inventoryprofilesnext");
-            case "com.obscuria.obscureapi.network.ObscuriaCollection",
-                 "com.obscuria.obscureapi.network.ObscuriaCollection$Mod":
-                return SMSNPlatform.isModLoaded("obscure_api");
-            case "com.teamabnormals.blueprint.client.RewardHandler":
-                return SMSNPlatform.isModLoaded("blueprint");
-            case "com.aetherteam.nitrogen.api.users.UserData$Server":
-                return SMSNPlatform.isModLoaded("nitrogen");
-            case "blusunrize.immersiveengineering.ImmersiveEngineering$ThreadContributorSpecialsDownloader":
-                return SMSNPlatform.isModLoaded("immersiveengineering");
-            default:
-                SMSN.LOGGER.warn("Unknown mixin target class: {}", targetClassName);
-                return false;
-        }
+        final Map<String, String> mixinClassNames = SMSNPlatform.getMixinClassNames();
+        if (mixinClassNames.containsKey(mixinClassName))
+            return SMSNPlatform.isModLoaded(mixinClassNames.get(mixinClassName));
+
+        log.warn(marker, "Unknown mixin class: {}", mixinClassName);
+        return false;
     }
 
     @Override

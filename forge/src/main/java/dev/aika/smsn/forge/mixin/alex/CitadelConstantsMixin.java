@@ -10,6 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class CitadelConstantsMixin {
     @Inject(method = "isAprilFools", at = @At("HEAD"), cancellable = true, remap = false)
     private static void onIsAprilFools(CallbackInfoReturnable<Boolean> cir) {
-        if (!SMSN.CONFIG.citadelAprilFoolsContent()) cir.setReturnValue(false);
+        if (!SMSN.CONFIG.isCitadelAprilFoolsContent()) cir.setReturnValue(false);
     }
 }
