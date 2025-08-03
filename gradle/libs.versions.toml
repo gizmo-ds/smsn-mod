@@ -1,0 +1,70 @@
+[plugins]
+architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
+modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
+curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
+
+[versions]
+lombok = "1.18.38"
+mixinextras = "0.4.1"
+# Dependencies
+parchment = "2024.11.17"
+fabric-loader = "0.16.14"
+neoforge = "21.1.145"
+clothconfig = "15.0.130"
+# Dev
+modmenu = "11.0.3"
+fabric-api = "0.107.0+1.21.1"
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+mixinextras-common = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixinextras" }
+mixinextras-fabric = { module = "io.github.llamalad7:mixinextras-fabric", version.ref = "mixinextras" }
+mixinextras-neoforge = { module = "io.github.llamalad7:mixinextras-neoforge", version.ref = "mixinextras" }
+# Dependencies
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+neoforge-version = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
+clothconfig-api = { module = "me.shedaniel.cloth:cloth-config", version.ref = "clothconfig" }
+clothconfig-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "clothconfig" }
+clothconfig-neoforge = { module = "me.shedaniel.cloth:cloth-config-neoforge", version.ref = "clothconfig" }
+# Dev
+modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+fabric-norealmsbutton = { version = "hvRXpKVD", module = "maven.modrinth:no-realms-button" } # 2.0.2
+fabric-moonlight = { version = "1.21-2.20.7-fabric", module = "maven.modrinth:moonlight" }
+fabric-sodium = { version = "mc1.21.1-0.6.1-fabric", module = "maven.modrinth:sodium" }
+fabric-forgeconfigapiport = { version = "21.1.0", module = "fuzs.forgeconfigapiport:forgeconfigapiport-fabric" }
+neoforge-norealmsbutton = { version = "ZPsxuqtp", module = "maven.modrinth:no-realms-button" } # 2.0.2
+neoforge-moonlight = { version = "1.21-2.20.7-neoforge", module = "maven.modrinth:moonlight" }
+neoforge-sodium = { version = "mc1.21.1-0.6.0-neoforge", module = "maven.modrinth:sodium" }
+neoforge-ponder = { version = "1.0.45", module = "net.createmod.ponder:Ponder-NeoForge-1.21.1" }
+neoforge-registrate = { version = "MC1.21-1.3.0+62", module = "com.tterrag.registrate:Registrate" }
+# Fabric
+fabric-xaeros-minimap = { version = "24.3.0_Fabric_1.21", module = "maven.modrinth:xaeros-minimap" }
+fabric-xaeros-worldmap = { version = "1.39.0_Fabric_1.21", module = "maven.modrinth:xaeros-world-map" }
+fabric-supplementaries = { version = "fabric_1.21-3.1.1", module = "maven.modrinth:supplementaries" }
+fabric-ipn = { version = "fabric-1.21-2.0.4", module = "maven.modrinth:inventory-profiles-next" }
+fabric-iris = { version = "1.8.1+1.21.1-fabric", module = "maven.modrinth:iris" }
+fabric-mru = { version = "1.0.0+1.21-fabric", module = "maven.modrinth:mru" }
+fabric-ribbits = { version = "IrZMelXO", module = "maven.modrinth:ribbits" } # 4.1.0
+fabric-exposure = { version = "sgmPzE6v", module = "maven.modrinth:exposure" } # 1.9.5
+fabric-nitrogen = { version = "1.21.1-1.1.21-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+# NeoForge
+neoforge-xaeros-minimap = { version = "24.3.0_NeoForge_1.21", module = "maven.modrinth:xaeros-minimap" }
+neoforge-xaeros-worldmap = { version = "1.39.0_NeoForge_1.21", module = "maven.modrinth:xaeros-world-map" }
+neoforge-supplementaries = { version = "3.1.1-neoforge", module = "maven.modrinth:supplementaries" }
+neoforge-ipn = { version = "neoforge-1.21-2.0.4", module = "maven.modrinth:inventory-profiles-next" }
+neoforge-iris = { version = "1.8.0+1.21.1-neoforge", module = "maven.modrinth:iris" }
+neoforge-mru = { version = "1.0.0+1.21-neoforge", module = "maven.modrinth:mru" }
+neoforge-ribbits = { version = "Mzbn7ing", module = "maven.modrinth:ribbits" } # 4.1.0
+neoforge-exposure = { version = "sMvel990", module = "maven.modrinth:exposure" } # 1.9.5
+neoforge-nitrogen = { version = "1.21.1-1.1.21-neoforge", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+neoforge-petrolpark = { version = "I5Tung1P", module = "maven.modrinth:petrolpark" } # 1.21.1-1.4.3
+neoforge-blueprint = { version = "1.21.1-8.0.0", module = "com.teamabnormals:blueprint" }
+neoforge-baguslib = { version = "HIdHWHMX", module = "maven.modrinth:bagus-lib" } # 1.21.1-13.0.0
+neoforge-immersiveengineering = { version = "1.21.1-12.1.0-185", module = "blusunrize.immersiveengineering:ImmersiveEngineering" }
+neoforge-placebo = { version = "1.21-9.3.5", module = "dev.shadowsoffire:Placebo" }
+neoforge-titanium = { version = "1.21-4.0.12", module = "maven.modrinth:titanium" }
+neoforge-immersivecaves = { version = "SfWRWBHr", module = "maven.modrinth:immersive-caves" } # 1.4.0
+neoforge-actuallyadditions = { version = "iIGebTKg", module = "maven.modrinth:actually-additions" } # 1.3.10

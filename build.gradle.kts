@@ -2,12 +2,12 @@
 
 plugins {
     java
-    id("dev.architectury.loom").version("1.10-SNAPSHOT") apply false
-    id("architectury-plugin").version("3.4-SNAPSHOT")
-    id("com.github.johnrengelman.shadow").version("8.1.1") apply false
-    id("co.uzzu.dotenv.gradle").version("4.0.0")
-    id("net.darkhax.curseforgegradle").version("1.1.26") apply false
-    id("com.modrinth.minotaur").version("2.+") apply false
+    alias(libs.plugins.loom) apply false
+    alias(libs.plugins.architectury)
+    alias(libs.plugins.shadow) apply false
+    alias(libs.plugins.dotenv)
+    alias(libs.plugins.curseforge) apply false
+    alias(libs.plugins.modrinth) apply false
 }
 
 architectury {
@@ -22,7 +22,8 @@ allprojects {
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
-val debugPublishing = true
+val parchmentVersion: String = libs.versions.parchment.get()
+val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
@@ -36,36 +37,20 @@ subprojects {
     repositories {
         flatDir { dirs("mods") }
 
-        maven {
-            name = "ParchmentMC"
-            url = uri("https://maven.parchmentmc.org")
-        }
-        maven {
-            url = uri("https://cursemaven.com")
+        maven("https://maven.parchmentmc.org") { name = "ParchmentMC" }
+        maven("https://jitpack.io") { name = "JitPack" }
+        maven("https://cursemaven.com") {
             content { includeGroup("curse.maven") }
         }
-        maven {
-            url = uri("https://api.modrinth.com/maven")
+        maven("https://api.modrinth.com/maven") {
             content { includeGroup("maven.modrinth") }
         }
-        maven {
-            name = "Cloth Config"
-            url = uri("https://maven.shedaniel.me/")
-        }
-        maven {
-            name = "Just Enough Items"
-            url = uri("https://modmaven.dev")
-        }
-        maven {
-            name = "Aether Team"
-            url = uri("https://packages.aether-mod.net/Nitrogen")
-        }
-        maven {
+        maven("https://maven.shedaniel.me/") { name = "Cloth Config" }
+        maven("https://modmaven.dev") { name = "Just Enough Items" }
+        maven("https://packages.aether-mod.net/Nitrogen") { name = "Aether Team" }
+        maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/") {
             name = "Fuzss"
-            url = uri("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/")
-            content {
-                includeGroup("fuzs.forgeconfigapiport")
-            }
+            content { includeGroup("fuzs.forgeconfigapiport") }
         }
     }
 
@@ -73,11 +58,14 @@ subprojects {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
         "mappings"(loom.layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
+            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:$parchmentVersion@zip")
         })
 
-        compileOnly("org.projectlombok:lombok:1.18.38")
-        annotationProcessor("org.projectlombok:lombok:1.18.38")
+        compileOnly(rootProject.libs.mixinextras.common)
+        annotationProcessor(rootProject.libs.mixinextras.common)
+
+        compileOnly(rootProject.libs.lombok)
+        annotationProcessor(rootProject.libs.lombok)
     }
 
     java {
@@ -118,7 +106,6 @@ subprojects {
                 loaders.add(project.name)
                 changelog.set(modChangelog)
                 dependencies {
-                    required.project("kubejs")
                     optional.project("cloth-config")
                 }
             }

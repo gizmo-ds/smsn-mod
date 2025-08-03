@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -26,86 +26,74 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = "NeoForged"
-        url = uri("https://maven.neoforged.net/releases")
-    }
-    maven {
-        name = "Blueprint"
-        url = uri("https://maven.teamabnormals.com")
-    }
-    maven {
+    maven("https://maven.neoforged.net/releases") { name = "NeoForged" }
+    maven("https://maven.teamabnormals.com") { name = "Blueprint" }
+    maven("https://maven.blamejared.com/") {
         name = "Immersive Engineering"
-        url = uri("https://maven.blamejared.com/")
-        content {
-            includeGroup("malte0811")
-            includeGroup("blusunrize.immersiveengineering")
-        }
+        content { includeGroup("blusunrize.immersiveengineering") }
     }
-    maven {
+    maven("https://mvn.devos.one/snapshots") {
         name = "Registrate"
-        url = uri("https://mvn.devos.one/snapshots")
-        content {
-            includeGroup("com.tterrag.registrate")
-        }
+        content { includeGroup("com.tterrag.registrate") }
     }
-    maven {
+    maven("https://maven.createmod.net/") {
         name = "Ponder"
-        url = uri("https://maven.createmod.net/")
         content {
             includeGroup("net.createmod.ponder")
             includeGroup("dev.engine-room.flywheel")
         }
     }
+    maven("https://maven.shadowsoffire.dev/releases") {
+        content { includeGroup("dev.shadowsoffire") }
+    }
 }
 
 dependencies {
-    neoForge("net.neoforged:neoforge:${mod.prop("neoforge.version")}")
+    neoForge(libs.neoforge.version)
 
-//    modApi("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
-    modCompileOnly("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
+    localRuntime(libs.mixinextras.neoforge)
+    modLocalRuntime(libs.neoforge.norealmsbutton)
+
+    modApi(libs.clothconfig.neoforge)
+//    modCompileOnly(libs.clothconfig.neoforge)
 
     // Supplementaries
-    modLocalRuntime("maven.modrinth:moonlight:kC4rX7ac")
-    modImplementation("mods:supplementaries:${mod.prop("neoforge.supplementaries")}")
+    modLocalRuntime(libs.neoforge.moonlight)
+    modImplementation(libs.neoforge.supplementaries)
     // Petrolpark's Library
-    modLocalRuntime("com.tterrag.registrate:Registrate:MC1.21-1.3.0+62")
-    modLocalRuntime("net.createmod.ponder:Ponder-NeoForge-1.21.1:1.0.45")
-    modImplementation("maven.modrinth:petrolpark:${mod.prop("neoforge.petrolpark")}")
+    modLocalRuntime(libs.neoforge.registrate)
+    modLocalRuntime(libs.neoforge.ponder)
+    modImplementation(libs.neoforge.petrolpark)
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("neoforge.ipn")}")
+    modCompileOnly(libs.neoforge.ipn)
     // Blueprint
-    modImplementation("com.teamabnormals:blueprint:${mod.prop("neoforge.blueprint")}")
+    modImplementation(libs.neoforge.blueprint)
     // Aether Nitrogen
-    modImplementation("com.aetherteam.nitrogen:nitrogen_internals:${mod.prop("neoforge.nitrogen")}")
+    modImplementation(libs.neoforge.nitrogen)
     // Bagus lib
-    modImplementation("maven.modrinth:bagus-lib:${mod.prop("neoforge.bagus_lib")}")
+    modImplementation(libs.neoforge.baguslib)
     // Immersive Engineering
-    modLocalRuntime("malte0811:BlockModelSplitter:2.0.1")
-    modLocalRuntime("malte0811:DualCodecs:0.1.2")
-    modImplementation(
-        group = "blusunrize.immersiveengineering", name = "ImmersiveEngineering",
-        version = mod.prop("neoforge.immersive_engineering")
-    )
+    modCompileOnly(libs.neoforge.immersiveengineering)
     // Placebo
-    modImplementation("curse.maven:placebo-283644:${mod.prop("neoforge.placebo")}")
+    modImplementation(libs.neoforge.placebo)
     // Immersive Caves
-    modImplementation("maven.modrinth:immersive-caves:${mod.prop("neoforge.immersive_caves")}")
+    modImplementation(libs.neoforge.immersivecaves)
     // Iris Shader
-    modCompileOnly("maven.modrinth:iris:${mod.prop("neoforge.iris")}")
+    modLocalRuntime(libs.neoforge.sodium)
+    modImplementation(libs.neoforge.iris)
     // Actually Additions
-    modImplementation("maven.modrinth:actually-additions:${mod.prop("neoforge.actually_additions")}")
+    modImplementation(libs.neoforge.actuallyadditions)
     // Exposure
-    modCompileOnly("maven.modrinth:exposure:${mod.prop("neoforge.exposure")}")
+    modImplementation(libs.neoforge.exposure)
     // Titanium
-    modCompileOnly("maven.modrinth:titanium:${mod.prop("neoforge.titanium")}")
+    modImplementation(libs.neoforge.titanium)
     // Ribbits
-    modCompileOnly("maven.modrinth:ribbits:${mod.prop("neoforge.ribbits")}")
+    modCompileOnly(libs.neoforge.ribbits)
     // Xaero's Maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("neoforge.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("neoforge.xaeros_world_map")}")
+    modImplementation(libs.neoforge.xaeros.minimap)
+    modImplementation(libs.neoforge.xaeros.worldmap)
     // M.R.U
-    modImplementation("maven.modrinth:mru:${mod.prop("neoforge.mru")}")
+    modImplementation(libs.neoforge.mru)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))
