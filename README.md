@@ -51,7 +51,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   checks and "DevotedBelievers" fetches;
 - [Exposure](https://www.curseforge.com/minecraft/mc-mods/exposure "1.7.15") Blocks golden camera skin requests;
 - [M.R.U](https://www.curseforge.com/minecraft/mc-mods/mru "1.0.0+1.20.1-forge") Blocks API requests;
-- [Immersive Engineering](https://www.curseforge.com/minecraft/mc-mods/enigmatic-legacy "2.29.0") Blocks special
+- [Immersive Engineering](https://www.curseforge.com/minecraft/mc-mods/immersive-engineering "2.29.0") Blocks special
   revolver skin requests;
 - [Immersive Caves](https://www.curseforge.com/minecraft/mc-mods/immersive-caves "1.4.1") Blocks special revolver skin
   requests;
