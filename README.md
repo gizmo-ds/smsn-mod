@@ -1,64 +1,20 @@
-# Save My Shaky Network
+# Save My Shaky Network (1.20.1)
 
-[![爱发电](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fafdian.com%2Fapi%2Fuser%2Fget-profile%3Fuser_id%3D75e549844b5111ed8df552540025c377&query=%24.data.user.name&label=%E7%88%B1%E5%8F%91%E7%94%B5&color=%23946ce6)](https://afdian.com/a/gizmo)
+[![AFDIAN](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Gizmo-%23946ce6)](https://afdian.com/a/gizmo)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/mod/oXzIQwRj)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/1129397?logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/smsn)
 ![GitHub License](https://img.shields.io/github/license/gizmo-ds/smsn-mod?style=flat&label=License)
 
-在不影响 mods 功能的前提下阻止常用 mod 的联网行为, 防止因网络原因导致的加载缓慢或游戏崩溃.
+Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or
+game crashes caused by network issues.
 
-## 你能得到什么
+## Why This Mod Exists?
 
-- 你的服务器启动不再会花费数十秒尝试获取[Quark](https://modrinth.com/mod/qnQsVE2z)的赞助者列表, 每次玩家加入都不再会重新获取赞助者列表.
-- [Citadel](https://modrinth.com/mod/jJfV67b1)不再会让你的游戏在愚人节崩溃.
-- [Destroy](https://modrinth.com/mod/destroy) 或 [Petrol's Parts](https://modrinth.com/mod/petrols-parts)
-  不会再在每次玩家加入时请求一次远程数据库.
-- 更多可参考下面的列表
-
-## 功能
-
-如果你使用 Forge 或 NeoForge，请尝试修改 `config/fml.toml` 的 `versionCheck` 为 `false`，这能禁用掉加载器自带的版本更新检查。
-
-```yaml
-#file: noinspection SpellCheckingInspection
-Forge:
-  - Quark: 禁止了获取贡献者和赞助者列表
-  - Alex's Caves: 禁止了获取最新冲突 mod 列表的请求，现在会使用 "assets/alexscaves/warning/mod_generation_conflicts.txt" 作为冲突 mod 列表
-  - Citadel: 禁止了获取赞助者列表，现在会使用 "assets/citadel/patreon.txt"，愚人节彩蛋永远不会被触发
-  - Botania: 禁止获取贡献者列表
-  - Supplementaries: 禁止获取赞助者信息的请求
-  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
-  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
-  - Petrolpark's Library: 禁止了获取 Badges 的请求
-  - Nitrogen: 禁用了 The Aether Team 的模组（如：The Aether）的赞助者内容，这会让 The Aether 中的恐鸟的赞助者换肤功能失效，默认不启用
-  - Inventory Profiles Next: 禁止了更新检测和追踪请求
-  - Obscure API: 禁止了获取作品展示信息的请求，我不认为这些信息对于用户来说有什么意义
-  - Blueprint: 现在会尊重用户的 "slabfishSettings.enabled" 设置，在为 false 的情况下不会再发送请求
-  - Bagus Lib: 禁止获取赞助者信息的请求
-  - Immersive Engineering: 禁止获取特殊左轮皮肤的请求
-  - Enigmatic Legacy: 禁止获取 "虔诚的信徒" 文件
-  - Immersive Caves: 禁用 Discord 消息
-  - Placebo: 禁止赞助者轨迹请求和赞助者翅膀请求
-  - Ad Astra: Stations
-  - Exposure: 禁止黄金相机皮肤请求
-  - Titanium: 禁止奖励请求
-  - Ribbits: 禁止赞助者帽子请求
-  - M.R.U: 禁止 API 请求
-
-Fabric:
-  - Botania: 禁止获取贡献者列表
-  - Supplementaries: 禁止获取赞助者信息的请求
-  - Xaero's Minimap: 禁止了更新检测和获取赞助者列表
-  - Xaero's World Map: 禁止了更新检测和获取赞助者列表
-  - Inventory Profiles Next: 禁止了更新检测和追踪请求
-  - Iris Shader: 禁止更新请求
-  - Ad Astra: Stations
-  - Exposure: 禁止黄金相机皮肤请求
-  - Ribbits: 禁止赞助者帽子请求
-  - M.R.U: 禁止 API 请求
-```
-
-## 为什么?
+Because in certain regions with strict network censorship, accessing specific websites is impossible. For example, in
+China, websites like Patreon and GitHub are blocked and cannot be accessed normally. However, some popular mods, such as
+Quark, have included code that requests these websites, and when these requests fail, it can cause the game to stutter
+or crash. These issues typically occur during server startup or when players join. This mod was created to solve this
+problem by blocking such network requests, improving game stability for players in affected regions.
 
 - [关于夸克模组一直尝试连接至Patreon的问题](https://www.bilibili.com/video/BV14E421u7Kt/)
 - [解决Quark模组无法加载赞助者信息无限报错的问题](https://www.bilibili.com/read/cv13814407/)
@@ -66,24 +22,85 @@ Fabric:
 - [Quark#3331](https://github.com/VazkiiMods/Quark/issues/3331)
 - [Quark#3416](https://github.com/VazkiiMods/Quark/issues/3416)
 
-坚持一款mod的开发并不容易, 在mod中对贡献者和赞助者表达感谢是常见的方法. 但我并不认为从远程服务器获取这些信息是个好主意,
-因为并不是地球上所有的地方都拥有良好的网络环境.
+A few months ago, I noticed that my Minecraft server was taking nearly 10 minutes to start each time. After
+investigating, I discovered that Quark was causing this issue. Upon searching the issue tracker, I found that the author
+of Quark refused to address this problem, which led me to develop this mod to resolve it.
 
-在那些网络不好的地区使用这些mod往往会导致游戏加载时间过长, 有的mod甚至会导致游戏无法启动.
+## Features
 
-如果mod不会导致以上的问题, 又或者mod开发者愿意增加一个禁止这些行为的选项, 这个mod也许就不会诞生.
+For Forge/NeoForge: Set `versionCheck = false` in `config/fml.toml` to disable the loader's update checker.  
+For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` to disable ModMenu's update checks.
 
-## 常见问题（Q&A）
+**Forge**
 
-1. 会支持 XX Minecraft 版本吗？  
-   作者的精力只能确保当前主流版本和作者游玩的版本的维护。
-2. 可以将 `救救我的答辩网络` 加入整合包吗？  
-   可以，✅ 我推荐整合包使用 [Modrinth
-   `.mrpack`](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) 或 CurseForge 整合包 ZIP
-   格式。❌ 请不要直接将模组二进制文件(`.jar`)直接包含在整合包中，请为用户的安全负责。
+- [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.0-458") `夸克` Blocks contributor list fetching on
+  startup and player join;
+- [Nitrogen](https://github.com/The-Aether-Team/Nitrogen "1.20.1-1.0.11-neoforge") `氮` Blocks supporters content for
+  The Aether Team mods (e.g., blocks MOA skins in The Aether);
+- [Citadel](https://www.curseforge.com/minecraft/mc-mods/citadel "2.5.4") Use local assets instead of remote assets –
+  prevents April Fools' crashes;
+- [Alex's Caves](https://www.curseforge.com/minecraft/mc-mods/alexs-caves "1.1.4") Use local assets instead of remote
+  assets;
+- [Ad Astra](https://www.curseforge.com/minecraft/mc-mods/ad-astra "1.15.18") Stations;
+- [Bagus Lib](https://www.curseforge.com/minecraft/mc-mods/bagus-lib "1.20.1-5.3.0") Blocks supporters info requests;
+- [Blueprint](https://www.curseforge.com/minecraft/mc-mods/blueprint "1.20.1-7.1.0") Respects
+  `slabfishSettings.enabled=false` to block unnecessary requests;
+- [Botania](https://www.curseforge.com/minecraft/mc-mods/botania "1.20.1-446-FORGE") `植物魔法` Blocks contributor
+  list fetches;
+- [Enigmatic Legacy](https://www.curseforge.com/minecraft/mc-mods/enigmatic-legacy "2.29.0") `神秘遗物` Blocks update
+  checks and "DevotedBelievers" fetches;
+- [Exposure](https://www.curseforge.com/minecraft/mc-mods/exposure "1.7.15") Blocks golden camera skin requests;
+- [M.R.U](https://www.curseforge.com/minecraft/mc-mods/mru "1.0.0+1.20.1-forge") Blocks golden camera skin requests;
+- [Immersive Engineering](https://www.curseforge.com/minecraft/mc-mods/enigmatic-legacy "2.29.0") Blocks special
+  revolver skin requests;
+- [Immersive Caves](https://www.curseforge.com/minecraft/mc-mods/immersive-caves "1.4.1") Blocks special revolver skin
+  requests;
+- [Inventory Profiles Next](https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next "forge-1.20.1-1.10.11")
+  `一键背包整理Next` Blocks update checks and telemetry requests;
+- [Obscure API](https://www.curseforge.com/minecraft/mc-mods/obscure-api "15") Blocks mod list requests;
+- [Petrolpark Library](https://www.curseforge.com/minecraft/mc-mods/petrolpark-library "1.20.1-1.0.6") Blocks badge
+  fetch requests;
+- [Placebo](https://www.curseforge.com/minecraft/mc-mods/placebo "1.20.1-8.6.0") Blocks patron trail requests and patron
+  wing requests;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests;
+- [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "1.20-3.1.10") `锦致装饰` Prevents
+  supporters info requests;
+- [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium "1.20.1-3.8.23") `钛` Prevents reward requests;
+- [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "24.2.0_Forge_1.20") `Xaero的小地图`
+  Blocks update checks & patreon checks fetches;
+- [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Forge_1.20") `Xaero的世界地图`
+  Blocks update checks & patreon checks fetches.
 
-## 赞助 ❤️
+**Fabric**
 
-喜欢 `救救我的答辩网络` 吗？你可以在 [爱发电](https://afdian.com/a/gizmo) 对我进行赞助，助力模组持续更新！
+- [Nitrogen](https://github.com/The-Aether-Team/Nitrogen "1.20.1-1.0.15-fabric") `氮` Blocks supporters content for
+  The Aether Team mods (e.g., blocks MOA skins in The Aether);
+- [Ad Astra](https://www.curseforge.com/minecraft/mc-mods/ad-astra "1.15.18") Stations;
+- [Botania](https://www.curseforge.com/minecraft/mc-mods/botania "1.20.1-446-FABRIC") `植物魔法` Blocks contributor
+  list fetches;
+- [Exposure](https://www.curseforge.com/minecraft/mc-mods/exposure "1.7.15") Blocks golden camera skin requests;
+- [M.R.U](https://www.curseforge.com/minecraft/mc-mods/mru "1.0.0+1.20.1-fabric") Blocks golden camera skin requests;
+- [Inventory Profiles Next](https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next "fabric-1.20.1-1.10.11")
+  `一键背包整理Next` Blocks update checks and telemetry requests;
+- [Iris Shaders](https://www.curseforge.com/minecraft/mc-mods/irisshaders "1.6.4+1.20") Blocks update requests;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests;
+- [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "1.20-3.1.10") `锦致装饰` Prevents
+  supporters info requests;
+- [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "24.2.0_Fabric_1.20") `Xaero的小地图`
+  Blocks update checks & patreon checks fetches;
+- [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Fabric_1.20") `Xaero的世界地图`
+  Blocks update checks & patreon checks fetches.
 
-[![金主爸爸](https://afdian-connect.deno.dev/sponsor.svg)](https://afdian.com/a/gizmo)
+## F.A.Q
+
+1. Will XX Minecraft version be supported?  
+   The author can only guarantee maintenance for current mainstream versions and versions the author actively plays.
+2. Can I include `Save My Shaky Network` in a modpack?  
+   ✅ Yes! It's recommended to
+   use [Modrinth .mrpack](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) or CurseForge
+   modpack ZIP format.  
+   ❌ Do not directly include the mod binary (`.jar`) in your modpack—prioritize user security.
+
+## License
+
+This mod is distributed under [MIT license](https://github.com/gizmo-ds/smsn-mod/blob/1.20.1/LICENSE)
