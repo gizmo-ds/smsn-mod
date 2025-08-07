@@ -46,7 +46,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   list fetches;
 - [Enigmatic Legacy](https://www.curseforge.com/minecraft/mc-mods/enigmatic-legacy "2.26.5") `神秘遗物` Blocks update
   checks and "DevotedBelievers" fetches;
-- [Immersive Engineering](https://www.curseforge.com/minecraft/mc-mods/enigmatic-legacy "1.19.2-9.2.4-170") Blocks
+- [Immersive Engineering](https://www.curseforge.com/minecraft/mc-mods/immersive-engineering "1.19.2-9.2.4-170") Blocks
   special revolver skin requests;
 - [Inventory Profiles Next](https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next "forge-1.19.2-1.10.11")
   `一键背包整理Next` Disables update checks and telemetry requests;
