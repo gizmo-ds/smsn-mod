@@ -57,7 +57,7 @@ repositories {
 }
 
 dependencies {
-    neoForge(libs.neoforge.version)
+    neoForge(libs.neoforge.neoforge)
 
     localRuntime(libs.mixinextras.neoforge)
     modLocalRuntime(libs.neoforge.norealmsbutton)

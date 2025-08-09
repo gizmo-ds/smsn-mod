@@ -36,7 +36,7 @@ dependencies {
     modLocalRuntime(libs.fabric.api)
     modLocalRuntime(libs.fabric.norealmsbutton)
 
-    modImplementation(libs.modmenu)
+    modImplementation(libs.fabric.modmenu)
     modApi(libs.clothconfig.fabric) { exclude(group = "net.fabricmc.fabric-api") }
 //    modCompileOnly(libs.clothconfig.fabric)
 
