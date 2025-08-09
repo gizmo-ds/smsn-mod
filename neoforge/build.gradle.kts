@@ -87,8 +87,7 @@ dependencies {
     // Immersive Caves
     modImplementation(libs.neoforge.immersivecaves)
     // Iris Shader
-    modLocalRuntime(libs.neoforge.sodium)
-    modImplementation(libs.neoforge.iris)
+    modCompileOnly(libs.neoforge.iris)
     // Actually Additions
     modImplementation(libs.neoforge.actuallyadditions)
     // Exposure

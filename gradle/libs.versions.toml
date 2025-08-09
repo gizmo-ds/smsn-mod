@@ -36,7 +36,6 @@ fabric-sodium = { version = "mc1.21.1-0.6.1-fabric", module = "maven.modrinth:so
 fabric-forgeconfigapiport = { version = "21.1.0", module = "fuzs.forgeconfigapiport:forgeconfigapiport-fabric" }
 neoforge-norealmsbutton = { version = "ZPsxuqtp", module = "maven.modrinth:no-realms-button" } # 2.0.2
 neoforge-moonlight = { version = "1.21-2.20.7-neoforge", module = "maven.modrinth:moonlight" }
-neoforge-sodium = { version = "mc1.21.1-0.6.0-neoforge", module = "maven.modrinth:sodium" }
 neoforge-ponder = { version = "1.0.45", module = "net.createmod.ponder:Ponder-NeoForge-1.21.1" }
 neoforge-registrate = { version = "MC1.21-1.3.0+62", module = "com.tterrag.registrate:Registrate" }
 # Fabric
