@@ -23,7 +23,6 @@ val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
 val parchmentVersion: String = libs.versions.parchment.get()
-val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
@@ -95,7 +94,7 @@ subprojects {
 
         if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty())
             extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
-                debugMode.set(debugPublishing)
+                debugMode.set(mod.debug_publishing)
                 token.set(modrinthToken)
                 projectId.set(mod.modrinth_id)
                 syncBodyFrom.set(rootProject.file("README.md").readText())
@@ -115,7 +114,7 @@ subprojects {
                 return@register
             }
             group = "publishing"
-            debugMode = debugPublishing
+            debugMode = mod.debug_publishing
             apiToken = curseforgeToken
         }
         tasks.register("releaseMod") {
