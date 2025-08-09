@@ -1,13 +1,13 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    `kotlin-dsl`
-    id("dev.architectury.loom").version("1.10-SNAPSHOT") apply false
-    id("architectury-plugin").version("3.4-SNAPSHOT")
-    id("com.github.johnrengelman.shadow").version("8.1.1") apply false
-    id("co.uzzu.dotenv.gradle").version("4.0.0")
-    id("net.darkhax.curseforgegradle").version("1.1.26") apply false
-    id("com.modrinth.minotaur").version("2.+") apply false
+    java
+    alias(libs.plugins.loom) apply false
+    alias(libs.plugins.architectury)
+    alias(libs.plugins.shadow) apply false
+    alias(libs.plugins.dotenv)
+    alias(libs.plugins.curseforge) apply false
+    alias(libs.plugins.modrinth) apply false
 }
 
 architectury {
@@ -22,44 +22,32 @@ allprojects {
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
+val parchmentVersion: String = libs.versions.parchment.get()
 val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
     apply(plugin = "architectury-plugin")
-    apply(plugin = "maven-publish")
 
     val loom = project.extensions.getByName<net.fabricmc.loom.api.LoomGradleExtensionAPI>("loom")
-
     loom.silentMojangMappingsLicense()
+
     base.archivesName.set("${mod.id}-${project.name}")
 
     repositories {
         flatDir { dirs("mods") }
 
-        maven {
-            name = "ParchmentMC"
-            url = uri("https://maven.parchmentmc.org")
-        }
-        maven {
-            name = "JitPack"
-            url = uri("https://jitpack.io")
-        }
-        maven {
-            url = uri("https://cursemaven.com")
+        maven("https://maven.parchmentmc.org") { name = "ParchmentMC" }
+        maven("https://jitpack.io") { name = "JitPack" }
+        maven("https://cursemaven.com") {
             content { includeGroup("curse.maven") }
         }
-        maven {
-            url = uri("https://api.modrinth.com/maven")
+        maven("https://api.modrinth.com/maven") {
             content { includeGroup("maven.modrinth") }
         }
-        maven {
-            name = "Cloth Config"
-            url = uri("https://maven.shedaniel.me/")
-        }
-        maven {
+        maven("https://maven.shedaniel.me/") { name = "Cloth Config" }
+        maven("https://maven.blamejared.com") {
             name = "vazkii"
-            url = uri("https://maven.blamejared.com")
             content {
                 includeGroup("vazkii.patchouli")
                 includeGroup("vazkii.botania")
@@ -71,13 +59,14 @@ subprojects {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
         "mappings"(loom.layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
+            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:$parchmentVersion@zip")
         })
 
-        compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1")!!)
+        compileOnly(rootProject.libs.mixinextras.common)
+        annotationProcessor(rootProject.libs.mixinextras.common)
 
-        compileOnly("org.projectlombok:lombok:1.18.38")
-        annotationProcessor("org.projectlombok:lombok:1.18.38")
+        compileOnly(rootProject.libs.lombok)
+        annotationProcessor(rootProject.libs.lombok)
     }
 
     java {
@@ -107,12 +96,12 @@ subprojects {
 
         if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty())
             extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
-                debugMode.set(debugPublishing)
+                debugMode.set(mod.debug_publishing)
                 token.set(modrinthToken)
                 projectId.set(mod.modrinth_id)
                 syncBodyFrom.set(rootProject.file("README.md").readText())
                 versionName.set("${mod.version} ${loom.platform.get().displayName()}")
-                versionNumber.set(project.version.toString())
+                versionNumber.set("${project.name}-${project.version}")
                 versionType.set(mod.release_type)
                 gameVersions.addAll(mod.game_version_supports)
                 loaders.add(project.name)
@@ -121,16 +110,15 @@ subprojects {
                     optional.project("cloth-config")
                 }
             }
-        if (mod.curseforge_id.isNotEmpty() && curseforgeToken.isNotEmpty())
-            tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
-                if (mod.curseforge_id.isEmpty() || curseforgeToken.isEmpty()) {
-                    isEnabled = false
-                    return@register
-                }
-                group = "publishing"
-                debugMode = debugPublishing
-                apiToken = curseforgeToken
+        tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
+            if (mod.curseforge_id.isEmpty() || curseforgeToken.isEmpty()) {
+                isEnabled = false
+                return@register
             }
+            group = "publishing"
+            debugMode = mod.debug_publishing
+            apiToken = curseforgeToken
+        }
         tasks.register("releaseMod") {
             group = "publishing"
 

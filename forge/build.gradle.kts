@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -31,61 +31,48 @@ configurations {
     shadowBundle.isCanBeConsumed = false
 }
 
-@Suppress("SpellCheckingInspection")
 repositories {
-    maven {
-        name = "Create"
-        url = uri("https://maven.tterrag.com/")
-    }
-    maven {
-        name = "Curios"
-        url = uri("https://maven.theillusivec4.top/")
-    }
-    maven {
-        name = "Blueprint"
-        url = uri("https://maven.teamabnormals.com")
-    }
-    maven {
+    maven("https://maven.theillusivec4.top/") { name = "Curios" }
+    maven("https://maven.teamabnormals.com") { name = "Blueprint" }
+    maven("https://maven.blamejared.com/") {
         name = "Immersive Engineering"
-        url = uri("https://maven.blamejared.com/")
-        content {
-            includeGroup("malte0811")
-            includeGroup("blusunrize.immersiveengineering")
-        }
+        content { includeGroup("blusunrize.immersiveengineering") }
     }
 }
 
 dependencies {
-    forge("net.minecraftforge:forge:${mod.prop("forge.version")}")
+    forge(libs.forge.forge)
 
-    localRuntime("io.github.llamalad7:mixinextras-forge:0.4.1")
+    localRuntime(libs.mixinextras.forge)
+    modLocalRuntime(libs.modernfix.forge)
 
-    modApi("me.shedaniel.cloth:cloth-config-forge:${mod.prop("cloth_config")}")
+    modApi(libs.clothconfig.forge)
+//    modCompileOnly(libs.clothconfig.forge)
 
     // Quark
-    modImplementation("maven.modrinth:quark:${mod.prop("forge.quark")}")
+    modImplementation(libs.forge.quark)
     // Alex's mods
-    modImplementation("maven.modrinth:citadel:${mod.prop("forge.citadel")}")
+    modImplementation(libs.forge.citadel)
     // Xaero's maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("forge.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("forge.xaeros_world_map")}")
+    modImplementation(libs.forge.xaeros.minimap)
+    modImplementation(libs.forge.xaeros.worldmap)
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("forge.ipn")}")
+    modCompileOnly(libs.forge.ipn)
     // Blueprint
-    modImplementation("com.teamabnormals:blueprint:${mod.prop("forge.blueprint")}")
+    modImplementation(libs.forge.blueprint)
     // Bagus lib
-    modImplementation("maven.modrinth:bagus-lib:${mod.prop("forge.bagus_lib")}")
+    modImplementation(libs.forge.baguslib)
     // Immersive Engineering
-    modImplementation("maven.modrinth:immersiveengineering:${mod.prop("forge.immersive_engineering")}")
+    modImplementation(libs.forge.immersiveengineering)
     // Enigmatic Legacy
 //    modLocalRuntime("top.theillusivec4.caelus:caelus-forge:3.2.0+1.20.1")
 //    modLocalRuntime("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1")
-    modLocalRuntime("vazkii.patchouli:Patchouli:${mod.prop("forge.patchouli")}")
-    modImplementation("maven.modrinth:enigmatic-legacy:${mod.prop("forge.enigmatic_legacy")}")
+    modLocalRuntime(libs.forge.patchouli)
+    modImplementation(libs.forge.enigmaticlegacy)
     // Botania
-    modImplementation("vazkii.botania:Botania:${mod.prop("forge.botania")}")
+    modImplementation(libs.forge.botania)
     // Titanium
-    modCompileOnly("maven.modrinth:titanium:${mod.prop("forge.titanium")}")
+    modImplementation(libs.forge.titanium)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))
@@ -125,6 +112,5 @@ tasks {
             mainFile.addModLoader(project.name)
             mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
-            mainFile.addEnvironment("Server", "Client")
         }
 }

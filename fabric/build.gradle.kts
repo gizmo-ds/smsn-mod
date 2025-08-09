@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -26,40 +26,33 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = "Terraformers"
-        url = uri("https://maven.terraformersmc.com/")
-    }
-    maven {
-        name = "trinkets"
-        url = uri("https://maven.ladysnake.org/releases")
-    }
+    maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
+    maven("https://maven.ladysnake.org/releases") { name = "trinkets" }
 }
 
 dependencies {
-    modImplementation("net.fabricmc:fabric-loader:${mod.prop("fabric.loader")}")
+    modImplementation(libs.fabric.loader)
 
-    localRuntime("io.github.llamalad7:mixinextras-fabric:0.4.1")
+    localRuntime(libs.mixinextras.fabric)
+    modLocalRuntime(libs.fabric.api)
+    modLocalRuntime(libs.modernfix.fabric)
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.prop("cloth_config")}") {
+    modApi(libs.clothconfig.fabric) {
         exclude(group = "net.fabricmc.fabric-api")
+        exclude(group = "net.fabricmc", module = "fabric-loader")
     }
-    modImplementation("com.terraformersmc:modmenu:${mod.prop("fabric.modmenu")}")
-
-    modLocalRuntime("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
+//    modCompileOnly(libs.clothconfig.fabric)
+    modImplementation(libs.fabric.modmenu)
 
     // Xaero's maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")
+    modImplementation(libs.fabric.xaeros.minimap)
+    modImplementation(libs.fabric.xaeros.worldmap)
     // Botania
-    modImplementation("vazkii.botania:Botania:${mod.prop("fabric.botania")}") {
-        exclude(group = "com.jamieswhiteshirt")
-    }
+    modImplementation(libs.fabric.botania) { exclude(group = "com.jamieswhiteshirt") }
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("fabric.ipn")}")
+    modCompileOnly(libs.fabric.ipn)
     // Iris
-    modLocalRuntime("maven.modrinth:sodium:${mod.prop("fabric.sodium")}")
-    modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
+    modCompileOnly(libs.fabric.iris)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))
@@ -99,6 +92,5 @@ tasks {
             mainFile.addModLoader(project.name)
             mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
-            mainFile.addEnvironment("Server", "Client")
         }
 }

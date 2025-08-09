@@ -1,0 +1,55 @@
+[plugins]
+architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
+modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
+curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
+
+[versions]
+lombok = "1.18.38"
+mixinextras = "0.4.1"
+# Dependencies
+parchment = "2022.11.06"
+fabric-loader = "0.17.0"
+forge = "1.18.2-40.2.21"
+clothconfig = "6.2.62"
+# Dev
+modmenu = "3.2.5"
+fabric-api = "0.77.0+1.18.2"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+mixinextras-common = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixinextras" }
+mixinextras-fabric = { module = "io.github.llamalad7:mixinextras-fabric", version.ref = "mixinextras" }
+mixinextras-forge = { module = "io.github.llamalad7:mixinextras-forge", version.ref = "mixinextras" }
+# Dependencies
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+forge-forge = { module = "net.minecraftforge:forge", version.ref = "forge" }
+clothconfig-api = { module = "me.shedaniel.cloth:cloth-config", version.ref = "clothconfig" }
+clothconfig-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "clothconfig" }
+clothconfig-forge = { module = "me.shedaniel.cloth:cloth-config-forge", version.ref = "clothconfig" }
+# Dev
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+modernfix-fabric = { version = "LJ5N4YSl", module = "maven.modrinth:modernfix" } # 5.18.0+mc1.18.2
+modernfix-forge = { version = "Vlkqd178", module = "maven.modrinth:modernfix" } # 5.18.0+mc1.18.2
+forge-patchouli = { version = "1.18.2-71.1", module = "vazkii.patchouli:Patchouli" }
+# Fabric
+fabric-modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+fabric-xaeros-minimap = { version = "25.2.6_Fabric_1.18.2", module = "maven.modrinth:xaeros-minimap" }
+fabric-xaeros-worldmap = { version = "1.39.9_Fabric_1.18.2", module = "maven.modrinth:xaeros-world-map" }
+fabric-ipn = { version = "fabric-1.18.2-1.10.15", module = "maven.modrinth:inventory-profiles-next" }
+fabric-botania = { version = "1.18.2-435-FABRIC", module = "vazkii.botania:Botania" }
+fabric-iris = { version = "ogIRhnAJ", module = "maven.modrinth:iris" } # 1.6.11+1.18.2
+# Forge
+forge-xaeros-minimap = { version = "25.2.6_Forge_1.18.2", module = "maven.modrinth:xaeros-minimap" }
+forge-xaeros-worldmap = { version = "1.39.9_Forge_1.18.2", module = "maven.modrinth:xaeros-world-map" }
+forge-quark = { version = "e4xifKGM", module = "maven.modrinth:quark" } # 3.2-358
+forge-citadel = { version = "ge8ra0kG", module = "maven.modrinth:citadel" } # 1.11.3
+forge-blueprint = { version = "1.18.2-5.5.0", module = "com.teamabnormals:blueprint" }
+forge-ipn = { version = "forge-1.18.2-1.10.14", module = "maven.modrinth:inventory-profiles-next" }
+forge-botania = { version = "1.18.2-435", module = "vazkii.botania:Botania" }
+forge-titanium = { version = "f8zZ2kK5", module = "maven.modrinth:titanium" } # 3.5.9
+forge-enigmaticlegacy = { version = "WxrW0zJe", module = "maven.modrinth:enigmatic-legacy" } # 2.25.0
+forge-immersiveengineering = { version = "g7u3ovfs", module = "maven.modrinth:immersiveengineering" } # 1.18.2-8.4.0-161
+forge-baguslib = { version = "kphZTVeN", module = "maven.modrinth:bagus-lib" } # 1.18.2-3.6.1
