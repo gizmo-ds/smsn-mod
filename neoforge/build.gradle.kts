@@ -67,8 +67,7 @@ dependencies {
 
     // Supplementaries
     modLocalRuntime(libs.neoforge.moonlight)
-    downloadAndModifySupplementariesJar()
-    modImplementation("mods:supplementaries:${libs.neoforge.supplementaries.get().version}")
+    modImplementation(downloadAndPatchJar(libs.neoforge.supplementaries.get()))
     // Petrolpark's Library
     modLocalRuntime(libs.neoforge.registrate)
     modLocalRuntime(libs.neoforge.ponder)
@@ -145,21 +144,21 @@ tasks {
         }
 }
 
-fun downloadAndModifySupplementariesJar() {
-    val supplementaries = libs.neoforge.supplementaries.get()
-    val modFile = file("./mods/supplementaries-${supplementaries.version}.jar")
-    if (modFile.exists()) return
+fun downloadAndPatchJar(dep: MinimalExternalModuleDependency): String {
+    val modFile = file("./mods/${dep.name}-${dep.version}.jar")
+    modFile.parentFile.mkdirs()
+    if (modFile.exists()) return "mods:${dep.name}:${dep.version}"
 
     val tempFile = File.createTempFile("temp", ".jar")
     tempFile.deleteOnExit()
 
-    println("Downloading supplementaries...")
-    URI("https://api.modrinth.com/maven/maven/modrinth/supplementaries/${supplementaries.version}/supplementaries-${supplementaries.version}.jar")
+    println("Downloading ${dep.name}...")
+    URI("https://api.modrinth.com/maven/maven/modrinth/${dep.name}/${dep.version}/${dep.name}-${dep.version}.jar")
         .toURL().openStream().use {
             it.copyTo(BufferedOutputStream(tempFile.outputStream()))
         }
 
-    println("Modifiing supplementaries...")
+    println("Patching ${dep.name}...")
     FileInputStream(tempFile).use { it ->
         ZipInputStream(it).use { zis ->
             FileOutputStream(modFile).use {
@@ -177,4 +176,5 @@ fun downloadAndModifySupplementariesJar() {
             }
         }
     }
+    return "mods:${dep.name}:${dep.version}"
 }
