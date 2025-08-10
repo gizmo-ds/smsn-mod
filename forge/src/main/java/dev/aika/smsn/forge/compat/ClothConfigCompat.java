@@ -1,4 +1,4 @@
-package dev.aika.smsn.forge.compat.cloth;
+package dev.aika.smsn.forge.compat;
 
 import dev.aika.smsn.compat.cloth.SMSNClothConfig;
 import dev.aika.smsn.client.gui.MissingClothConfigScreen;

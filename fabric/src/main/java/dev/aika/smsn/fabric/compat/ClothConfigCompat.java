@@ -1,4 +1,4 @@
-package dev.aika.smsn.fabric.compat.cloth;
+package dev.aika.smsn.fabric.compat;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

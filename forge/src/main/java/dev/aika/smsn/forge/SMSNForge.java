@@ -1,6 +1,6 @@
 package dev.aika.smsn.forge;
 
-import dev.aika.smsn.forge.compat.cloth.ClothConfigCompat;
+import dev.aika.smsn.forge.compat.ClothConfigCompat;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.ConfigGuiHandler;
 import net.minecraftforge.fml.DistExecutor;

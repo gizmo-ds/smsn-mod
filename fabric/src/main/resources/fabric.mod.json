@@ -20,7 +20,7 @@
       "dev.aika.smsn.fabric.SMSNFabric"
     ],
     "modmenu": [
-      "dev.aika.smsn.fabric.compat.cloth.ClothConfigCompat"
+      "dev.aika.smsn.fabric.compat.ClothConfigCompat"
     ]
   },
   "mixins": [
