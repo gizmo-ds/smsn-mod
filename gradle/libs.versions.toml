@@ -25,12 +25,11 @@ mixinextras-fabric = { module = "io.github.llamalad7:mixinextras-fabric", versio
 mixinextras-forge = { module = "io.github.llamalad7:mixinextras-forge", version.ref = "mixinextras" }
 # Dependencies
 fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
-forge-version = { module = "net.minecraftforge:forge", version.ref = "forge" }
+forge-forge = { module = "net.minecraftforge:forge", version.ref = "forge" }
 clothconfig-api = { module = "me.shedaniel.cloth:cloth-config", version.ref = "clothconfig" }
 clothconfig-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "clothconfig" }
 clothconfig-forge = { module = "me.shedaniel.cloth:cloth-config-forge", version.ref = "clothconfig" }
 # Dev
-modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
 forge-patchouli = { version = "1.19.2-77", module = "vazkii.patchouli:Patchouli" }
 forge-curios = { version = "1.19.2-5.1.1.0", module = "top.theillusivec4.curios:curios-forge" }
@@ -38,6 +37,7 @@ forge-caelus = { version = "1.19.2-3.0.0.6", module = "top.theillusivec4.caelus:
 forge-autoreglib = { version = "pwEa2yJ2", module = "maven.modrinth:autoreglib" } # 1.8.2-55
 forge-moonlight = { version = "4R7I44b3", module = "maven.modrinth:moonlight" } # 1.19.2-2.3.7
 # Fabric
+fabric-modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 fabric-xaeros-minimap = { version = "24.2.0_Fabric_1.19.1", module = "maven.modrinth:xaeros-minimap" }
 fabric-xaeros-worldmap = { version = "1.38.8_Fabric_1.19.1", module = "maven.modrinth:xaeros-world-map" }
 fabric-supplementaries = { version = "VNwz9Avv", module = "maven.modrinth:supplementaries" } # 1.19.2-2.4.20

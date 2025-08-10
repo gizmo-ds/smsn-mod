@@ -1,3 +1,14 @@
+### 1.2.7
+
+**Forge**
+
+- Add Mixins for [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte)
+- Update MissingClothConfigScreen
+
+**Fabric**
+
+- Update MissingClothConfigScreen
+
 ### 1.2.6
 
 **Forge**

@@ -49,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    forge(libs.forge.version)
+    forge(libs.forge.forge)
 
     localRuntime(libs.mixinextras.forge)
 
@@ -127,8 +127,8 @@ tasks {
             mainFile.releaseType = mod.release_type
             mainFile.gameVersions.addAll(mod.game_version_supports)
             mainFile.addModLoader(project.name)
-            mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
+            mainFile.addOptional("cloth-config")
         }
 }
 
