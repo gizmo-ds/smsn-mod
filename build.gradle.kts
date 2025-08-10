@@ -3,13 +3,13 @@
 import net.fabricmc.loom.api.LoomGradleExtensionAPI
 
 plugins {
-    `kotlin-dsl`
-    id("dev.architectury.loom").version("1.10-SNAPSHOT") apply false
-    id("architectury-plugin").version("3.4-SNAPSHOT")
-    id("com.github.johnrengelman.shadow").version("8.1.1") apply false
-    id("co.uzzu.dotenv.gradle").version("4.0.0")
-    id("net.darkhax.curseforgegradle").version("1.1.26") apply false
-    id("com.modrinth.minotaur").version("2.+") apply false
+    java
+    alias(libs.plugins.loom) apply false
+    alias(libs.plugins.architectury)
+    alias(libs.plugins.shadow) apply false
+    alias(libs.plugins.dotenv)
+    alias(libs.plugins.curseforge) apply false
+    alias(libs.plugins.modrinth) apply false
 }
 
 architectury {
@@ -24,12 +24,11 @@ allprojects {
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
-val debugPublishing = false
+val parchmentVersion: String = libs.versions.parchment.get()
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
     apply(plugin = "architectury-plugin")
-    apply(plugin = "maven-publish")
 
     val loom = project.extensions.getByName<LoomGradleExtensionAPI>("loom")
     loom.silentMojangMappingsLicense()
@@ -39,48 +38,26 @@ subprojects {
     repositories {
         flatDir { dirs("mods") }
 
-        maven {
-            name = "ParchmentMC"
-            url = uri("https://maven.parchmentmc.org")
-        }
-        maven {
-            url = uri("https://cursemaven.com")
+        maven("https://maven.parchmentmc.org") { name = "ParchmentMC" }
+        maven("https://jitpack.io") { name = "JitPack" }
+        maven("https://cursemaven.com") {
             content { includeGroup("curse.maven") }
         }
-        maven {
-            url = uri("https://api.modrinth.com/maven")
+        maven("https://api.modrinth.com/maven") {
             content { includeGroup("maven.modrinth") }
         }
-        maven {
-            name = "Cloth Config"
-            url = uri("https://maven.shedaniel.me/")
-        }
-        maven {
-            name = "Just Enough Items"
-            url = uri("https://modmaven.dev")
-        }
-        maven {
-            name = "Aether Team"
-            url = uri("https://packages.aether-mod.net/Nitrogen")
-        }
-        maven {
-            name = "Fuzss"
-            url = uri("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/")
-            content {
-                includeGroup("fuzs.forgeconfigapiport")
-            }
-        }
+        maven("https://maven.shedaniel.me/") { name = "Cloth Config" }
     }
 
     dependencies {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
         "mappings"(loom.layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:${mod.prop("parchment_version")}@zip")
+            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:$parchmentVersion@zip")
         })
 
-        compileOnly("org.projectlombok:lombok:1.18.38")
-        annotationProcessor("org.projectlombok:lombok:1.18.38")
+        compileOnly(rootProject.libs.lombok)
+        annotationProcessor(rootProject.libs.lombok)
     }
 
     java {
@@ -110,12 +87,12 @@ subprojects {
 
         if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty()) {
             extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
-                debugMode.set(debugPublishing)
+                debugMode.set(mod.debug_publishing)
                 token.set(modrinthToken)
                 projectId.set(mod.modrinth_id)
                 syncBodyFrom.set(rootProject.file("README.md").readText())
                 versionName.set("${mod.version} ${loom.platform.get().displayName()}")
-                versionNumber.set(project.version.toString())
+                versionNumber.set("${project.name}-${project.version}")
                 versionType.set(mod.release_type)
                 gameVersions.addAll(mod.game_version_supports)
                 loaders.add(project.name)
@@ -130,7 +107,7 @@ subprojects {
                     return@register
                 }
                 group = "publishing"
-                debugMode = debugPublishing
+                debugMode = mod.debug_publishing
                 apiToken = curseforgeToken
             }
             tasks.register("releaseMod") {

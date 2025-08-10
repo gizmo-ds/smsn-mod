@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -26,54 +26,26 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = "NeoForged"
-        url = uri("https://maven.neoforged.net/releases")
-    }
-    maven {
-        name = "Blueprint"
-        url = uri("https://maven.teamabnormals.com")
-    }
-    maven {
-        name = "Immersive Engineering"
-        url = uri("https://maven.blamejared.com/")
-        content {
-            includeGroup("malte0811")
-            includeGroup("blusunrize.immersiveengineering")
-        }
-    }
-    maven {
-        name = "Registrate"
-        url = uri("https://mvn.devos.one/snapshots")
-        content {
-            includeGroup("com.tterrag.registrate")
-        }
-    }
-    maven {
-        name = "Ponder"
-        url = uri("https://maven.createmod.net/")
-        content {
-            includeGroup("net.createmod.ponder")
-            includeGroup("dev.engine-room.flywheel")
-        }
-    }
+    maven("https://maven.neoforged.net/releases") { name = "NeoForged" }
 }
 
 dependencies {
-    neoForge("net.neoforged:neoforge:${mod.prop("neoforge.version")}")
+    neoForge(libs.neoforge.neoforge)
 
-    modApi("me.shedaniel.cloth:cloth-config-neoforge:${mod.prop("cloth_config")}")
+    modLocalRuntime(libs.neoforge.norealmsbutton)
+
+    modApi(libs.clothconfig.neoforge)
+//    modCompileOnly(libs.clothconfig.neoforge)
 
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("neoforge.ipn")}")
+    modCompileOnly(libs.neoforge.ipn)
     // Iris Shader
-    modLocalRuntime("maven.modrinth:sodium:${mod.prop("neoforge.sodium")}")
-    modCompileOnly("maven.modrinth:iris:${mod.prop("neoforge.iris")}")
+    modCompileOnly(libs.neoforge.iris)
     // Xaero's Maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("neoforge.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("neoforge.xaeros_world_map")}")
+    modImplementation(libs.neoforge.xaeros.minimap)
+    modImplementation(libs.neoforge.xaeros.worldmap)
     // M.R.U
-    modImplementation("maven.modrinth:mru:${mod.prop("neoforge.mru")}")
+    modImplementation(libs.neoforge.mru)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))
@@ -111,8 +83,7 @@ tasks {
             mainFile.releaseType = mod.release_type
             mainFile.gameVersions.addAll(mod.game_version_supports)
             mainFile.addModLoader(project.name)
-            mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
-            mainFile.addEnvironment("Server", "Client")
+            mainFile.addOptional("cloth-config")
         }
 }

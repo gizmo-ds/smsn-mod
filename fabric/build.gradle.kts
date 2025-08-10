@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
 plugins {
-    id("com.github.johnrengelman.shadow")
+    alias(libs.plugins.shadow)
 }
 
 apply(plugin = "com.modrinth.minotaur")
@@ -26,32 +26,29 @@ configurations {
 }
 
 repositories {
-    maven {
-        name = "Terraformers"
-        url = uri("https://maven.terraformersmc.com/")
-    }
+    maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
 }
 
 dependencies {
-    modImplementation("net.fabricmc:fabric-loader:${mod.prop("fabric.loader")}")
+    modImplementation(libs.fabric.loader)
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.prop("cloth_config")}") {
-        exclude(group = "net.fabricmc.fabric-api")
-    }
-    modImplementation("com.terraformersmc:modmenu:${mod.prop("fabric.modmenu")}")
+    modLocalRuntime(libs.fabric.api)
+    modLocalRuntime(libs.fabric.norealmsbutton)
 
-    modLocalRuntime("net.fabricmc.fabric-api:fabric-api:${mod.prop("fabric.api")}")
+    modImplementation(libs.fabric.modmenu)
+    modApi(libs.clothconfig.fabric) { exclude(group = "net.fabricmc.fabric-api") }
+//    modCompileOnly(libs.clothconfig.fabric)
 
     // Inventory Profiles Next (I can't make this work. ¯\_(ツ)_/¯)
-    modCompileOnly("maven.modrinth:inventory-profiles-next:${mod.prop("fabric.ipn")}")
+    modCompileOnly(libs.fabric.ipn)
     // Iris Shader
-    modLocalRuntime("maven.modrinth:sodium:${mod.prop("fabric.sodium")}")
-    modImplementation("maven.modrinth:iris:${mod.prop("fabric.iris")}")
+    modLocalRuntime(libs.fabric.sodium)
+    modImplementation(libs.fabric.iris)
     // Xaero's Maps
-    modImplementation("maven.modrinth:xaeros-minimap:${mod.prop("fabric.xaeros_minimap")}")
-    modImplementation("maven.modrinth:xaeros-world-map:${mod.prop("fabric.xaeros_world_map")}")
+    modImplementation(libs.fabric.xaeros.minimap)
+    modImplementation(libs.fabric.xaeros.worldmap)
     // M.R.U
-    modImplementation("maven.modrinth:mru:${mod.prop("fabric.mru")}")
+    modImplementation(libs.fabric.mru)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))
@@ -89,8 +86,7 @@ tasks {
             mainFile.releaseType = mod.release_type
             mainFile.gameVersions.addAll(mod.game_version_supports)
             mainFile.addModLoader(project.name)
-            mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
-            mainFile.addEnvironment("Server", "Client")
+            mainFile.addOptional("cloth-config")
         }
 }

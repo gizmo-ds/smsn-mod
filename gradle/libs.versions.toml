@@ -1,0 +1,45 @@
+[plugins]
+architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
+modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
+curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
+
+[versions]
+lombok = "1.18.38"
+# Dependencies
+parchment = "2025.06.29"
+fabric-loader = "0.17.2"
+neoforge = "21.6.11-beta"
+clothconfig = "19.0.147"
+# Dev
+modmenu = "15.0.0-beta.3"
+fabric-api = "0.128.2+1.21.6"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+# Dependencies
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+neoforge-neoforge = { module = "net.neoforged:neoforge", version.ref = "neoforge" }
+clothconfig-api = { module = "me.shedaniel.cloth:cloth-config", version.ref = "clothconfig" }
+clothconfig-fabric = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "clothconfig" }
+clothconfig-neoforge = { module = "me.shedaniel.cloth:cloth-config-neoforge", version.ref = "clothconfig" }
+# Dev
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+fabric-norealmsbutton = { version = "hvRXpKVD", module = "maven.modrinth:no-realms-button" } # 2.0.2
+fabric-sodium = { version = "mc1.21.6-0.6.13-fabric", module = "maven.modrinth:sodium" }
+neoforge-norealmsbutton = { version = "ZPsxuqtp", module = "maven.modrinth:no-realms-button" } # 2.0.2
+# Fabric
+fabric-modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+fabric-xaeros-minimap = { version = "25.2.7_Fabric_1.21.6", module = "maven.modrinth:xaeros-minimap" }
+fabric-xaeros-worldmap = { version = "1.39.10_Fabric_1.21.6", module = "maven.modrinth:xaeros-world-map" }
+fabric-ipn = { version = "fabric-1.21.6-2.1.10", module = "maven.modrinth:inventory-profiles-next" }
+fabric-iris = { version = "1.9.1+1.21.7-fabric", module = "maven.modrinth:iris" }
+fabric-mru = { version = "1.0.18+1.21.6-fabric", module = "maven.modrinth:mru" }
+# NeoForge
+neoforge-xaeros-minimap = { version = "25.2.7_NeoForge_1.21.6", module = "maven.modrinth:xaeros-minimap" }
+neoforge-xaeros-worldmap = { version = "1.39.10_NeoForge_1.21.6", module = "maven.modrinth:xaeros-world-map" }
+neoforge-ipn = { version = "neoforge-1.21.6-2.1.10", module = "maven.modrinth:inventory-profiles-next" }
+neoforge-iris = { version = "1.9.1+1.21.7-neoforge", module = "maven.modrinth:iris" }
+neoforge-mru = { version = "1.0.18+1.21.6-neoforge", module = "maven.modrinth:mru" }
