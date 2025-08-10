@@ -5,7 +5,6 @@ import dev.aika.smsn.utils.MapUtils;
 import java.util.Map;
 
 public class MixinInfo {
-    @SuppressWarnings("SpellCheckingInspection")
     public static Map<String, String> getMixinClassNames() {
         return MapUtils.createMap(
                 "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin", "citadel",
@@ -16,6 +15,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.enigmatic_legacy.EnigmaticUpdateHandlerMixin", "enigmaticlegacy",
                 "dev.aika.smsn.forge.mixin.immersive_engineering.ImmersiveEngineeringMixin", "immersiveengineering",
                 "dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin", "inventoryprofilesnext",
+                "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin", "projecte",
                 "dev.aika.smsn.forge.mixin.quark.ThreadContributorListLoaderMixin", "quark",
                 "dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium",
                 "dev.aika.smsn.forge.mixin.xaero.minimap.InternetMixin", "xaerominimap",

@@ -34,6 +34,8 @@ public class SMSNConfig extends ModConfig {
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
 
     @SneakyThrows
     public static SMSNConfig load() {

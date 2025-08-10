@@ -53,3 +53,4 @@ forge-titanium = { version = "f8zZ2kK5", module = "maven.modrinth:titanium" } # 
 forge-enigmaticlegacy = { version = "WxrW0zJe", module = "maven.modrinth:enigmatic-legacy" } # 2.25.0
 forge-immersiveengineering = { version = "g7u3ovfs", module = "maven.modrinth:immersiveengineering" } # 1.18.2-8.4.0-161
 forge-baguslib = { version = "kphZTVeN", module = "maven.modrinth:bagus-lib" } # 1.18.2-3.6.1
+forge-projecte = { version = "3722831", module = "curse.maven:projecte-226410" } # 1.0.1

@@ -73,6 +73,8 @@ dependencies {
     modImplementation(libs.forge.botania)
     // Titanium
     modImplementation(libs.forge.titanium)
+    // ProjectE
+    modImplementation(libs.forge.projecte)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

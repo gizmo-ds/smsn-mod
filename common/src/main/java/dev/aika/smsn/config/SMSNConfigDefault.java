@@ -13,4 +13,5 @@ public class SMSNConfigDefault {
     public static boolean enigmaticLegacyFetchDevotedBelievers = false;
     public static boolean irisUpdateCheck = false;
     public static boolean titaniumReward = false;
+    public static boolean projecteUUIDCheck = false;
 }

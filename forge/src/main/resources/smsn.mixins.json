@@ -15,6 +15,7 @@
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "ipn.IPNInfoManagerMixin",
+    "projecte.ThreadCheckUUIDMixin",
     "quark.ThreadContributorListLoaderMixin",
     "titanium.RewardMixin",
     "xaero.minimap.InternetMixin",
