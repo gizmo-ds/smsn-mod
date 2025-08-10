@@ -1,11 +1,12 @@
-### 1.2.6
+### 1.2.7
 
 **NeoForge**
 
 - Refactoring the configuration API
-- Update version format
+- Update MissingClothConfigScreen
+- Add Mixins for [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte)
 
 **Fabric**
 
 - Refactoring the configuration API
-- Update version format
+- Update MissingClothConfigScreen
