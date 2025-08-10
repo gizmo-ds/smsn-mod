@@ -1,7 +1,5 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
-import net.fabricmc.loom.api.LoomGradleExtensionAPI
-
 plugins {
     java
     alias(libs.plugins.loom) apply false
@@ -18,7 +16,7 @@ architectury {
 
 allprojects {
     group = mod.group
-    version = mod.version
+    version = "${mod.minecraft_version}-${mod.version}"
 }
 
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
@@ -30,7 +28,7 @@ subprojects {
     apply(plugin = "dev.architectury.loom")
     apply(plugin = "architectury-plugin")
 
-    val loom = project.extensions.getByName<LoomGradleExtensionAPI>("loom")
+    val loom = project.extensions.getByName<net.fabricmc.loom.api.LoomGradleExtensionAPI>("loom")
     loom.silentMojangMappingsLicense()
 
     base.archivesName.set("${mod.id}-${project.name}")
@@ -85,7 +83,7 @@ subprojects {
         ext.set("curseforge_token", curseforgeToken)
         ext.set("modrinth_token", modrinthToken)
 
-        if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty()) {
+        if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty())
             extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
                 debugMode.set(mod.debug_publishing)
                 token.set(modrinthToken)
@@ -101,21 +99,20 @@ subprojects {
                     optional.project("cloth-config")
                 }
             }
-            tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
-                if (mod.curseforge_id.isEmpty() || curseforgeToken.isEmpty()) {
-                    isEnabled = false
-                    return@register
-                }
-                group = "publishing"
-                debugMode = mod.debug_publishing
-                apiToken = curseforgeToken
+        tasks.register<net.darkhax.curseforgegradle.TaskPublishCurseForge>("curseforge") {
+            if (mod.curseforge_id.isEmpty() || curseforgeToken.isEmpty()) {
+                isEnabled = false
+                return@register
             }
-            tasks.register("releaseMod") {
-                group = "publishing"
+            group = "publishing"
+            debugMode = mod.debug_publishing
+            apiToken = curseforgeToken
+        }
+        tasks.register("releaseMod") {
+            group = "publishing"
 
-                dependsOn("curseforge")
-                dependsOn("modrinth")
-            }
+            dependsOn("curseforge")
+            dependsOn("modrinth")
         }
     }
 }
