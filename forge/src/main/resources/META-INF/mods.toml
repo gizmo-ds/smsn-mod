@@ -34,3 +34,80 @@ mandatory = false
 versionRange = "[6.,)"
 ordering = "NONE"
 side = "CLIENT"
+
+[[dependencies.smsn]]
+modId = "citadel"
+mandatory = false
+versionRange = "[1.11.3,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "bagus_lib"
+mandatory = false
+versionRange = "[1.18.2-3.6.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "blueprint"
+mandatory = false
+versionRange = "[5.5.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "botania"
+mandatory = false
+versionRange = "[1.18.2-435,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "enigmaticlegacy"
+mandatory = false
+versionRange = "[2.25.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "immersiveengineering"
+mandatory = false
+versionRange = "[1.18.2-8.4.0-161,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "inventoryprofilesnext"
+mandatory = false
+versionRange = "[1.10.14,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "quark"
+mandatory = false
+versionRange = "[3.2-358,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "titanium"
+mandatory = false
+versionRange = "[3.5.9,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "xaerominimap"
+mandatory = false
+versionRange = "[25.2.6,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.smsn]]
+modId = "xaeroworldmap"
+mandatory = false
+versionRange = "[1.39.9,)"
+ordering = "NONE"
+side = "BOTH"
