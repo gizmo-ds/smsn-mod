@@ -28,6 +28,7 @@
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
+    "projecte.ThreadCheckUUIDMixin",
     "quark.ThreadContributorListLoaderMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",

@@ -55,6 +55,8 @@ public class SMSNConfig extends ModConfig {
     public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
     @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean mruApi = SMSNConfigDefault.mruApi;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)

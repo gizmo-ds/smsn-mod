@@ -25,4 +25,5 @@ public class SMSNConfigDefault {
     public static boolean titaniumReward = false;
     public static boolean ribbitsSupporterHat = false;
     public static boolean mruApi = false;
+    public static boolean projecteUUIDCheck = false;
 }

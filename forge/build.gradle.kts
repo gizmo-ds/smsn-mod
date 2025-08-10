@@ -105,6 +105,8 @@ dependencies {
     modImplementation(libs.forge.mru)
     // Botania
     modImplementation(libs.forge.botania)
+    // ProjectE
+    modImplementation(libs.forge.projecte)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))
