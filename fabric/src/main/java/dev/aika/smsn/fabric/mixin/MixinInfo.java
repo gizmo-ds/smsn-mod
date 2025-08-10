@@ -5,7 +5,6 @@ import dev.aika.smsn.utils.MapUtils;
 import java.util.Map;
 
 public class MixinInfo {
-    @SuppressWarnings("SpellCheckingInspection")
     public static Map<String, String> getMixinClassNames() {
         return MapUtils.createMap(
                 "dev.aika.smsn.fabric.mixin.botania.ContributorListMixin", "botania",

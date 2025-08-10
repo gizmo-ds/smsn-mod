@@ -5,7 +5,6 @@ import dev.aika.smsn.utils.MapUtils;
 import java.util.Map;
 
 public class MixinInfo {
-    @SuppressWarnings("SpellCheckingInspection")
     public static Map<String, String> getMixinClassNames() {
         return MapUtils.createMap(
                 "dev.aika.smsn.forge.mixin.aetherteam.UserData$ServerMixin", "nitrogen",
@@ -20,6 +19,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin", "inventoryprofilesnext",
                 "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin", "obscure_api",
                 "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin$Mod", "obscure_api",
+                "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin", "projecte",
                 "dev.aika.smsn.forge.mixin.quark.ThreadContributorListLoaderMixin", "quark",
                 "dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin", "supplementaries",
                 "dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium",

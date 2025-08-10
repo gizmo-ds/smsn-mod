@@ -59,3 +59,4 @@ forge-enigmaticlegacy = { version = "9pdtGQb7", module = "maven.modrinth:enigmat
 forge-immersiveengineering = { version = "VzTXQKEm", module = "maven.modrinth:immersiveengineering" } # 1.19.2-9.2.4-170
 forge-nitrogen = { version = "1.19.2-1.0.7-forge", module = "com.aetherteam.nitrogen:nitrogen_internals" }
 forge-baguslib = { version = "Qiw9t3HU", module = "maven.modrinth:bagus-lib" } # 1.19.2-3.6.0
+forge-projecte = { version = "4860858", module = "curse.maven:projecte-226410" } # 1.1.0
