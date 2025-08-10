@@ -67,10 +67,10 @@ dependencies {
 
 tasks {
     processResources {
-        inputs.property("version", mod.version)
+        inputs.property("version", project.version)
 
         filesMatching("fabric.mod.json") {
-            expand("version" to mod.version)
+            expand("version" to project.version)
         }
         from(rootProject.file("assets/icon.png")) {
             rename { "assets/${mod.id}/icon.png" }
