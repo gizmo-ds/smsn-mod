@@ -5,6 +5,7 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.MultiLineLabel;
+import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
@@ -30,16 +31,26 @@ public class MissingClothConfigScreen extends Screen {
 
         int posX = (width - 200) / 2;
         int posY = height / 2 - 20;
+
         posY += font.wordWrapHeight(messageComponent, 300);
-        addRenderableWidget(new Button(posX, posY, 100, 20, curseforgeButton,
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_CURSEFORGE)));
-        addRenderableWidget(new Button(posX + 100, posY, 100, 20,modrinthButton,
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_MODRINTH)));
-        addRenderableWidget(new Button(posX, posY + 25, 200, 20,CommonComponents.GUI_BACK, this::onBack));
+
+        addRenderableWidget(new Button(posX, posY, 100, 20, curseforgeButton, openLink(CLOTH_CONFIG_CURSEFORGE)));
+        addRenderableWidget(new Button(posX + 100, posY, 100, 20, modrinthButton, openLink(CLOTH_CONFIG_MODRINTH)));
+        addRenderableWidget(new Button(posX, posY + 25, 200, 20, CommonComponents.GUI_BACK, this::onBack));
     }
 
     private void onBack(Button ignoredButton) {
         Minecraft.getInstance().setScreen(parent);
+    }
+
+    private Button.OnPress openLink(String link) {
+        return b -> {
+            if (minecraft == null) return;
+            minecraft.setScreen(new ConfirmLinkScreen((v) -> {
+                if (v) Util.getPlatform().openUri(link);
+                minecraft.setScreen(this);
+            }, link, true));
+        };
     }
 
     @Override
