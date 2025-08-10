@@ -23,7 +23,6 @@ val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
 val parchmentVersion: String = libs.versions.parchment.get()
-val debugPublishing = false
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
