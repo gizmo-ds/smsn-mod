@@ -30,10 +30,10 @@ public class MissingClothConfigScreen extends Screen {
     protected void init() {
         super.init();
 
-        var posX = (this.width - 200) / 2;
-        var posY = this.height / 2 - 20;
+        var posX = (width - 200) / 2;
+        var posY = height / 2 - 20;
 
-        posY += this.font.wordWrapHeight(message.getString(), 300);
+        posY += font.wordWrapHeight(message.getString(), 300);
 
         addRenderableWidget(new Button(posX, posY, 100, 20, curseforgeButton, openLink(CLOTH_CONFIG_CURSEFORGE)));
         addRenderableWidget(new Button(posX + 100, posY, 100, 20, modrinthButton, openLink(CLOTH_CONFIG_MODRINTH)));
@@ -57,10 +57,10 @@ public class MissingClothConfigScreen extends Screen {
     @Override
     public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTick) {
         renderBackground(poseStack);
-        MultiLineLabel.create(this.font, this.title, 300)
-                .renderCentered(poseStack, this.width / 2, this.height / 2 - 45);
-        MultiLineLabel.create(this.font, message, 300)
-                .renderCentered(poseStack, this.width / 2, this.height / 2 - 30);
+        MultiLineLabel.create(font, title, 300)
+                .renderCentered(poseStack, width / 2, height / 2 - 45);
+        MultiLineLabel.create(font, message, 300)
+                .renderCentered(poseStack, width / 2, height / 2 - 30);
         super.render(poseStack, mouseX, mouseY, partialTick);
     }
 }
