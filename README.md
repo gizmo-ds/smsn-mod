@@ -52,7 +52,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "25.2.6_Forge_1.18.2") `Xaero的小地图`
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.39.9_Forge_1.18.2") `Xaero的世界地图`
-  Disables update checks & patreon checks fetches.
+  Disables update checks & patreon checks fetches;
+- [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request.
 
 **Fabric**
 
@@ -78,4 +79,4 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 
 ## License
 
-This mod is distributed under [MIT license](https://github.com/gizmo-ds/smsn-mod/blob/1.19.2/LICENSE)
+This mod is distributed under [MIT license](https://github.com/gizmo-ds/smsn-mod/blob/1.18.2/LICENSE)
