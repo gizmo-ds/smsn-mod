@@ -39,7 +39,7 @@ dependencies {
 
     modApi(libs.clothconfig.fabric) { exclude(group = "net.fabricmc.fabric-api") }
 //    modCompileOnly(libs.clothconfig.fabric)
-    modImplementation(libs.modmenu)
+    modImplementation(libs.fabric.modmenu)
 
     // Xaero's maps
     modImplementation(libs.fabric.xaeros.minimap)
@@ -100,7 +100,7 @@ tasks {
             mainFile.releaseType = mod.release_type
             mainFile.gameVersions.addAll(mod.game_version_supports)
             mainFile.addModLoader(project.name)
-            mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
+            mainFile.addOptional("cloth-config")
         }
 }

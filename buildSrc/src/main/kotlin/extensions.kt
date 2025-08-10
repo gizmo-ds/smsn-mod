@@ -19,6 +19,7 @@ value class ModData(private val project: Project) {
 
     val modrinth_id: String get() = strProp("modrinth_id")
     val curseforge_id: String get() = strProp("curseforge_id")
+    val debug_publishing: Boolean get() = strProp("debug_publishing") == "true"
 
     fun prop(key: String) = strProp(key)
 }
