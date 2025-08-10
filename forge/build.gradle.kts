@@ -44,7 +44,7 @@ dependencies {
     forge(libs.forge.forge)
 
     localRuntime(libs.mixinextras.forge)
-    modLocalRuntime(libs.modernfix.forge)
+    modLocalRuntime(libs.lazydfu.forge)
 
     modApi(libs.clothconfig.forge)
 //    modCompileOnly(libs.clothconfig.forge)

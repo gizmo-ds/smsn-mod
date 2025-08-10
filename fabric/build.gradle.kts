@@ -35,7 +35,7 @@ dependencies {
 
     localRuntime(libs.mixinextras.fabric)
     modLocalRuntime(libs.fabric.api)
-    modLocalRuntime(libs.modernfix.fabric)
+    modLocalRuntime(libs.lazydfu.fabric)
 
     modApi(libs.clothconfig.fabric) {
         exclude(group = "net.fabricmc.fabric-api")
