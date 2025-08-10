@@ -1,6 +1,6 @@
 package dev.aika.smsn.annotation;
 
-import dev.aika.smsn.client.gui.config.components.SwitchBuilder;
+import dev.aika.smsn.client.gui.components.SwitchBuilder;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

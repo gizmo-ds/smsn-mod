@@ -31,11 +31,9 @@ side = "BOTH"
 [[dependencies.smsn]]
 modId = "cloth_config"
 type = "optional"
-versionRange = "[19.0.0,)"
+versionRange = "[19.,)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[mixins]]
 config = "smsn.mixins.json"
-[[mixins]]
-config = "smsn-common.mixins.json"

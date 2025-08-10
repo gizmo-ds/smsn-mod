@@ -1,23 +1,20 @@
 package dev.aika.smsn.fabric.mixin;
 
-import java.util.HashMap;
+import dev.aika.smsn.utils.MapUtils;
+
 import java.util.Map;
 
 public class MixinInfo {
-    @SuppressWarnings("SpellCheckingInspection")
     public static Map<String, String> getMixinClassNames() {
-        return new HashMap<>() {{
-            put("dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin", "inventoryprofilesnext");
-            put("dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin", "inventoryprofilesnext");
-
-            put("dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin", "iris");
-
-            put("dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin", "xaerominimap");
-            put("dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap");
-            put("dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap");
-            put("dev.aika.smsn.fabric.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap");
-
-            put("dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin", "mru");
-        }};
+        return MapUtils.createMap(
+                "dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin", "mru",
+                "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin", "inventoryprofilesnext",
+                "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin", "inventoryprofilesnext",
+                "dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin", "iris",
+                "dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin", "xaerominimap",
+                "dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap",
+                "dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap",
+                "dev.aika.smsn.fabric.mixin.xaero.world_map.PatreonMixin", "xaeroworldmap"
+        );
     }
 }

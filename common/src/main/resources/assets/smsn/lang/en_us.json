@@ -17,8 +17,5 @@
   "config.smsn.general.xaeroMapPatreonCheck": "Xaero's Maps Patreon Check",
   "config.smsn.general.xaeroMapVersionCheck": "Xaero's Maps Update Check",
   "config.smsn.general.irisUpdateCheck": "Iris Shaders update check",
-  "config.smsn.general.mruApi": "M.R.U API request",
-  "config.smsn.qol": "QoL",
-  "config.smsn.qol.hideFireOverlayWhenFireResistance": "Hide fire overlay when fire resistance",
-  "config.smsn.qol.hideRealmsButton": "Hide Realms Button"
+  "config.smsn.general.mruApi": "M.R.U API request"
 }

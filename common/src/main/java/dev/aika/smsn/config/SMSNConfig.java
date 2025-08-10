@@ -1,9 +1,5 @@
 package dev.aika.smsn.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import dev.aika.smsn.annotation.Category;
-import dev.aika.smsn.annotation.Components;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
@@ -24,17 +20,6 @@ public class SMSNConfig extends ModConfig {
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
     @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean mruApi = SMSNConfigDefault.mruApi;
-
-    @Category("qol")
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
-    @Components.Switch(checked = "enable", unchecked = "disabled")
-    public boolean hideFireOverlayWhenFireResistance = SMSNConfigDefault.hideFireOverlayWhenFireResistance;
-    @Category("qol")
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
-    @Components.Switch(checked = "enable", unchecked = "disabled")
-    public boolean hideRealmsButton = SMSNConfigDefault.hideRealmsButton;
-
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     @SneakyThrows
     public static SMSNConfig load() {

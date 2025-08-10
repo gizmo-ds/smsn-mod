@@ -1,4 +1,4 @@
-package dev.aika.smsn.client.gui.config.components;
+package dev.aika.smsn.client.gui.components;
 
 import lombok.Setter;
 import lombok.SneakyThrows;
