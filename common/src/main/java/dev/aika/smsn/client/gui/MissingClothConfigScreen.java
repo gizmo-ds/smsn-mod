@@ -25,8 +25,8 @@ public class MissingClothConfigScreen extends Screen {
     protected void init() {
         super.init();
 
-        var posX = (this.width - 200) / 2 - 20;
-        var posY = this.height / 2;
+        var posX = (this.width - 200) / 2;
+        var posY = this.height / 2 - 20;
         posY += this.font.wordWrapHeight(messageComponent.getString(), 300);
         this.addRenderableWidget(new Button(posX, posY, 100, 20,
                 new TranslatableComponent("gui.smsn.missing_cloth_config.modrinth_download"),

@@ -1,16 +1,17 @@
-package dev.aika.smsn.compat.cloth;
+package dev.aika.smsn.compat;
 
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.client.gui.components.ComponentBuilder;
+import dev.aika.smsn.config.ModConfig;
 import dev.aika.smsn.config.SMSNConfigDefault;
-import lombok.SneakyThrows;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import me.shedaniel.clothconfig2.gui.entries.TextListEntry;
+import me.shedaniel.clothconfig2.impl.ConfigCategoryImpl;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.*;
@@ -23,35 +24,37 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SMSNClothConfig {
+public class ClothConfigCompat {
     private static final Logger log = SMSN.LOGGER;
     private static final Marker marker = MarkerFactory.getMarker("SMSNClothConfig");
 
-    public static Screen ConfigScreen(Screen parent) {
+    private static final String modid = SMSN.MOD_ID;
+    private static final String sponsorUrl = "https://afdian.com/a/gizmo";
+    private static final Class<?> configDefault = SMSNConfigDefault.class;
+
+    public static Screen ConfigScreen(ModConfig config, Screen parent) {
         final ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(new TranslatableComponent("config.smsn.title"))
-                .setSavingRunnable(SMSN.CONFIG::save);
-        ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+                .setSavingRunnable(config::save)
+                .setTitle(new TranslatableComponent(String.format("config.%s.title", modid)));
 
-        final ConfigCategory general = builder.getOrCreateCategory(new TranslatableComponent("config.smsn.general"));
-        general.addEntry(sponsorDescription(entryBuilder));
+        final ComponentBuilder componentBuilder = new ComponentBuilder(builder.entryBuilder(), config)
+                .setModId(modid).setDefaultObject(configDefault);
 
-//        final ConfigCategory qol = builder.getOrCreateCategory(new TranslatableComponent("config.smsn.qol"));
-//        qol.addEntry(sponsorDescription(entryBuilder));
-
-        final ComponentBuilder componentBuilder = new ComponentBuilder(entryBuilder, SMSN.CONFIG)
-                .setModId(SMSN.MOD_ID)
-                .setDefaultObject(SMSNConfigDefault.class);
-
-        final Field[] fields = SMSN.CONFIG.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            if (isIgnored(field)) continue;
-            addEntry(builder, componentBuilder, field);
-        }
+        final Field[] fields = config.getClass().getDeclaredFields();
+        for (Field field : fields) addEntry(builder, componentBuilder, field);
 
         builder.transparentBackground();
         return builder.build();
+    }
+
+    private static ConfigCategory getCategory(ConfigBuilder builder, ComponentBuilder componentBuilder, String categoryKey) {
+        final ConfigCategory category = builder.getOrCreateCategory(
+                new TranslatableComponent(String.format("config.%s.%s", modid, categoryKey)));
+        if (((ConfigCategoryImpl) category).getEntries().isEmpty()) {
+            category.addEntry(sponsorDescription(componentBuilder.getEntryBuilder()));
+        }
+        return category;
     }
 
     private static boolean isIgnored(Field field) {
@@ -65,29 +68,28 @@ public class SMSNClothConfig {
     }
 
     private static void addEntry(ConfigBuilder builder, ComponentBuilder componentBuilder, Field field) {
+        if (isIgnored(field)) return;
+
         final Category categoryAnnotation = field.getAnnotation(Category.class);
         final String category = categoryAnnotation != null ? categoryAnnotation.value() : "general";
+        final ConfigCategory configCategory = getCategory(builder, componentBuilder, category);
 
-        final ConfigCategory configCategory = builder.getOrCreateCategory(
-                new TranslatableComponent(String.format("config.smsn.%s", category)));
-
-        Class<?> fieldType = field.getType();
-        if (fieldType == Boolean.class || fieldType == boolean.class)
+        final Class<?> fieldType = field.getType();
+        if (fieldType == Boolean.class || fieldType == boolean.class) {
             configCategory.addEntry(componentBuilder.switchBuilder(field).setCategory(category).build());
-        else log.warn(marker, "Unsupported field type: {}", fieldType);
+        } else log.warn(marker, "Unsupported field type: {}", fieldType);
     }
 
-    @SneakyThrows
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
         return entryBuilder.startTextDescription(
-                new TranslatableComponent("config.smsn.sponsor.description",
-                        new TranslatableComponent("modmenu.nameTranslation.smsn")
+                new TranslatableComponent(String.format("config.%s.sponsor.description", modid),
+                        new TranslatableComponent("modmenu.nameTranslation." + modid)
                                 .withStyle(s -> s.withColor(ChatFormatting.AQUA).withBold(true)),
-                        new TranslatableComponent("config.smsn.sponsor.description.afdian")
+                        new TranslatableComponent(String.format("config.%s.sponsor.description.afdian", modid))
                                 .withStyle(s -> s.withColor(ChatFormatting.DARK_PURPLE).withBold(true)
-                                        .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponent(SMSN.SponsorUrl)))
-                                        .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, SMSN.SponsorUrl)))
-                )
-        ).build();
+                                        .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponent(sponsorUrl)))
+                                        .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sponsorUrl))
+                                )
+                )).build();
     }
 }
