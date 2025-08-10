@@ -53,10 +53,10 @@ dependencies {
 
 tasks {
     processResources {
-        inputs.property("version", mod.version)
+        inputs.property("version", project.version)
 
         filesMatching("META-INF/neoforge.mods.toml") {
-            expand("version" to mod.version)
+            expand("version" to project.version)
         }
         from(rootProject.file("assets/icon.png")) {
             rename { "${mod.id}-icon.png" }
