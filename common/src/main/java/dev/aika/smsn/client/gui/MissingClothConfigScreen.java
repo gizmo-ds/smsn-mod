@@ -5,6 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.MultiLineLabel;
+import net.minecraft.client.gui.screens.ConfirmLinkScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
@@ -14,8 +15,11 @@ public class MissingClothConfigScreen extends Screen {
     private final static String CLOTH_CONFIG_MODRINTH = "https://modrinth.com/mod/9s6osm5g";
     private final static String CLOTH_CONFIG_CURSEFORGE = "https://www.curseforge.com/minecraft/mc-mods/cloth-config";
 
+    private final Component message = Component.translatable("gui.smsn.missing_cloth_config.message");
+    private final Component curseforgeButton = Component.translatable("gui.smsn.missing_cloth_config.curseforge_download");
+    private final Component modrinthButton = Component.translatable("gui.smsn.missing_cloth_config.modrinth_download");
+
     private final Screen parent;
-    private MultiLineLabel message = MultiLineLabel.EMPTY;
 
     public MissingClothConfigScreen(Screen parent) {
         super(Component.translatable("gui.smsn.missing_cloth_config.title"));
@@ -26,24 +30,37 @@ public class MissingClothConfigScreen extends Screen {
     protected void init() {
         super.init();
 
-        var posX = (this.width - 200) / 2;
-        var posY = this.height / 2;
+        int posX = (width - 200) / 2;
+        int posY = height / 2 - 20;
 
-        this.message = MultiLineLabel.create(this.font, Component.translatable("gui.smsn.missing_cloth_config.message"), 300);
-        this.addRenderableWidget(Button.builder(Component.translatable("gui.smsn.missing_cloth_config.modrinth_download"),
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_MODRINTH)).bounds(posX, posY, 200, 20).build());
-        posY += 25;
-        this.addRenderableWidget(Button.builder(Component.translatable("gui.smsn.missing_cloth_config.curseforge_download"),
-                b -> Util.getPlatform().openUri(CLOTH_CONFIG_CURSEFORGE)).bounds(posX, posY, 200, 20).build());
-        posY += 25;
-        this.addRenderableWidget(Button.builder(CommonComponents.GUI_BACK,
-                (pressed) -> Minecraft.getInstance().setScreen(this.parent)).bounds(posX, posY, 200, 20).build());
+        posY += font.wordWrapHeight(message, 300);
+
+        addRenderableWidget(Button.builder(curseforgeButton, openLink(CLOTH_CONFIG_CURSEFORGE))
+                .bounds(posX, posY, 100, 20).build());
+        addRenderableWidget(Button.builder(modrinthButton, openLink(CLOTH_CONFIG_MODRINTH))
+                .bounds(posX + 100, posY, 100, 20).build());
+        addRenderableWidget(Button.builder(CommonComponents.GUI_BACK, this::onBack)
+                .bounds(posX, posY + 25, 200, 20).build());
+    }
+
+    private void onBack(Button ignoredButton) {
+        Minecraft.getInstance().setScreen(parent);
+    }
+
+    private Button.OnPress openLink(String link) {
+        return b -> {
+            if (minecraft == null) return;
+            minecraft.setScreen(new ConfirmLinkScreen((v) -> {
+                if (v) Util.getPlatform().openUri(link);
+                minecraft.setScreen(this);
+            }, link, true));
+        };
     }
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
         super.render(graphics, mouseX, mouseY, partialTick);
-        graphics.drawCenteredString(font, title, width / 2, this.height / 2 - 60, CommonColors.WHITE);
-        this.message.renderCentered(graphics, this.width / 2, this.height / 2 - 40);
+        graphics.drawCenteredString(font, title, width / 2, height / 2 - 50, CommonColors.WHITE);
+        MultiLineLabel.create(font, message, 300).renderCentered(graphics, width / 2, height / 2 - 30);
     }
 }
