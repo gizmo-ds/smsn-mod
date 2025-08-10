@@ -18,4 +18,5 @@ public class SMSNConfigDefault {
     public static boolean xaeroMapVersionCheck = true;
     public static boolean xaeroMapPatreonCheck = false;
     public static boolean mruApi = false;
+    public static boolean projecteUUIDCheck = false;
 }

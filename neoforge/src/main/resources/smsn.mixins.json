@@ -21,6 +21,7 @@
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
+    "projecte.ThreadCheckUUIDMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "titanium.RewardMixin",

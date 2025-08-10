@@ -43,6 +43,8 @@ public class SMSNConfig extends ModConfig {
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
     @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean mruApi = SMSNConfigDefault.mruApi;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

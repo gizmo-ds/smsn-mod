@@ -101,6 +101,8 @@ dependencies {
     modImplementation(libs.neoforge.xaeros.worldmap)
     // M.R.U
     modImplementation(libs.neoforge.mru)
+    // ProjectE
+    modImplementation(libs.neoforge.projecte)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))
@@ -138,8 +140,8 @@ tasks {
             mainFile.releaseType = mod.release_type
             mainFile.gameVersions.addAll(mod.game_version_supports)
             mainFile.addModLoader(project.name)
-            mainFile.addOptional("cloth-config")
             mainFile.changelog = ext.get("changelog")
+            mainFile.addOptional("cloth-config")
         }
 }
 

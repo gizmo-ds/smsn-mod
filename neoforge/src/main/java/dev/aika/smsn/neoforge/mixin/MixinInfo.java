@@ -5,7 +5,6 @@ import dev.aika.smsn.utils.MapUtils;
 import java.util.Map;
 
 public class MixinInfo {
-    @SuppressWarnings("SpellCheckingInspection")
     public static Map<String, String> getMixinClassNames() {
         return MapUtils.createMap(
                 "dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin", "actuallyadditions",
@@ -22,6 +21,7 @@ public class MixinInfo {
                 "dev.aika.smsn.neoforge.mixin.petrolpark.BadgeHandlerMixin", "petrolpark",
                 "dev.aika.smsn.neoforge.mixin.placebo.TrailsManagerMixin", "placebo",
                 "dev.aika.smsn.neoforge.mixin.placebo.WingsManagerMixin", "placebo",
+                "dev.aika.smsn.neoforge.mixin.projecte.ThreadCheckUUIDMixin", "projecte",
                 "dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin", "ribbits",
                 "dev.aika.smsn.neoforge.mixin.supplementaries.CreditsMixin", "supplementaries",
                 "dev.aika.smsn.neoforge.mixin.titanium.RewardMixin", "titanium",

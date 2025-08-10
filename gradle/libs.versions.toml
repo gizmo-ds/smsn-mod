@@ -67,3 +67,4 @@ neoforge-placebo = { version = "1.21-9.3.5", module = "dev.shadowsoffire:Placebo
 neoforge-titanium = { version = "1.21-4.0.12", module = "maven.modrinth:titanium" }
 neoforge-immersivecaves = { version = "SfWRWBHr", module = "maven.modrinth:immersive-caves" } # 1.4.0
 neoforge-actuallyadditions = { version = "iIGebTKg", module = "maven.modrinth:actually-additions" } # 1.3.10
+neoforge-projecte = { version = "6323142", module = "curse.maven:projecte-226410" } # 1.0.1
