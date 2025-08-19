@@ -20,7 +20,7 @@ public final class SMSNForge {
 
     public static void clientInit() {
         ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -> new IExtensionPoint.DisplayTest(() -> NetworkConstants.IGNORESERVERONLY, (a, b) -> true));
-        DistExecutor.safeRunWhenOn(Dist.CLIENT,
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT,
                 () -> () -> ModLoadingContext.get().registerExtensionPoint(ConfigGuiHandler.ConfigGuiFactory.class,
                         () -> new ConfigGuiHandler.ConfigGuiFactory(ClothConfigCompat::setup)));
     }

@@ -50,7 +50,7 @@ dependencies {
 //    modCompileOnly(libs.clothconfig.forge)
 
     // Quark
-    modImplementation(libs.forge.quark)
+    modCompileOnly(libs.forge.quark)
     // Alex's mods
     modImplementation(libs.forge.citadel)
     // Xaero's maps
@@ -65,8 +65,8 @@ dependencies {
     // Immersive Engineering
     modImplementation(libs.forge.immersiveengineering)
     // Enigmatic Legacy
-//    modLocalRuntime("top.theillusivec4.caelus:caelus-forge:3.2.0+1.20.1")
-//    modLocalRuntime("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1")
+    modLocalRuntime(libs.forge.caelus)
+    modLocalRuntime(libs.forge.curios)
     modLocalRuntime(libs.forge.patchouli)
     modImplementation(libs.forge.enigmaticlegacy)
     // Botania
