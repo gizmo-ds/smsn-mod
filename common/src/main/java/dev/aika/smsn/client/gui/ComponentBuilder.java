@@ -1,5 +1,6 @@
-package dev.aika.smsn.client.gui.components;
+package dev.aika.smsn.client.gui;
 
+import dev.aika.smsn.client.gui.components.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;

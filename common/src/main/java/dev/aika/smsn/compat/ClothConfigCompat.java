@@ -5,7 +5,7 @@ import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.Ignored;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
-import dev.aika.smsn.client.gui.components.ComponentBuilder;
+import dev.aika.smsn.client.gui.ComponentBuilder;
 import dev.aika.smsn.config.ModConfig;
 import dev.aika.smsn.config.SMSNConfigDefault;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
@@ -64,8 +64,8 @@ public class ClothConfigCompat {
         if (field.getAnnotation(Ignored.class) != null) return true;
 
         final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
-        if (loaderAnnotation != null) return List.of(loaderAnnotation.value()).contains(LoaderType.getCurrentLoader());
-        else return true;
+        if (loaderAnnotation != null) return !List.of(loaderAnnotation.value()).contains(LoaderType.getCurrentLoader());
+        else return false;
     }
 
     @SuppressWarnings("unchecked")
