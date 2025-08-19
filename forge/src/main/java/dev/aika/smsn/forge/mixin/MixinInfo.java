@@ -30,6 +30,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.placebo.WingsManagerMixin", "placebo",
                 "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin", "projecte",
                 "dev.aika.smsn.forge.mixin.quark.ThreadContributorListLoaderMixin", "quark",
+                "dev.aika.smsn.forge.mixin.quark.QButtonMixin", "quark",
                 "dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin", "ribbits",
                 "dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin", "supplementaries",
                 "dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium",

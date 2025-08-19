@@ -34,7 +34,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 **Forge**
 
 - [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.0-458") `夸克` Disables contributor list fetching on
-  startup and player join;
+  startup and player join. fewer celebrations;
 - [Nitrogen](https://github.com/The-Aether-Team/Nitrogen "1.20.1-1.0.11-neoforge") `氮` Disables supporters content for
   The Aether Team mods (e.g., disables MOA skins in The Aether);
 - [Citadel](https://www.curseforge.com/minecraft/mc-mods/citadel "2.5.4") Use local assets instead of remote assets –

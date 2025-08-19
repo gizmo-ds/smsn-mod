@@ -3,6 +3,7 @@
 **Forge**
 
 - Add Ukrainian [#11](https://github.com/gizmo-ds/smsn-mod/pull/11)
+- Fewer Quark Celebration
 
 **Fabric**
 

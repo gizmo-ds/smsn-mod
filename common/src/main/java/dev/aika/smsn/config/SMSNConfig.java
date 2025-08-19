@@ -2,11 +2,15 @@ package dev.aika.smsn.config;
 
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.annotation.RequiresRestart;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 @SuppressWarnings("unused")
@@ -64,6 +68,10 @@ public class SMSNConfig extends ModConfig {
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+    @Category("qol")
+    @RequiresRestart
+    @LoaderSpecific(LoaderType.FORGE)
+    public QuarkCelebration quarkCelebration = SMSNConfigDefault.quarkCelebration;
 
     @SneakyThrows
     public static SMSNConfig load() {
@@ -73,5 +81,26 @@ public class SMSNConfig extends ModConfig {
         final var defaultConfig = new SMSNConfig();
         defaultConfig.save();
         return defaultConfig;
+    }
+
+    public enum QuarkCelebration {
+        ShowAll(),
+        HideAll("all"),
+        @SuppressWarnings("SpellCheckingInspection")
+        HideLGBTQIA(
+                "iad", "iad2", "idr", "ld", "lvd", "ncod", "nbpd", "ppad", "tdr", "tdv", "zdd",
+                "pm", "baw", "taw"
+        );
+
+        private final List<String> CELEBRATIONS = new ArrayList<>();
+
+        QuarkCelebration(String... celebrations) {
+            CELEBRATIONS.addAll(Arrays.asList(celebrations));
+        }
+
+        public boolean isHide(String name) {
+            if (CELEBRATIONS.size() == 1 && CELEBRATIONS.get(0).equals("all")) return true;
+            return CELEBRATIONS.contains(name);
+        }
     }
 }

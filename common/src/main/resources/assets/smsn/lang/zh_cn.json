@@ -38,5 +38,9 @@
   "config.smsn.general.projecteUUIDCheck": "等价交换重制版 UUID 请求",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.citadelAprilFoolsContent": "Citadel 愚人节内容",
-  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息"
+  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息",
+  "config.smsn.qol.quarkCelebration": "夸克 \"节日\"",
+  "config.smsn.qol.quarkCelebration.ShowAll": "显示全部",
+  "config.smsn.qol.quarkCelebration.HideAll": "隐藏全部",
+  "config.smsn.qol.quarkCelebration.HideLGBTQIA": "隐藏 LGBTQIA+"
 }
