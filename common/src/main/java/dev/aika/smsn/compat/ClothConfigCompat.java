@@ -69,6 +69,7 @@ public class ClothConfigCompat {
         return !loaders.contains(LoaderType.getCurrentLoader());
     }
 
+    @SuppressWarnings("unchecked")
     private static void addEntry(ConfigBuilder builder, ComponentBuilder componentBuilder, Field field) {
         if (isIgnored(field)) return;
 
@@ -77,9 +78,13 @@ public class ClothConfigCompat {
         final ConfigCategory configCategory = getCategory(builder, componentBuilder, category);
 
         final Class<?> fieldType = field.getType();
-        if (fieldType == Boolean.class || fieldType == boolean.class) {
-            configCategory.addEntry(componentBuilder.switchBuilder(field).setCategory(category).build());
-        } else log.warn(marker, "Unsupported field type: {}", fieldType);
+        if (fieldType == Boolean.class || fieldType == boolean.class)
+            configCategory.addEntry(componentBuilder.switchBuilder(field)
+                    .setCategory(category).build());
+        else if (fieldType.isEnum())
+            configCategory.addEntry(componentBuilder.enumSelectorBuilder(field, (Class<? extends Enum<?>>) fieldType)
+                    .setCategory(category).build());
+        else log.warn(marker, "Unsupported field type: {}", fieldType);
     }
 
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {

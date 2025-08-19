@@ -32,4 +32,11 @@ public class ComponentBuilder {
         if (defaultObject != null) builder.setDefaultObject(defaultObject);
         return builder;
     }
+
+    public <E extends Enum<?>> EnumSelectorBuilder<?> enumSelectorBuilder(Field field, Class<E> enumClass) {
+        EnumSelectorBuilder<?> builder = new EnumSelectorBuilder<>(entryBuilder, configObject, enumClass, field);
+        builder.setModId(modId);
+        if (defaultObject != null) builder.setDefaultObject(defaultObject);
+        return builder;
+    }
 }
