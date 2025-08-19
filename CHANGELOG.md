@@ -1,3 +1,13 @@
+### Unreleased
+
+**Forge**
+
+- Add Ukrainian [#11](https://github.com/gizmo-ds/smsn-mod/pull/11)
+
+**Fabric**
+
+- Add Ukrainian [#11](https://github.com/gizmo-ds/smsn-mod/pull/11)
+
 ### 1.2.7
 
 **Forge**
