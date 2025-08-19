@@ -2,6 +2,7 @@ package dev.aika.smsn.compat;
 
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.Category;
+import dev.aika.smsn.annotation.Ignored;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.client.gui.components.ComponentBuilder;
@@ -61,6 +62,7 @@ public class ClothConfigCompat {
 
     private static boolean isIgnored(Field field) {
         if (Modifier.isFinal(field.getModifiers())) return true;
+        if (field.getAnnotation(Ignored.class) != null) return true;
 
         final List<LoaderType> loaders = new ArrayList<>();
         final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
