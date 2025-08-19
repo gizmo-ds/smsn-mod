@@ -24,7 +24,6 @@ import org.slf4j.MarkerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClothConfigCompat {
@@ -64,11 +63,9 @@ public class ClothConfigCompat {
         if (Modifier.isFinal(field.getModifiers())) return true;
         if (field.getAnnotation(Ignored.class) != null) return true;
 
-        final List<LoaderType> loaders = new ArrayList<>();
         final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
-        if (loaderAnnotation != null) loaders.addAll(List.of(loaderAnnotation.value()));
-        else loaders.add(LoaderType.getCurrentLoader());
-        return !loaders.contains(LoaderType.getCurrentLoader());
+        if (loaderAnnotation != null) return List.of(loaderAnnotation.value()).contains(LoaderType.getCurrentLoader());
+        else return true;
     }
 
     @SuppressWarnings("unchecked")

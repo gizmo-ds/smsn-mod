@@ -15,17 +15,16 @@ import java.util.List;
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
+    //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
+    //NOTE: Not adding the @Category annotation means using the "general" category.
+
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean quarkContributorCheck = SMSNConfigDefault.quarkContributorCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean alexModsContributorCheck = SMSNConfigDefault.alexModsContributorCheck;
@@ -33,9 +32,7 @@ public class SMSNConfig extends ModConfig {
     public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean obscureModsCheck = SMSNConfigDefault.obscureModsCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean botaniaContributorCheck = SMSNConfigDefault.botaniaContributorCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
@@ -49,15 +46,11 @@ public class SMSNConfig extends ModConfig {
     public boolean placeboWings = SMSNConfigDefault.placeboWings;
     @LoaderSpecific(LoaderType.FABRIC)
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean mruApi = SMSNConfigDefault.mruApi;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
