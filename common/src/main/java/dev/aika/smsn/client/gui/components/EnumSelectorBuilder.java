@@ -1,5 +1,6 @@
 package dev.aika.smsn.client.gui.components;
 
+import dev.aika.smsn.annotation.RequiresRestart;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.fabricmc.api.EnvType;
@@ -28,6 +29,7 @@ public final class EnumSelectorBuilder<E extends Enum<?>> extends AbstractCompon
                 .setSaveConsumer(this::setValue)
                 .setEnumNameProvider(this::enumNameProvider);
         if (defaultObject != null) builder = builder.setDefaultValue(getDefaultValue());
+        builder.requireRestart(field.getAnnotation(RequiresRestart.class) != null);
         return builder.build();
     }
 
