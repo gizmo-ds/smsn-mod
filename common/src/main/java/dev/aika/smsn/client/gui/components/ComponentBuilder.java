@@ -26,17 +26,33 @@ public class ComponentBuilder {
         this.configObject = configObject;
     }
 
-    public SwitchBuilder switchBuilder(Field field) {
-        SwitchBuilder builder = new SwitchBuilder(entryBuilder, configObject, field);
-        builder.setModId(modId);
+    private <T extends AbstractComponentBuilder<?>> T createBuilder(String category, T builder) {
+        builder.setModId(modId).setCategory(category);
         if (defaultObject != null) builder.setDefaultObject(defaultObject);
         return builder;
     }
 
-    public <E extends Enum<?>> EnumSelectorBuilder<?> enumSelectorBuilder(Field field, Class<E> enumClass) {
-        EnumSelectorBuilder<?> builder = new EnumSelectorBuilder<>(entryBuilder, configObject, enumClass, field);
-        builder.setModId(modId);
-        if (defaultObject != null) builder.setDefaultObject(defaultObject);
-        return builder;
+    public SwitchBuilder switchBuilder(Field field, String category) {
+        return createBuilder(category, new SwitchBuilder(entryBuilder, configObject, field));
+    }
+
+    public <E extends Enum<?>> EnumSelectorBuilder<?> enumSelectorBuilder(Field field, String category, Class<E> enumClass) {
+        return createBuilder(category, new EnumSelectorBuilder<>(entryBuilder, configObject, enumClass, field));
+    }
+
+    public StringInputBuilder stringInputBuilder(Field field, String category) {
+        return createBuilder(category, new StringInputBuilder(entryBuilder, configObject, field));
+    }
+
+    public FloatInputBuilder floatInputBuilder(Field field, String category) {
+        return createBuilder(category, new FloatInputBuilder(entryBuilder, configObject, field));
+    }
+
+    public IntInputBuilder intInputBuilder(Field field, String category) {
+        return createBuilder(category, new IntInputBuilder(entryBuilder, configObject, field));
+    }
+
+    public DoubleInputBuilder doubleInputBuilder(Field field, String category) {
+        return createBuilder(category, new DoubleInputBuilder(entryBuilder, configObject, field));
     }
 }

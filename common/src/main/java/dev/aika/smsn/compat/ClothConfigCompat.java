@@ -80,13 +80,21 @@ public class ClothConfigCompat {
         final ConfigCategory configCategory = getCategory(builder, componentBuilder, category);
 
         final Class<?> fieldType = field.getType();
-        if (fieldType == Boolean.class || fieldType == boolean.class)
-            configCategory.addEntry(componentBuilder.switchBuilder(field)
-                    .setCategory(category).build());
-        else if (fieldType.isEnum())
-            configCategory.addEntry(componentBuilder.enumSelectorBuilder(field, (Class<? extends Enum<?>>) fieldType)
-                    .setCategory(category).build());
-        else log.warn(marker, "Unsupported field type: {}", fieldType);
+        if (fieldType.equals(Boolean.class) || fieldType.equals(boolean.class)) {
+            configCategory.addEntry(componentBuilder.switchBuilder(field, category).build());
+        } else if (fieldType.equals(String.class)) {
+            configCategory.addEntry(componentBuilder.stringInputBuilder(field, category).build());
+        } else if (fieldType.equals(Integer.class) || fieldType.equals(int.class)) {
+            configCategory.addEntry(componentBuilder.intInputBuilder(field, category).build());
+        } else if (fieldType.equals(Float.class) || fieldType.equals(float.class)) {
+            configCategory.addEntry(componentBuilder.floatInputBuilder(field, category).build());
+        } else if (fieldType.equals(Double.class) || fieldType.equals(double.class)) {
+            configCategory.addEntry(componentBuilder.doubleInputBuilder(field, category).build());
+        } else if (fieldType.isEnum()) {
+            configCategory.addEntry(componentBuilder.enumSelectorBuilder(
+                            field, category, (Class<? extends Enum<?>>) fieldType)
+                    .build());
+        } else log.warn(marker, "Unsupported field type: {}", fieldType);
     }
 
     public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {

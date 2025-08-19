@@ -15,17 +15,14 @@ public final class EnumSelectorBuilder<E extends Enum<?>> extends AbstractCompon
 
     public EnumSelectorBuilder(ConfigEntryBuilder entryBuilder, Object configObject,
                                Class<E> enumClass, Field field) {
-        super(entryBuilder, configObject);
+        super(entryBuilder, configObject, field);
 
-        this.field = field;
         this.enumClass = enumClass;
     }
 
     @Override
     public AbstractConfigListEntry<E> build() {
-        var builder = entryBuilder.startEnumSelector(
-                        Component.translatable(String.format("%s.%s", translatableKeyPrefix(), field.getName())),
-                        enumClass, getValue())
+        var builder = entryBuilder.startEnumSelector(fieldNameKey(), enumClass, getValue())
                 .setSaveConsumer(this::setValue)
                 .setEnumNameProvider(this::enumNameProvider);
         if (defaultObject != null) builder = builder.setDefaultValue(getDefaultValue());
