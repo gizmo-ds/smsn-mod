@@ -4,6 +4,7 @@
 
 - Add Ukrainian [#11](https://github.com/gizmo-ds/smsn-mod/pull/11)
 - Fewer Quark Celebration
+- Add Mixins for [Blue Archives Craft](https://www.mcmod.cn/class/20585.html)
 
 **Fabric**
 

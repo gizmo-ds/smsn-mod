@@ -54,17 +54,19 @@ public class SMSNConfig extends ModConfig {
     public boolean mruApi = SMSNConfigDefault.mruApi;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean baCheckUpdate = SMSNConfigDefault.baCheckUpdate;
 
+    @Category("qol")
+    @RequiresRestart
+    @LoaderSpecific(LoaderType.FORGE)
+    public QuarkCelebration quarkCelebration = SMSNConfigDefault.quarkCelebration;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
     public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
-    @Category("qol")
-    @RequiresRestart
-    @LoaderSpecific(LoaderType.FORGE)
-    public QuarkCelebration quarkCelebration = SMSNConfigDefault.quarkCelebration;
 
     @SneakyThrows
     public static SMSNConfig load() {

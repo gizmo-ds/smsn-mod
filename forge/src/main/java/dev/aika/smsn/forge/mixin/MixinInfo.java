@@ -12,6 +12,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.alex.AlexsCavesWebHelperMixin", "alexscaves",
                 "dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin", "citadel",
                 "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin", "citadel",
+                "dev.aika.smsn.forge.mixin.ba.BlueArchivescraftModMixin", "blue_archivescraft",
                 "dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin", "bagus_lib",
                 "dev.aika.smsn.forge.mixin.blueprint.RewardHandlerMixin", "blueprint",
                 "dev.aika.smsn.forge.mixin.botania.ContributorListMixin", "botania",

@@ -7,7 +7,6 @@ public class SMSNConfigDefault {
     public static boolean ipnUpdateCheckAndUserTracking = false;
     public static boolean xaeroMapPatreonCheck = false;
     public static boolean xaeroMapVersionCheck = false;
-    public static boolean citadelAprilFoolsContent = false;
     public static boolean alexModsContributorCheck = false;
     public static boolean petrolparkBadgeCheck = false;
     public static boolean obscureModsCheck = false;
@@ -19,12 +18,16 @@ public class SMSNConfigDefault {
     public static boolean placeboTrails = false;
     public static boolean placeboWings = false;
     public static boolean irisUpdateCheck = false;
-    public static boolean immersiveCavesDiscordMessage = false;
     public static boolean adAstraStation = false;
     public static boolean exposureGoldenCameraSkin = false;
     public static boolean titaniumReward = false;
     public static boolean ribbitsSupporterHat = false;
     public static boolean mruApi = false;
     public static boolean projecteUUIDCheck = false;
+    public static boolean baCheckUpdate = false;
+
+    // QoL
     public static SMSNConfig.QuarkCelebration quarkCelebration = SMSNConfig.QuarkCelebration.HideLGBTQIA;
+    public static boolean citadelAprilFoolsContent = false;
+    public static boolean immersiveCavesDiscordMessage = false;
 }

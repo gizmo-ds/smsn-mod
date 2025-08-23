@@ -16,6 +16,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "ba.BlueArchivescraftModMixin",
     "bagus_lib.TierHelperMixin",
     "botania.ContributorListMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",

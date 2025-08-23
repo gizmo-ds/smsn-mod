@@ -107,6 +107,9 @@ dependencies {
     modImplementation(libs.forge.botania)
     // ProjectE
     modImplementation(libs.forge.projecte)
+    // BlueArchivescraft
+    if (file("mods/BlueArchivescraft-mc1.20.1-2.1.0.jar").exists())
+        modCompileOnly("mods:BlueArchivescraft:mc1.20.1-2.1.0")
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))
