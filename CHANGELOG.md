@@ -1,5 +1,7 @@
 ### Unreleased
 
+### 1.2.8
+
 **Forge**
 
 - Add Ukrainian [#11](https://github.com/gizmo-ds/smsn-mod/pull/11)
