@@ -70,7 +70,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Forge_1.20") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
-- [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request.
+- [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request;
+- [Blue Archives Craft](https://www.mcmod.cn/class/20585.html "mc1.20.1-2.1.0") `蔚蓝档案工艺` Blocks update checks
+  requests.
 
 **Fabric**
 
