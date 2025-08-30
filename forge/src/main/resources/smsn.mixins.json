@@ -23,6 +23,7 @@
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
+    "hexerei.HexereiSupporterBenefitsMixin",
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",

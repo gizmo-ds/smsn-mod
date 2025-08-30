@@ -110,6 +110,10 @@ dependencies {
     // BlueArchivescraft
     if (file("mods/BlueArchivescraft-mc1.20.1-2.1.0.jar").exists())
         modCompileOnly("mods:BlueArchivescraft:mc1.20.1-2.1.0")
+    // Hexerei
+    modCompileOnly(libs.forge.hexerei)
+    // Voidscape
+    modImplementation(libs.forge.voidscape)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

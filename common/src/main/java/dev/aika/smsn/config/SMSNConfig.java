@@ -56,6 +56,8 @@ public class SMSNConfig extends ModConfig {
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean baCheckUpdate = SMSNConfigDefault.baCheckUpdate;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
 
     @Category("qol")
     @RequiresRestart

@@ -76,3 +76,5 @@ forge-nitrogen = { version = "1.20.1-1.0.11-neoforge", module = "com.aetherteam.
 forge-baguslib = { version = "VU7aEpro", module = "maven.modrinth:bagus-lib" } # 1.20.1-5.3.0
 forge-petrolpark = { version = "fBVOTUaX", module = "maven.modrinth:petrolpark" } # 1.20.1-1.0.6
 forge-projecte = { version = "4901949", module = "curse.maven:projecte-226410" } # 1.0.1
+forge-hexerei = { version = "hR4PQb6h", module = "maven.modrinth:hexerei" } # 0.4.2.1
+forge-voidscape = { version = "5020417", module = "curse.maven:voidscape-251730" } # 1.5.348

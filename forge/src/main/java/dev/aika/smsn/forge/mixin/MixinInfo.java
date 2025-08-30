@@ -20,6 +20,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.enigmatic_legacy.EnigmaticUpdateHandlerMixin", "enigmaticlegacy",
                 "dev.aika.smsn.forge.mixin.exposure.GildedMixin", "exposure",
                 "dev.aika.smsn.forge.mixin.exposure.PatreonMixin", "exposure",
+                "dev.aika.smsn.forge.mixin.hexerei.HexereiSupporterBenefitsMixin", "hexerei",
                 "dev.aika.smsn.forge.mixin.imb11.mru.APIMixin", "mru",
                 "dev.aika.smsn.forge.mixin.immersive_engineering.ImmersiveEngineeringMixin", "immersiveengineering",
                 "dev.aika.smsn.forge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin", "immersivecaves",

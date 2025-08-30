@@ -1,5 +1,9 @@
 ### Unreleased
 
+**Forge**
+
+- Add Mixins for [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei)
+
 ### 1.2.8
 
 **Forge**
