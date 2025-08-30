@@ -1,6 +1,6 @@
 [plugins]
 architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
-loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.11-SNAPSHOT" }
 shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
 modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
