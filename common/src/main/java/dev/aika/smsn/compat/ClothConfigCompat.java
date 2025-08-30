@@ -2,9 +2,10 @@ package dev.aika.smsn.compat;
 
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.Category;
+import dev.aika.smsn.annotation.Ignored;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.api.LoaderType;
-import dev.aika.smsn.client.gui.components.ComponentBuilder;
+import dev.aika.smsn.client.gui.ComponentBuilder;
 import dev.aika.smsn.config.ModConfig;
 import dev.aika.smsn.config.SMSNConfigDefault;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
@@ -21,7 +22,6 @@ import org.slf4j.MarkerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClothConfigCompat {
@@ -59,14 +59,14 @@ public class ClothConfigCompat {
 
     private static boolean isIgnored(Field field) {
         if (Modifier.isFinal(field.getModifiers())) return true;
+        if (field.getAnnotation(Ignored.class) != null) return true;
 
-        final List<LoaderType> loaders = new ArrayList<>();
         final LoaderSpecific loaderAnnotation = field.getAnnotation(LoaderSpecific.class);
-        if (loaderAnnotation != null) loaders.addAll(List.of(loaderAnnotation.value()));
-        else loaders.add(LoaderType.getCurrentLoader());
-        return !loaders.contains(LoaderType.getCurrentLoader());
+        if (loaderAnnotation != null) return !List.of(loaderAnnotation.value()).contains(LoaderType.getCurrentLoader());
+        else return false;
     }
 
+    @SuppressWarnings("unchecked")
     private static void addEntry(ConfigBuilder builder, ComponentBuilder componentBuilder, Field field) {
         if (isIgnored(field)) return;
 
@@ -75,8 +75,12 @@ public class ClothConfigCompat {
         final ConfigCategory configCategory = getCategory(builder, componentBuilder, category);
 
         final Class<?> fieldType = field.getType();
-        if (fieldType == Boolean.class || fieldType == boolean.class) {
-            configCategory.addEntry(componentBuilder.switchBuilder(field).setCategory(category).build());
+        if (fieldType.equals(Boolean.class) || fieldType.equals(boolean.class)) {
+            configCategory.addEntry(componentBuilder.switchBuilder(field, category).build());
+        } else if (fieldType.isEnum()) {
+            configCategory.addEntry(componentBuilder.enumSelectorBuilder(
+                            field, category, (Class<? extends Enum<?>>) fieldType)
+                    .build());
         } else log.warn(marker, "Unsupported field type: {}", fieldType);
     }
 

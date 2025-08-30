@@ -1,5 +1,8 @@
-package dev.aika.smsn.client.gui.components;
+package dev.aika.smsn.client.gui;
 
+import dev.aika.smsn.client.gui.components.AbstractComponentBuilder;
+import dev.aika.smsn.client.gui.components.EnumSelectorBuilder;
+import dev.aika.smsn.client.gui.components.SwitchBuilder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -26,10 +29,17 @@ public class ComponentBuilder {
         this.configObject = configObject;
     }
 
-    public SwitchBuilder switchBuilder(Field field) {
-        SwitchBuilder builder = new SwitchBuilder(entryBuilder, configObject, field);
-        builder.setModId(modId);
+    private <T extends AbstractComponentBuilder<?>> T createBuilder(String category, T builder) {
+        builder.setModId(modId).setCategory(category);
         if (defaultObject != null) builder.setDefaultObject(defaultObject);
         return builder;
+    }
+
+    public SwitchBuilder switchBuilder(Field field, String category) {
+        return createBuilder(category, new SwitchBuilder(entryBuilder, configObject, field));
+    }
+
+    public <E extends Enum<?>> EnumSelectorBuilder<?> enumSelectorBuilder(Field field, String category, Class<E> enumClass) {
+        return createBuilder(category, new EnumSelectorBuilder<>(entryBuilder, configObject, enumClass, field));
     }
 }

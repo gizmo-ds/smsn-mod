@@ -7,6 +7,8 @@ import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 
 import java.lang.reflect.Field;
 
@@ -23,9 +25,10 @@ public abstract class AbstractComponentBuilder<T> {
     @Setter
     protected String modId;
 
-    public AbstractComponentBuilder(ConfigEntryBuilder entryBuilder, Object configObject) {
+    public AbstractComponentBuilder(ConfigEntryBuilder entryBuilder, Object configObject, Field field) {
         this.entryBuilder = entryBuilder;
         this.configObject = configObject;
+        this.field = field;
     }
 
     @SneakyThrows
@@ -44,13 +47,22 @@ public abstract class AbstractComponentBuilder<T> {
     @SneakyThrows
     @SuppressWarnings("unchecked")
     protected T getDefaultValue() {
-        Field f = defaultObject.getDeclaredField(field.getName());
-        f.setAccessible(true);
-        return (T) f.get(null);
+        Field _field;
+        try {
+            _field = defaultObject.getDeclaredField(field.getName());
+        } catch (NoSuchFieldException e) {
+            return getValue();
+        }
+        _field.setAccessible(true);
+        return (T) _field.get(null);
     }
 
     protected String translatableKeyPrefix() {
         return String.format("config.%s.%s", modId, category);
+    }
+
+    protected Component fieldNameKey() {
+        return new TranslatableComponent(String.format("%s.%s", translatableKeyPrefix(), field.getName()));
     }
 
     public abstract AbstractConfigListEntry<T> build();
