@@ -45,6 +45,8 @@ public class SMSNConfig extends ModConfig {
     public boolean mruApi = SMSNConfigDefault.mruApi;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

@@ -103,6 +103,8 @@ dependencies {
     modImplementation(libs.neoforge.mru)
     // ProjectE
     modImplementation(libs.neoforge.projecte)
+    // Hexerei
+    modCompileOnly(libs.neoforge.hexerei)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))

@@ -16,13 +16,12 @@ architectury {
 
 allprojects {
     group = mod.group
-    version = "${mod.minecraft_version}-${mod.version}"
+    version = "${mod.version}-${mod.minecraft_version}"
 }
 
 val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
 val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
 val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
-val parchmentVersion: String = libs.versions.parchment.get()
 
 subprojects {
     apply(plugin = "dev.architectury.loom")
@@ -55,10 +54,7 @@ subprojects {
 
     dependencies {
         "minecraft"("net.minecraft:minecraft:${mod.minecraft_version}")
-        "mappings"(loom.layered {
-            officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${mod.minecraft_version}:$parchmentVersion@zip")
-        })
+        "mappings"(loom.officialMojangMappings())
 
         compileOnly(rootProject.libs.mixinextras.common)
         annotationProcessor(rootProject.libs.mixinextras.common)
@@ -94,7 +90,7 @@ subprojects {
 
         if (mod.modrinth_id.isNotEmpty() && modrinthToken.isNotEmpty())
             extensions.configure<com.modrinth.minotaur.ModrinthExtension>("modrinth") {
-                debugMode.set(mod.debug_publishing)
+                debugMode.set(mod.debug_publishing || !mod.publish_platforms.contains(project.name))
                 token.set(modrinthToken)
                 projectId.set(mod.modrinth_id)
                 syncBodyFrom.set(rootProject.file("README.md").readText())
@@ -114,7 +110,7 @@ subprojects {
                 return@register
             }
             group = "publishing"
-            debugMode = mod.debug_publishing
+            debugMode = mod.debug_publishing || !mod.publish_platforms.contains(project.name)
             apiToken = curseforgeToken
         }
         tasks.register("releaseMod") {

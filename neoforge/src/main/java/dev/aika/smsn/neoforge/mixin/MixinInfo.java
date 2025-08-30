@@ -13,6 +13,7 @@ public class MixinInfo {
                 "dev.aika.smsn.neoforge.mixin.blueprint.RewardHandlerMixin", "blueprint",
                 "dev.aika.smsn.neoforge.mixin.exposure.GildedMixin", "exposure",
                 "dev.aika.smsn.neoforge.mixin.exposure.PatreonMixin", "exposure",
+                "dev.aika.smsn.neoforge.mixin.hexerei.HexereiSupporterBenefitsMixin", "hexerei",
                 "dev.aika.smsn.neoforge.mixin.imb11.mru.APIMixin", "mru",
                 "dev.aika.smsn.neoforge.mixin.immersive_engineering.ImmersiveEngineeringMixin", "immersiveengineering",
                 "dev.aika.smsn.neoforge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin", "immersivecaves",

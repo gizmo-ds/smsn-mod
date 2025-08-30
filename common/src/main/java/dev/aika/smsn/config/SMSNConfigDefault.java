@@ -19,4 +19,5 @@ public class SMSNConfigDefault {
     public static boolean xaeroMapPatreonCheck = false;
     public static boolean mruApi = false;
     public static boolean projecteUUIDCheck = false;
+    public static boolean hexereiSupporter = false;
 }

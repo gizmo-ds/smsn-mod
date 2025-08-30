@@ -29,3 +29,6 @@ gradle-app.setting
 
 .idea/
 .env
+mods/
+**/logs/*.log
+**/logs/*.log.gz
