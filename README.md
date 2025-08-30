@@ -1,7 +1,7 @@
 # Save My Shaky Network (1.18.2)
 
 [![AFDIAN](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Gizmo-%23946ce6)](https://afdian.com/a/gizmo)
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/mod/oXzIQwRj)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/project/oXzIQwRj)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/1129397?logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/smsn)
 ![GitHub License](https://img.shields.io/github/license/gizmo-ds/smsn-mod?style=flat&label=License)
 
@@ -53,7 +53,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.39.9_Forge_1.18.2") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
-- [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request.
+- [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request;
+- [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "0.2.88") `虚空工艺` Blocks donator requests.
 
 **Fabric**
 
