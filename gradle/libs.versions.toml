@@ -60,3 +60,4 @@ forge-immersiveengineering = { version = "VzTXQKEm", module = "maven.modrinth:im
 forge-nitrogen = { version = "1.19.2-1.0.7-forge", module = "com.aetherteam.nitrogen:nitrogen_internals" }
 forge-baguslib = { version = "Qiw9t3HU", module = "maven.modrinth:bagus-lib" } # 1.19.2-3.6.0
 forge-projecte = { version = "4860858", module = "curse.maven:projecte-226410" } # 1.1.0
+forge-voidscape = { version = "4139554", module = "curse.maven:voidscape-251730" } # 0.2.119
