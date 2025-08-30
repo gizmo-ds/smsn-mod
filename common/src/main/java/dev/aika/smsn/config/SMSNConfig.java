@@ -2,34 +2,36 @@ package dev.aika.smsn.config;
 
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.annotation.RequiresRestart;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
+    //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
+    //NOTE: Not adding the @Category annotation means using the "general" category.
+
     @LoaderSpecific(LoaderType.FORGE)
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean quarkContributorCheck = SMSNConfigDefault.quarkContributorCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean alexModsContributorCheck = SMSNConfigDefault.alexModsContributorCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean obscureModsCheck = SMSNConfigDefault.obscureModsCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
-    @LoaderSpecific({LoaderType.FORGE, LoaderType.FABRIC})
     public boolean botaniaContributorCheck = SMSNConfigDefault.botaniaContributorCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
@@ -45,6 +47,10 @@ public class SMSNConfig extends ModConfig {
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
 
     @Category("qol")
+    @RequiresRestart
+    @LoaderSpecific(LoaderType.FORGE)
+    public QuarkCelebration quarkCelebration = SMSNConfigDefault.quarkCelebration;
+    @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
     public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
 
@@ -56,5 +62,26 @@ public class SMSNConfig extends ModConfig {
         final var defaultConfig = new SMSNConfig();
         defaultConfig.save();
         return defaultConfig;
+    }
+
+    public enum QuarkCelebration {
+        ShowAll(),
+        HideAll("all"),
+        @SuppressWarnings("SpellCheckingInspection")
+        HideLGBTQIA(
+                "iad", "iad2", "idr", "ld", "lvd", "ncod", "nbpd", "ppad", "tdr", "tdv", "zdd",
+                "pm", "baw", "taw"
+        );
+
+        private final List<String> CELEBRATIONS = new ArrayList<>();
+
+        QuarkCelebration(String... celebrations) {
+            CELEBRATIONS.addAll(Arrays.asList(celebrations));
+        }
+
+        public boolean isHide(String name) {
+            if (CELEBRATIONS.size() == 1 && CELEBRATIONS.get(0).equals("all")) return true;
+            return CELEBRATIONS.contains(name);
+        }
     }
 }

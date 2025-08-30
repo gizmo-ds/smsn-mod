@@ -7,7 +7,6 @@ public class SMSNConfigDefault {
     public static boolean ipnUpdateCheckAndUserTracking = false;
     public static boolean xaeroMapPatreonCheck = false;
     public static boolean xaeroMapVersionCheck = false;
-    public static boolean citadelAprilFoolsContent = false;
     public static boolean alexModsContributorCheck = false;
     public static boolean obscureModsCheck = false;
     public static boolean supplementariesCreditsCheck = false;
@@ -18,4 +17,8 @@ public class SMSNConfigDefault {
     public static boolean irisUpdateCheck = false;
     public static boolean titaniumReward = false;
     public static boolean projecteUUIDCheck = false;
+
+    // QoL
+    public static SMSNConfig.QuarkCelebration quarkCelebration = SMSNConfig.QuarkCelebration.HideLGBTQIA;
+    public static boolean citadelAprilFoolsContent = false;
 }
