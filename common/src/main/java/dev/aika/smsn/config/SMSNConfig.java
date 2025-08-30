@@ -58,6 +58,8 @@ public class SMSNConfig extends ModConfig {
     public boolean baCheckUpdate = SMSNConfigDefault.baCheckUpdate;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
 
     @Category("qol")
     @RequiresRestart

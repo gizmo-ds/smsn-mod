@@ -3,6 +3,7 @@
 **Forge**
 
 - Add Mixins for [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei)
+- Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 
 ### 1.2.8
 
