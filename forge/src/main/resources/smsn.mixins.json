@@ -19,6 +19,7 @@
     "projecte.ThreadCheckUUIDMixin",
     "quark.ThreadContributorListLoaderMixin",
     "titanium.RewardMixin",
+    "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",

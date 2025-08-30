@@ -3,6 +3,7 @@
 **Forge**
 
 - Fewer Quark Celebration
+- Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 
 ### 1.2.7
 

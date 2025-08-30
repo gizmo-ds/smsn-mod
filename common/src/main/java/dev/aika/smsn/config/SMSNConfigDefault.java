@@ -14,6 +14,7 @@ public class SMSNConfigDefault {
     public static boolean irisUpdateCheck = false;
     public static boolean titaniumReward = false;
     public static boolean projecteUUIDCheck = false;
+    public static boolean voidscapeDonator = false;
 
     // QoL
     public static SMSNConfig.QuarkCelebration quarkCelebration = SMSNConfig.QuarkCelebration.HideLGBTQIA;

@@ -40,6 +40,8 @@ public class SMSNConfig extends ModConfig {
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
 
     @Category("qol")
     @RequiresRestart
