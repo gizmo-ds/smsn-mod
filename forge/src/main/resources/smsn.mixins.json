@@ -11,6 +11,7 @@
     "quark.QButtonMixin"
   ],
   "mixins": [
+    "additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",

@@ -47,6 +47,8 @@ public class SMSNConfig extends ModConfig {
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
 
     @Category("qol")
     @RequiresRestart

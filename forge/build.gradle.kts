@@ -92,6 +92,8 @@ dependencies {
     modImplementation(libs.forge.projecte)
     // Voidscape
     modImplementation(libs.forge.voidscape)
+    // AdditionalStructures
+    modImplementation(libs.forge.additionalstructures)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

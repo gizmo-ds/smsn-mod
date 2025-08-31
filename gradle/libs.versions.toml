@@ -1,6 +1,6 @@
 [plugins]
 architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
-loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.11-SNAPSHOT" }
 shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
 modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
@@ -10,7 +10,6 @@ curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
 lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
-parchment = "2022.11.27"
 fabric-loader = "0.15.11"
 forge = "1.19.2-43.4.4"
 clothconfig = "8.3.134"
@@ -61,3 +60,4 @@ forge-nitrogen = { version = "1.19.2-1.0.7-forge", module = "com.aetherteam.nitr
 forge-baguslib = { version = "Qiw9t3HU", module = "maven.modrinth:bagus-lib" } # 1.19.2-3.6.0
 forge-projecte = { version = "4860858", module = "curse.maven:projecte-226410" } # 1.1.0
 forge-voidscape = { version = "4139554", module = "curse.maven:voidscape-251730" } # 0.2.119
+forge-additionalstructures = { version = "EzhFkj9w", module = "maven.modrinth:additional-structures" } # 4.0.3

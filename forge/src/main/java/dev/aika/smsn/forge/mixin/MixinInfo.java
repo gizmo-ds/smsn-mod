@@ -6,7 +6,9 @@ import java.util.Map;
 
 public class MixinInfo {
     public static Map<String, String> getMixinClassNames() {
+        //noinspection SpellCheckingInspection
         return MapUtils.createMap(
+                "dev.aika.smsn.forge.mixin.additionalstructures.EventsMixin", "additionalstructures",
                 "dev.aika.smsn.forge.mixin.aetherteam.UserData$ServerMixin", "nitrogen",
                 "dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin", "citadel",
                 "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin", "citadel",

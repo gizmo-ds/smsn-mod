@@ -2,6 +2,12 @@
 
 **Forge**
 
+- Add Mixins for [Additional Structures](https://modrinth.com/mod/additional-structures)
+
+### 1.2.9
+
+**Forge**
+
 - Fewer Quark Celebration
 - Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 
