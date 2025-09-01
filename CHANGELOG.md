@@ -3,6 +3,7 @@
 **Forge**
 
 - Add Mixins for [TenshiLib](https://github.com/Flemmli97/TenshiLib)
+- Add Mixins for [Additional Structures](https://modrinth.com/mod/additional-structures) 
 
 **Fabric**
 

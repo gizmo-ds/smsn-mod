@@ -79,3 +79,4 @@ forge-projecte = { version = "4901949", module = "curse.maven:projecte-226410" }
 forge-hexerei = { version = "hR4PQb6h", module = "maven.modrinth:hexerei" } # 0.4.2.1
 forge-voidscape = { version = "5020417", module = "curse.maven:voidscape-251730" } # 1.5.348
 forge-tenshilib = { version = "4819252", module = "curse.maven:tenshilib-312040" } # 1.7.2
+forge-additionalstructures = { version = "OqEwjVmd", module = "maven.modrinth:additional-structures" } # 4.1.2

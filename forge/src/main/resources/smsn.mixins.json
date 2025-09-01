@@ -12,6 +12,7 @@
   ],
   "mixins": [
     "ad_astra.StationLoaderMixin",
+    "additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
