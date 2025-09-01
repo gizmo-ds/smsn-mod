@@ -59,7 +59,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Forge_1.19.1") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
 - [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.1.0") `等价交换重制版` Blocks UUID check request;
-- [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "0.2.119") `虚空工艺` Blocks donator requests.
+- [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "0.2.119") `虚空工艺` Blocks donator requests;
+- [Additional Structures](https://modrinth.com/mod/additional-structures "4.0.3") `失落废墟` Blocks supporter requests;
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.6.15") Blocks patreon checks requests.
 
 **Fabric**
 
@@ -73,7 +75,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "24.2.0_Fabric_1.19.1") `Xaero的小地图`
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Fabric_1.19.1") `Xaero的世界地图`
-  Disables update checks & patreon checks fetches.
+  Disables update checks & patreon checks fetches;
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.6.15") Blocks patreon checks requests.
 
 ## F.A.Q
 
