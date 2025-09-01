@@ -35,6 +35,7 @@
     "quark.ThreadContributorListLoaderMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
+    "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
     "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",

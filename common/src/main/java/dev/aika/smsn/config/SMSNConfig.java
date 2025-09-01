@@ -60,6 +60,7 @@ public class SMSNConfig extends ModConfig {
     public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
+    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
 
     @Category("qol")
     @RequiresRestart

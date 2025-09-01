@@ -63,6 +63,8 @@ dependencies {
     modImplementation(libs.fabric.mru)
     // Aether Nitrogen
     modImplementation(libs.fabric.nitrogen)
+    // TenshiLib
+    modImplementation(libs.fabric.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

@@ -35,6 +35,7 @@ public class MixinInfo {
                 "dev.aika.smsn.forge.mixin.quark.QButtonMixin", "quark",
                 "dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin", "ribbits",
                 "dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin", "supplementaries",
+                "dev.aika.smsn.forge.mixin.tenshilib.PatreonDataManagerMixin", "tenshilib",
                 "dev.aika.smsn.forge.mixin.titanium.RewardMixin", "titanium",
                 "dev.aika.smsn.forge.mixin.voidscape.DonatorHandlerMixin", "voidscape",
                 "dev.aika.smsn.forge.mixin.xaero.minimap.InternetMixin", "xaerominimap",

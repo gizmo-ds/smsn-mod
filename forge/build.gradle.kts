@@ -114,6 +114,8 @@ dependencies {
     modCompileOnly(libs.forge.hexerei)
     // Voidscape
     modImplementation(libs.forge.voidscape)
+    // TenshiLib
+    modImplementation(libs.forge.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

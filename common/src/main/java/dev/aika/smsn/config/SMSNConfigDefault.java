@@ -27,6 +27,7 @@ public class SMSNConfigDefault {
     public static boolean baCheckUpdate = false;
     public static boolean hexereiSupporter = false;
     public static boolean voidscapeDonator = false;
+    public static boolean tenshilibPatreon = false;
 
     // QoL
     public static SMSNConfig.QuarkCelebration quarkCelebration = SMSNConfig.QuarkCelebration.HideLGBTQIA;

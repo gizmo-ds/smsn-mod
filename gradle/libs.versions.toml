@@ -10,7 +10,6 @@ curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
 lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
-parchment = "2023.09.03"
 fabric-loader = "0.16.14"
 forge = "1.20.1-47.2.32"
 clothconfig = "11.1.136"
@@ -52,6 +51,7 @@ fabric-ribbits = { version = "15vB3aE9", module = "maven.modrinth:ribbits" } # 3
 fabric-exposure = { version = "O4Fow0Po", module = "maven.modrinth:exposure" } # 1.7.15
 fabric-adastra = { version = "MxqFxL9C", module = "maven.modrinth:ad-astra" } # 1.15.18
 fabric-nitrogen = { version = "1.20.1-1.0.15-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+fabric-tenshilib = { version = "5240454", module = "curse.maven:tenshilib-fabric-552662" } # 1.7.6
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
@@ -78,3 +78,4 @@ forge-petrolpark = { version = "fBVOTUaX", module = "maven.modrinth:petrolpark" 
 forge-projecte = { version = "4901949", module = "curse.maven:projecte-226410" } # 1.0.1
 forge-hexerei = { version = "hR4PQb6h", module = "maven.modrinth:hexerei" } # 0.4.2.1
 forge-voidscape = { version = "5020417", module = "curse.maven:voidscape-251730" } # 1.5.348
+forge-tenshilib = { version = "4819252", module = "curse.maven:tenshilib-312040" } # 1.7.2

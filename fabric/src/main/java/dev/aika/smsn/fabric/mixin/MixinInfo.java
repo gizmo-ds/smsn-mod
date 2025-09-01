@@ -18,6 +18,7 @@ public class MixinInfo {
                 "dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin", "iris",
                 "dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin", "ribbits",
                 "dev.aika.smsn.fabric.mixin.supplementaries.CreditsMixin", "supplementaries",
+                "dev.aika.smsn.fabric.mixin.tenshilib.PatreonDataManagerMixin", "tenshilib",
                 "dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin", "xaerominimap",
                 "dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap",
                 "dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap",
