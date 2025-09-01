@@ -49,6 +49,7 @@ public class SMSNConfig extends ModConfig {
     public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
+    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
 
     @Category("qol")
     @RequiresRestart

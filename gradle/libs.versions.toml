@@ -43,6 +43,7 @@ fabric-supplementaries = { version = "VNwz9Avv", module = "maven.modrinth:supple
 fabric-ipn = { version = "fabric-1.19.2-1.10.11", module = "maven.modrinth:inventory-profiles-next" }
 fabric-botania = { version = "1.19.2-440-FABRIC", module = "vazkii.botania:Botania" }
 fabric-iris = { version = "9YEwbzW6", module = "maven.modrinth:iris" } # 1.6.4+1.19.2
+fabric-tenshilib = { version = "4396884", module = "curse.maven:tenshilib-fabric-552662" } # 1.6.15
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.19.1", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.19.1", module = "maven.modrinth:xaeros-world-map" }
@@ -61,3 +62,4 @@ forge-baguslib = { version = "Qiw9t3HU", module = "maven.modrinth:bagus-lib" } #
 forge-projecte = { version = "4860858", module = "curse.maven:projecte-226410" } # 1.1.0
 forge-voidscape = { version = "4139554", module = "curse.maven:voidscape-251730" } # 0.2.119
 forge-additionalstructures = { version = "EzhFkj9w", module = "maven.modrinth:additional-structures" } # 4.0.3
+forge-tenshilib = { version = "4396883", module = "curse.maven:tenshilib-312040" } # 1.6.15

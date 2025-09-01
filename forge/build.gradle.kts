@@ -94,6 +94,8 @@ dependencies {
     modImplementation(libs.forge.voidscape)
     // AdditionalStructures
     modImplementation(libs.forge.additionalstructures)
+    // TenshiLib
+    modImplementation(libs.forge.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionForge"))

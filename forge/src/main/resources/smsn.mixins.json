@@ -24,6 +24,7 @@
     "projecte.ThreadCheckUUIDMixin",
     "quark.ThreadContributorListLoaderMixin",
     "supplementaries.CreditsMixin",
+    "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
     "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",
