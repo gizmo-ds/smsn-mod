@@ -8,6 +8,7 @@
   "config.smsn.title": "Save My Shit Network",
   "config.smsn.sponsor.description": "❤ Enjoy %1$s ? Support the author on %2$s ! ❤",
   "config.smsn.sponsor.description.afdian": "AFDIAN",
+  "config.smsn.unsupported.description": "§6§lUnsupported field type: %1$s",
   "config.smsn.@switch.true": "§aAllow",
   "config.smsn.@switch.false": "§cNot allowed",
   "config.smsn.@switch.enable": "§aEnable",

@@ -11,8 +11,8 @@ import dev.aika.smsn.config.SMSNConfigDefault;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import me.shedaniel.clothconfig2.gui.entries.TextListEntry;
 import me.shedaniel.clothconfig2.impl.ConfigCategoryImpl;
+import me.shedaniel.clothconfig2.impl.builders.FieldBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.ClickEvent;
@@ -53,9 +53,8 @@ public class ClothConfigCompat {
     private static ConfigCategory getCategory(ConfigBuilder builder, ComponentBuilder componentBuilder, String categoryKey) {
         final ConfigCategory category = builder.getOrCreateCategory(
                 Component.translatable(String.format("config.%s.%s", modid, categoryKey)));
-        if (((ConfigCategoryImpl) category).getEntries().isEmpty()) {
-            category.addEntry(sponsorDescription(componentBuilder.getEntryBuilder()));
-        }
+        if (((ConfigCategoryImpl) category).getEntries().isEmpty())
+            category.addEntry(sponsorDescription(componentBuilder.getEntryBuilder()).build());
         return category;
     }
 
@@ -91,10 +90,13 @@ public class ClothConfigCompat {
             configCategory.addEntry(componentBuilder.enumSelectorBuilder(
                             field, category, (Class<? extends Enum<?>>) fieldType)
                     .build());
-        } else log.warn(marker, "Unsupported field type: {}", fieldType);
+        } else {
+            configCategory.addEntry(unsupportedDescription(componentBuilder.getEntryBuilder(), fieldType).build());
+            log.warn(marker, "Unsupported field type: {}", fieldType);
+        }
     }
 
-    public static TextListEntry sponsorDescription(ConfigEntryBuilder entryBuilder) {
+    private static FieldBuilder<?, ?, ?> sponsorDescription(ConfigEntryBuilder entryBuilder) {
         return entryBuilder.startTextDescription(
                 Component.translatable(String.format("config.%s.sponsor.description", modid),
                         Component.translatable("modmenu.nameTranslation." + modid)
@@ -104,6 +106,16 @@ public class ClothConfigCompat {
                                         .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.literal(sponsorUrl)))
                                         .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, sponsorUrl))
                                 )
-                )).build();
+                )
+        );
+    }
+
+    private static FieldBuilder<?, ?, ?> unsupportedDescription(ConfigEntryBuilder entryBuilder, Class<?> clazz) {
+        return entryBuilder.startTextDescription(
+                        Component.translatable(String.format("config.%s.unsupported.description", modid), clazz.getSimpleName())
+                )
+                .setTooltip(
+                        Component.literal(clazz.getName())
+                );
     }
 }

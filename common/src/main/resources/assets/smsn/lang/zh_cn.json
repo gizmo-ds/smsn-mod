@@ -8,6 +8,7 @@
   "config.smsn.title": "救救我的答辩网络",
   "config.smsn.sponsor.description": "❤ 喜欢 %1$s 吗？欢迎到 %2$s 赞助支持，助力模组持续更新！ ❤",
   "config.smsn.sponsor.description.afdian": "爱发电",
+  "config.smsn.unsupported.description": "§6§l不受支持的字段类型: %1$s",
   "config.smsn.@switch.true": "§a允许",
   "config.smsn.@switch.false": "§c不允许",
   "config.smsn.@switch.enable": "§a启用",
