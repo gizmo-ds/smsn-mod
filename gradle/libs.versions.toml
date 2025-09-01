@@ -1,6 +1,6 @@
 [plugins]
 architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
-loom = { id = "dev.architectury.loom", version = "1.10-SNAPSHOT" }
+loom = { id = "dev.architectury.loom", version = "1.11-SNAPSHOT" }
 shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
 modrinth = { id = "com.modrinth.minotaur", version = "2.+" }
@@ -10,7 +10,6 @@ curseforge = { id = "net.darkhax.curseforgegradle", version = "1.1.26" }
 lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
-parchment = "2024.11.17"
 fabric-loader = "0.16.14"
 neoforge = "21.1.145"
 clothconfig = "15.0.130"
