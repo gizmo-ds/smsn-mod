@@ -6,8 +6,10 @@ import java.util.Map;
 
 public class MixinInfo {
     public static Map<String, String> getMixinClassNames() {
+        //noinspection SpellCheckingInspection
         return MapUtils.createMap(
                 "dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin", "actuallyadditions",
+                "dev.aika.smsn.neoforge.mixin.additionalstructures.EventsMixin", "additionalstructures",
                 "dev.aika.smsn.neoforge.mixin.aetherteam.UserData$ServerMixin", "nitrogen",
                 "dev.aika.smsn.neoforge.mixin.bagus_lib.TierHelperMixin", "bagus_lib",
                 "dev.aika.smsn.neoforge.mixin.blueprint.RewardHandlerMixin", "blueprint",

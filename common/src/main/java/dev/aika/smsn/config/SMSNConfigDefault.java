@@ -20,4 +20,5 @@ public class SMSNConfigDefault {
     public static boolean mruApi = false;
     public static boolean projecteUUIDCheck = false;
     public static boolean hexereiSupporter = false;
+    public static boolean additionalStructuresSupporterCheck = false;
 }

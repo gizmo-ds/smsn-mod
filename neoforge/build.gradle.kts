@@ -105,6 +105,8 @@ dependencies {
     modImplementation(libs.neoforge.projecte)
     // Hexerei
     modCompileOnly(libs.neoforge.hexerei)
+    // AdditionalStructures
+    modImplementation(libs.neoforge.additionalstructures)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))

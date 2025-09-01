@@ -1,3 +1,9 @@
+### Unreleased
+
+**NeoForge**
+
+- Add Mixins for [Additional Structures](https://modrinth.com/mod/additional-structures)
+
 ### 1.2.9
 
 **NeoForge**

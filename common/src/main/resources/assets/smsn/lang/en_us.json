@@ -31,6 +31,7 @@
   "config.smsn.general.mruApi": "M.R.U API request",
   "config.smsn.general.projecteUUIDCheck": "ProjectE UUID request",
   "config.smsn.general.hexereiSupporter": "Hexerei supporter request",
+  "config.smsn.general.additionalStructuresSupporterCheck": "Additional Structures supporters check",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"
 }

@@ -11,15 +11,12 @@ import java.nio.file.Files;
 @Getter
 @SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
@@ -31,22 +28,19 @@ public class SMSNConfig extends ModConfig {
     public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean actuallyAdditionsSpecialPeopleStuff = SMSNConfigDefault.actuallyAdditionsSpecialPeopleStuff;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
-    @LoaderSpecific({LoaderType.NEOFORGE, LoaderType.FABRIC})
     public boolean mruApi = SMSNConfigDefault.mruApi;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

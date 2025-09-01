@@ -10,6 +10,7 @@
   ],
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
+    "additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
     "bagus_lib.TierHelperMixin",
     "exposure.GildedMixin",
