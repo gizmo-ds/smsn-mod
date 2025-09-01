@@ -18,6 +18,7 @@
     "ipn.IPNInfoManagerMixin",
     "projecte.ThreadCheckUUIDMixin",
     "quark.ThreadContributorListLoaderMixin",
+    "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
     "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",

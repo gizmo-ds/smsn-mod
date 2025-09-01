@@ -15,6 +15,7 @@ public class SMSNConfigDefault {
     public static boolean titaniumReward = false;
     public static boolean projecteUUIDCheck = false;
     public static boolean voidscapeDonator = false;
+    public static boolean tenshilibPatreon = false;
 
     // QoL
     public static SMSNConfig.QuarkCelebration quarkCelebration = SMSNConfig.QuarkCelebration.HideLGBTQIA;

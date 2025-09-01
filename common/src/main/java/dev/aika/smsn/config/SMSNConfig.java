@@ -42,6 +42,7 @@ public class SMSNConfig extends ModConfig {
     public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
+    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
 
     @Category("qol")
     @RequiresRestart

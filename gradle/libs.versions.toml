@@ -43,6 +43,7 @@ fabric-xaeros-worldmap = { version = "1.39.9_Fabric_1.18.2", module = "maven.mod
 fabric-ipn = { version = "fabric-1.18.2-1.10.15", module = "maven.modrinth:inventory-profiles-next" }
 fabric-botania = { version = "1.18.2-435-FABRIC", module = "vazkii.botania:Botania" }
 fabric-iris = { version = "ogIRhnAJ", module = "maven.modrinth:iris" } # 1.6.11+1.18.2
+fabric-tenshilib = { version = "3764869", module = "curse.maven:tenshilib-fabric-552662" } # 1.6.7
 # Forge
 forge-xaeros-minimap = { version = "25.2.6_Forge_1.18.2", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.39.9_Forge_1.18.2", module = "maven.modrinth:xaeros-world-map" }
@@ -57,3 +58,4 @@ forge-immersiveengineering = { version = "g7u3ovfs", module = "maven.modrinth:im
 forge-baguslib = { version = "kphZTVeN", module = "maven.modrinth:bagus-lib" } # 1.18.2-3.6.1
 forge-projecte = { version = "3722831", module = "curse.maven:projecte-226410" } # 1.0.1
 forge-voidscape = { version = "3841775", module = "curse.maven:voidscape-251730" } # 0.2.88
+forge-tenshilib = { version = "3803816", module = "curse.maven:tenshilib-312040" } # 1.6.8

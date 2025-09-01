@@ -11,6 +11,7 @@ public class MixinInfo {
                 "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin", "inventoryprofilesnext",
                 "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin", "inventoryprofilesnext",
                 "dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin", "iris",
+                "dev.aika.smsn.fabric.mixin.tenshilib.PatreonDataManagerMixin", "tenshilib",
                 "dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin", "xaerominimap",
                 "dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin", "xaerominimap",
                 "dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin", "xaeroworldmap",

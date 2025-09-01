@@ -2,6 +2,16 @@
 
 **Forge**
 
+- Add Mixins for [TenshiLib](https://github.com/Flemmli97/TenshiLib)
+
+**Fabric**
+
+- Add Mixins for [TenshiLib](https://github.com/Flemmli97/TenshiLib)
+
+### 1.2.9
+
+**Forge**
+
 - Fewer Quark Celebration
 - Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 

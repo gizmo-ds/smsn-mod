@@ -53,6 +53,8 @@ dependencies {
     modCompileOnly(libs.fabric.ipn)
     // Iris
     modCompileOnly(libs.fabric.iris)
+    // TenshiLib
+    modImplementation(libs.fabric.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

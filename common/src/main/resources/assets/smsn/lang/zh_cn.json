@@ -27,6 +27,7 @@
   "config.smsn.general.titaniumReward": "钛 奖励请求",
   "config.smsn.general.projecteUUIDCheck": "等价交换重制版 UUID 请求",
   "config.smsn.general.voidscapeDonator": "虚空工艺 捐助者请求",
+  "config.smsn.general.tenshilibPatreon": "TenshiLib 赞助者检查",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.quarkCelebration": "夸克 \"节日\"",
   "config.smsn.qol.quarkCelebration.ShowAll": "显示全部",
