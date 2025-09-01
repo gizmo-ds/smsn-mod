@@ -27,6 +27,7 @@ public class MixinInfo {
                 "dev.aika.smsn.neoforge.mixin.projecte.ThreadCheckUUIDMixin", "projecte",
                 "dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin", "ribbits",
                 "dev.aika.smsn.neoforge.mixin.supplementaries.CreditsMixin", "supplementaries",
+                "dev.aika.smsn.neoforge.mixin.tenshilib.PatreonDataManagerMixin", "tenshilib",
                 "dev.aika.smsn.neoforge.mixin.titanium.RewardMixin", "titanium",
                 "dev.aika.smsn.neoforge.mixin.xaero.minimap.InternetMixin", "xaerominimap",
                 "dev.aika.smsn.neoforge.mixin.xaero.minimap.PatreonMixin", "xaerominimap",

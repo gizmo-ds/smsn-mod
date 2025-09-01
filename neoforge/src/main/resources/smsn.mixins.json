@@ -26,6 +26,7 @@
     "projecte.ThreadCheckUUIDMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
+    "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",

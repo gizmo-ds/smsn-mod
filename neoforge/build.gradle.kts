@@ -107,6 +107,8 @@ dependencies {
     modCompileOnly(libs.neoforge.hexerei)
     // AdditionalStructures
     modImplementation(libs.neoforge.additionalstructures)
+    // TenshiLib
+    modImplementation(libs.neoforge.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))

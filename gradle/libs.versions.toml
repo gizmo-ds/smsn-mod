@@ -49,6 +49,7 @@ fabric-mru = { version = "1.0.0+1.21-fabric", module = "maven.modrinth:mru" }
 fabric-ribbits = { version = "IrZMelXO", module = "maven.modrinth:ribbits" } # 4.1.0
 fabric-exposure = { version = "sgmPzE6v", module = "maven.modrinth:exposure" } # 1.9.5
 fabric-nitrogen = { version = "1.21.1-1.1.21-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
+fabric-tenshilib = { version = "6502385", module = "curse.maven:tenshilib-fabric-552662" } # 1.8.2.b
 # NeoForge
 neoforge-xaeros-minimap = { version = "24.3.0_NeoForge_1.21", module = "maven.modrinth:xaeros-minimap" }
 neoforge-xaeros-worldmap = { version = "1.39.0_NeoForge_1.21", module = "maven.modrinth:xaeros-world-map" }
@@ -70,3 +71,4 @@ neoforge-actuallyadditions = { version = "iIGebTKg", module = "maven.modrinth:ac
 neoforge-projecte = { version = "6323142", module = "curse.maven:projecte-226410" } # 1.0.1
 neoforge-hexerei = { version = "RrbUdVdM", module = "maven.modrinth:hexerei" } # 0.5.0.1
 neoforge-additionalstructures = { version = "2AMB4SVA", module = "maven.modrinth:additional-structures" } # 6.0.1
+neoforge-tenshilib = { version = "5950962", module = "curse.maven:tenshilib-312040" } # 1.8.2

@@ -60,6 +60,8 @@ dependencies {
     modImplementation(libs.fabric.xaeros.worldmap)
     // M.R.U
     modImplementation(libs.fabric.mru)
+    // TenshiLib
+    modImplementation(libs.fabric.tenshilib)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

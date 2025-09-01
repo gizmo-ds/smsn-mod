@@ -21,4 +21,5 @@ public class SMSNConfigDefault {
     public static boolean projecteUUIDCheck = false;
     public static boolean hexereiSupporter = false;
     public static boolean additionalStructuresSupporterCheck = false;
+    public static boolean tenshilibPatreon = false;
 }

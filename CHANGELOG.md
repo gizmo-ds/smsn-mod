@@ -3,6 +3,11 @@
 **NeoForge**
 
 - Add Mixins for [Additional Structures](https://modrinth.com/mod/additional-structures)
+- Add Mixins for [TenshiLib](https://github.com/Flemmli97/TenshiLib)
+
+**Fabric**
+
+- Add Mixins for [TenshiLib](https://github.com/Flemmli97/TenshiLib)
 
 ### 1.2.9
 

@@ -41,6 +41,7 @@ public class SMSNConfig extends ModConfig {
     public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
+    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

@@ -16,6 +16,7 @@
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
+    "tenshilib.PatreonDataManagerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
