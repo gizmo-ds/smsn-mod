@@ -15,7 +15,6 @@ public class ModConfig {
     private static final Marker marker = MarkerFactory.getMarker("ModConfig");
 
     protected static final File CONFIG_FILE = new File(SMSNPlatform.getConfigDir().toFile(), SMSN.MOD_ID + ".json");
-    protected static final File OLD_CONFIG_FILE = new File(SMSNPlatform.getConfigDir().toFile(), SMSN.MOD_ID + ".json5");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     protected static <T> T load(Class<T> clazz) {

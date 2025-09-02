@@ -3,7 +3,6 @@ package dev.aika.smsn;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
 import java.nio.file.Path;
-import java.util.Map;
 
 public class SMSNPlatform {
     @ExpectPlatform
@@ -12,12 +11,12 @@ public class SMSNPlatform {
     }
 
     @ExpectPlatform
-    public static Path getConfigDir() {
+    public static String getModName(String modId) {
         throw new AssertionError();
     }
 
     @ExpectPlatform
-    public static Map<String, String> getMixinClassNames() {
+    public static Path getConfigDir() {
         throw new AssertionError();
     }
 }

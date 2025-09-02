@@ -18,7 +18,8 @@ public class ComponentBuilder {
     @Getter
     protected final Object configObject;
     @Setter
-    protected Class<?> defaultObject;
+    protected Object defaultConfigObject;
+    @Getter
     @Setter
     protected String modId;
 
@@ -29,7 +30,7 @@ public class ComponentBuilder {
 
     private <T extends AbstractComponentBuilder<?>> T createBuilder(String category, T builder) {
         builder.setModId(modId).setCategory(category);
-        if (defaultObject != null) builder.setDefaultObject(defaultObject);
+        if (defaultConfigObject != null) builder.setDefaultConfigObject(defaultConfigObject);
         return builder;
     }
 

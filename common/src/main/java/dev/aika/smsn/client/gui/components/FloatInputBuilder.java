@@ -1,6 +1,5 @@
 package dev.aika.smsn.client.gui.components;
 
-import dev.aika.smsn.annotation.RequiresRestart;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import me.shedaniel.clothconfig2.impl.builders.FloatFieldBuilder;
@@ -19,8 +18,7 @@ public final class FloatInputBuilder extends AbstractComponentBuilder<Float> {
     public AbstractConfigListEntry<Float> build() {
         FloatFieldBuilder builder = entryBuilder.startFloatField(fieldNameKey(), getValue())
                 .setSaveConsumer(this::setValue);
-        if (defaultObject != null) builder = builder.setDefaultValue(getDefaultValue());
-        builder.requireRestart(field.getAnnotation(RequiresRestart.class) != null);
+        fieldBuilderInit(builder);
         return builder.build();
     }
 }

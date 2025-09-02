@@ -1,10 +1,8 @@
 package dev.aika.smsn.fabric;
 
-import dev.aika.smsn.fabric.mixin.MixinInfo;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.nio.file.Path;
-import java.util.Map;
 
 @SuppressWarnings("unused")
 public class SMSNPlatformImpl {
@@ -12,11 +10,14 @@ public class SMSNPlatformImpl {
         return FabricLoader.getInstance().isModLoaded(modId);
     }
 
-    public static Path getConfigDir() {
-        return FabricLoader.getInstance().getConfigDir();
+    public static String getModName(String modId) {
+        if (!isModLoaded(modId)) return null;
+        return FabricLoader.getInstance().getModContainer(modId)
+                .map(c -> c.getMetadata().getName())
+                .orElse(modId);
     }
 
-    public static Map<String, String> getMixinClassNames() {
-        return MixinInfo.getMixinClassNames();
+    public static Path getConfigDir() {
+        return FabricLoader.getInstance().getConfigDir();
     }
 }

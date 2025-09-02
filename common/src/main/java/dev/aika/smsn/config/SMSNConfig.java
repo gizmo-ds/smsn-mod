@@ -2,15 +2,13 @@ package dev.aika.smsn.config;
 
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.annotation.MixinList;
 import dev.aika.smsn.annotation.RequiresRestart;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
-import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Getter
 @SuppressWarnings("unused")
@@ -18,67 +16,68 @@ public class SMSNConfig extends ModConfig {
     //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
     //NOTE: Not adding the @Category annotation means using the "general" category.
 
-    public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
+    public boolean aetherMoaSkinsFeature = true;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
+    public boolean immersiveEngineeringSpecialRevolvers = true;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean quarkContributorCheck = SMSNConfigDefault.quarkContributorCheck;
-    public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
-    public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
-    public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
+    public boolean quarkContributorCheck = false;
+    public boolean ipnUpdateCheckAndUserTracking = false;
+    public boolean xaeroMapPatreonCheck = false;
+    public boolean xaeroMapVersionCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean alexModsContributorCheck = SMSNConfigDefault.alexModsContributorCheck;
+    public boolean alexModsContributorCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
+    public boolean petrolparkBadgeCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean obscureModsCheck = SMSNConfigDefault.obscureModsCheck;
-    public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
-    public boolean botaniaContributorCheck = SMSNConfigDefault.botaniaContributorCheck;
+    public boolean obscureModsCheck = false;
+    public boolean supplementariesCreditsCheck = false;
+    public boolean botaniaContributorCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
+    public boolean bagusLibSupportersCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean enigmaticLegacyUpdateCheck = SMSNConfigDefault.enigmaticLegacyUpdateCheck;
+    public boolean enigmaticLegacyUpdateCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean enigmaticLegacyFetchDevotedBelievers = SMSNConfigDefault.enigmaticLegacyFetchDevotedBelievers;
+    public boolean enigmaticLegacyFetchDevotedBelievers = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
+    public boolean placeboTrails = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean placeboWings = SMSNConfigDefault.placeboWings;
+    public boolean placeboWings = false;
     @LoaderSpecific(LoaderType.FABRIC)
-    public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
-    public boolean adAstraStation = SMSNConfigDefault.adAstraStation;
-    public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
+    public boolean irisUpdateCheck = false;
+    public boolean adAstraStation = false;
+    public boolean exposureGoldenCameraSkin = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
-    public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
-    public boolean mruApi = SMSNConfigDefault.mruApi;
+    public boolean titaniumReward = false;
+    public boolean ribbitsSupporterHat = false;
+    public boolean mruApi = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
+    public boolean projecteUUIDCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean baCheckUpdate = SMSNConfigDefault.baCheckUpdate;
+    public boolean baCheckUpdate = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
+    public boolean hexereiSupporter = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean voidscapeDonator = SMSNConfigDefault.voidscapeDonator;
-    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
+    public boolean voidscapeDonator = false;
+    public boolean tenshilibPatreon = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
+    public boolean additionalStructuresSupporterCheck = false;
 
     @Category("qol")
     @RequiresRestart
     @LoaderSpecific(LoaderType.FORGE)
-    public QuarkCelebration quarkCelebration = SMSNConfigDefault.quarkCelebration;
+    public QuarkCelebration quarkCelebration = QuarkCelebration.HideLGBTQIA;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean citadelAprilFoolsContent = SMSNConfigDefault.citadelAprilFoolsContent;
+    public boolean citadelAprilFoolsContent = false;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+    public boolean immersiveCavesDiscordMessage = false;
+
+    @MixinList(@Category("mixins"))
+    public Set<String> disabledMixins = new HashSet<>();
 
     @SneakyThrows
     public static SMSNConfig load() {
-        if (!CONFIG_FILE.exists() && OLD_CONFIG_FILE.exists())
-            Files.move(OLD_CONFIG_FILE.toPath(), CONFIG_FILE.toPath());
         if (CONFIG_FILE.exists()) return SMSNConfig.load(SMSNConfig.class);
         final var defaultConfig = new SMSNConfig();
         defaultConfig.save();
