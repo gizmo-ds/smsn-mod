@@ -12,6 +12,5 @@ public final class SMSN {
     public static SMSNConfig CONFIG = new SMSNConfig();
 
     public static void init() {
-        CONFIG = SMSNConfig.load();
     }
 }

@@ -1,5 +1,6 @@
 package dev.aika.smsn;
 
+import dev.aika.smsn.config.SMSNConfig;
 import dev.aika.smsn.mixin.MixinPlatform;
 import dev.aika.smsn.mixin.ModMixinInfo;
 import dev.aika.smsn.mixin.ModMixinManager;
@@ -19,6 +20,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
+        SMSN.CONFIG = SMSNConfig.load();
         MixinPlatform.register();
     }
 
@@ -30,7 +32,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         final ModMixinInfo info = ModMixinManager.getByMixinClass(mixinClassName).orElse(null);
-        if (info != null) return info.isModLoaded();
+        if (info != null) return info.shouldApply(mixinClassName);
 
         log.warn(marker, "Unknown mixin class: {}", mixinClassName);
         return false;

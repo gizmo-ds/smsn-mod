@@ -1,5 +1,6 @@
 package dev.aika.smsn.mixin;
 
+import dev.aika.smsn.SMSN;
 import dev.aika.smsn.SMSNPlatform;
 import lombok.Getter;
 import org.intellij.lang.annotations.Language;
@@ -32,5 +33,9 @@ public class ModMixinInfo implements Comparable<ModMixinInfo> {
         else if (modid.hashCode() == o.modid.hashCode())
             return 0;
         return 1;
+    }
+
+    public boolean shouldApply(String mixinClassName) {
+        return isModLoaded && !SMSN.CONFIG.disabledMixins.contains(mixinClassName);
     }
 }
