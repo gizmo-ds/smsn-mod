@@ -27,8 +27,7 @@ gradle-app.setting
 
 .architectury-transformer
 
-.idea/
+.idea/*
+!.idea/dictionaries
 .env
 mods/
-**/logs/*.log
-**/logs/*.log.gz

@@ -1,8 +1,14 @@
 pluginManagement {
     repositories {
-        maven { url = uri("https://maven.fabricmc.net/") }
-        maven { url = uri("https://maven.architectury.dev/") }
-        maven { url = uri("https://files.minecraftforge.net/maven/") }
+        maven("https://maven.fabricmc.net/")
+        maven("https://maven.architectury.dev/")
+        maven("https://files.minecraftforge.net/maven/")
+        maven("https://maven.firstdark.dev/releases") {
+            content {
+                includeGroup("com.hypherionmc.modutils")
+                includeGroup("com.hypherionmc.modutils.modpublisher")
+            }
+        }
         gradlePluginPortal()
     }
 }

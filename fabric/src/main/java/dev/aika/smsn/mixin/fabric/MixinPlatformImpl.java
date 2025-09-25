@@ -3,7 +3,7 @@ package dev.aika.smsn.mixin.fabric;
 import dev.aika.smsn.mixin.ModMixinInfo;
 import dev.aika.smsn.mixin.ModMixinManager;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class MixinPlatformImpl {
     public static void register() {
         ModMixinManager.addInfo(

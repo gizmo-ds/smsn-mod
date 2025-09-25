@@ -3,7 +3,7 @@ package dev.aika.smsn.mixin.forge;
 import dev.aika.smsn.mixin.ModMixinInfo;
 import dev.aika.smsn.mixin.ModMixinManager;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class MixinPlatformImpl {
     public static void register() {
         ModMixinManager.addInfo(
@@ -22,9 +22,6 @@ public class MixinPlatformImpl {
                 ModMixinInfo.create("citadel",
                         "dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin",
                         "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin"
-                ),
-                ModMixinInfo.create("blue_archivescraft",
-                        "dev.aika.smsn.forge.mixin.ba.BlueArchivescraftModMixin"
                 ),
                 ModMixinInfo.create("bagus_lib",
                         "dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin"
