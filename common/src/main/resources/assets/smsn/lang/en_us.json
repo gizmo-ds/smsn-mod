@@ -74,7 +74,7 @@
   "config.smsn.general.voidscapeDonator": "Voidscape donator request",
   "config.smsn.general.tenshilibPatreon": "TenshiLib Patreon check",
   "config.smsn.general.additionalStructuresSupporterCheck": "Additional Structures supporters check",
-  "config.smsn.general.createTramAdditionsTTL": "Create Tram Additions TTL",
+  "config.smsn.general.createTramAdditionsTTS": "Create Tram Additions TTS",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.citadelAprilFoolsContent": "Citadel April Fools Content",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message",

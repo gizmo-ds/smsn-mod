@@ -59,7 +59,7 @@ public class SMSNConfig extends ModConfig {
     public boolean tenshilibPatreon = false;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean additionalStructuresSupporterCheck = false;
-    public boolean createTramAdditionsTTL = true;
+    public boolean createTramAdditionsTTS = true;
 
     @Category("qol")
     @RequiresRestart

@@ -16,7 +16,7 @@ public abstract class WorldTickMixin {
     )
     @SuppressWarnings("SpellCheckingInspection")
     private static void onWorldTick(MinecraftServer server, CallbackInfo ci) {
-        if (SMSN.CONFIG.isCreateTramAdditionsTTL()) return;
+        if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();
     }
 }

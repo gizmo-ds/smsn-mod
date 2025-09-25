@@ -22,7 +22,7 @@ public abstract class TramAdditionsMixin {
     )
     @SuppressWarnings("SpellCheckingInspection")
     private static void init(MinecraftServer server, CallbackInfo ci) {
-        if (SMSN.CONFIG.isCreateTramAdditionsTTL()) return;
+        if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();
         jsonMapStorage.load(server.overworld());
     }
@@ -34,7 +34,7 @@ public abstract class TramAdditionsMixin {
     )
     @SuppressWarnings("SpellCheckingInspection")
     private static void close(MinecraftServer server, CallbackInfo ci) {
-        if (SMSN.CONFIG.isCreateTramAdditionsTTL()) return;
+        if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();
         jsonMapStorage.save();
     }
