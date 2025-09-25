@@ -53,8 +53,6 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.FORGE)
     public boolean projecteUUIDCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean baCheckUpdate = false;
-    @LoaderSpecific(LoaderType.FORGE)
     public boolean hexereiSupporter = false;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean voidscapeDonator = false;

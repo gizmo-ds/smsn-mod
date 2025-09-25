@@ -71,12 +71,11 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Forge_1.20") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
 - [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request;
-- [Blue Archives Craft](https://www.mcmod.cn/class/20585.html "mc1.20.1-2.1.0") `蔚蓝档案工艺` Blocks update checks
-  requests;
 - [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei "0.4.2.1") `魔法巫师` Blocks supporter requests;
 - [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "1.5.348") `虚空工艺` Blocks donator requests;
 - [Additional Structures](https://modrinth.com/mod/additional-structures "4.1.2") `失落废墟` Blocks supporter requests;
-- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon checks requests.
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon checks requests;
+- [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTL requests.
 
 **Fabric**
 
@@ -97,7 +96,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Fabric_1.20") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
-- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon checks requests.
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon checks requests;
+- [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTL requests.
 
 ## F.A.Q
 
