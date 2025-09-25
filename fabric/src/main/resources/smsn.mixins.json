@@ -11,6 +11,8 @@
     "ad_astra.StationLoaderMixin",
     "aetherteam.UserData$ServerMixin",
     "botania.ContributorListMixin",
+    "create_tram_additions.TramAdditionsMixin",
+    "create_tram_additions.WorldTickMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "imb11.mru.APIMixin",

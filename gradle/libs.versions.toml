@@ -52,6 +52,7 @@ fabric-exposure = { version = "O4Fow0Po", module = "maven.modrinth:exposure" } #
 fabric-adastra = { version = "MxqFxL9C", module = "maven.modrinth:ad-astra" } # 1.15.18
 fabric-nitrogen = { version = "1.20.1-1.0.15-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
 fabric-tenshilib = { version = "5240454", module = "curse.maven:tenshilib-fabric-552662" } # 1.7.6
+fabric-createtramadditions = { version = "Szc6mYko", module = "maven.modrinth:create-tram-additions" } # 1.6
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
@@ -80,3 +81,4 @@ forge-hexerei = { version = "hR4PQb6h", module = "maven.modrinth:hexerei" } # 0.
 forge-voidscape = { version = "5020417", module = "curse.maven:voidscape-251730" } # 1.5.348
 forge-tenshilib = { version = "4819252", module = "curse.maven:tenshilib-312040" } # 1.7.2
 forge-additionalstructures = { version = "OqEwjVmd", module = "maven.modrinth:additional-structures" } # 4.1.2
+forge-createtramadditions = { version = "CBLu5Isq", module = "maven.modrinth:create-tram-additions" } # 1.6

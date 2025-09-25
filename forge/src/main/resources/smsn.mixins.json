@@ -19,6 +19,8 @@
     "alex.CitadelWebHelperMixin",
     "bagus_lib.TierHelperMixin",
     "botania.ContributorListMixin",
+    "create_tram_additions.TramAdditionsMixin",
+    "create_tram_additions.WorldTickMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",
     "enigmatic_legacy.EnigmaticUpdateHandlerMixin",
     "exposure.GildedMixin",

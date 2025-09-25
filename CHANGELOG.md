@@ -3,10 +3,14 @@
 **Forge**
 
 - Add disable Mixins features
+- Remove [Blue Archives Craft](https://www.mcmod.cn/class/20585.html) mixins (this mod has no public download link, and
+  I no longer have the energy to support it.)
+- Add Mixins for [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions)
 
 **Fabric**
 
 - Add disable Mixins features
+- Add Mixins for [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions)
 
 ### 1.2.10
 

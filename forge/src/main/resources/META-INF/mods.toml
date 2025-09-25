@@ -11,7 +11,7 @@ authors = "Gizmo"
 description = '''
 Block common mods from connecting to the internet without affecting the mods' functionality, preventing slow loading or game crashes caused by network issues.
 '''
-logoFile = "smsn-icon.png"
+logoFile = "smsn_logo.png"
 displayURL = "https://github.com/gizmo-ds/smsn-mod"
 
 [[dependencies.smsn]]

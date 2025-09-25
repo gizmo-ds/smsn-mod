@@ -32,6 +32,10 @@ public class MixinPlatformImpl {
                 ModMixinInfo.create("botania",
                         "dev.aika.smsn.forge.mixin.botania.ContributorListMixin"
                 ),
+                ModMixinInfo.create("tram_additions",
+                        "dev.aika.smsn.forge.mixin.create_tram_additions.WorldTickMixin",
+                        "dev.aika.smsn.forge.mixin.create_tram_additions.TramAdditionsMixin"
+                ),
                 ModMixinInfo.create("enigmaticlegacy",
                         "dev.aika.smsn.forge.mixin.enigmatic_legacy.DevotedBelieversHandlerMixin",
                         "dev.aika.smsn.forge.mixin.enigmatic_legacy.EnigmaticUpdateHandlerMixin"

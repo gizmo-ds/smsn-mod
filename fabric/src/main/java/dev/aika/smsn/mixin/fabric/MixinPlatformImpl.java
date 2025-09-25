@@ -16,6 +16,10 @@ public class MixinPlatformImpl {
                 ModMixinInfo.create("botania",
                         "dev.aika.smsn.fabric.mixin.botania.ContributorListMixin"
                 ),
+                ModMixinInfo.create("tram_additions",
+                        "dev.aika.smsn.fabric.mixin.create_tram_additions.WorldTickMixin",
+                        "dev.aika.smsn.fabric.mixin.create_tram_additions.TramAdditionsMixin"
+                ),
                 ModMixinInfo.create("exposure",
                         "dev.aika.smsn.fabric.mixin.exposure.GildedMixin",
                         "dev.aika.smsn.fabric.mixin.exposure.PatreonMixin"

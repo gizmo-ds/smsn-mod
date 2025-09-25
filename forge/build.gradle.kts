@@ -104,6 +104,8 @@ dependencies {
     modImplementation(libs.forge.tenshilib)
     // AdditionalStructures
     modImplementation(libs.forge.additionalstructures)
+    // Create Tram Additions
+    modCompileOnly(libs.forge.createtramadditions)
 }
 
 tasks {

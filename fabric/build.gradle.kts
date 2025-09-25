@@ -54,6 +54,8 @@ dependencies {
     modImplementation(libs.fabric.nitrogen)
     // TenshiLib
     modImplementation(libs.fabric.tenshilib)
+    // Create Tram Additions
+    modCompileOnly(libs.fabric.createtramadditions)
 }
 
 tasks {
