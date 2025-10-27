@@ -23,6 +23,9 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin",
                         "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin"
                 ),
+                ModMixinInfo.create("ars_nouveau",
+                        "dev.aika.smsn.forge.mixin.arsnouveau.RewardsMixin"
+                ),
                 ModMixinInfo.create("bagus_lib",
                         "dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin"
                 ),

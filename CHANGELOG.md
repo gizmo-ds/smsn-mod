@@ -1,3 +1,9 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+
 ### 1.3.1
 
 > 1.3.0 ➡️ 1.3.1 fix typo

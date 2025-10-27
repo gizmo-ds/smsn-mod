@@ -11,7 +11,7 @@ import lombok.SneakyThrows;
 import java.util.*;
 
 @Getter
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class SMSNConfig extends ModConfig {
     //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
     //NOTE: Not adding the @Category annotation means using the "general" category.
@@ -60,6 +60,8 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.FORGE)
     public boolean additionalStructuresSupporterCheck = false;
     public boolean createTramAdditionsTTS = true;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean arsnouveauRewards = false;
 
     @Category("qol")
     @RequiresRestart

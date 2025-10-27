@@ -82,3 +82,4 @@ forge-voidscape = { version = "5020417", module = "curse.maven:voidscape-251730"
 forge-tenshilib = { version = "4819252", module = "curse.maven:tenshilib-312040" } # 1.7.2
 forge-additionalstructures = { version = "OqEwjVmd", module = "maven.modrinth:additional-structures" } # 4.1.2
 forge-createtramadditions = { version = "CBLu5Isq", module = "maven.modrinth:create-tram-additions" } # 1.6
+forge-arsnouveau = { version = "qtW93rN7", module = "maven.modrinth:ars-nouveau" } # 4.9.0

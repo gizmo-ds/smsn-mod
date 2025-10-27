@@ -17,6 +17,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
     "botania.ContributorListMixin",
     "create_tram_additions.TramAdditionsMixin",

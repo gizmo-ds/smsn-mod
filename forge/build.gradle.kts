@@ -106,6 +106,8 @@ dependencies {
     modImplementation(libs.forge.additionalstructures)
     // Create Tram Additions
     modCompileOnly(libs.forge.createtramadditions)
+    // Ars Nouveau
+    modCompileOnly(libs.forge.arsnouveau)
 }
 
 tasks {
