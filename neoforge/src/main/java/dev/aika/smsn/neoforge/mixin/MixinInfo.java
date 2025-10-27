@@ -11,6 +11,7 @@ public class MixinInfo {
                 "dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin", "actuallyadditions",
                 "dev.aika.smsn.neoforge.mixin.additionalstructures.EventsMixin", "additionalstructures",
                 "dev.aika.smsn.neoforge.mixin.aetherteam.UserData$ServerMixin", "nitrogen",
+                "dev.aika.smsn.neoforge.mixin.arsnouveau.RewardsMixin", "ars_nouveau",
                 "dev.aika.smsn.neoforge.mixin.bagus_lib.TierHelperMixin", "bagus_lib",
                 "dev.aika.smsn.neoforge.mixin.blueprint.RewardHandlerMixin", "blueprint",
                 "dev.aika.smsn.neoforge.mixin.exposure.GildedMixin", "exposure",

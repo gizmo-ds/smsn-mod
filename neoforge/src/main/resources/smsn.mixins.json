@@ -12,6 +12,7 @@
     "actuallyadditions.ThreadSpecialFetcherMixin",
     "additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
+    "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",

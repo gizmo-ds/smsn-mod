@@ -109,6 +109,8 @@ dependencies {
     modImplementation(libs.neoforge.additionalstructures)
     // TenshiLib
     modImplementation(libs.neoforge.tenshilib)
+    // Ars Nouveau
+    modCompileOnly(libs.neoforge.arsnouveau)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))

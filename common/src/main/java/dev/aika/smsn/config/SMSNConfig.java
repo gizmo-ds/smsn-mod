@@ -9,7 +9,7 @@ import lombok.SneakyThrows;
 import java.nio.file.Files;
 
 @Getter
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class SMSNConfig extends ModConfig {
     public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
     @LoaderSpecific(LoaderType.NEOFORGE)
@@ -42,6 +42,8 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
     public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean arsnouveauRewards = false;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)

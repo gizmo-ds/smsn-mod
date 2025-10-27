@@ -71,3 +71,4 @@ neoforge-projecte = { version = "6323142", module = "curse.maven:projecte-226410
 neoforge-hexerei = { version = "RrbUdVdM", module = "maven.modrinth:hexerei" } # 0.5.0.1
 neoforge-additionalstructures = { version = "2AMB4SVA", module = "maven.modrinth:additional-structures" } # 6.0.1
 neoforge-tenshilib = { version = "5950962", module = "curse.maven:tenshilib-312040" } # 1.8.2
+neoforge-arsnouveau = { version = "XbkLdBPV", module = "maven.modrinth:ars-nouveau" } # 5.9.4

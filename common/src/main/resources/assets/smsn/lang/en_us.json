@@ -33,6 +33,7 @@
   "config.smsn.general.hexereiSupporter": "Hexerei supporter request",
   "config.smsn.general.additionalStructuresSupporterCheck": "Additional Structures supporters check",
   "config.smsn.general.tenshilibPatreon": "TenshiLib Patreon check",
+  "config.smsn.general.arsnouveauRewards": "Ars Nouveau reward request",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"
 }

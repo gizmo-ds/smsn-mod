@@ -1,3 +1,9 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+
 ### 1.2.10
 
 **NeoForge**
