@@ -1,12 +1,10 @@
-package dev.aika.smsn;
+package dev.aika.smsn.mixin;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 
-import java.nio.file.Path;
-
-public class SMSNPlatform {
+public class MixinPlatform {
     @ExpectPlatform
-    public static Path getConfigDir() {
+    public static void register() {
         throw new AssertionError();
     }
 }

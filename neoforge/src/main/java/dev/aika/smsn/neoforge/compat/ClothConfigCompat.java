@@ -1,15 +1,19 @@
 package dev.aika.smsn.neoforge.compat;
 
 import dev.aika.smsn.SMSN;
+import dev.aika.smsn.api.ModPlatform;
 import dev.aika.smsn.client.gui.MissingClothConfigScreen;
-import dev.aika.smsn.neoforge.SMSNPlatformImpl;
+import dev.aika.smsn.compat.ClothConfigScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.neoforged.fml.ModContainer;
 
 public class ClothConfigCompat {
     public static Screen setup(ModContainer ignoredModContainer, Screen parent) {
-        if (SMSNPlatformImpl.isModLoaded("cloth_config"))
-            return dev.aika.smsn.compat.ClothConfigCompat.ConfigScreen(SMSN.CONFIG, parent);
-        else return new MissingClothConfigScreen(parent);
+        return ModPlatform.isModLoaded("cloth_config") ?
+                ClothConfigScreen.builder()
+                        .setParent(parent).setModId(SMSN.MOD_ID)
+                        .setConfig(SMSN.CONFIG).setMixinManager(SMSN.MixinManager)
+                        .build()
+                : new MissingClothConfigScreen(parent);
     }
 }

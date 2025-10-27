@@ -3,6 +3,11 @@
 **NeoForge**
 
 - Add mixins for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+- Refactor Config API and add Mixins category
+
+**Fabric**
+
+- Refactor Config API and add Mixins category
 
 ### 1.2.10
 

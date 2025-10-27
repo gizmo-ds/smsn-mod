@@ -2,11 +2,14 @@ package dev.aika.smsn.config;
 
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
+import dev.aika.smsn.annotation.MixinList;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.nio.file.Files;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @SuppressWarnings({"unused", "SpellCheckingInspection"})
@@ -48,6 +51,9 @@ public class SMSNConfig extends ModConfig {
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+
+    @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")
+    public Set<String> disabledMixins = new HashSet<>();
 
     @SneakyThrows
     public static SMSNConfig load() {
