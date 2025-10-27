@@ -65,7 +65,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request;
 - [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei "0.5.0.1") `魔法巫师` Blocks supporter requests;
 - [Additional Structures](https://modrinth.com/mod/additional-structures "6.0.1") `失落废墟` Blocks supporter requests;
-- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.8.2") Blocks patreon checks requests.
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.8.2") Blocks patreon checks requests;
+- [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "5.9.4") Blocks reward requests.
 
 **Fabric**
 
