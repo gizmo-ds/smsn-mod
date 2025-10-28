@@ -76,8 +76,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Additional Structures](https://modrinth.com/mod/additional-structures "4.1.2") `失落废墟` Blocks supporter requests;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon checks requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
-- [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "4.9.0") Blocks reward requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") Blocks mod info requests.
+- [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "4.9.0") `新生魔艺` Blocks reward requests;
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门` Blocks mod info requests.
 
 **Fabric**
 
@@ -100,7 +100,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon checks requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") Blocks mod info requests.
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks mod info requests.
 
 ## F.A.Q
 
