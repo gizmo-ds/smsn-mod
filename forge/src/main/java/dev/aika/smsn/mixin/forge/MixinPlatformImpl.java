@@ -59,7 +59,7 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("immersivecaves",
                         "dev.aika.smsn.forge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin"
                 ),
-                new ModMixinInfo("immersive_portals_core",
+                new ModMixinInfo("imm_ptl_core",
                         "dev.aika.smsn.forge.mixin.immersiveportals.IPModInfoCheckingMixin"
                 ),
                 new ModMixinInfo("inventoryprofilesnext",
