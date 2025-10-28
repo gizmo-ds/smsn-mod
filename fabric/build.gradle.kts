@@ -4,25 +4,14 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
-apply(plugin = "com.modrinth.minotaur")
-apply(plugin = "net.darkhax.curseforgegradle")
+apply(plugin = "com.hypherionmc.modutils.modpublisher")
 
-architectury {
-    platformSetupLoomIde()
-    fabric()
-}
+architectury { fabric() }
 
-val common: Configuration by configurations.creating
-val shadowBundle: Configuration by configurations.creating
+val shadowBundle: Configuration by configurations.getting
 val developmentFabric: Configuration by configurations.getting
-
 configurations {
-    compileOnly.configure { extendsFrom(common) }
-    runtimeOnly.configure { extendsFrom(common) }
-    developmentFabric.extendsFrom(common)
-
-    shadowBundle.isCanBeResolved = true
-    shadowBundle.isCanBeConsumed = false
+    developmentFabric.extendsFrom(common.get())
 }
 
 repositories {
@@ -64,21 +53,13 @@ dependencies {
     modImplementation(libs.fabric.tenshilib)
     // Immersive Portals
     modCompileOnly(libs.fabric.immersiveportals)
-
-    common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
-    shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))
 }
 
 tasks {
     processResources {
         inputs.property("version", project.version)
 
-        filesMatching("fabric.mod.json") {
-            expand("version" to project.version)
-        }
-        from(rootProject.file("assets/icon.png")) {
-            rename { "assets/${mod.id}/icon.png" }
-        }
+        filesMatching("fabric.mod.json") { expand("version" to project.version) }
     }
 
     shadowJar {
@@ -93,15 +74,5 @@ tasks {
         dependsOn(shadowJar)
     }
 
-    if (mod.modrinth_id.isNotEmpty() && (ext.get("modrinth_token") as String).isNotEmpty())
-        modrinth { uploadFile.set(remapJar.flatMap { it.archiveFile }) }
-    if (mod.curseforge_id.isNotEmpty() && (ext.get("curseforge_token") as String).isNotEmpty())
-        curseforge {
-            val mainFile = upload(mod.curseforge_id, remapJar.flatMap { it.archiveFile })
-            mainFile.releaseType = mod.release_type
-            mainFile.gameVersions.addAll(mod.game_version_supports)
-            mainFile.addModLoader(project.name)
-            mainFile.changelog = ext.get("changelog")
-            mainFile.addOptional("cloth-config")
-        }
+    publisher { artifact.set(remapJar) }
 }

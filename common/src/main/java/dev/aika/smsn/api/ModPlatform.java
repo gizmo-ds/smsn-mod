@@ -3,6 +3,7 @@ package dev.aika.smsn.api;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import lombok.experimental.UtilityClass;
 
+@SuppressWarnings("unused")
 @UtilityClass
 public class ModPlatform {
     @ExpectPlatform

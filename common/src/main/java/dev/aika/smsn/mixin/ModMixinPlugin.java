@@ -17,7 +17,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-        MixinPlatform.register();
+        SMSN.preInit();
     }
 
     @Override

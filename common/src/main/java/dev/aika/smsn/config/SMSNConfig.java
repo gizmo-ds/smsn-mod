@@ -14,44 +14,44 @@ import java.util.Set;
 @Getter
 @SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class SMSNConfig extends ModConfig {
-    public boolean aetherMoaSkinsFeature = SMSNConfigDefault.aetherMoaSkinsFeature;
+    public boolean aetherMoaSkinsFeature = true;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean immersiveEngineeringSpecialRevolvers = SMSNConfigDefault.immersiveEngineeringSpecialRevolvers;
-    public boolean ipnUpdateCheckAndUserTracking = SMSNConfigDefault.ipnUpdateCheckAndUserTracking;
+    public boolean immersiveEngineeringSpecialRevolvers = true;
+    public boolean ipnUpdateCheckAndUserTracking = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean petrolparkBadgeCheck = SMSNConfigDefault.petrolparkBadgeCheck;
-    public boolean supplementariesCreditsCheck = SMSNConfigDefault.supplementariesCreditsCheck;
+    public boolean petrolparkBadgeCheck = false;
+    public boolean supplementariesCreditsCheck = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean bagusLibSupportersCheck = SMSNConfigDefault.bagusLibSupportersCheck;
+    public boolean bagusLibSupportersCheck = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean placeboTrails = SMSNConfigDefault.placeboTrails;
+    public boolean placeboTrails = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean placeboWings = SMSNConfigDefault.placeboWings;
+    public boolean placeboWings = false;
     @LoaderSpecific(LoaderType.FABRIC)
-    public boolean irisUpdateCheck = SMSNConfigDefault.irisUpdateCheck;
+    public boolean irisUpdateCheck = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean actuallyAdditionsSpecialPeopleStuff = SMSNConfigDefault.actuallyAdditionsSpecialPeopleStuff;
-    public boolean exposureGoldenCameraSkin = SMSNConfigDefault.exposureGoldenCameraSkin;
+    public boolean actuallyAdditionsSpecialPeopleStuff = false;
+    public boolean exposureGoldenCameraSkin = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean titaniumReward = SMSNConfigDefault.titaniumReward;
-    public boolean ribbitsSupporterHat = SMSNConfigDefault.ribbitsSupporterHat;
-    public boolean xaeroMapVersionCheck = SMSNConfigDefault.xaeroMapVersionCheck;
-    public boolean xaeroMapPatreonCheck = SMSNConfigDefault.xaeroMapPatreonCheck;
-    public boolean mruApi = SMSNConfigDefault.mruApi;
+    public boolean titaniumReward = false;
+    public boolean ribbitsSupporterHat = false;
+    public boolean xaeroMapVersionCheck = true;
+    public boolean xaeroMapPatreonCheck = false;
+    public boolean mruApi = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean projecteUUIDCheck = SMSNConfigDefault.projecteUUIDCheck;
+    public boolean projecteUUIDCheck = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean hexereiSupporter = SMSNConfigDefault.hexereiSupporter;
+    public boolean hexereiSupporter = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean additionalStructuresSupporterCheck = SMSNConfigDefault.additionalStructuresSupporterCheck;
-    public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
+    public boolean additionalStructuresSupporterCheck = false;
+    public boolean tenshilibPatreon = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean arsnouveauRewards = false;
     public boolean immersiveportalsModInfoChecking = false;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean immersiveCavesDiscordMessage = SMSNConfigDefault.immersiveCavesDiscordMessage;
+    public boolean immersiveCavesDiscordMessage = false;
 
     @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")
     public Set<String> disabledMixins = new HashSet<>();
