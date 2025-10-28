@@ -1,9 +1,6 @@
-package dev.aika.smsn;
+package dev.aika.smsn.mixin;
 
-import dev.aika.smsn.config.SMSNConfig;
-import dev.aika.smsn.mixin.MixinPlatform;
-import dev.aika.smsn.mixin.ModMixinInfo;
-import dev.aika.smsn.mixin.ModMixinManager;
+import dev.aika.smsn.SMSN;
 import org.objectweb.asm.tree.ClassNode;
 import org.slf4j.Logger;
 import org.slf4j.Marker;
@@ -20,8 +17,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-        SMSN.CONFIG = SMSNConfig.load();
-        MixinPlatform.register();
+        SMSN.preInit();
     }
 
     @Override
@@ -31,7 +27,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        final ModMixinInfo info = ModMixinManager.getByMixinClass(mixinClassName).orElse(null);
+        final ModMixinInfo info = SMSN.MixinManager.getByMixinClass(mixinClassName).orElse(null);
         if (info != null) return info.shouldApply(mixinClassName);
 
         log.warn(marker, "Unknown mixin class: {}", mixinClassName);

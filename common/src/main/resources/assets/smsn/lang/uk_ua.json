@@ -5,7 +5,7 @@
   "gui.smsn.missing_cloth_config.message": "Вам потрібно встановити мод Cloth Config, щоб використовувати функцію налаштування в грі.\nНатисніть кнопку нижче, щоб перейти на сторінку завантаження",
   "gui.smsn.missing_cloth_config.modrinth_download": "Modrinth",
   "gui.smsn.missing_cloth_config.curseforge_download": "CurseForge",
-  "config.smsn.title": "Налаштування Save My Shit Network",
+  "config.smsn.@title": "Налаштування Save My Shit Network",
   "config.smsn.sponsor.description": "❤ Подобається %1$s? Підтримайте автора на %2$s! ❤",
   "config.smsn.sponsor.description.afdian": "AFDIAN",
   "config.smsn.@switch.true": "§aТак",

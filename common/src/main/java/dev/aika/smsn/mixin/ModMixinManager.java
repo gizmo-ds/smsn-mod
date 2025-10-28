@@ -1,25 +1,20 @@
 package dev.aika.smsn.mixin;
 
+import lombok.Getter;
+
 import java.util.*;
 
 public class ModMixinManager {
-    private static final ModMixinManager INSTANCE = new ModMixinManager();
+    @Getter
     private final Set<ModMixinInfo> mixinInfos = new LinkedHashSet<>();
 
-    private ModMixinManager() {
+    public void addInfo(ModMixinInfo... infos) {
+        Collections.addAll(mixinInfos, infos);
     }
 
-    public static void addInfo(ModMixinInfo... infos) {
-        Collections.addAll(INSTANCE.mixinInfos, infos);
-    }
-
-    public static Optional<ModMixinInfo> getByMixinClass(String mixinClassName) {
-        return INSTANCE.mixinInfos.stream()
+    public Optional<ModMixinInfo> getByMixinClass(String mixinClassName) {
+        return mixinInfos.stream()
                 .filter(info -> info.getMixinClasses().contains(mixinClassName))
                 .findFirst();
-    }
-
-    public static Set<ModMixinInfo> getMixinInfos() {
-        return INSTANCE.mixinInfos;
     }
 }

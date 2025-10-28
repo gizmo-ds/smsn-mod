@@ -9,6 +9,7 @@ import dev.aika.smsn.api.LoaderType;
 import dev.aika.smsn.client.gui.ComponentBuilder;
 import dev.aika.smsn.client.gui.ConfigMixinList;
 import dev.aika.smsn.config.ModConfig;
+import dev.aika.smsn.mixin.ModMixinManager;
 import dev.aika.smsn.utils.ComponentUtils;
 import lombok.Setter;
 import lombok.SneakyThrows;
@@ -36,14 +37,6 @@ public class ClothConfigScreen {
         return new ClothConfigScreenBuilder();
     }
 
-    public static Screen create(Screen parent) {
-        return builder()
-                .setModId(SMSN.MOD_ID)
-                .setConfig(SMSN.CONFIG)
-                .setParent(parent)
-                .build();
-    }
-
     @Accessors(chain = true)
     public static class ClothConfigScreenBuilder {
         private static final Marker marker = MarkerFactory.getMarker("ClothConfigScreenBuilder");
@@ -56,6 +49,8 @@ public class ClothConfigScreen {
         private ModConfig config;
         @Setter
         private Class<?> defaultConfigClass;
+        @Setter
+        private ModMixinManager mixinManager;
 
         private final List<Runnable> saveRunnables = new ArrayList<>();
         private final ConfigBuilder builder = ConfigBuilder.create();
@@ -90,7 +85,11 @@ public class ClothConfigScreen {
             final ConfigCategory configCategory = getConfigCategory(categoryKey);
 
             if (field.getAnnotation(MixinList.class) != null) {
-                final var mixinList = new ConfigMixinList(componentBuilder, field, configCategory);
+                if (mixinManager == null) {
+                    log.warn(marker, "ModMixinManager not set");
+                    return;
+                }
+                final var mixinList = new ConfigMixinList(modId, mixinManager, componentBuilder, field, configCategory);
                 saveRunnables.add(mixinList::save);
                 mixinList.create();
                 return;

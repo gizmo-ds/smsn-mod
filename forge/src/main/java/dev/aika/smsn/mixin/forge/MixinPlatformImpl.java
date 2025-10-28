@@ -1,105 +1,108 @@
 package dev.aika.smsn.mixin.forge;
 
+import dev.aika.smsn.SMSN;
 import dev.aika.smsn.mixin.ModMixinInfo;
-import dev.aika.smsn.mixin.ModMixinManager;
 
 @SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class MixinPlatformImpl {
     public static void register() {
-        ModMixinManager.addInfo(
-                ModMixinInfo.create("ad_astra",
+        SMSN.MixinManager.addInfo(
+                new ModMixinInfo("ad_astra",
                         "dev.aika.smsn.forge.mixin.ad_astra.StationLoaderMixin"
                 ),
-                ModMixinInfo.create("additionalstructures",
+                new ModMixinInfo("additionalstructures",
                         "dev.aika.smsn.forge.mixin.additionalstructures.EventsMixin"
                 ),
-                ModMixinInfo.create("nitrogen",
+                new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.forge.mixin.aetherteam.UserData$ServerMixin"
                 ),
-                ModMixinInfo.create("alexscaves",
+                new ModMixinInfo("alexscaves",
                         "dev.aika.smsn.forge.mixin.alex.AlexsCavesWebHelperMixin"
                 ),
-                ModMixinInfo.create("citadel",
+                new ModMixinInfo("citadel",
                         "dev.aika.smsn.forge.mixin.alex.CitadelConstantsMixin",
                         "dev.aika.smsn.forge.mixin.alex.CitadelWebHelperMixin"
                 ),
-                ModMixinInfo.create("ars_nouveau",
+                new ModMixinInfo("ars_nouveau",
                         "dev.aika.smsn.forge.mixin.arsnouveau.RewardsMixin"
                 ),
-                ModMixinInfo.create("bagus_lib",
+                new ModMixinInfo("bagus_lib",
                         "dev.aika.smsn.forge.mixin.bagus_lib.TierHelperMixin"
                 ),
-                ModMixinInfo.create("blueprint",
+                new ModMixinInfo("blueprint",
                         "dev.aika.smsn.forge.mixin.blueprint.RewardHandlerMixin"
                 ),
-                ModMixinInfo.create("botania",
+                new ModMixinInfo("botania",
                         "dev.aika.smsn.forge.mixin.botania.ContributorListMixin"
                 ),
-                ModMixinInfo.create("tram_additions",
+                new ModMixinInfo("tram_additions",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.WorldTickMixin",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.TramAdditionsMixin"
                 ),
-                ModMixinInfo.create("enigmaticlegacy",
+                new ModMixinInfo("enigmaticlegacy",
                         "dev.aika.smsn.forge.mixin.enigmatic_legacy.DevotedBelieversHandlerMixin",
                         "dev.aika.smsn.forge.mixin.enigmatic_legacy.EnigmaticUpdateHandlerMixin"
                 ),
-                ModMixinInfo.create("exposure",
+                new ModMixinInfo("exposure",
                         "dev.aika.smsn.forge.mixin.exposure.GildedMixin",
                         "dev.aika.smsn.forge.mixin.exposure.PatreonMixin"
                 ),
-                ModMixinInfo.create("hexerei",
+                new ModMixinInfo("hexerei",
                         "dev.aika.smsn.forge.mixin.hexerei.HexereiSupporterBenefitsMixin"
                 ),
-                ModMixinInfo.create("mru",
+                new ModMixinInfo("mru",
                         "dev.aika.smsn.forge.mixin.imb11.mru.APIMixin"
                 ),
-                ModMixinInfo.create("immersiveengineering",
+                new ModMixinInfo("immersiveengineering",
                         "dev.aika.smsn.forge.mixin.immersive_engineering.ImmersiveEngineeringMixin"
                 ),
-                ModMixinInfo.create("immersivecaves",
+                new ModMixinInfo("immersivecaves",
                         "dev.aika.smsn.forge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin"
                 ),
-                ModMixinInfo.create("inventoryprofilesnext",
+                new ModMixinInfo("immersive_portals_core",
+                        "dev.aika.smsn.forge.mixin.immersiveportals.IPModInfoCheckingMixin"
+                ),
+                new ModMixinInfo("inventoryprofilesnext",
                         "dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin"
                 ),
-                ModMixinInfo.create("obscure_api",
+                new ModMixinInfo("obscure_api",
                         "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin",
                         "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin$Mod"
                 ),
-                ModMixinInfo.create("petrolpark",
+                new ModMixinInfo("petrolpark",
                         "dev.aika.smsn.forge.mixin.petrolpark.BadgeHandlerMixin"
                 ),
-                ModMixinInfo.create("placebo",
+                new ModMixinInfo("placebo",
                         "dev.aika.smsn.forge.mixin.placebo.TrailsManagerMixin",
                         "dev.aika.smsn.forge.mixin.placebo.WingsManagerMixin"
                 ),
-                ModMixinInfo.create("projecte",
+                new ModMixinInfo("projecte",
                         "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin"
                 ),
-                ModMixinInfo.create("quark",
+                new ModMixinInfo("quark",
                         "dev.aika.smsn.forge.mixin.quark.ThreadContributorListLoaderMixin",
                         "dev.aika.smsn.forge.mixin.quark.QButtonMixin"
                 ),
-                ModMixinInfo.create("ribbits",
+                new ModMixinInfo("ribbits",
                         "dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin"
                 ),
-                ModMixinInfo.create("supplementaries",
+                new ModMixinInfo("supplementaries",
                         "dev.aika.smsn.forge.mixin.supplementaries.CreditsMixin"
                 ),
-                ModMixinInfo.create("tenshilib",
+                new ModMixinInfo("tenshilib",
                         "dev.aika.smsn.forge.mixin.tenshilib.PatreonDataManagerMixin"
                 ),
-                ModMixinInfo.create("titanium",
+                new ModMixinInfo("titanium",
                         "dev.aika.smsn.forge.mixin.titanium.RewardMixin"
                 ),
-                ModMixinInfo.create("voidscape",
+                new ModMixinInfo("voidscape",
                         "dev.aika.smsn.forge.mixin.voidscape.DonatorHandlerMixin"
                 ),
-                ModMixinInfo.create("xaerominimap",
+                new ModMixinInfo("xaerominimap",
                         "dev.aika.smsn.forge.mixin.xaero.minimap.InternetMixin",
                         "dev.aika.smsn.forge.mixin.xaero.minimap.PatreonMixin"
                 ),
-                ModMixinInfo.create("xaeroworldmap",
+                new ModMixinInfo("xaeroworldmap",
                         "dev.aika.smsn.forge.mixin.xaero.world_map.InternetMixin",
                         "dev.aika.smsn.forge.mixin.xaero.world_map.PatreonMixin"
                 )

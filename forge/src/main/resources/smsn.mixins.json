@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "dev.aika.smsn.forge.mixin",
-  "plugin": "dev.aika.smsn.ModMixinPlugin",
+  "plugin": "dev.aika.smsn.mixin.ModMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "client": [
@@ -30,6 +30,7 @@
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
+    "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",

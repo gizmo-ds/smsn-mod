@@ -62,6 +62,7 @@ public class SMSNConfig extends ModConfig {
     public boolean createTramAdditionsTTS = true;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean arsnouveauRewards = false;
+    public boolean immersiveportalsModInfoChecking = false;
 
     @Category("qol")
     @RequiresRestart
@@ -74,7 +75,7 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.FORGE)
     public boolean immersiveCavesDiscordMessage = false;
 
-    @MixinList(@Category("mixins"))
+    @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")
     public Set<String> disabledMixins = new HashSet<>();
 
     @SneakyThrows

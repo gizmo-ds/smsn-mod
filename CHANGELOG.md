@@ -3,6 +3,11 @@
 **Forge**
 
 - Add mixins for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+- Add mixins for [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge)
+
+**Fabric**
+
+- Add mixins for [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod)
 
 ### 1.3.1
 

@@ -56,6 +56,8 @@ dependencies {
     modImplementation(libs.fabric.tenshilib)
     // Create Tram Additions
     modCompileOnly(libs.fabric.createtramadditions)
+    // Immersive Portals
+    modCompileOnly(libs.fabric.immersiveportals) { exclude(group = "net.fabricmc.fabric-api") }
 }
 
 tasks {
@@ -77,7 +79,5 @@ tasks {
         dependsOn(shadowJar)
     }
 
-    publisher {
-        artifact.set(remapJar)
-    }
+    publisher { artifact.set(remapJar) }
 }

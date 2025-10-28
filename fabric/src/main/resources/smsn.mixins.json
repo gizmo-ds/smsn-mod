@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "dev.aika.smsn.fabric.mixin",
-  "plugin": "dev.aika.smsn.ModMixinPlugin",
+  "plugin": "dev.aika.smsn.mixin.ModMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "client": [
@@ -16,6 +16,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "imb11.mru.APIMixin",
+    "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "ribbits.SupportersJSONMixin",

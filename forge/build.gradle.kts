@@ -108,6 +108,8 @@ dependencies {
     modCompileOnly(libs.forge.createtramadditions)
     // Ars Nouveau
     modCompileOnly(libs.forge.arsnouveau)
+    // Immersive Portals
+    modCompileOnly(libs.forge.immersiveportals)
 }
 
 tasks {
@@ -129,7 +131,5 @@ tasks {
         dependsOn(shadowJar)
     }
 
-    publisher {
-        artifact.set(remapJar)
-    }
+    publisher { artifact.set(remapJar) }
 }
