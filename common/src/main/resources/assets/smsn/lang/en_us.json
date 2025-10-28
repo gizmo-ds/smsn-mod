@@ -35,6 +35,7 @@
   "smsn.mod.voidscape": "Voidscape",
   "smsn.mod.tram_additions": "Tram Additions",
   "smsn.mod.ars_nouveau": "Ars Nouveau",
+  "smsn.mod.immersive_portals_core": "Immersive Portals",
   "config.smsn.@title": "Save My Shit Network",
   "config.smsn.sponsor.description": "❤ Enjoy %1$s ? Support the author on %2$s ! ❤",
   "config.smsn.sponsor.description.afdian": "AFDIAN",
@@ -69,6 +70,7 @@
   "config.smsn.general.additionalStructuresSupporterCheck": "Additional Structures supporters check",
   "config.smsn.general.tenshilibPatreon": "TenshiLib Patreon check",
   "config.smsn.general.arsnouveauRewards": "Ars Nouveau reward request",
+  "config.smsn.general.immersiveportalsModInfoChecking": "Immersive Portals mod info request",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves discord message"
 }

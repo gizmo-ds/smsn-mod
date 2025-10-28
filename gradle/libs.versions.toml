@@ -49,6 +49,7 @@ fabric-ribbits = { version = "IrZMelXO", module = "maven.modrinth:ribbits" } # 4
 fabric-exposure = { version = "sgmPzE6v", module = "maven.modrinth:exposure" } # 1.9.5
 fabric-nitrogen = { version = "1.21.1-1.1.21-fabric", module = "com.aetherteam.nitrogen:nitrogen_internals" }
 fabric-tenshilib = { version = "6502385", module = "curse.maven:tenshilib-fabric-552662" } # 1.8.2.b
+fabric-immersiveportals = { version = "5946966", module = "curse.maven:immersive-portals-mod-332273" } # 6.0.6-mc1.21.1
 # NeoForge
 neoforge-xaeros-minimap = { version = "24.3.0_NeoForge_1.21", module = "maven.modrinth:xaeros-minimap" }
 neoforge-xaeros-worldmap = { version = "1.39.0_NeoForge_1.21", module = "maven.modrinth:xaeros-world-map" }
@@ -72,3 +73,4 @@ neoforge-hexerei = { version = "RrbUdVdM", module = "maven.modrinth:hexerei" } #
 neoforge-additionalstructures = { version = "2AMB4SVA", module = "maven.modrinth:additional-structures" } # 6.0.1
 neoforge-tenshilib = { version = "5950962", module = "curse.maven:tenshilib-312040" } # 1.8.2
 neoforge-arsnouveau = { version = "XbkLdBPV", module = "maven.modrinth:ars-nouveau" } # 5.9.4
+neoforge-immersiveportals = { version = "6013197", module = "curse.maven:immersive-portals-for-forge-355440" } # 6.0.6

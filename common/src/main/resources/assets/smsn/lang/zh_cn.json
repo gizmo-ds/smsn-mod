@@ -35,6 +35,7 @@
   "smsn.mod.voidscape": "虚空工艺",
   "smsn.mod.tram_additions": "Tram Additions",
   "smsn.mod.ars_nouveau": "新生魔艺",
+  "smsn.mod.immersive_portals_core": "沉浸式传送门",
   "config.smsn.@title": "救救我的答辩网络",
   "config.smsn.sponsor.description": "❤ 喜欢 %1$s 吗？欢迎到 %2$s 赞助支持，助力模组持续更新！ ❤",
   "config.smsn.sponsor.description.afdian": "爱发电",
@@ -69,6 +70,7 @@
   "config.smsn.general.additionalStructuresSupporterCheck": "失落废墟 赞助者检查",
   "config.smsn.general.tenshilibPatreon": "TenshiLib 赞助者检查",
   "config.smsn.general.arsnouveauRewards": "新生魔艺 奖励请求",
+  "config.smsn.general.immersiveportalsModInfoChecking": "沉浸式传送门 模组信息请求",
   "config.smsn.qol": "QoL",
   "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息"
 }

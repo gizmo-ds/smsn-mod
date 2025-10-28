@@ -3,10 +3,12 @@
 **NeoForge**
 
 - Add mixins for [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau)
+- Add mixins for [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge)
 - Refactor Config API and add Mixins category
 
 **Fabric**
 
+- Add mixins for [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod)
 - Refactor Config API and add Mixins category
 
 ### 1.2.10

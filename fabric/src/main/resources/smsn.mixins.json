@@ -12,6 +12,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "imb11.mru.APIMixin",
+    "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "ribbits.SupportersJSONMixin",

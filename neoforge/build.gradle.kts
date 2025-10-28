@@ -111,6 +111,8 @@ dependencies {
     modImplementation(libs.neoforge.tenshilib)
     // Ars Nouveau
     modCompileOnly(libs.neoforge.arsnouveau)
+    // Immersive Portals
+    modCompileOnly(libs.fabric.immersiveportals)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionNeoForge"))

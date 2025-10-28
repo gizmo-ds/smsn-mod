@@ -62,6 +62,8 @@ dependencies {
     modImplementation(libs.fabric.mru)
     // TenshiLib
     modImplementation(libs.fabric.tenshilib)
+    // Immersive Portals
+    modCompileOnly(libs.fabric.immersiveportals)
 
     common(project(path = ":common", configuration = "namedElements")) { isTransitive = false }
     shadowBundle(project(path = ":common", configuration = "transformProductionFabric"))

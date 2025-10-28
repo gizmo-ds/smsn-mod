@@ -20,6 +20,7 @@
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
+    "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManagerMixin",
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",

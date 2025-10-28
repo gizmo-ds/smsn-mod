@@ -17,6 +17,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("mru",
                         "dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin"
                 ),
+                new ModMixinInfo("immersive_portals_core",
+                        "dev.aika.smsn.fabric.mixin.immersiveportals.IPModInfoCheckingMixin"
+                ),
                 new ModMixinInfo("inventoryprofilesnext",
                         "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
                         "dev.aika.smsn.fabric.mixin.ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin"

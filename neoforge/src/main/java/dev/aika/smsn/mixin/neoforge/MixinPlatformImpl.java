@@ -41,6 +41,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("immersivecaves",
                         "dev.aika.smsn.neoforge.mixin.immersivecaves.DiscordInviteOnJoinProcedureMixin"
                 ),
+                new ModMixinInfo("immersive_portals_core",
+                        "dev.aika.smsn.neoforge.mixin.immersiveportals.IPModInfoCheckingMixin"
+                ),
                 new ModMixinInfo("inventoryprofilesnext",
                         "dev.aika.smsn.neoforge.mixin.ipn.IPNInfoManagerMixin"
                 ),

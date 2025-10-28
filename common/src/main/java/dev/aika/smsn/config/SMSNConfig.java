@@ -47,6 +47,7 @@ public class SMSNConfig extends ModConfig {
     public boolean tenshilibPatreon = SMSNConfigDefault.tenshilibPatreon;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean arsnouveauRewards = false;
+    public boolean immersiveportalsModInfoChecking = false;
 
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
