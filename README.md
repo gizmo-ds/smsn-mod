@@ -97,6 +97,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
    use [Modrinth .mrpack](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) or CurseForge
    modpack ZIP format.  
    ❌ Do not directly include the mod binary (`.jar`) in your modpack—prioritize user security.
+3. Add support for [I18nUpdateMod](https://github.com/CFPAOrg/I18nUpdateMod3)?  
+   Never, I can't get a mod that needs a network to work after losing it. Maybe God can. 😇
 
 ## License
 
