@@ -1,3 +1,14 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [Quark](https://www.curseforge.com/minecraft/mc-mods/quark)
+- Add translations for missing mod names
+
+**Fabric**
+
+- Add translations for missing mod names
+
 ### 1.3.2
 
 **NeoForge**

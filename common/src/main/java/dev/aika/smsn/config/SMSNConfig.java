@@ -3,17 +3,22 @@ package dev.aika.smsn.config;
 import dev.aika.smsn.annotation.Category;
 import dev.aika.smsn.annotation.LoaderSpecific;
 import dev.aika.smsn.annotation.MixinList;
+import dev.aika.smsn.annotation.RequiresRestart;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
 
 import java.nio.file.Files;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 @SuppressWarnings({"unused", "SpellCheckingInspection"})
 public class SMSNConfig extends ModConfig {
+    //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
+    //NOTE: Not adding the @Category annotation means using the "general" category.
+
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean quarkContributorCheck = false;
     public boolean aetherMoaSkinsFeature = true;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveEngineeringSpecialRevolvers = true;
@@ -50,6 +55,10 @@ public class SMSNConfig extends ModConfig {
     public boolean immersiveportalsModInfoChecking = false;
 
     @Category("qol")
+    @RequiresRestart
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public QuarkCelebration quarkCelebration = QuarkCelebration.HideLGBTQIA;
+    @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = false;
 
@@ -64,5 +73,25 @@ public class SMSNConfig extends ModConfig {
         final var defaultConfig = new SMSNConfig();
         defaultConfig.save();
         return defaultConfig;
+    }
+
+    public enum QuarkCelebration {
+        ShowAll(),
+        HideAll("all"),
+        HideLGBTQIA(
+                "iad", "iad2", "idr", "ld", "lvd", "ncod", "nbpd", "ppad", "tdr", "tdv", "zdd",
+                "pm", "baw", "taw"
+        );
+
+        private final List<String> CELEBRATIONS = new ArrayList<>();
+
+        QuarkCelebration(String... celebrations) {
+            CELEBRATIONS.addAll(Arrays.asList(celebrations));
+        }
+
+        public boolean isHide(String name) {
+            if (CELEBRATIONS.size() == 1 && CELEBRATIONS.getFirst().equals("all")) return true;
+            return CELEBRATIONS.contains(name);
+        }
     }
 }

@@ -6,7 +6,8 @@
   "minVersion": "0.8",
   "client": [
     "blueprint.RewardHandlerMixin",
-    "iris.UpdateCheckerMixin"
+    "iris.UpdateCheckerMixin",
+    "quark.QButtonMixin"
   ],
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
@@ -26,6 +27,7 @@
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
     "projecte.ThreadCheckUUIDMixin",
+    "quark.ThreadContributorListLoaderMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",

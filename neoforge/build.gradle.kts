@@ -43,6 +43,12 @@ repositories {
     maven("https://maven.shadowsoffire.dev/releases") {
         content { includeGroup("dev.shadowsoffire") }
     }
+    maven("https://maven.blamejared.com") {
+        name = "vazkii"
+        content {
+            includeGroup("org.violetmoon.quark")
+        }
+    }
 }
 
 dependencies {
@@ -102,6 +108,8 @@ dependencies {
     modCompileOnly(libs.neoforge.arsnouveau)
     // Immersive Portals
     modCompileOnly(libs.fabric.immersiveportals)
+    // Quark
+    modCompileOnly(libs.neoforge.quark)
 }
 
 tasks {

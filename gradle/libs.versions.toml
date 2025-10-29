@@ -11,7 +11,7 @@ mixinextras = "0.4.1"
 # Dependencies
 parchment = "2024.11.17"
 fabric-loader = "0.16.14"
-neoforge = "21.1.145"
+neoforge = "21.1.213"
 clothconfig = "15.0.130"
 # Dev
 modmenu = "11.0.3"
@@ -74,3 +74,4 @@ neoforge-additionalstructures = { version = "2AMB4SVA", module = "maven.modrinth
 neoforge-tenshilib = { version = "5950962", module = "curse.maven:tenshilib-312040" } # 1.8.2
 neoforge-arsnouveau = { version = "XbkLdBPV", module = "maven.modrinth:ars-nouveau" } # 5.9.4
 neoforge-immersiveportals = { version = "6013197", module = "curse.maven:immersive-portals-for-forge-355440" } # 6.0.6
+neoforge-quark = { version = "4.1-466.3558", module = "org.violetmoon.quark:Quark" }

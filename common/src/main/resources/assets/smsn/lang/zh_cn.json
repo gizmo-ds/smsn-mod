@@ -5,6 +5,7 @@
   "gui.smsn.missing_cloth_config.message": "你需要安装 Cloth Config 模组才能使用游戏内配置功能。\n点击下方按钮跳转到下载页面",
   "gui.smsn.missing_cloth_config.modrinth_download": "Modrinth",
   "gui.smsn.missing_cloth_config.curseforge_download": "CurseForge",
+  "smsn.mod.actuallyadditions": "实用拓展",
   "smsn.mod.ad_astra": "Ad Astra",
   "smsn.mod.nitrogen": "Nitrogen",
   "smsn.mod.botania": "植物魔法",
@@ -72,6 +73,11 @@
   "config.smsn.general.tenshilibPatreon": "TenshiLib 赞助者检查",
   "config.smsn.general.arsnouveauRewards": "新生魔艺 奖励请求",
   "config.smsn.general.immersiveportalsModInfoChecking": "沉浸式传送门 模组信息请求",
+  "config.smsn.general.quarkContributorCheck": "夸克 贡献者检查",
   "config.smsn.qol": "QoL",
-  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息"
+  "config.smsn.qol.immersiveCavesDiscordMessage": "Immersive Caves Discord 消息",
+  "config.smsn.qol.quarkCelebration": "夸克 \"节日\"",
+  "config.smsn.qol.quarkCelebration.ShowAll": "显示全部",
+  "config.smsn.qol.quarkCelebration.HideAll": "隐藏全部",
+  "config.smsn.qol.quarkCelebration.HideLGBTQIA": "隐藏 LGBTQIA+"
 }
