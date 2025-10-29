@@ -77,7 +77,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon checks requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "4.9.0") `新生魔艺` Blocks reward requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门` Blocks mod info requests.
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门`
+  Blocks mod info requests.
 
 **Fabric**
 
@@ -100,7 +101,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon checks requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks mod info requests.
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks
+  mod info requests.
 
 ## F.A.Q
 
@@ -111,6 +113,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
    use [Modrinth .mrpack](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack) or CurseForge
    modpack ZIP format.  
    ❌ Do not directly include the mod binary (`.jar`) in your modpack—prioritize user security.
+3. Add support for [I18nUpdateMod](https://github.com/CFPAOrg/I18nUpdateMod3)?  
+   Never, I can't get a mod that needs a network to work after losing it. Maybe God can. 😇
 
 ## License
 
