@@ -3,7 +3,7 @@ architectury = { id = "architectury-plugin", version = "3.4-SNAPSHOT" }
 loom = { id = "dev.architectury.loom", version = "1.11-SNAPSHOT" }
 shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
 dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
-modpublisher = { id = "com.hypherionmc.modutils.modpublisher", version = "2.1.6" }
+modpublisher = { id = "com.hypherionmc.modutils.modpublisher", version = "2.1.8" }
 
 [versions]
 lombok = "1.18.38"
@@ -34,7 +34,6 @@ fabric-moonlight = { version = "1.21-2.20.7-fabric", module = "maven.modrinth:mo
 fabric-sodium = { version = "mc1.21.1-0.6.1-fabric", module = "maven.modrinth:sodium" }
 fabric-forgeconfigapiport = { version = "21.1.0", module = "fuzs.forgeconfigapiport:forgeconfigapiport-fabric" }
 neoforge-norealmsbutton = { version = "ZPsxuqtp", module = "maven.modrinth:no-realms-button" } # 2.0.2
-neoforge-moonlight = { version = "1.21-2.20.7-neoforge", module = "maven.modrinth:moonlight" }
 neoforge-ponder = { version = "1.0.45", module = "net.createmod.ponder:Ponder-NeoForge-1.21.1" }
 neoforge-registrate = { version = "MC1.21-1.3.0+62", module = "com.tterrag.registrate:Registrate" }
 # Fabric

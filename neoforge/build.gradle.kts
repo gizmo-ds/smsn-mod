@@ -61,8 +61,7 @@ dependencies {
 //    modCompileOnly(libs.clothconfig.neoforge)
 
     // Supplementaries
-    modLocalRuntime(libs.neoforge.moonlight)
-    modImplementation(downloadAndPatchJar(libs.neoforge.supplementaries.get()))
+    modCompileOnly(downloadAndPatchJar(libs.neoforge.supplementaries.get()))
     // Petrolpark's Library
     modLocalRuntime(libs.neoforge.registrate)
     modLocalRuntime(libs.neoforge.ponder)
