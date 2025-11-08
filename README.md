@@ -67,7 +67,10 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Additional Structures](https://modrinth.com/mod/additional-structures "6.0.1") `失落废墟` Blocks supporter requests;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.8.2") Blocks patreon checks requests;
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "5.9.4") `新生魔艺` Blocks reward requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "6.0.6") `沉浸式传送门` Blocks mod info requests.
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "6.0.6") `沉浸式传送门`
+  Blocks mod info requests;
+- [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.1-466.3558") `夸克` Disables contributor list fetching
+  on startup and player join. fewer celebrations.
 
 **Fabric**
 
@@ -86,7 +89,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.39.0_Fabric_1.21") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.8.2.b") Blocks patreon checks requests;
-- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "6.0.6-mc1.21.1") `沉浸式传送门` Blocks mod info requests.
+- [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "6.0.6-mc1.21.1") `沉浸式传送门`
+  Blocks mod info requests.
 
 ## F.A.Q
 
