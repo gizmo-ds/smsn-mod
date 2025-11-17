@@ -1,3 +1,9 @@
+### Unreleased
+
+**Both**
+
+- Add mixins for [Kiwi Library](https://modrinth.com/mod/kiwi)
+
 ### 1.3.3
 
 **NeoForge**

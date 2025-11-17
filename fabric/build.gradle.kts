@@ -53,6 +53,8 @@ dependencies {
     modImplementation(libs.fabric.tenshilib)
     // Immersive Portals
     modCompileOnly(libs.fabric.immersiveportals)
+    // Kiwi
+    modImplementation(libs.fabric.kiwi)
 }
 
 tasks {

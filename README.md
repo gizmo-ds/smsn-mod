@@ -70,7 +70,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "6.0.6") `沉浸式传送门`
   Blocks mod info requests;
 - [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.1-466.3558") `夸克` Disables contributor list fetching
-  on startup and player join. fewer celebrations.
+  on startup and player join. fewer celebrations;
+- [Kiwi Library](https://modrinth.com/mod/kiwi "15.7.5+neoforge") Blocks reward requests.
 
 **Fabric**
 
@@ -90,7 +91,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.8.2.b") Blocks patreon checks requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "6.0.6-mc1.21.1") `沉浸式传送门`
-  Blocks mod info requests.
+  Blocks mod info requests;
+- [Kiwi Library](https://modrinth.com/mod/kiwi "15.1.5+fabric") Blocks reward requests.
 
 ## F.A.Q
 

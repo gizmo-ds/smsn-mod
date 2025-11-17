@@ -53,6 +53,7 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean arsnouveauRewards = false;
     public boolean immersiveportalsModInfoChecking = false;
+    public boolean kiwiTier = false;
 
     @Category("qol")
     @RequiresRestart

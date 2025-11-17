@@ -109,6 +109,8 @@ dependencies {
     modCompileOnly(libs.fabric.immersiveportals)
     // Quark
     modCompileOnly(libs.neoforge.quark)
+    // Kiwi
+    modImplementation(libs.neoforge.kiwi)
 }
 
 tasks {

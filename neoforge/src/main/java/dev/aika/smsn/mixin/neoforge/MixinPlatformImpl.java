@@ -50,6 +50,10 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("iris",
                         "dev.aika.smsn.neoforge.mixin.iris.UpdateCheckerMixin"
                 ),
+                new ModMixinInfo("kiwi",
+                        "dev.aika.smsn.neoforge.mixin.kiwi.KiwiTierProviderMixin",
+                        "dev.aika.smsn.neoforge.mixin.kiwi.JsonTierProviderMixin"
+                ),
                 new ModMixinInfo("petrolpark",
                         "dev.aika.smsn.neoforge.mixin.petrolpark.BadgeHandlerMixin"
                 ),

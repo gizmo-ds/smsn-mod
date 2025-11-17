@@ -23,6 +23,8 @@
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManagerMixin",
+    "kiwi.JsonTierProviderMixin",
+    "kiwi.KiwiTierProviderMixin",
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
