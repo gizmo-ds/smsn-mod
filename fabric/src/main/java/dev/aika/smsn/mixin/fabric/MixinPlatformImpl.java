@@ -37,6 +37,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("iris",
                         "dev.aika.smsn.fabric.mixin.iris.UpdateCheckerMixin"
                 ),
+                new ModMixinInfo("majruszlibrary",
+                        "dev.aika.smsn.fabric.mixin.majrusz.VersionCheckerMixin"
+                ),
                 new ModMixinInfo("ribbits",
                         "dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin"
                 ),

@@ -110,6 +110,8 @@ dependencies {
     modCompileOnly(libs.forge.arsnouveau)
     // Immersive Portals
     modCompileOnly(libs.forge.immersiveportals)
+    // Majrusz
+    modCompileOnly(libs.forge.majrusz.library)
 }
 
 tasks {

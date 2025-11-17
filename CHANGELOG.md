@@ -1,3 +1,9 @@
+### Unreleased
+
+**Both**
+
+- Add mixins for [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library)
+
 ### 1.3.2
 
 **Forge**

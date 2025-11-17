@@ -54,6 +54,7 @@ fabric-nitrogen = { version = "1.20.1-1.0.15-fabric", module = "com.aetherteam.n
 fabric-tenshilib = { version = "5240454", module = "curse.maven:tenshilib-fabric-552662" } # 1.7.6
 fabric-createtramadditions = { version = "Szc6mYko", module = "maven.modrinth:create-tram-additions" } # 1.6
 fabric-immersiveportals = { version = "v3.3.7-mc1.20.1", module = "com.github.iPortalTeam.ImmersivePortalsMod:imm_ptl_core" }
+fabric-majrusz-library = { version = "nfkUUMHq", module = "maven.modrinth:majrusz-library" } # 7.0.8
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
@@ -85,3 +86,4 @@ forge-additionalstructures = { version = "OqEwjVmd", module = "maven.modrinth:ad
 forge-createtramadditions = { version = "CBLu5Isq", module = "maven.modrinth:create-tram-additions" } # 1.6
 forge-arsnouveau = { version = "qtW93rN7", module = "maven.modrinth:ars-nouveau" } # 4.9.0
 forge-immersiveportals = { version = "6368524", module = "curse.maven:immersive-portals-for-forge-355440" } # 3.0.7
+forge-majrusz-library = { version = "BZzTRseC", module = "maven.modrinth:majrusz-library" } # 7.0.8

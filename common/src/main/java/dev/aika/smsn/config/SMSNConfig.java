@@ -63,6 +63,7 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.FORGE)
     public boolean arsnouveauRewards = false;
     public boolean immersiveportalsModInfoChecking = false;
+    public boolean majruszModsVersionCheck = false;
 
     @Category("qol")
     @RequiresRestart

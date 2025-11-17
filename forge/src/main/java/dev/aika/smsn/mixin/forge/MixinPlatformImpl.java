@@ -62,6 +62,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("imm_ptl_core",
                         "dev.aika.smsn.forge.mixin.immersiveportals.IPModInfoCheckingMixin"
                 ),
+                new ModMixinInfo("majruszlibrary",
+                        "dev.aika.smsn.forge.mixin.majrusz.VersionCheckerMixin"
+                ),
                 new ModMixinInfo("inventoryprofilesnext",
                         "dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin"
                 ),
