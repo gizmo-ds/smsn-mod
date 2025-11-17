@@ -3,6 +3,7 @@
 **Both**
 
 - Add mixins for [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library)
+- Add mixins for [Kiwi Library](https://modrinth.com/mod/kiwi)
 
 ### 1.3.2
 

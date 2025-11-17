@@ -64,6 +64,7 @@ public class SMSNConfig extends ModConfig {
     public boolean arsnouveauRewards = false;
     public boolean immersiveportalsModInfoChecking = false;
     public boolean majruszModsVersionCheck = false;
+    public boolean kiwiTier = false;
 
     @Category("qol")
     @RequiresRestart

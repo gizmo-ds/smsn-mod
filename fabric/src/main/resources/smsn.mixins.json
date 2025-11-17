@@ -19,6 +19,8 @@
     "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
+    "kiwi.JsonTierProviderMixin",
+    "kiwi.KiwiTierProviderMixin",
     "majrusz.VersionCheckerMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",

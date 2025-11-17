@@ -79,7 +79,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "4.9.0") `新生魔艺` Blocks reward requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门`
   Blocks mod info requests;
-- [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check.
+- [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check;
+- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests.
 
 **Fabric**
 
@@ -104,7 +105,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks
   mod info requests;
-- [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check.
+- [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check;
+- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests.
 
 ## F.A.Q
 

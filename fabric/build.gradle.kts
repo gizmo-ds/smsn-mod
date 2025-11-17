@@ -60,6 +60,8 @@ dependencies {
     modCompileOnly(libs.fabric.immersiveportals) { exclude(group = "net.fabricmc.fabric-api") }
     // Majrusz
     modCompileOnly(libs.fabric.majrusz.library)
+    // Kiwi
+    modImplementation(libs.fabric.kiwi)
 }
 
 tasks {

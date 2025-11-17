@@ -112,6 +112,8 @@ dependencies {
     modCompileOnly(libs.forge.immersiveportals)
     // Majrusz
     modCompileOnly(libs.forge.majrusz.library)
+    // Kiwi
+    modImplementation(libs.forge.kiwi)
 }
 
 tasks {
