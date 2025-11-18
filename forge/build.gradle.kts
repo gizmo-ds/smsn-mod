@@ -24,13 +24,6 @@ repositories {
     maven("https://maven.tterrag.com/") { name = "Create" }
     maven("https://maven.theillusivec4.top/") { name = "Curios" }
     maven("https://maven.teamabnormals.com") { name = "Blueprint" }
-    maven("https://maven.blamejared.com/") {
-        name = "Immersive Engineering"
-        content {
-            includeGroup("malte0811")
-            includeGroup("blusunrize.immersiveengineering")
-        }
-    }
     maven("https://maven.shadowsoffire.dev/releases") {
         content {
             includeGroup("dev.shadowsoffire")
@@ -48,7 +41,7 @@ dependencies {
 //    modCompileOnly(libs.clothconfig.forge)
 
     // Quark
-    modLocalRuntime(libs.forge.zeta)
+    modImplementation(libs.forge.zeta)
     modImplementation(libs.forge.quark)
     // Alex's mods
     modImplementation(libs.forge.citadel)

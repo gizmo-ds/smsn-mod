@@ -32,9 +32,6 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("blueprint",
                         "dev.aika.smsn.forge.mixin.blueprint.RewardHandlerMixin"
                 ),
-                new ModMixinInfo("botania",
-                        "dev.aika.smsn.forge.mixin.botania.ContributorListMixin"
-                ),
                 new ModMixinInfo("tram_additions",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.WorldTickMixin",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.TramAdditionsMixin"
@@ -87,8 +84,15 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin"
                 ),
                 new ModMixinInfo("quark",
-                        "dev.aika.smsn.forge.mixin.quark.ThreadContributorListLoaderMixin",
-                        "dev.aika.smsn.forge.mixin.quark.QButtonMixin"
+                        "dev.aika.smsn.forge.mixin.vazkii.quark.ThreadContributorListLoaderMixin",
+                        "dev.aika.smsn.forge.mixin.vazkii.quark.QButtonMixin"
+                ),
+                new ModMixinInfo("zeta",
+                        "dev.aika.smsn.forge.mixin.vazkii.zeta.ZetaModuleManagerMixin",
+                        "import dev.aika.smsn.forge.mixin.vazkii.quark.ModelHandlerMixin;ModelHandlerMixin"
+                ),
+                new ModMixinInfo("botania",
+                        "dev.aika.smsn.forge.mixin.vazkii.botania.ContributorListMixin"
                 ),
                 new ModMixinInfo("ribbits",
                         "dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin"

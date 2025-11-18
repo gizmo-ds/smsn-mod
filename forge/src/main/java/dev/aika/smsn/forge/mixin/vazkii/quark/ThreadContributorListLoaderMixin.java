@@ -1,4 +1,4 @@
-package dev.aika.smsn.forge.mixin.quark;
+package dev.aika.smsn.forge.mixin.vazkii.quark;
 
 import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;

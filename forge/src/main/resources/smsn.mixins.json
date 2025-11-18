@@ -8,7 +8,7 @@
     "blueprint.RewardHandlerMixin",
     "obscure.ObscuriaCollectionMixin",
     "obscure.ObscuriaCollectionMixin$Mod",
-    "quark.QButtonMixin"
+    "vazkii.quark.QButtonMixin"
   ],
   "mixins": [
     "ad_astra.StationLoaderMixin",
@@ -19,7 +19,7 @@
     "alex.CitadelWebHelperMixin",
     "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
-    "botania.ContributorListMixin",
+    "vazkii.botania.ContributorListMixin",
     "create_tram_additions.TramAdditionsMixin",
     "create_tram_additions.WorldTickMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",
@@ -39,11 +39,13 @@
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
     "projecte.ThreadCheckUUIDMixin",
-    "quark.ThreadContributorListLoaderMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
+    "vazkii.quark.ThreadContributorListLoaderMixin",
+    "vazkii.quark.ModelHandlerMixin",
+    "vazkii.zeta.ZetaModuleManagerMixin",
     "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",

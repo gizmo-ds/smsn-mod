@@ -1,4 +1,4 @@
-package dev.aika.smsn.forge.mixin.quark;
+package dev.aika.smsn.forge.mixin.vazkii.quark;
 
 import dev.aika.smsn.SMSN;
 import net.minecraftforge.api.distmarker.Dist;
@@ -12,6 +12,7 @@ import org.violetmoon.quark.base.client.config.QButton;
 import java.time.Month;
 
 @OnlyIn(Dist.CLIENT)
+@SuppressWarnings("SpellCheckingInspection")
 @Mixin(value = QButton.class, remap = false)
 public abstract class QButtonMixin {
     @Inject(method = "celebrate(Ljava/lang/String;IILjava/time/Month;I)V", at = @At("HEAD"), cancellable = true)

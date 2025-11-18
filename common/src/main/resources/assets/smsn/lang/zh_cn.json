@@ -31,6 +31,7 @@
   "smsn.mod.placebo": "Placebo",
   "smsn.mod.projecte": "等价交换重制版",
   "smsn.mod.quark": "夸克",
+  "smsn.mod.zeta": "Zeta",
   "smsn.mod.titanium": "钛",
   "smsn.mod.voidscape": "虚空工艺",
   "smsn.mod.tram_additions": "Tram Additions",
@@ -89,5 +90,6 @@
   "config.smsn.qol.quarkCelebration": "夸克 \"节日\"",
   "config.smsn.qol.quarkCelebration.ShowAll": "显示全部",
   "config.smsn.qol.quarkCelebration.HideAll": "隐藏全部",
-  "config.smsn.qol.quarkCelebration.HideLGBTQIA": "隐藏 LGBTQIA+"
+  "config.smsn.qol.quarkCelebration.HideLGBTQIA": "隐藏 LGBTQIA+",
+  "config.smsn.qol.vazkiiModsSpamLogs": "Vazkii的模组 垃圾日志"
 }

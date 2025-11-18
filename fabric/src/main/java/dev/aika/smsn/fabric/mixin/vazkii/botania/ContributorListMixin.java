@@ -1,4 +1,4 @@
-package dev.aika.smsn.forge.mixin.botania;
+package dev.aika.smsn.fabric.mixin.vazkii.botania;
 
 import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;

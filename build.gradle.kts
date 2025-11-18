@@ -56,8 +56,11 @@ subprojects {
         maven("https://maven.blamejared.com") {
             name = "vazkii"
             content {
+                includeGroup("blusunrize.immersiveengineering")
                 includeGroup("vazkii.patchouli")
                 includeGroup("vazkii.botania")
+                includeGroup("org.violetmoon.quark")
+                includeGroup("org.violetmoon.zeta")
             }
         }
         maven("https://packages.aether-mod.net/Nitrogen") { name = "Aether Teams" }

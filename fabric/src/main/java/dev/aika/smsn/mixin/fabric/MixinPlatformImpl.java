@@ -14,7 +14,7 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.fabric.mixin.aetherteam.UserData$ServerMixin"
                 ),
                 new ModMixinInfo("botania",
-                        "dev.aika.smsn.fabric.mixin.botania.ContributorListMixin"
+                        "dev.aika.smsn.fabric.mixin.vazkii.botania.ContributorListMixin"
                 ),
                 new ModMixinInfo("tram_additions",
                         "dev.aika.smsn.fabric.mixin.create_tram_additions.WorldTickMixin",

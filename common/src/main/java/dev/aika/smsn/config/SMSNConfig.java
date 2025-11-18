@@ -72,6 +72,9 @@ public class SMSNConfig extends ModConfig {
     public QuarkCelebration quarkCelebration = QuarkCelebration.HideLGBTQIA;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
+    public boolean vazkiiModsSpamLogs = false;
+    @Category("qol")
+    @LoaderSpecific(LoaderType.FORGE)
     public boolean citadelAprilFoolsContent = false;
     @Category("qol")
     @LoaderSpecific(LoaderType.FORGE)
