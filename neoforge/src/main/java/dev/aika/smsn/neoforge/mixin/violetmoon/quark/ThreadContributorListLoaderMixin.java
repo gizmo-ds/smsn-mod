@@ -1,4 +1,4 @@
-package dev.aika.smsn.neoforge.mixin.quark;
+package dev.aika.smsn.neoforge.mixin.violetmoon.quark;
 
 import dev.aika.smsn.SMSN;
 import org.spongepowered.asm.mixin.Mixin;

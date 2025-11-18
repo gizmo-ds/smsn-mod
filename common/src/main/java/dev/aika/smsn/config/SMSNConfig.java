@@ -61,6 +61,9 @@ public class SMSNConfig extends ModConfig {
     public QuarkCelebration quarkCelebration = QuarkCelebration.HideLGBTQIA;
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean zetaSpamLogs = false;
+    @Category("qol")
+    @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = false;
 
     @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")

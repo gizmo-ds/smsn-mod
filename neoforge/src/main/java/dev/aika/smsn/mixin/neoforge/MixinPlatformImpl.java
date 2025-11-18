@@ -65,8 +65,12 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.neoforge.mixin.projecte.ThreadCheckUUIDMixin"
                 ),
                 new ModMixinInfo("quark",
-                        "dev.aika.smsn.neoforge.mixin.quark.QButtonMixin",
-                        "dev.aika.smsn.neoforge.mixin.quark.ThreadContributorListLoaderMixin"
+                        "dev.aika.smsn.neoforge.mixin.violetmoon.quark.QButtonMixin",
+                        "dev.aika.smsn.neoforge.mixin.violetmoon.quark.ThreadContributorListLoaderMixin"
+                ),
+                new ModMixinInfo("zeta",
+                        "dev.aika.smsn.neoforge.mixin.violetmoon.zeta.ZetaModuleManagerMixin",
+                        "dev.aika.smsn.neoforge.mixin.violetmoon.zeta.ModelHandlerMixin"
                 ),
                 new ModMixinInfo("ribbits",
                         "dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin"

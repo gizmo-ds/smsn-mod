@@ -1,3 +1,9 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta)
+
 ### 1.3.4
 
 **Both**

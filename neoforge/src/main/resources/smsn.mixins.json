@@ -7,7 +7,7 @@
   "client": [
     "blueprint.RewardHandlerMixin",
     "iris.UpdateCheckerMixin",
-    "quark.QButtonMixin"
+    "violetmoon.quark.QButtonMixin"
   ],
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
@@ -29,11 +29,13 @@
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
     "projecte.ThreadCheckUUIDMixin",
-    "quark.ThreadContributorListLoaderMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
+    "violetmoon.quark.ThreadContributorListLoaderMixin",
+    "violetmoon.zeta.ModelHandlerMixin",
+    "violetmoon.zeta.ZetaModuleManagerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",

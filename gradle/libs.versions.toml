@@ -74,5 +74,6 @@ neoforge-additionalstructures = { version = "2AMB4SVA", module = "maven.modrinth
 neoforge-tenshilib = { version = "5950962", module = "curse.maven:tenshilib-312040" } # 1.8.2
 neoforge-arsnouveau = { version = "XbkLdBPV", module = "maven.modrinth:ars-nouveau" } # 5.9.4
 neoforge-immersiveportals = { version = "6013197", module = "curse.maven:immersive-portals-for-forge-355440" } # 6.0.6
-neoforge-quark = { version = "4.1-466.3558", module = "org.violetmoon.quark:Quark" }
+neoforge-quark = { version = "4.1-467.3573", module = "org.violetmoon.quark:Quark" }
+neoforge-zeta = { version = "1.1-33.147", module = "org.violetmoon.zeta:Zeta" }
 neoforge-kiwi = { version = "15.7.5+neoforge", module = "maven.modrinth:kiwi" }

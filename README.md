@@ -71,6 +71,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Blocks mod info requests;
 - [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.1-466.3558") `夸克` Disables contributor list fetching
   on startup and player join. fewer celebrations;
+- [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta "1.1-33.147") Block spam logs;
 - [Kiwi Library](https://modrinth.com/mod/kiwi "15.7.5+neoforge") Blocks reward requests.
 
 **Fabric**

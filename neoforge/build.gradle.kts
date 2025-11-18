@@ -47,6 +47,7 @@ repositories {
         name = "vazkii"
         content {
             includeGroup("org.violetmoon.quark")
+            includeGroup("org.violetmoon.zeta")
         }
     }
 }
@@ -107,8 +108,9 @@ dependencies {
     modCompileOnly(libs.neoforge.arsnouveau)
     // Immersive Portals
     modCompileOnly(libs.fabric.immersiveportals)
-    // Quark
-    modCompileOnly(libs.neoforge.quark)
+    // Quark & Zeta
+    modImplementation(libs.neoforge.quark)
+    modImplementation(libs.neoforge.zeta)
     // Kiwi
     modImplementation(libs.neoforge.kiwi)
 }
