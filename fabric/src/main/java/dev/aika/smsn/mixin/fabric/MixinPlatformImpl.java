@@ -32,6 +32,7 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.fabric.mixin.kiwi.JsonTierProviderMixin"
                 ),
                 new ModMixinInfo("ribbits",
+                        "dev.aika.smsn.fabric.mixin.ribbits.RibbitEntityMixin",
                         "dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin"
                 ),
                 new ModMixinInfo("supplementaries",

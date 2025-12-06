@@ -29,6 +29,7 @@
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",
     "projecte.ThreadCheckUUIDMixin",
+    "ribbits.RibbitEntityMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",

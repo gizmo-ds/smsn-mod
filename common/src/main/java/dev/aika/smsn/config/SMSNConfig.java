@@ -65,6 +65,8 @@ public class SMSNConfig extends ModConfig {
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = false;
+    @Category("qol")
+    public boolean ribbitsNoMorePrideMonth = false;
 
     @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")
     public Set<String> disabledMixins = new HashSet<>();

@@ -83,5 +83,6 @@
   "config.smsn.qol.quarkCelebration.ShowAll": "显示全部",
   "config.smsn.qol.quarkCelebration.HideAll": "隐藏全部",
   "config.smsn.qol.quarkCelebration.HideLGBTQIA": "隐藏 LGBTQIA+",
-  "config.smsn.qol.zetaSpamLogs": "Zeta 垃圾日志"
+  "config.smsn.qol.zetaSpamLogs": "Zeta 垃圾日志",
+  "config.smsn.qol.ribbitsNoMorePrideMonth": "Ribbits 不再有骄傲月"
 }

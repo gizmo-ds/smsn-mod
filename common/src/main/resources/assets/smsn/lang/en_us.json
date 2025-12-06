@@ -83,5 +83,6 @@
   "config.smsn.qol.quarkCelebration.ShowAll": "Show All",
   "config.smsn.qol.quarkCelebration.HideAll": "Hide All",
   "config.smsn.qol.quarkCelebration.HideLGBTQIA": "Hide LGBTQIA+",
-  "config.smsn.qol.zetaSpamLogs": "Zeta spam logs"
+  "config.smsn.qol.zetaSpamLogs": "Zeta spam logs",
+  "config.smsn.qol.ribbitsNoMorePrideMonth": "Ribbits No more Pride Month"
 }

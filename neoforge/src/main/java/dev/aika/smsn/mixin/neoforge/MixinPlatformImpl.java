@@ -73,6 +73,7 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.neoforge.mixin.violetmoon.zeta.ModelHandlerMixin"
                 ),
                 new ModMixinInfo("ribbits",
+                        "dev.aika.smsn.neoforge.mixin.ribbits.RibbitEntityMixin",
                         "dev.aika.smsn.neoforge.mixin.ribbits.SupportersJSONMixin"
                 ),
                 new ModMixinInfo("supplementaries",

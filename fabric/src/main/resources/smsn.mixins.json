@@ -17,6 +17,7 @@
     "ipn.IPNInfoManager$doSessionKeepAlive$$inlined$timer$default$1Mixin",
     "kiwi.JsonTierProviderMixin",
     "kiwi.KiwiTierProviderMixin",
+    "ribbits.RibbitEntityMixin",
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
