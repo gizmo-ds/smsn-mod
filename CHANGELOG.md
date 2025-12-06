@@ -1,12 +1,13 @@
-### Unreleased
-
-**Both**
-
-- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits) No more Pride Month
+### 1.3.5
 
 **NeoForge**
 
 - Add mixins for [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta)
+- No more Pride Month ([Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits))
+
+**Fabric**
+
+- No more Pride Month ([Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits))
 
 ### 1.3.4
 
