@@ -63,7 +63,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   fetch requests;
 - [Placebo](https://www.curseforge.com/minecraft/mc-mods/placebo "1.20.1-8.6.0") Blocks patron trail requests and patron
   wing requests;
-- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests and No more Pride Month;
 - [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "1.20-3.1.10") `锦致装饰` Prevents
   supporters info requests;
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium "1.20.1-3.8.23") `钛` Blocks reward requests;
@@ -95,7 +95,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Inventory Profiles Next](https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next "fabric-1.20.1-1.10.11")
   `一键背包整理Next` Disables update checks and telemetry requests;
 - [Iris Shaders](https://www.curseforge.com/minecraft/mc-mods/irisshaders "1.6.4+1.20") Blocks update requests;
-- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "3.0.2") Blocks patron hat requests and No more Pride Month;
 - [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "1.20-3.1.10") `锦致装饰` Prevents
   supporters info requests;
 - [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "24.2.0_Fabric_1.20") `Xaero的小地图`

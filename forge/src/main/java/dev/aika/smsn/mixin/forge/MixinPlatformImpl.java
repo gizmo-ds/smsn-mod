@@ -95,6 +95,7 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.forge.mixin.vazkii.botania.ContributorListMixin"
                 ),
                 new ModMixinInfo("ribbits",
+                        "dev.aika.smsn.forge.mixin.ribbits.RibbitEntityMixin",
                         "dev.aika.smsn.forge.mixin.ribbits.SupportersJSONMixin"
                 ),
                 new ModMixinInfo("supplementaries",

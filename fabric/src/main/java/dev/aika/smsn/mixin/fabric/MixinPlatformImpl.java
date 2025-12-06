@@ -45,6 +45,7 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.fabric.mixin.majrusz.VersionCheckerMixin"
                 ),
                 new ModMixinInfo("ribbits",
+                        "dev.aika.smsn.fabric.mixin.ribbits.RibbitEntityMixin",
                         "dev.aika.smsn.fabric.mixin.ribbits.SupportersJSONMixin"
                 ),
                 new ModMixinInfo("supplementaries",

@@ -1,5 +1,9 @@
 ### Unreleased
 
+**Both**
+
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits) No more Pride Month
+
 **Forge**
 
 - Add mixins for [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta)
