@@ -62,6 +62,8 @@ dependencies {
     modCompileOnly(libs.fabric.majrusz.library)
     // Kiwi
     modImplementation(libs.fabric.kiwi)
+    // Create: Steam 'n' Rails
+    modCompileOnly(libs.fabric.create.snr)
 }
 
 tasks {

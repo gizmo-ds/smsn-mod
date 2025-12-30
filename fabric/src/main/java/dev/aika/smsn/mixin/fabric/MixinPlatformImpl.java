@@ -13,6 +13,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.fabric.mixin.aetherteam.UserData$ServerMixin"
                 ),
+                new ModMixinInfo("railways",
+                        "dev.aika.smsn.fabric.mixin.create_snr.DevCapeUtilsMixin"
+                ),
                 new ModMixinInfo("botania",
                         "dev.aika.smsn.fabric.mixin.vazkii.botania.ContributorListMixin"
                 ),

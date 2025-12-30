@@ -10,6 +10,7 @@
   "mixins": [
     "ad_astra.StationLoaderMixin",
     "aetherteam.UserData$ServerMixin",
+    "create_snr.DevCapeUtilsMixin",
     "create_tram_additions.TramAdditionsMixin",
     "create_tram_additions.WorldTickMixin",
     "exposure.GildedMixin",

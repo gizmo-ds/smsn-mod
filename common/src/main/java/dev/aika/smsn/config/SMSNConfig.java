@@ -65,6 +65,7 @@ public class SMSNConfig extends ModConfig {
     public boolean immersiveportalsModInfoChecking = false;
     public boolean majruszModsVersionCheck = false;
     public boolean kiwiTier = false;
+    public boolean createSnrDevCape = false;
 
     @Category("qol")
     @RequiresRestart

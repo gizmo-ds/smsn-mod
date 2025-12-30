@@ -32,6 +32,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("blueprint",
                         "dev.aika.smsn.forge.mixin.blueprint.RewardHandlerMixin"
                 ),
+                new ModMixinInfo("railways",
+                        "dev.aika.smsn.forge.mixin.create_snr.DevCapeUtilsMixin"
+                ),
                 new ModMixinInfo("tram_additions",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.WorldTickMixin",
                         "dev.aika.smsn.forge.mixin.create_tram_additions.TramAdditionsMixin"

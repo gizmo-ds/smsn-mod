@@ -19,6 +19,7 @@
     "alex.CitadelWebHelperMixin",
     "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
+    "create_snr.DevCapeUtilsMixin",
     "create_tram_additions.TramAdditionsMixin",
     "create_tram_additions.WorldTickMixin",
     "enigmatic_legacy.DevotedBelieversHandlerMixin",

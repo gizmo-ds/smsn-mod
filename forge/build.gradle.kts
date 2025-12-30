@@ -107,6 +107,8 @@ dependencies {
     modCompileOnly(libs.forge.majrusz.library)
     // Kiwi
     modImplementation(libs.forge.kiwi)
+    // Create: Steam 'n' Rails
+    modCompileOnly(libs.forge.create.snr)
 }
 
 tasks {
