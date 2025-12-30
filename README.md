@@ -1,7 +1,6 @@
 # Save My Shaky Network (1.20.1)
 
 [![AFDIAN](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Gizmo-%23946ce6)](https://afdian.com/a/gizmo)
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/oXzIQwRj?logo=modrinth&label=Modrinth)](https://modrinth.com/project/oXzIQwRj)
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/1129397?logo=curseforge&label=CurseForge)](https://www.curseforge.com/minecraft/mc-mods/smsn)
 ![GitHub License](https://img.shields.io/github/license/gizmo-ds/smsn-mod?style=flat&label=License)
 
@@ -25,6 +24,14 @@ problem by blocking such network requests, improving game stability for players 
 A few months ago, I noticed that my Minecraft server was taking nearly 10 minutes to start each time. After
 investigating, I discovered that Quark was causing this issue. Upon searching the issue tracker, I found that the author
 of Quark refused to address this problem, which led me to develop this mod to resolve it.
+
+## Modrinth?
+
+Modrinth doesn't like this mod ¯\_(ツ)_/¯
+
+I don't think this mod violates the [Modrinth's Content Rules](https://modrinth.com/legal/rules).
+
+![screenshot-modrinth.png](./assets/screenshot-modrinth.png)
 
 ## Features
 
