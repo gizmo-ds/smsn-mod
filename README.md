@@ -27,7 +27,7 @@ of Quark refused to address this problem, which led me to develop this mod to re
 
 ## Modrinth?
 
-Modrinth doesn't like this mod ¯\_(ツ)_/¯
+Modrinth doesn't like this mod ¯\\\_(ツ)\_/¯
 
 I don't think this mod violates the [Modrinth's Content Rules](https://modrinth.com/legal/rules).
 
