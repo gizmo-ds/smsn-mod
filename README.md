@@ -88,7 +88,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门`
   Blocks mod info requests;
 - [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check;
-- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests.
+- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests;
+- [Create: Steam 'n' Rails](https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails "1.5.1") `机械动力：汽鸣铁道` Blocks DevCaps requests.
 
 **Fabric**
 
@@ -114,7 +115,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks
   mod info requests;
 - [Majrusz Library](https://www.curseforge.com/minecraft/mc-mods/majrusz-library "7.0.8") Blocks version check;
-- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests.
+- [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests;
+- [Create: Steam 'n' Rails](https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails "1.5.1") `机械动力：汽鸣铁道` Blocks DevCaps requests.
 
 ## F.A.Q
 

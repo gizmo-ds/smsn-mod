@@ -11,6 +11,7 @@ architectury { forge() }
 loom {
     forge {
         mixinConfig("smsn.mixins.json")
+        mixinConfig("smsn-common.mixins.json")
     }
 }
 
@@ -88,7 +89,7 @@ dependencies {
     // Botania
     modImplementation(libs.forge.botania)
     // ProjectE
-    modImplementation(libs.forge.projecte)
+    modCompileOnly(libs.forge.projecte)
     // Hexerei
     modCompileOnly(libs.forge.hexerei)
     // Voidscape

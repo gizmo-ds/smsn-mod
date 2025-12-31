@@ -7,7 +7,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.violetmoon.quark.base.client.handler.ModelHandler;
 
-@SuppressWarnings("SpellCheckingInspection")
 @Mixin(value = ModelHandler.class, remap = false)
 public abstract class ModelHandlerMixin {
     @WrapWithCondition(method = "registerLayer",

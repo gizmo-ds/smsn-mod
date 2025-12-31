@@ -9,4 +9,14 @@ public class SMSNPlatform {
     public static Path getConfigDir() {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static boolean isModVersionCheckEnabled() {
+        throw new AssertionError();
+    }
+
+    @ExpectPlatform
+    public static void setModVersionCheckEnabled(boolean enabled) {
+        throw new AssertionError();
+    }
 }

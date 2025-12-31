@@ -87,12 +87,12 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.forge.mixin.projecte.ThreadCheckUUIDMixin"
                 ),
                 new ModMixinInfo("quark",
+                        "dev.aika.smsn.forge.mixin.vazkii.quark.ModelHandlerMixin",
                         "dev.aika.smsn.forge.mixin.vazkii.quark.ThreadContributorListLoaderMixin",
                         "dev.aika.smsn.forge.mixin.vazkii.quark.QButtonMixin"
                 ),
                 new ModMixinInfo("zeta",
-                        "dev.aika.smsn.forge.mixin.vazkii.zeta.ZetaModuleManagerMixin",
-                        "import dev.aika.smsn.forge.mixin.vazkii.quark.ModelHandlerMixin;ModelHandlerMixin"
+                        "dev.aika.smsn.forge.mixin.vazkii.zeta.ZetaModuleManagerMixin"
                 ),
                 new ModMixinInfo("botania",
                         "dev.aika.smsn.forge.mixin.vazkii.botania.ContributorListMixin"

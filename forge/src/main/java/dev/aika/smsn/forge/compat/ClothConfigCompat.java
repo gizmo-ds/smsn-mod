@@ -2,7 +2,7 @@ package dev.aika.smsn.forge.compat;
 
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.api.ModPlatform;
-import dev.aika.smsn.client.gui.MissingClothConfigScreen;
+import dev.aika.smsn.client.gui.screen.MissingClothConfigScreen;
 import dev.aika.smsn.compat.ClothConfigScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;

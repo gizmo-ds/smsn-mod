@@ -24,7 +24,8 @@
     ]
   },
   "mixins": [
-    "smsn.mixins.json"
+    "smsn.mixins.json",
+    "smsn-common.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.11",
