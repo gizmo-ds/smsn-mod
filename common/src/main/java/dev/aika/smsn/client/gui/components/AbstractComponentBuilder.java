@@ -2,6 +2,7 @@ package dev.aika.smsn.client.gui.components;
 
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.annotation.RequiresRestart;
+import dev.aika.smsn.utils.ComponentUtils;
 import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.experimental.Accessors;
@@ -86,6 +87,10 @@ public abstract class AbstractComponentBuilder<T> {
 
     protected <A extends AbstractConfigListEntry<T>, SELF extends FieldBuilder<T, A, SELF>> void fieldBuilderInit(AbstractFieldBuilder<T, A, SELF> builder) {
         if (defaultConfigObject != null) builder.setDefaultValue(getDefaultValue());
+
+        final String translationKey = String.format("%s.%s.@tooltip", translatableKeyPrefix(), field.getName());
+        if (ComponentUtils.hasTranslation(translationKey)) builder.setTooltip(Component.translatable(translationKey));
+
         builder.requireRestart(field.getAnnotation(RequiresRestart.class) != null);
     }
 
