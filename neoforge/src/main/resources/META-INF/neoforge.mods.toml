@@ -37,3 +37,5 @@ side = "CLIENT"
 
 [[mixins]]
 config = "smsn.mixins.json"
+[[mixins]]
+config = "smsn-common.mixins.json"

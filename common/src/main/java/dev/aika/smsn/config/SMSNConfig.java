@@ -1,9 +1,6 @@
 package dev.aika.smsn.config;
 
-import dev.aika.smsn.annotation.Category;
-import dev.aika.smsn.annotation.LoaderSpecific;
-import dev.aika.smsn.annotation.MixinList;
-import dev.aika.smsn.annotation.RequiresRestart;
+import dev.aika.smsn.annotation.*;
 import dev.aika.smsn.api.LoaderType;
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -55,6 +52,9 @@ public class SMSNConfig extends ModConfig {
     public boolean immersiveportalsModInfoChecking = false;
     public boolean kiwiTier = false;
 
+    @Category("qol")
+    @Components.Switch(checked = "enable", unchecked = "disabled")
+    public boolean versionCheckWarn = true;
     @Category("qol")
     @RequiresRestart
     @LoaderSpecific(LoaderType.NEOFORGE)
