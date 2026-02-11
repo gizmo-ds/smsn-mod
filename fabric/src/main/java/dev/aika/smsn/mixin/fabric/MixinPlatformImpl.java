@@ -41,6 +41,10 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("tenshilib",
                         "dev.aika.smsn.fabric.mixin.tenshilib.PatreonDataManagerMixin"
                 ),
+                new ModMixinInfo("unionlib",
+                        "dev.aika.smsn.fabric.mixin.unionlib.CosmeticsMixin",
+                        "dev.aika.smsn.fabric.mixin.unionlib.SupportersMixin"
+                ),
                 new ModMixinInfo("xaerominimap",
                         "dev.aika.smsn.fabric.mixin.xaero.minimap.InternetMixin",
                         "dev.aika.smsn.fabric.mixin.xaero.minimap.PatreonMixin"
@@ -48,6 +52,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("xaeroworldmap",
                         "dev.aika.smsn.fabric.mixin.xaero.world_map.InternetMixin",
                         "dev.aika.smsn.fabric.mixin.xaero.world_map.PatreonMixin"
+                ),
+                new ModMixinInfo("additionalstructures",
+                        "dev.aika.smsn.fabric.mixin.xxrexraptorxx.additionalstructures.EventsMixin"
                 )
         );
     }

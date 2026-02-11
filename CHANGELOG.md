@@ -1,3 +1,17 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
+- Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
+- Add StopModRepostsMessages option
+
+**Fabric**
+
+- Add mixins for [Additional Structures](https://modrinth.com/mod/additional-structures)
+- Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
+- Add StopModRepostsMessages option
+
 ### 1.3.6
 
 **NeoForge**

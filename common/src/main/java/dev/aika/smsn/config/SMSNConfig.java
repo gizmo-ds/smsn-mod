@@ -45,12 +45,14 @@ public class SMSNConfig extends ModConfig {
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean hexereiSupporter = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
-    public boolean additionalStructuresSupporterCheck = false;
+    public boolean XxRexRaptorxXModsSupporterCheck = false;
     public boolean tenshilibPatreon = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean arsnouveauRewards = false;
     public boolean immersiveportalsModInfoChecking = false;
     public boolean kiwiTier = false;
+    public boolean unionLibCosmeticsFeature = true;
+    public boolean unionLibSupporterCheck = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")
@@ -67,6 +69,8 @@ public class SMSNConfig extends ModConfig {
     public boolean immersiveCavesDiscordMessage = false;
     @Category("qol")
     public boolean ribbitsNoMorePrideMonth = false;
+    @Category("qol")
+    public boolean stopModRepostsMessages = true;
 
     @MixinList(value = @Category("mixins"), prefix = "dev.aika.smsn.")
     public Set<String> disabledMixins = new HashSet<>();

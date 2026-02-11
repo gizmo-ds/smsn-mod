@@ -4,13 +4,10 @@ import dev.aika.smsn.annotation.Components;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import me.shedaniel.clothconfig2.impl.builders.BooleanToggleBuilder;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.network.chat.Component;
 
 import java.lang.reflect.Field;
 
-@Environment(EnvType.CLIENT)
 public final class SwitchBuilder extends AbstractComponentBuilder<Boolean> {
     private final Components.Switch annotation;
 

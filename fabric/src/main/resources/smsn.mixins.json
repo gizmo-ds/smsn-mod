@@ -21,10 +21,13 @@
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
+    "unionlib.CosmeticsMixin",
+    "unionlib.SupportersMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
-    "xaero.world_map.PatreonMixin"
+    "xaero.world_map.PatreonMixin",
+    "xxrexraptorxx.additionalstructures.EventsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

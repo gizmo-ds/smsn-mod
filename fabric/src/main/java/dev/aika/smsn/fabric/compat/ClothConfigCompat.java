@@ -6,10 +6,7 @@ import dev.aika.smsn.SMSN;
 import dev.aika.smsn.api.ModPlatform;
 import dev.aika.smsn.client.gui.screen.MissingClothConfigScreen;
 import dev.aika.smsn.compat.ClothConfigScreen;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 
-@Environment(EnvType.CLIENT)
 public class ClothConfigCompat implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {

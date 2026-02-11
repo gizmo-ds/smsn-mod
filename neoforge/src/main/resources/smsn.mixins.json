@@ -11,7 +11,7 @@
   ],
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
-    "additionalstructures.EventsMixin",
+    "xxrexraptorxx.additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
     "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
@@ -34,13 +34,16 @@
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
+    "unionlib.CosmeticsMixin",
+    "unionlib.SupportersMixin",
     "violetmoon.quark.ThreadContributorListLoaderMixin",
     "violetmoon.zeta.ModelHandlerMixin",
     "violetmoon.zeta.ZetaModuleManagerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
-    "xaero.world_map.PatreonMixin"
+    "xaero.world_map.PatreonMixin",
+    "xxrexraptorxx.allthecompatibility.EventsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

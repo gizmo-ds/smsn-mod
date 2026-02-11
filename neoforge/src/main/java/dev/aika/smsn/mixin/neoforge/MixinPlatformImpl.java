@@ -10,9 +10,6 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("actuallyadditions",
                         "dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin"
                 ),
-                new ModMixinInfo("additionalstructures",
-                        "dev.aika.smsn.neoforge.mixin.additionalstructures.EventsMixin"
-                ),
                 new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.neoforge.mixin.aetherteam.UserData$ServerMixin"
                 ),
@@ -85,6 +82,10 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("titanium",
                         "dev.aika.smsn.neoforge.mixin.titanium.RewardMixin"
                 ),
+                new ModMixinInfo("unionlib",
+                        "dev.aika.smsn.neoforge.mixin.unionlib.CosmeticsMixin",
+                        "dev.aika.smsn.neoforge.mixin.unionlib.SupportersMixin"
+                ),
                 new ModMixinInfo("xaerominimap",
                         "dev.aika.smsn.neoforge.mixin.xaero.minimap.InternetMixin",
                         "dev.aika.smsn.neoforge.mixin.xaero.minimap.PatreonMixin"
@@ -92,6 +93,12 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("xaeroworldmap",
                         "dev.aika.smsn.neoforge.mixin.xaero.world_map.InternetMixin",
                         "dev.aika.smsn.neoforge.mixin.xaero.world_map.PatreonMixin"
+                ),
+                new ModMixinInfo("additionalstructures",
+                        "dev.aika.smsn.neoforge.mixin.xxrexraptorxx.additionalstructures.EventsMixin"
+                ),
+                new ModMixinInfo("allthecompatibility",
+                        "dev.aika.smsn.neoforge.mixin.xxrexraptorxx.allthecompatibility.EventsMixin"
                 )
         );
     }

@@ -55,6 +55,11 @@ dependencies {
     modCompileOnly(libs.fabric.immersiveportals)
     // Kiwi
     modImplementation(libs.fabric.kiwi)
+    // UnionLib
+    localRuntime("org.tomlj:tomlj:1.1.1")
+    modImplementation(libs.fabric.unionlib)
+    // AdditionalStructures
+    modImplementation(libs.fabric.additionalstructures)
 }
 
 tasks {

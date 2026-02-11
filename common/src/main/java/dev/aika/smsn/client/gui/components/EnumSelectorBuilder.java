@@ -2,13 +2,10 @@ package dev.aika.smsn.client.gui.components;
 
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.network.chat.Component;
 
 import java.lang.reflect.Field;
 
-@Environment(EnvType.CLIENT)
 public final class EnumSelectorBuilder<E extends Enum<?>> extends AbstractComponentBuilder<E> {
     private final Class<E> enumClass;
 

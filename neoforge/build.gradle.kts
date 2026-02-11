@@ -113,6 +113,10 @@ dependencies {
     modImplementation(libs.neoforge.zeta)
     // Kiwi
     modImplementation(libs.neoforge.kiwi)
+    // UnionLib
+    modCompileOnly(libs.neoforge.unionlib)
+    // All The Compatibility
+    modCompileOnly(libs.neoforge.allthecompatibility)
 }
 
 tasks {

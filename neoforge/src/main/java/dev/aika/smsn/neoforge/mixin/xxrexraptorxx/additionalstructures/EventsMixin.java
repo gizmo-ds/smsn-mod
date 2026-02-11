@@ -1,0 +1,31 @@
+package dev.aika.smsn.neoforge.mixin.xxrexraptorxx.additionalstructures;
+
+import dev.aika.smsn.SMSN;
+import net.minecraft.world.entity.player.Player;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import xxrexraptorxx.additionalstructures.utils.Events;
+
+import java.net.URL;
+
+@Mixin(value = Events.class, remap = false)
+public abstract class EventsMixin {
+    @Inject(method = "SupporterCheck", at = @At("HEAD"), cancellable = true)
+    private static void SupporterCheck(URL url, Player player, CallbackInfoReturnable<Boolean> cir) {
+        if (SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) cir.setReturnValue(false);
+    }
+
+    @Inject(method = "SupporterRewards", at = @At("HEAD"), cancellable = true)
+    private static void SupporterRewards(PlayerEvent.PlayerLoggedInEvent event, CallbackInfo ci) {
+        if (SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) ci.cancel();
+    }
+
+    @Inject(method = "onPlayerLogin", at = @At("HEAD"), cancellable = true)
+    private static void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event, CallbackInfo ci) {
+        if (!SMSN.CONFIG.isStopModRepostsMessages()) ci.cancel();
+    }
+}
