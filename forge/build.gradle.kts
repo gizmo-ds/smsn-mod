@@ -110,6 +110,10 @@ dependencies {
     modImplementation(libs.forge.kiwi)
     // Create: Steam 'n' Rails
     modCompileOnly(libs.forge.create.snr)
+    // UnionLib
+    modCompileOnly(libs.forge.unionlib)
+    // All The Compatibility
+    modCompileOnly(libs.forge.allthecompatibility)
 }
 
 tasks {

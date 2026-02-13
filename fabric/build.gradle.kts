@@ -64,6 +64,9 @@ dependencies {
     modImplementation(libs.fabric.kiwi)
     // Create: Steam 'n' Rails
     modCompileOnly(libs.fabric.create.snr)
+    // UnionLib
+    localRuntime("org.tomlj:tomlj:1.1.1")
+    modImplementation(libs.fabric.unionlib)
 }
 
 tasks {

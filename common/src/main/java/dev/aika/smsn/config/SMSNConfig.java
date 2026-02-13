@@ -55,7 +55,7 @@ public class SMSNConfig extends ModConfig {
     public boolean voidscapeDonator = false;
     public boolean tenshilibPatreon = false;
     @LoaderSpecific(LoaderType.FORGE)
-    public boolean additionalStructuresSupporterCheck = false;
+    public boolean XxRexRaptorxXModsSupporterCheck = false;
     public boolean createTramAdditionsTTS = true;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean arsnouveauRewards = false;
@@ -63,6 +63,8 @@ public class SMSNConfig extends ModConfig {
     public boolean majruszModsVersionCheck = false;
     public boolean kiwiTier = false;
     public boolean createSnrDevCape = false;
+    public boolean unionLibCosmeticsFeature = true;
+    public boolean unionLibSupporterCheck = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")
@@ -97,7 +99,6 @@ public class SMSNConfig extends ModConfig {
     public enum QuarkCelebration {
         ShowAll(),
         HideAll("all"),
-        @SuppressWarnings("SpellCheckingInspection")
         HideLGBTQIA(
                 "iad", "iad2", "idr", "ld", "lvd", "ncod", "nbpd", "ppad", "tdr", "tdv", "zdd",
                 "pm", "baw", "taw"

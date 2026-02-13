@@ -1,3 +1,14 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
+- Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
+
+**Fabric**
+
+- Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
+
 ### 1.3.6
 
 **Forge**

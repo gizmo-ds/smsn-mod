@@ -12,7 +12,6 @@
   ],
   "mixins": [
     "ad_astra.StationLoaderMixin",
-    "additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
@@ -44,6 +43,8 @@
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
     "titanium.RewardMixin",
+    "unionlib.CosmeticsMixin",
+    "unionlib.SupportersMixin",
     "vazkii.botania.ContributorListMixin",
     "vazkii.quark.ModelHandlerMixin",
     "vazkii.quark.ThreadContributorListLoaderMixin",
@@ -52,7 +53,9 @@
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
-    "xaero.world_map.PatreonMixin"
+    "xaero.world_map.PatreonMixin",
+    "xxrexraptorxx.additionalstructures.EventsMixin",
+    "xxrexraptorxx.allthecompatibility.EventsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

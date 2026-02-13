@@ -6,8 +6,6 @@
   "gui.smsn.missing_cloth_config.modrinth_download": "Modrinth",
   "gui.smsn.missing_cloth_config.curseforge_download": "CurseForge",
   "config.smsn.@title": "Налаштування Save My Shit Network",
-  "config.smsn.sponsor.description": "❤ Подобається %1$s? Підтримайте автора на %2$s! ❤",
-  "config.smsn.sponsor.description.afdian": "AFDIAN",
   "config.smsn.@switch.true": "§aТак",
   "config.smsn.@switch.false": "§cНі",
   "config.smsn.@switch.enable": "§aУВІМК.",

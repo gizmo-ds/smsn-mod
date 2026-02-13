@@ -55,7 +55,8 @@ fabric-createtramadditions = { version = "Szc6mYko", module = "maven.modrinth:cr
 fabric-immersiveportals = { version = "v3.3.7-mc1.20.1", module = "com.github.iPortalTeam.ImmersivePortalsMod:imm_ptl_core" }
 fabric-majrusz-library = { version = "nfkUUMHq", module = "maven.modrinth:majrusz-library" } # 7.0.8
 fabric-kiwi = { version = "11.8.29+fabric", module = "maven.modrinth:kiwi" }
-fabric-create-snr= { version = "1.5.1-fabric-mc1.20.1", module = "maven.modrinth:create-steam-n-rails" }
+fabric-create-snr = { version = "1.5.1-fabric-mc1.20.1", module = "maven.modrinth:create-steam-n-rails" }
+fabric-unionlib = { version = "1.20.1-12.0.18-Fabric", module = "maven.modrinth:unionlib" }
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
@@ -90,4 +91,6 @@ forge-arsnouveau = { version = "qtW93rN7", module = "maven.modrinth:ars-nouveau"
 forge-immersiveportals = { version = "6368524", module = "curse.maven:immersive-portals-for-forge-355440" } # 3.0.7
 forge-majrusz-library = { version = "BZzTRseC", module = "maven.modrinth:majrusz-library" } # 7.0.8
 forge-kiwi = { version = "11.8.29+forge", module = "maven.modrinth:kiwi" }
-forge-create-snr= { version = "1.5.1-forge-mc1.20.1", module = "maven.modrinth:create-steam-n-rails" }
+forge-create-snr = { version = "1.5.1-forge-mc1.20.1", module = "maven.modrinth:create-steam-n-rails" }
+forge-unionlib = { version = "1.20.1-12.0.18-Forge", module = "maven.modrinth:unionlib" }
+forge-allthecompatibility = { version = "GQG2clMp", module = "maven.modrinth:all-the-compatibility" } # 2.3.1

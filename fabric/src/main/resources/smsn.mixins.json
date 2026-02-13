@@ -26,6 +26,8 @@
     "ribbits.SupportersJSONMixin",
     "supplementaries.CreditsMixin",
     "tenshilib.PatreonDataManagerMixin",
+    "unionlib.CosmeticsMixin",
+    "unionlib.SupportersMixin",
     "vazkii.botania.ContributorListMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",

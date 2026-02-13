@@ -10,9 +10,6 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("ad_astra",
                         "dev.aika.smsn.forge.mixin.ad_astra.StationLoaderMixin"
                 ),
-                new ModMixinInfo("additionalstructures",
-                        "dev.aika.smsn.forge.mixin.additionalstructures.EventsMixin"
-                ),
                 new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.forge.mixin.aetherteam.UserData$ServerMixin"
                 ),
@@ -110,6 +107,10 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("titanium",
                         "dev.aika.smsn.forge.mixin.titanium.RewardMixin"
                 ),
+                new ModMixinInfo("unionlib",
+                        "dev.aika.smsn.forge.mixin.unionlib.CosmeticsMixin",
+                        "dev.aika.smsn.forge.mixin.unionlib.SupportersMixin"
+                ),
                 new ModMixinInfo("voidscape",
                         "dev.aika.smsn.forge.mixin.voidscape.DonatorHandlerMixin"
                 ),
@@ -120,6 +121,12 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("xaeroworldmap",
                         "dev.aika.smsn.forge.mixin.xaero.world_map.InternetMixin",
                         "dev.aika.smsn.forge.mixin.xaero.world_map.PatreonMixin"
+                ),
+                new ModMixinInfo("additionalstructures",
+                        "dev.aika.smsn.forge.mixin.xxrexraptorxx.additionalstructures.EventsMixin"
+                ),
+                new ModMixinInfo("allthecompatibility",
+                        "dev.aika.smsn.forge.mixin.xxrexraptorxx.allthecompatibility.EventsMixin"
                 )
         );
     }
