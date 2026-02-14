@@ -59,7 +59,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   fetch requests;
 - [Placebo](https://www.curseforge.com/minecraft/mc-mods/placebo "1.21-9.3.5") Blocks patron trail requests and patron
   wing requests;
-- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "4.1.0") Blocks patron hat requests and No more Pride Month;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "4.1.0") Blocks patron hat requests and No more Pride
+  Month;
 - [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "neoforge_1.21-3.1.1") `锦致装饰`
   Prevents supporters info requests;
 - [Titanium](https://www.curseforge.com/minecraft/mc-mods/titanium "1.21-4.0.12") `钛` Blocks reward requests;
@@ -71,7 +72,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [ProjectE](https://www.curseforge.com/minecraft/mc-mods/projecte "1.0.1") `等价交换重制版` Blocks UUID check request;
 - [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei "0.5.0.1") `魔法巫师` Blocks supporter requests;
-- [Additional Structures](https://modrinth.com/mod/additional-structures "6.3.0") `失落废墟` Blocks supporter requests;
+- [Additional Structures](https://modrinth.com/mod/additional-structures "6.3.0") `失落废墟` Blocks supporter requests
+  and disable StopModReposts messages;
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.8.2") Blocks patreon checks requests;
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "5.9.4") `新生魔艺` Blocks reward requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "6.0.6") `沉浸式传送门`
@@ -79,7 +81,10 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Quark](https://www.curseforge.com/minecraft/mc-mods/quark "4.1-466.3558") `夸克` Disables contributor list fetching
   on startup and player join. fewer celebrations;
 - [Zeta](https://www.curseforge.com/minecraft/mc-mods/zeta "1.1-33.147") Block spam logs;
-- [Kiwi Library](https://modrinth.com/mod/kiwi "15.7.5+neoforge") Blocks reward requests.
+- [Kiwi Library](https://modrinth.com/mod/kiwi "15.7.5+neoforge") Blocks reward requests;
+- [All The Compatibility](https://modrinth.com/mod/all-the-compatibility "3.9.1") Blocks supporter requests;
+- [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.21.1-12.0.18-NeoForge") Disables cosmetics feature
+  and blocks supporter requests.
 
 **Fabric**
 
@@ -90,7 +95,8 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Inventory Profiles Next](https://www.curseforge.com/minecraft/mc-mods/inventory-profiles-next "fabric-1.21-2.0.4")
   `一键背包整理Next` Disables update checks and telemetry requests;
 - [Iris Shaders](https://www.curseforge.com/minecraft/mc-mods/irisshaders "1.8.1+1.21.1-fabric") Blocks update requests;
-- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "4.1.0") Blocks patron hat requests and No more Pride Month;
+- [Ribbits](https://www.curseforge.com/minecraft/mc-mods/ribbits "4.1.0") Blocks patron hat requests and No more Pride
+  Month;
 - [Supplementaries](https://www.curseforge.com/minecraft/mc-mods/supplementaries "fabric_1.21-3.1.1") `锦致装饰`
   Prevents supporters info requests;
 - [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap "24.3.0_Fabric_1.21") `Xaero的小地图`
@@ -100,7 +106,11 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.8.2.b") Blocks patreon checks requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "6.0.6-mc1.21.1") `沉浸式传送门`
   Blocks mod info requests;
-- [Kiwi Library](https://modrinth.com/mod/kiwi "15.1.5+fabric") Blocks reward requests.
+- [Kiwi Library](https://modrinth.com/mod/kiwi "15.1.5+fabric") Blocks reward requests;
+- [Additional Structures](https://modrinth.com/mod/additional-structures "5.1.0") `失落废墟` Disables StopModReposts
+  messages;
+- [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.21.1-12.0.18-Fabric") Disables cosmetics feature
+  and blocks supporter requests.
 
 ## F.A.Q
 

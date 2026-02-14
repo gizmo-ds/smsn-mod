@@ -16,12 +16,12 @@ import java.net.URL;
 public abstract class EventsMixin {
     @Inject(method = "SupporterCheck", at = @At("HEAD"), cancellable = true)
     private static void SupporterCheck(URL url, Player player, CallbackInfoReturnable<Boolean> cir) {
-        if (SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) cir.setReturnValue(false);
+        if (!SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) cir.setReturnValue(false);
     }
 
     @Inject(method = "SupporterRewards", at = @At("HEAD"), cancellable = true)
     private static void SupporterRewards(PlayerEvent.PlayerLoggedInEvent event, CallbackInfo ci) {
-        if (SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) ci.cancel();
+        if (!SMSN.CONFIG.isXxRexRaptorxXModsSupporterCheck()) ci.cancel();
     }
 
     @Inject(method = "onPlayerLogin", at = @At("HEAD"), cancellable = true)
