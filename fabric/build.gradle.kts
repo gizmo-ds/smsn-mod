@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
-apply(plugin = "com.hypherionmc.modutils.modpublisher")
-
 architectury { fabric() }
 
 val shadowBundle: Configuration by configurations.getting
@@ -87,6 +85,4 @@ tasks {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
     }
-
-    publisher { artifact.set(remapJar) }
 }

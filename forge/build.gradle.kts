@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
-apply(plugin = "com.hypherionmc.modutils.modpublisher")
-
 architectury { forge() }
 
 loom {
@@ -134,6 +132,4 @@ tasks {
         inputFile.set(shadowJar.flatMap { it.archiveFile })
         dependsOn(shadowJar)
     }
-
-    publisher { artifact.set(remapJar) }
 }

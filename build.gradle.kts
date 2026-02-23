@@ -1,6 +1,5 @@
 @file:Suppress("UnstableApiUsage", "SpellCheckingInspection")
 
-import com.hypherionmc.modpublisher.plugin.ModPublisherGradleExtension
 import net.fabricmc.loom.api.LoomGradleExtensionAPI
 
 plugins {
@@ -8,20 +7,13 @@ plugins {
     alias(libs.plugins.loom) apply false
     alias(libs.plugins.architectury)
     alias(libs.plugins.shadow) apply false
-    alias(libs.plugins.dotenv)
-    alias(libs.plugins.modpublisher) apply false
 }
 
-val mcVersion = mod.minecraft_version
-val curseforgeToken: String = env.fetch("CF_TOKEN", "").trim()
-val modrinthToken: String = env.fetch("MODRINTH_TOKEN", "").trim()
-val modChangelog = rootProject.file("CHANGELOG.md").readText().split("###")[1].let { x -> "###$x".trim() }
-
-architectury { minecraft = mcVersion }
+architectury { minecraft = mod.mc_version }
 
 allprojects {
     group = mod.group
-    version = "${mod.version}-$mcVersion"
+    version = "${mod.version}-${mod.mc_version}"
 }
 
 subprojects {
@@ -37,7 +29,7 @@ subprojects {
 
         mappingsDependency = layered {
             officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-$mcVersion:${libs.versions.parchment.get()}@zip")
+            parchment("org.parchmentmc.data:parchment-${mod.mc_version}:${libs.versions.parchment.get()}@zip")
         }
     }
 
@@ -71,7 +63,7 @@ subprojects {
     }
 
     dependencies {
-        "minecraft"("net.minecraft:minecraft:$mcVersion")
+        "minecraft"("net.minecraft:minecraft:${mod.mc_version}")
         mappingsDependency?.let { "mappings"(it) }
 
         compileOnly(rootProject.libs.mixinextras.common)
@@ -97,10 +89,9 @@ subprojects {
     }
 }
 
-configure(pub.enabled_platforms.map { project(":$it") }) {
+configure(mod.enabled_platforms.map { project(":$it") }) {
     apply(plugin = "architectury-plugin")
     apply(plugin = "dev.architectury.loom")
-    apply(plugin = "com.hypherionmc.modutils.modpublisher")
 
     val platformName = project.extensions.getByName<LoomGradleExtensionAPI>("loom")
         .platform.map { it.displayName() }.get()
@@ -133,31 +124,6 @@ configure(pub.enabled_platforms.map { project(":$it") }) {
             from(project.file("third-party-licenses")) { into("third-party-licenses") }
             from(rootProject.file("assets/logo.png")) { rename { "${mod.id}_logo.png" } }
             from(rootProject.file("assets/private-logo.png")) { rename { "${mod.id}_logo.png" } }
-        }
-    }
-
-    configure<ModPublisherGradleExtension> {
-        apiKeys {
-            modrinth(modrinthToken)
-            curseforge(curseforgeToken)
-        }
-        modrinthID.set(pub.modrinth_id)
-        curseID.set(pub.curseforge_id)
-
-        debug.set(pub.debug)
-
-        versionType.set(mod.release_type)
-        changelog.set(modChangelog)
-        displayName.set("${mod.name} ${mod.version} for $platformName $mcVersion")
-        projectVersion.set("${project.version}-${project.name}")
-        loaders.add(project.name)
-        gameVersions.addAll(pub.game_version_supports)
-
-        modrinthDepends {
-            optional("cloth-config")
-        }
-        curseDepends {
-            optional("cloth-config")
         }
     }
 }
