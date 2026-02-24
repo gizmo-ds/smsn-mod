@@ -14,7 +14,6 @@ public abstract class WorldTickMixin {
             at = @At(value = "INVOKE", target = "Lhu/qliqs/WsClient;send(Ljava/lang/String;)V"),
             cancellable = true
     )
-    @SuppressWarnings("SpellCheckingInspection")
     private static void onWorldTick(MinecraftServer server, CallbackInfo ci) {
         if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();

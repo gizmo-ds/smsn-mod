@@ -20,7 +20,6 @@ public abstract class TramAdditionsMixin {
             at = @At(value = "INVOKE", target = "Lhu/qliqs/WsClient;<init>(Ljava/net/URI;)V"),
             cancellable = true
     )
-    @SuppressWarnings("SpellCheckingInspection")
     private static void init(MinecraftServer server, CallbackInfo ci) {
         if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();
@@ -32,7 +31,6 @@ public abstract class TramAdditionsMixin {
             at = @At(value = "INVOKE", target = "Lhu/qliqs/WsClient;close()V"),
             cancellable = true
     )
-    @SuppressWarnings("SpellCheckingInspection")
     private static void close(MinecraftServer server, CallbackInfo ci) {
         if (SMSN.CONFIG.isCreateTramAdditionsTTS()) return;
         ci.cancel();
