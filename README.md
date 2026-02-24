@@ -82,7 +82,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Hexerei](https://www.curseforge.com/minecraft/mc-mods/hexerei "0.4.2.1") `魔法巫师` Blocks supporter requests;
 - [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "1.5.348") `虚空工艺` Blocks donator requests;
 - [Additional Structures](https://modrinth.com/mod/additional-structures "4.1.2") `失落废墟` Blocks supporter requests;
-- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon checks requests;
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib "1.7.2") Blocks patreon requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
 - [Ars Nouveau](https://www.curseforge.com/minecraft/mc-mods/ars-nouveau "4.9.0") `新生魔艺` Blocks reward requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-for-forge "3.0.7") `沉浸式传送门`
@@ -93,7 +93,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [All The Compatibility](https://modrinth.com/mod/all-the-compatibility "2.3.1") Blocks supporter requests;
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.20.1-12.0.18-Forge") Disables cosmetics feature
   and blocks supporter requests;
-- [Illager Revolution](https://www.curseforge.com/minecraft/mc-mods/illager-revolution "1.2") Blocks patreon checks requests.
+- [Illager Revolution](https://www.curseforge.com/minecraft/mc-mods/illager-revolution "1.2") Blocks patreon requests.
 
 **Fabric**
 
@@ -114,7 +114,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
   Disables update checks & patreon checks fetches;
 - [Xaero's World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map "1.38.8_Fabric_1.20") `Xaero的世界地图`
   Disables update checks & patreon checks fetches;
-- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon checks requests;
+- [TenshiLib](https://www.curseforge.com/minecraft/mc-mods/tenshilib-fabric "1.7.6") Blocks patreon requests;
 - [Create Tram Additions](https://github.com/neebooo/Create-Tram-Additions "1.6") Blocks TTS requests;
 - [Immersive Portals](https://www.curseforge.com/minecraft/mc-mods/immersive-portals-mod "3.0.7") `沉浸式传送门` Blocks
   mod info requests;
