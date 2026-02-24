@@ -65,6 +65,8 @@ public class SMSNConfig extends ModConfig {
     public boolean createSnrDevCape = false;
     public boolean unionLibCosmeticsFeature = true;
     public boolean unionLibSupporterCheck = false;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean illagerRevolutionPatreon = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")

@@ -47,6 +47,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("hexerei",
                         "dev.aika.smsn.forge.mixin.hexerei.HexereiSupporterBenefitsMixin"
                 ),
+                new ModMixinInfo("illagerrevolutionmod",
+                        "dev.aika.smsn.forge.mixin.illagerrevolution.IllagerRevolutionModMixin"
+                ),
                 new ModMixinInfo("mru",
                         "dev.aika.smsn.forge.mixin.imb11.mru.APIMixin"
                 ),

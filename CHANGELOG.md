@@ -1,3 +1,9 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [Illager Revolution](https://www.curseforge.com/minecraft/mc-mods/illager-revolution)
+
 ### 1.3.7
 
 **Forge**

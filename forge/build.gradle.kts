@@ -112,6 +112,8 @@ dependencies {
     modCompileOnly(libs.forge.unionlib)
     // All The Compatibility
     modCompileOnly(libs.forge.allthecompatibility)
+    // Illager Revolution
+    modCompileOnly(libs.forge.illagerrevolution)
 }
 
 tasks {

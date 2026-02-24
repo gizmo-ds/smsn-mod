@@ -26,6 +26,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "hexerei.HexereiSupporterBenefitsMixin",
+    "illagerrevolution.IllagerRevolutionModMixin",
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
