@@ -1,5 +1,9 @@
 ### Unreleased
 
+**NeoForge**
+
+- Add mixins for [Citadel](https://www.curseforge.com/minecraft/mc-mods/citadel)
+
 ### 1.3.7
 
 **NeoForge**

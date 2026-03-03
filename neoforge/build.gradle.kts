@@ -115,6 +115,9 @@ dependencies {
     modCompileOnly(libs.neoforge.unionlib)
     // All The Compatibility
     modCompileOnly(libs.neoforge.allthecompatibility)
+    // Citadel
+    modImplementation(libs.neoforge.citadel)
+//    modImplementation(libs.neoforge.citadel.unofficial)
 }
 
 tasks {

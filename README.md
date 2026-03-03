@@ -84,7 +84,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Kiwi Library](https://modrinth.com/mod/kiwi "15.7.5+neoforge") Blocks reward requests;
 - [All The Compatibility](https://modrinth.com/mod/all-the-compatibility "3.9.1") Blocks supporter requests;
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.21.1-12.0.18-NeoForge") Disables cosmetics feature
-  and blocks supporter requests.
+  and blocks supporter requests;
+- [Citadel](https://www.curseforge.com/minecraft/mc-mods/citadel "2.7.0") Use local assets instead of remote assets –
+  prevents April Fools' crashes.
 
 **Fabric**
 

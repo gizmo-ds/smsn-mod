@@ -80,3 +80,5 @@ neoforge-zeta = { version = "1.1-33.147", module = "org.violetmoon.zeta:Zeta" }
 neoforge-kiwi = { version = "15.7.5+neoforge", module = "maven.modrinth:kiwi" }
 neoforge-unionlib = { version = "1.21.1-12.0.18-NeoForge", module = "maven.modrinth:unionlib" }
 neoforge-allthecompatibility = { version = "1IfRn5Yp", module = "maven.modrinth:all-the-compatibility" } # 3.9.1
+neoforge-citadel = { version = "2.7.0", module = "maven.modrinth:citadel" }
+#neoforge-citadel-unofficial = { version = "7432825", module = "curse.maven:citadel-1-21-1-port-1415723" }

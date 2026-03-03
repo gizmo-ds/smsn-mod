@@ -53,6 +53,8 @@ public class SMSNConfig extends ModConfig {
     public boolean kiwiTier = false;
     public boolean unionLibCosmeticsFeature = true;
     public boolean unionLibSupporterCheck = false;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean alexModsContributorCheck = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")
@@ -64,6 +66,9 @@ public class SMSNConfig extends ModConfig {
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean zetaSpamLogs = false;
+    @Category("qol")
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean citadelAprilFoolsContent = false;
     @Category("qol")
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean immersiveCavesDiscordMessage = false;

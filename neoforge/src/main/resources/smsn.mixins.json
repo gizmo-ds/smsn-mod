@@ -11,8 +11,9 @@
   ],
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
-    "xxrexraptorxx.additionalstructures.EventsMixin",
     "aetherteam.UserData$ServerMixin",
+    "alex.CitadelConstantsMixin",
+    "alex.CitadelWebHelperMixin",
     "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
     "exposure.GildedMixin",
@@ -43,6 +44,7 @@
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",
     "xaero.world_map.PatreonMixin",
+    "xxrexraptorxx.additionalstructures.EventsMixin",
     "xxrexraptorxx.allthecompatibility.EventsMixin"
   ],
   "injectors": {
