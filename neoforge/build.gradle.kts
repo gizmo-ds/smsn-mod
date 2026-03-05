@@ -115,9 +115,10 @@ dependencies {
     modCompileOnly(libs.neoforge.unionlib)
     // All The Compatibility
     modCompileOnly(libs.neoforge.allthecompatibility)
-    // Citadel
+    // Alex's mods
     modImplementation(libs.neoforge.citadel)
 //    modImplementation(libs.neoforge.citadel.unofficial)
+    modImplementation(libs.neoforge.alexscaves.unofficial)
 }
 
 tasks {

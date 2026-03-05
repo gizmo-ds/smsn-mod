@@ -82,3 +82,4 @@ neoforge-unionlib = { version = "1.21.1-12.0.18-NeoForge", module = "maven.modri
 neoforge-allthecompatibility = { version = "1IfRn5Yp", module = "maven.modrinth:all-the-compatibility" } # 3.9.1
 neoforge-citadel = { version = "2.7.0", module = "maven.modrinth:citadel" }
 #neoforge-citadel-unofficial = { version = "7432825", module = "curse.maven:citadel-1-21-1-port-1415723" }
+neoforge-alexscaves-unofficial = { version = "7518652", module = "curse.maven:alexs-caves-unofficial-port-1420348" } # 2.0.9

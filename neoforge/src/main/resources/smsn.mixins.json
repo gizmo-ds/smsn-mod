@@ -12,6 +12,7 @@
   "mixins": [
     "actuallyadditions.ThreadSpecialFetcherMixin",
     "aetherteam.UserData$ServerMixin",
+    "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
     "arsnouveau.RewardsMixin",

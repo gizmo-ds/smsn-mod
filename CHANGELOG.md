@@ -1,3 +1,9 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [Alex's Caves (Unofficial Port)](https://www.curseforge.com/minecraft/mc-mods/alexs-caves-unofficial-port)
+
 ### 1.3.9
 
 **NeoForge**

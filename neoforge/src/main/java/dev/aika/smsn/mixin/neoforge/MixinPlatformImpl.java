@@ -10,6 +10,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("actuallyadditions",
                         "dev.aika.smsn.neoforge.mixin.actuallyadditions.ThreadSpecialFetcherMixin"
                 ),
+                new ModMixinInfo("alexscaves",
+                        "dev.aika.smsn.neoforge.mixin.alex.AlexsCavesWebHelperMixin"
+                ),
                 new ModMixinInfo("citadel",
                         "dev.aika.smsn.neoforge.mixin.alex.CitadelConstantsMixin",
                         "dev.aika.smsn.neoforge.mixin.alex.CitadelWebHelperMixin"
