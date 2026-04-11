@@ -93,7 +93,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [All The Compatibility](https://modrinth.com/mod/all-the-compatibility "2.3.1") Blocks supporter requests;
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.20.1-12.0.18-Forge") Disables cosmetics feature
   and blocks supporter requests;
-- [Illager Revolution](https://www.curseforge.com/minecraft/mc-mods/illager-revolution "1.2") Blocks patreon requests.
+- [Illager Revolution](https://www.curseforge.com/minecraft/mc-mods/illager-revolution "1.2") Blocks patreon requests;
+- [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
+  CreditsScreen is open;
 
 **Fabric**
 
@@ -122,7 +124,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Kiwi Library](https://modrinth.com/mod/kiwi "11.8.29") Blocks reward requests;
 - [Create: Steam 'n' Rails](https://www.curseforge.com/minecraft/mc-mods/create-steam-n-rails "1.5.1") `机械动力：汽鸣铁道` Blocks DevCaps requests;
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.20.1-12.0.18-Fabric") Disables cosmetics feature
-  and blocks supporter requests.
+  and blocks supporter requests;
+- [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
+  CreditsScreen is open;
 
 ## F.A.Q
 
