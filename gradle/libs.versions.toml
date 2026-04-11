@@ -8,7 +8,7 @@ lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
 parchment = "2023.09.03"
-fabric-loader = "0.16.14"
+fabric-loader = "0.17.2"
 forge = "1.20.1-47.2.32"
 clothconfig = "11.1.136"
 # Dev
@@ -55,6 +55,7 @@ fabric-majrusz-library = { version = "nfkUUMHq", module = "maven.modrinth:majrus
 fabric-kiwi = { version = "11.8.29+fabric", module = "maven.modrinth:kiwi" }
 fabric-create-snr = { version = "1.5.1-fabric-mc1.20.1", module = "maven.modrinth:create-steam-n-rails" }
 fabric-unionlib = { version = "1.20.1-12.0.18-Fabric", module = "maven.modrinth:unionlib" }
+fabric-fancytoasts = { version = "2uQRFMhK", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1
 # Forge
 forge-xaeros-minimap = { version = "24.2.0_Forge_1.20", module = "maven.modrinth:xaeros-minimap" }
 forge-xaeros-worldmap = { version = "1.38.8_Forge_1.20", module = "maven.modrinth:xaeros-world-map" }
@@ -93,3 +94,4 @@ forge-create-snr = { version = "1.5.1-forge-mc1.20.1", module = "maven.modrinth:
 forge-unionlib = { version = "1.20.1-12.0.18-Forge", module = "maven.modrinth:unionlib" }
 forge-allthecompatibility = { version = "GQG2clMp", module = "maven.modrinth:all-the-compatibility" } # 2.3.1
 forge-illagerrevolution = { version = "1.2", module = "maven.modrinth:illager-revolution" }
+forge-fancytoasts = { version = "H1RE3Phw", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1

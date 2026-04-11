@@ -47,6 +47,7 @@
   "smsn.mod.unionlib": "UnionLib",
   "smsn.mod.allthecompatibility": "All The Compatibility",
   "smsn.mod.illagerrevolutionmod": "Illager Revolution",
+  "smsn.mod.fancytoasts": "FancyToasts",
   "config.smsn.@title": "Save My Shit Network",
   "config.smsn.unsupported.description": "§6§lUnsupported field type: %s",
   "config.smsn.@switch.true": "§aAllow",

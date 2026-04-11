@@ -47,6 +47,7 @@
   "smsn.mod.unionlib": "UnionLib",
   "smsn.mod.allthecompatibility": "All The Compatibility",
   "smsn.mod.illagerrevolutionmod": "Illager Revolution",
+  "smsn.mod.fancytoasts": "FancyToasts",
   "config.smsn.@title": "救救我的答辩网络",
   "config.smsn.unsupported.description": "§6§l不受支持的字段类型: %s",
   "config.smsn.@switch.true": "§a允许",

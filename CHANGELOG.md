@@ -1,3 +1,13 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [Fancy Toasts | Better Advancements](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts)
+
+**Fabric**
+
+- Add mixins for [Fancy Toasts | Better Advancements](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts)
+
 ### 1.3.8
 
 **Forge**

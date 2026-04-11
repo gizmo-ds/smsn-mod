@@ -65,6 +65,8 @@ dependencies {
     // UnionLib
     localRuntime("org.tomlj:tomlj:1.1.1")
     modImplementation(libs.fabric.unionlib)
+    // Fancy Toasts | Better Advancements
+    modImplementation(libs.fabric.fancytoasts)
 }
 
 tasks {

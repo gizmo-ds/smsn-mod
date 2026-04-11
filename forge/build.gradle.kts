@@ -114,6 +114,8 @@ dependencies {
     modCompileOnly(libs.forge.allthecompatibility)
     // Illager Revolution
     modCompileOnly(libs.forge.illagerrevolution)
+    // Fancy Toasts | Better Advancements
+    modImplementation(libs.forge.fancytoasts)
 }
 
 tasks {

@@ -15,6 +15,7 @@
     "create_tram_additions.WorldTickMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
+    "fancytoasts.CreditsManagerMixin",
     "imb11.mru.APIMixin",
     "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",
