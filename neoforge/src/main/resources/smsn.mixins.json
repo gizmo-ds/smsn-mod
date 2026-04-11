@@ -19,6 +19,7 @@
     "bagus_lib.TierHelperMixin",
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
+    "fancytoasts.CreditsManagerMixin",
     "hexerei.HexereiSupporterBenefitsMixin",
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",

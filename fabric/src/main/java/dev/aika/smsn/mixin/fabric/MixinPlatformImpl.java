@@ -3,7 +3,7 @@ package dev.aika.smsn.mixin.fabric;
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.mixin.ModMixinInfo;
 
-@SuppressWarnings({"unused", "SpellCheckingInspection"})
+@SuppressWarnings("unused")
 public class MixinPlatformImpl {
     public static void register() {
         SMSN.MixinManager.addInfo(
@@ -13,6 +13,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("exposure",
                         "dev.aika.smsn.fabric.mixin.exposure.GildedMixin",
                         "dev.aika.smsn.fabric.mixin.exposure.PatreonMixin"
+                ),
+                new ModMixinInfo("fancytoasts",
+                        "dev.aika.smsn.fabric.mixin.fancytoasts.CreditsManagerMixin"
                 ),
                 new ModMixinInfo("mru",
                         "dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin"

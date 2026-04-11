@@ -58,6 +58,8 @@ dependencies {
     modImplementation(libs.fabric.unionlib)
     // AdditionalStructures
     modImplementation(libs.fabric.additionalstructures)
+    // Fancy Toasts | Better Advancements
+    modImplementation(libs.fabric.fancytoasts)
 }
 
 tasks {

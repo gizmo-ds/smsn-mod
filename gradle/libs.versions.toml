@@ -8,7 +8,7 @@ lombok = "1.18.38"
 mixinextras = "0.4.1"
 # Dependencies
 parchment = "2024.11.17"
-fabric-loader = "0.16.14"
+fabric-loader = "0.17.2"
 neoforge = "21.1.213"
 clothconfig = "15.0.130"
 # Dev
@@ -51,6 +51,7 @@ fabric-immersiveportals = { version = "5946966", module = "curse.maven:immersive
 fabric-kiwi = { version = "15.1.5+fabric", module = "maven.modrinth:kiwi" }
 fabric-unionlib = { version = "1.21.1-12.0.18-Fabric", module = "maven.modrinth:unionlib" }
 fabric-additionalstructures = { version = "kIrYpclx", module = "maven.modrinth:additional-structures" } # 5.1.0
+fabric-fancytoasts = { version = "JH6A5PbT", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1
 # NeoForge
 neoforge-xaeros-minimap = { version = "24.3.0_NeoForge_1.21", module = "maven.modrinth:xaeros-minimap" }
 neoforge-xaeros-worldmap = { version = "1.39.0_NeoForge_1.21", module = "maven.modrinth:xaeros-world-map" }
@@ -83,3 +84,4 @@ neoforge-allthecompatibility = { version = "1IfRn5Yp", module = "maven.modrinth:
 neoforge-citadel = { version = "2.7.0", module = "maven.modrinth:citadel" }
 #neoforge-citadel-unofficial = { version = "7432825", module = "curse.maven:citadel-1-21-1-port-1415723" }
 neoforge-alexscaves-unofficial = { version = "7518652", module = "curse.maven:alexs-caves-unofficial-port-1420348" } # 2.0.9
+neoforge-fancytoasts = { version = "mRTW5IaJ", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1

@@ -3,7 +3,7 @@ package dev.aika.smsn.mixin.neoforge;
 import dev.aika.smsn.SMSN;
 import dev.aika.smsn.mixin.ModMixinInfo;
 
-@SuppressWarnings({"unused", "SpellCheckingInspection"})
+@SuppressWarnings("unused")
 public class MixinPlatformImpl {
     public static void register() {
         SMSN.MixinManager.addInfo(
@@ -32,6 +32,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("exposure",
                         "dev.aika.smsn.neoforge.mixin.exposure.GildedMixin",
                         "dev.aika.smsn.neoforge.mixin.exposure.PatreonMixin"
+                ),
+                new ModMixinInfo("fancytoasts",
+                        "dev.aika.smsn.neoforge.mixin.fancytoasts.CreditsManagerMixin"
                 ),
                 new ModMixinInfo("hexerei",
                         "dev.aika.smsn.neoforge.mixin.hexerei.HexereiSupporterBenefitsMixin"

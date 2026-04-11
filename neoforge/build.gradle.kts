@@ -119,6 +119,8 @@ dependencies {
     modImplementation(libs.neoforge.citadel)
 //    modImplementation(libs.neoforge.citadel.unofficial)
     modImplementation(libs.neoforge.alexscaves.unofficial)
+    // Fancy Toasts | Better Advancements
+    modImplementation(libs.neoforge.fancytoasts)
 }
 
 tasks {
