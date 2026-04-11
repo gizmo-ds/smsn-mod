@@ -121,6 +121,8 @@ dependencies {
     modImplementation(libs.neoforge.alexscaves.unofficial)
     // Fancy Toasts | Better Advancements
     modImplementation(libs.neoforge.fancytoasts)
+    // Voidscape
+    modImplementation(libs.neoforge.voidscape)
 }
 
 tasks {

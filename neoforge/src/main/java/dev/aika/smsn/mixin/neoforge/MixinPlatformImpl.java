@@ -96,6 +96,9 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.neoforge.mixin.unionlib.CosmeticsMixin",
                         "dev.aika.smsn.neoforge.mixin.unionlib.SupportersMixin"
                 ),
+                new ModMixinInfo("voidscape",
+                        "dev.aika.smsn.neoforge.mixin.voidscape.DonatorHandlerMixin"
+                ),
                 new ModMixinInfo("xaerominimap",
                         "dev.aika.smsn.neoforge.mixin.xaero.minimap.InternetMixin",
                         "dev.aika.smsn.neoforge.mixin.xaero.minimap.PatreonMixin"

@@ -42,6 +42,7 @@
     "violetmoon.quark.ThreadContributorListLoaderMixin",
     "violetmoon.zeta.ModelHandlerMixin",
     "violetmoon.zeta.ZetaModuleManagerMixin",
+    "voidscape.DonatorHandlerMixin",
     "xaero.minimap.InternetMixin",
     "xaero.minimap.PatreonMixin",
     "xaero.world_map.InternetMixin",

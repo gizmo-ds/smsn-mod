@@ -4,6 +4,7 @@
 
 - Add mixins for [Alex's Caves (Unofficial Port)](https://www.curseforge.com/minecraft/mc-mods/alexs-caves-unofficial-port)
 - Add mixins for [Fancy Toasts | Better Advancements](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts)
+- Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 
 **Fabric**
 
