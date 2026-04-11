@@ -86,7 +86,12 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.21.1-12.0.18-NeoForge") Disables cosmetics feature
   and blocks supporter requests;
 - [Citadel](https://www.curseforge.com/minecraft/mc-mods/citadel "2.7.0") Use local assets instead of remote assets –
-  prevents April Fools' crashes.
+  prevents April Fools' crashes;
+- [Alex's Caves](https://www.curseforge.com/minecraft/mc-mods/alexs-caves "2.0.9") Use local assets instead of remote
+  assets;
+- [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "1.9.583") `虚空工艺` Blocks donator requests;
+- [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
+  CreditsScreen is open;
 
 **Fabric**
 
@@ -112,7 +117,9 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Additional Structures](https://modrinth.com/mod/additional-structures "5.1.0") `失落废墟` Disables StopModReposts
   messages;
 - [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib "1.21.1-12.0.18-Fabric") Disables cosmetics feature
-  and blocks supporter requests.
+  and blocks supporter requests;
+- [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
+  CreditsScreen is open;
 
 ## F.A.Q
 
