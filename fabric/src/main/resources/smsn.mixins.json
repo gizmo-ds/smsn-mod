@@ -16,6 +16,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "fancytoasts.CreditsManagerMixin",
+    "fancytoasts.CreditsManagerMixin_147",
     "imb11.mru.APIMixin",
     "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManager$doCheckVersion$$inlined$timer$default$1Mixin",

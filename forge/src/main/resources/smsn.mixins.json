@@ -26,6 +26,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "fancytoasts.CreditsManagerMixin",
+    "fancytoasts.CreditsManagerMixin_147",
     "hexerei.HexereiSupporterBenefitsMixin",
     "illagerrevolution.IllagerRevolutionModMixin",
     "imb11.mru.APIMixin",

@@ -27,8 +27,9 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        final ModMixinInfo info = SMSN.MixinManager.getByMixinClass(mixinClassName).orElse(null);
-        if (info != null) return info.shouldApply(mixinClassName);
+        final List<ModMixinInfo> infos = SMSN.MixinManager.getByMixinClass(mixinClassName);
+        if (infos != null && !infos.isEmpty())
+            return infos.stream().anyMatch(info -> info.shouldApply(mixinClassName));
 
         log.warn(marker, "Unknown mixin class: {}", mixinClassName);
         return false;

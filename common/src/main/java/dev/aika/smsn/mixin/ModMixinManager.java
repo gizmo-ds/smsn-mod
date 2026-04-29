@@ -12,9 +12,9 @@ public class ModMixinManager {
         Collections.addAll(mixinInfos, infos);
     }
 
-    public Optional<ModMixinInfo> getByMixinClass(String mixinClassName) {
+    public List<ModMixinInfo> getByMixinClass(String mixinClassName) {
         return mixinInfos.stream()
-                .filter(info -> info.getMixinClasses().contains(mixinClassName))
-                .findFirst();
+                .filter(info -> info.mixinClasses().contains(mixinClassName))
+                .toList();
     }
 }

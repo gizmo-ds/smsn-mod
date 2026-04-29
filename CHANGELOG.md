@@ -1,3 +1,11 @@
+### Unreleased
+
+- Resolve crash caused by mixin conflict with Fancy Toasts 1.4.7 [#16](https://github.com/gizmo-ds/smsn-mod/issues/16)
+- Add optional version range check to MixinConfigPlugin
+
+> I’ve been sick with a cold over the past few days, so this release may contain some bugs. Thanks for your
+> understanding.
+
 ### 1.4.0
 
 **Forge**
@@ -18,7 +26,8 @@
 
 **Forge**
 
-- Add mixins for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
+- Add mixins
+  for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
 - Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
 
 **Fabric**

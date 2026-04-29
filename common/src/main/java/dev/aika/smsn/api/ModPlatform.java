@@ -15,4 +15,17 @@ public class ModPlatform {
     public String getModName(String modId) {
         throw new AssertionError();
     }
+
+    @ExpectPlatform
+    public static ModInfo getModInfo(String modId) {
+        throw new AssertionError();
+    }
+
+    public record ModInfo(String modId, String name, String version) {
+    }
+
+    @ExpectPlatform
+    public static boolean containsVersion(String version, String versionRange) {
+        throw new AssertionError();
+    }
 }
