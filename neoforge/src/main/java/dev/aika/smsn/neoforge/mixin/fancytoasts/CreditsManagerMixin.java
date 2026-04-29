@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+@SuppressWarnings({"MixinAnnotationTarget", "RedundantSuppression"})
 @Mixin(value = CreditsManager.class, remap = false)
 public abstract class CreditsManagerMixin {
     @Shadow

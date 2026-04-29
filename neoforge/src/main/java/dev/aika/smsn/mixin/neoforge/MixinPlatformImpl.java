@@ -35,7 +35,10 @@ public class MixinPlatformImpl {
                 ),
                 new ModMixinInfo("fancytoasts",
                         "dev.aika.smsn.neoforge.mixin.fancytoasts.CreditsManagerMixin"
-                ),
+                ).versionRange("[1.4.5.1,1.4.7)"),
+                new ModMixinInfo("fancytoasts",
+                        "dev.aika.smsn.neoforge.mixin.fancytoasts.CreditsManagerMixin_147"
+                ).versionRange("[1.4.7,)"),
                 new ModMixinInfo("hexerei",
                         "dev.aika.smsn.neoforge.mixin.hexerei.HexereiSupporterBenefitsMixin"
                 ),

@@ -1,8 +1,17 @@
+### Unreleased
+
+- Resolve crash caused by mixin conflict with Fancy Toasts 1.4.7 [#16](https://github.com/gizmo-ds/smsn-mod/issues/16)
+- Add optional version range check to MixinConfigPlugin
+
+> I’ve been sick with a cold over the past few days, so this release may contain some bugs. Thanks for your
+> understanding.
+
 ### 1.4.0
 
 **NeoForge**
 
-- Add mixins for [Alex's Caves (Unofficial Port)](https://www.curseforge.com/minecraft/mc-mods/alexs-caves-unofficial-port)
+- Add mixins
+  for [Alex's Caves (Unofficial Port)](https://www.curseforge.com/minecraft/mc-mods/alexs-caves-unofficial-port)
 - Add mixins for [Fancy Toasts | Better Advancements](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts)
 - Add Mixins for [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape)
 
@@ -20,7 +29,8 @@
 
 **NeoForge**
 
-- Add mixins for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
+- Add mixins
+  for [All The Compatibility](https://modrinth.com/mod/all-the-compatibility) [#15](https://github.com/gizmo-ds/smsn-mod/issues/15)
 - Add mixins for [UnionLib](https://www.curseforge.com/minecraft/mc-mods/unionlib)
 - Add StopModRepostsMessages option
 

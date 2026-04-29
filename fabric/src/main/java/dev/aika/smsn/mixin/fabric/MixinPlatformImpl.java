@@ -16,7 +16,10 @@ public class MixinPlatformImpl {
                 ),
                 new ModMixinInfo("fancytoasts",
                         "dev.aika.smsn.fabric.mixin.fancytoasts.CreditsManagerMixin"
-                ),
+                ).versionRange(">=1.4.5.1 <1.4.7"),
+                new ModMixinInfo("fancytoasts",
+                        "dev.aika.smsn.fabric.mixin.fancytoasts.CreditsManagerMixin_147"
+                ).versionRange(">=1.4.7"),
                 new ModMixinInfo("mru",
                         "dev.aika.smsn.fabric.mixin.imb11.mru.APIMixin"
                 ),

@@ -70,22 +70,22 @@ public class ConfigMixinList {
         final var infos = mixinManager.getMixinInfos();
         for (ModMixinInfo info : infos) {
             final var subTitle = Objects.requireNonNull(ComponentUtils.createWithFallback(
-                            String.format("%s.mod.%s", modId, info.getModId()),
-                            "modmenu.nameTranslation." + info.getModId(),
-                            ComponentUtils.literal(ModPlatform.getModName(info.getModId())),
-                            ComponentUtils.literal(info.getModId())
+                            String.format("%s.mod.%s", modId, info.modId()),
+                            "modmenu.nameTranslation." + info.modId(),
+                            ComponentUtils.literal(ModPlatform.getModName(info.modId())),
+                            ComponentUtils.literal(info.modId())
                     ))
                     .withStyle(Style.EMPTY.applyFormat(ChatFormatting.BOLD));
-            if (ModPlatform.isModLoaded(info.getModId()))
+            if (ModPlatform.isModLoaded(info.modId()))
                 subTitle.append(Component.translatable(String.format("config.%s.mixins.modLoaded", modId)));
             category.addEntry(
                     builder.startTextDescription(subTitle)
                             .setTooltip(Component.translatable(
                                     String.format("config.%s.mixins.modIdTooltip", modId),
-                                    info.getModId()))
+                                    info.modId()))
                             .build()
             );
-            for (String mixinClass : info.getMixinClasses()) {
+            for (String mixinClass : info.mixinClasses()) {
                 final String shortName = mixinClass.replaceFirst(annotation.prefix(), "");
                 category.addEntry(
                         builder.startBooleanToggle(Component.literal(shortName), isEnable(mixinClass))

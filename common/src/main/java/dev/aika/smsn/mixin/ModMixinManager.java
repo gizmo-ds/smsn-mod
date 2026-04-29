@@ -2,10 +2,7 @@ package dev.aika.smsn.mixin;
 
 import lombok.Getter;
 
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 public class ModMixinManager {
     @Getter
@@ -15,9 +12,9 @@ public class ModMixinManager {
         Collections.addAll(mixinInfos, infos);
     }
 
-    public Optional<ModMixinInfo> getByMixinClass(String mixinClassName) {
+    public List<ModMixinInfo> getByMixinClass(String mixinClassName) {
         return mixinInfos.stream()
-                .filter(info -> info.getMixinClasses().contains(mixinClassName))
-                .findFirst();
+                .filter(info -> info.mixinClasses().contains(mixinClassName))
+                .toList();
     }
 }

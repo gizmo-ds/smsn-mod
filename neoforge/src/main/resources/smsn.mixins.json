@@ -20,6 +20,7 @@
     "exposure.GildedMixin",
     "exposure.PatreonMixin",
     "fancytoasts.CreditsManagerMixin",
+    "fancytoasts.CreditsManagerMixin_147",
     "hexerei.HexereiSupporterBenefitsMixin",
     "imb11.mru.APIMixin",
     "immersive_engineering.ImmersiveEngineeringMixin",
