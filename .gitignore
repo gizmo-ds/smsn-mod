@@ -32,3 +32,4 @@ gradle-app.setting
 mods/
 **/logs/*.log
 **/logs/*.log.gz
+**/.kotlin
