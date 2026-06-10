@@ -116,6 +116,8 @@ dependencies {
     modCompileOnly(libs.forge.illagerrevolution)
     // Fancy Toasts | Better Advancements
     modImplementation(libs.forge.fancytoasts)
+    // ManaitaPlusGeneral
+    modImplementation(libs.forge.manaitaplusgeneral)
 }
 
 tasks {

@@ -37,6 +37,7 @@
     "kiwi.JsonTierProviderMixin",
     "kiwi.KiwiTierProviderMixin",
     "majrusz.VersionCheckerMixin",
+    "manaitaplusgeneral.MPG$MPGUpdateCheckerMixin",
     "petrolpark.BadgeHandlerMixin",
     "placebo.TrailsManagerMixin",
     "placebo.WingsManagerMixin",

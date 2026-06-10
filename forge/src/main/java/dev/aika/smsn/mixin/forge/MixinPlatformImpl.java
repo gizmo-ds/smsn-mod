@@ -78,6 +78,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("majruszlibrary",
                         "dev.aika.smsn.forge.mixin.majrusz.VersionCheckerMixin"
                 ),
+                new ModMixinInfo("manaita_plus_general",
+                        "dev.aika.smsn.forge.mixin.manaitaplusgeneral.MPG$MPGUpdateCheckerMixin"
+                ),
                 new ModMixinInfo("obscure_api",
                         "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin",
                         "dev.aika.smsn.forge.mixin.obscure.ObscuriaCollectionMixin$Mod"

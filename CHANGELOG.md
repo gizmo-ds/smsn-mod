@@ -1,3 +1,9 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [ManaitaPlusGeneral](https://www.curseforge.com/minecraft/mc-mods/manaita-plus-general)
+
 ### 1.4.1
 
 - Resolve crash caused by mixin conflict with Fancy Toasts 1.4.7 [#16](https://github.com/gizmo-ds/smsn-mod/issues/16)

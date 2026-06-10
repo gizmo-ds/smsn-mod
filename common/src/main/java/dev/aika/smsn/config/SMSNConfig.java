@@ -8,7 +8,7 @@ import lombok.SneakyThrows;
 import java.util.*;
 
 @Getter
-@SuppressWarnings({"unused", "SpellCheckingInspection"})
+@SuppressWarnings("unused")
 public class SMSNConfig extends ModConfig {
     //NOTE: Not adding the @LoaderSpecific annotation means the field applies to all Mod Loaders.
     //NOTE: Not adding the @Category annotation means using the "general" category.
@@ -67,6 +67,8 @@ public class SMSNConfig extends ModConfig {
     public boolean unionLibSupporterCheck = false;
     @LoaderSpecific(LoaderType.FORGE)
     public boolean illagerRevolutionPatreon = false;
+    @LoaderSpecific(LoaderType.FORGE)
+    public boolean mpgUpdateChecker = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")

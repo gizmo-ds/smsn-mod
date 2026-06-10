@@ -95,3 +95,4 @@ forge-unionlib = { version = "1.20.1-12.0.18-Forge", module = "maven.modrinth:un
 forge-allthecompatibility = { version = "GQG2clMp", module = "maven.modrinth:all-the-compatibility" } # 2.3.1
 forge-illagerrevolution = { version = "1.2", module = "maven.modrinth:illager-revolution" }
 forge-fancytoasts = { version = "H1RE3Phw", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1
+forge-manaitaplusgeneral = { version = "8078091", module = "curse.maven:manaita-plus-general-1525979" } # 2.3.0-1.20.1
