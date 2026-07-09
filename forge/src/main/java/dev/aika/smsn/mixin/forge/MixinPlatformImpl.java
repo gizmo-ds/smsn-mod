@@ -71,6 +71,9 @@ public class MixinPlatformImpl {
                 new ModMixinInfo("inventoryprofilesnext",
                         "dev.aika.smsn.forge.mixin.ipn.IPNInfoManagerMixin"
                 ),
+                new ModMixinInfo("irons_lib",
+                        "dev.aika.smsn.forge.mixin.ironslib.PatreonHandlerMixin"
+                ),
                 new ModMixinInfo("kiwi",
                         "dev.aika.smsn.forge.mixin.kiwi.KiwiTierProviderMixin",
                         "dev.aika.smsn.forge.mixin.kiwi.JsonTierProviderMixin"

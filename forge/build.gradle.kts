@@ -118,6 +118,8 @@ dependencies {
     modImplementation(libs.forge.fancytoasts)
     // ManaitaPlusGeneral
     modImplementation(libs.forge.manaitaplusgeneral)
+    // Iron's Lib
+    modCompileOnly(libs.forge.ironslib)
 }
 
 tasks {

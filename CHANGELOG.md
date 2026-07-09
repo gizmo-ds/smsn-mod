@@ -1,3 +1,9 @@
+### Unreleased
+
+**Forge**
+
+- Add mixins for [Iron's Lib](https://www.curseforge.com/minecraft/mc-mods/irons-lib)
+
 ### 1.4.2
 
 **Forge**
