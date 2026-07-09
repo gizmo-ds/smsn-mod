@@ -117,7 +117,7 @@ public class SMSNConfig extends ModConfig {
         }
 
         public boolean isHide(String name) {
-            if (CELEBRATIONS.size() == 1 && CELEBRATIONS.getFirst().equals("all")) return true;
+            if (CELEBRATIONS.size() == 1 && CELEBRATIONS.get(0).equals("all")) return true;
             return CELEBRATIONS.contains(name);
         }
     }
