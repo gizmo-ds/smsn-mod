@@ -88,3 +88,4 @@ neoforge-alexscaves-unofficial = { version = "7518652", module = "curse.maven:al
 #neoforge-fancytoasts = { version = "mRTW5IaJ", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1
 neoforge-fancytoasts = { version = "ErhgSKSc", module = "maven.modrinth:fancy-toasts" } # 1.4.7
 neoforge-voidscape = { version = "7383510", module = "curse.maven:voidscape-251730" } # 1.9.583
+neoforge-ironslib = { version = "8207094", module = "curse.maven:irons-lib-1492763" } # 1.1.0

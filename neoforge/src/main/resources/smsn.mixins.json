@@ -27,6 +27,7 @@
     "immersivecaves.DiscordInviteOnJoinProcedureMixin",
     "immersiveportals.IPModInfoCheckingMixin",
     "ipn.IPNInfoManagerMixin",
+    "ironslib.PatreonHandlerMixin",
     "kiwi.JsonTierProviderMixin",
     "kiwi.KiwiTierProviderMixin",
     "petrolpark.BadgeHandlerMixin",

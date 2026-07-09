@@ -57,6 +57,8 @@ public class SMSNConfig extends ModConfig {
     public boolean alexModsContributorCheck = false;
     @LoaderSpecific(LoaderType.NEOFORGE)
     public boolean voidscapeDonator = false;
+    @LoaderSpecific(LoaderType.NEOFORGE)
+    public boolean ironsLibPatreon = false;
 
     @Category("qol")
     @Components.Switch(checked = "enable", unchecked = "disabled")

@@ -123,6 +123,8 @@ dependencies {
     modImplementation(libs.neoforge.fancytoasts)
     // Voidscape
     modImplementation(libs.neoforge.voidscape)
+    // Iron's Lib
+    modCompileOnly(libs.neoforge.ironslib)
 }
 
 tasks {

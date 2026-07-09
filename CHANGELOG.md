@@ -1,3 +1,9 @@
+### Unreleased
+
+**NeoForge**
+
+- Add mixins for [Iron's Lib](https://www.curseforge.com/minecraft/mc-mods/irons-lib)
+
 ### 1.4.1
 
 - Resolve crash caused by mixin conflict with Fancy Toasts 1.4.7 [#16](https://github.com/gizmo-ds/smsn-mod/issues/16)
