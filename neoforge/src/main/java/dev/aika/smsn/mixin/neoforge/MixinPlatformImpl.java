@@ -17,6 +17,9 @@ public class MixinPlatformImpl {
                         "dev.aika.smsn.neoforge.mixin.alex.CitadelConstantsMixin",
                         "dev.aika.smsn.neoforge.mixin.alex.CitadelWebHelperMixin"
                 ),
+                new ModMixinInfo("aquamirae",
+                        "dev.aika.smsn.neoforge.mixin.aquamirae.KeepsakeManagerMixin"
+                ),
                 new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.neoforge.mixin.aetherteam.UserData$ServerMixin"
                 ),
