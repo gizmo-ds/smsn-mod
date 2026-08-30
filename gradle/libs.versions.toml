@@ -85,6 +85,7 @@ neoforge-allthecompatibility = { version = "1IfRn5Yp", module = "maven.modrinth:
 neoforge-citadel = { version = "2.7.0", module = "maven.modrinth:citadel" }
 #neoforge-citadel-unofficial = { version = "7432825", module = "curse.maven:citadel-1-21-1-port-1415723" }
 neoforge-alexscaves-unofficial = { version = "7518652", module = "curse.maven:alexs-caves-unofficial-port-1420348" } # 2.0.9
+neoforge-aquamirae = { version = "usuA98Eb", module = "maven.modrinth:aquamirae" } # 7.2.1
 #neoforge-fancytoasts = { version = "mRTW5IaJ", module = "maven.modrinth:fancy-toasts" } # 1.4.5.1
 neoforge-fancytoasts = { version = "ErhgSKSc", module = "maven.modrinth:fancy-toasts" } # 1.4.7
 neoforge-voidscape = { version = "7383510", module = "curse.maven:voidscape-251730" } # 1.9.583

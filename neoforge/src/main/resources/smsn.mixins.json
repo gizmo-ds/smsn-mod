@@ -15,6 +15,7 @@
     "alex.AlexsCavesWebHelperMixin",
     "alex.CitadelConstantsMixin",
     "alex.CitadelWebHelperMixin",
+    "aquamirae.KeepsakeManagerMixin",
     "arsnouveau.RewardsMixin",
     "bagus_lib.TierHelperMixin",
     "exposure.GildedMixin",

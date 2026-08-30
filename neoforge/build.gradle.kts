@@ -119,6 +119,8 @@ dependencies {
     modImplementation(libs.neoforge.citadel)
 //    modImplementation(libs.neoforge.citadel.unofficial)
     modImplementation(libs.neoforge.alexscaves.unofficial)
+    // Aquamirae
+    modCompileOnly(libs.neoforge.aquamirae)
     // Fancy Toasts | Better Advancements
     modImplementation(libs.neoforge.fancytoasts)
     // Voidscape
