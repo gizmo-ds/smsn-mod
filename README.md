@@ -27,7 +27,7 @@ of Quark refused to address this problem, which led me to develop this mod to re
 
 ## Modrinth?
 
-Modrinth doesn't like this mod ¯\\\_(ツ)\_/¯
+Modrinth doesn't like this mod ¯\\\_ (ツ)\_/¯
 
 I don't think this mod violates the [Modrinth's Content Rules](https://modrinth.com/legal/rules).
 
@@ -92,6 +92,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "1.9.583") `虚空工艺` Blocks donator requests;
 - [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
   CreditsScreen is open;
+- [Aquamirae](https://www.curseforge.com/minecraft/mc-mods/aquamirae "7.2.1") Disables keepsake check;
 
 **Fabric**
 
