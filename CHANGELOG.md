@@ -1,3 +1,9 @@
+### 1.4.4
+
+**NeoForge**
+
+- Add mixins for [Aquamirae](https://www.curseforge.com/minecraft/mc-mods/aquamirae)
+
 ### 1.4.3
 
 **NeoForge**
