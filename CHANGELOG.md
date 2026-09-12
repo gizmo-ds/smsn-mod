@@ -1,3 +1,10 @@
+### 1.4.5
+
+**NeoForge**
+
+- Fix [Aquamirae](https://www.curseforge.com/minecraft/mc-mods/aquamirae)
+  mixins [#20](https://github.com/gizmo-ds/smsn-mod/issues/20)
+
 ### 1.4.4
 
 **NeoForge**
