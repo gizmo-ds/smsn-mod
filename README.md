@@ -92,7 +92,7 @@ For Fabric with ModMenu: Set `"update_checker": false` in `config/modmenu.json` 
 - [Voidscape](https://www.curseforge.com/minecraft/mc-mods/voidscape "1.9.583") `虚空工艺` Blocks donator requests;
 - [FancyToasts](https://www.curseforge.com/minecraft/mc-mods/fancy-toasts "1.5.348") Only send request when
   CreditsScreen is open;
-- [Aquamirae](https://www.curseforge.com/minecraft/mc-mods/aquamirae "7.2.1") Disables keepsake check;
+- [Aquamirae](https://www.curseforge.com/minecraft/mc-mods/aquamirae "7.2.0") Disables keepsake check;
 
 **Fabric**
 

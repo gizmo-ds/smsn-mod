@@ -19,7 +19,10 @@ public class MixinPlatformImpl {
                 ),
                 new ModMixinInfo("aquamirae",
                         "dev.aika.smsn.neoforge.mixin.aquamirae.KeepsakeManagerMixin"
-                ),
+                ).versionRange("[,7.2.6]"),
+                new ModMixinInfo("aquamirae",
+                        "dev.aika.smsn.neoforge.mixin.aquamirae.KeepsakeManagerMixin_726"
+                ).versionRange("[7.2.6,)"),
                 new ModMixinInfo("nitrogen",
                         "dev.aika.smsn.neoforge.mixin.aetherteam.UserData$ServerMixin"
                 ),
